@@ -209,79 +209,66 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
           </button>
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile Navigation Drawer (Short & Compact) */}
         <div
-          className={`lg:hidden fixed inset-x-0 top-full bg-[#FAF8F5]/98 backdrop-blur-2xl border-b border-black/[0.1] transition-all duration-300 overflow-y-auto max-h-[85vh] ${
-            mobileMenuOpen ? 'py-6 opacity-100 shadow-2xl block' : 'max-h-0 py-0 opacity-0 hidden'
+          className={`lg:hidden fixed inset-x-0 top-full bg-[#FAF8F5]/98 backdrop-blur-2xl border-b border-black/[0.1] transition-all duration-300 overflow-hidden shadow-2xl ${
+            mobileMenuOpen ? 'py-4 opacity-100 max-h-[420px] block' : 'max-h-0 py-0 opacity-0 hidden'
           }`}
         >
-          <div className="px-6 flex flex-col space-y-4 text-sm uppercase tracking-[0.22em]">
-            <div className="text-[10px] text-[#8C8275] pb-2 border-b border-black/[0.08] flex items-center justify-between font-mono">
-              <span>Kerala • Tamil Nadu • Karnataka</span>
-              <span>+91 6282549008</span>
-            </div>
-
-            {navLinks.map((link) => {
-              const isActive = activePage === link.id;
-              return (
-                <button
-                  key={link.id}
-                  onClick={() => handleNavClick(link.id)}
-                  className={`py-2 text-left flex items-center justify-between transition-colors ${
-                    isActive ? 'text-[#9E8255] font-bold' : 'text-[#1E1D1B] hover:text-[#9E8255]'
-                  }`}
-                >
-                  <span>{link.name}</span>
-                  <span className="text-xs">{isActive ? '●' : '→'}</span>
-                </button>
-              );
-            })}
-
-            {/* Mobile 10 Services Fast List */}
-            <div className="pt-2 pb-2 border-t border-black/[0.06]">
-              <span className="text-[10px] font-mono text-[#9E8255] block mb-2 tracking-widest">
-                OUR 10 SERVICES
-              </span>
-              <div className="grid grid-cols-2 gap-2 text-[11px] font-mono">
-                {CLIENT_SERVICES_CONFIG.map((s) => (
+          <div className="px-5 space-y-3">
+            
+            {/* Quick 2-Column Key Navigation Grid */}
+            <div className="grid grid-cols-2 gap-2 text-xs uppercase tracking-wider font-semibold font-mono">
+              {navLinks.map((link) => {
+                const isActive = activePage === link.id;
+                return (
                   <button
-                    key={s.id}
-                    onClick={() => handleServiceClick(s.id)}
-                    className="text-left text-[#524D46] hover:text-[#9E8255] py-1 truncate"
+                    key={link.id}
+                    onClick={() => handleNavClick(link.id)}
+                    className={`py-2.5 px-3 rounded text-left flex items-center justify-between transition-all border ${
+                      isActive
+                        ? 'bg-[#1E1D1B] text-[#D4B584] border-[#1E1D1B] font-bold'
+                        : 'bg-white/80 text-[#1E1D1B] border-black/10 hover:border-[#9E8255]'
+                    }`}
                   >
-                    {s.number}. {s.title}
+                    <span className="truncate">{link.name}</span>
+                    <span className="text-[10px]">{isActive ? '●' : '→'}</span>
                   </button>
-                ))}
-              </div>
+                );
+              })}
             </div>
 
-            <div className="pt-3 border-t border-black/[0.08] flex flex-col space-y-3">
+            {/* Quick Action Bar & Phone Links */}
+            <div className="pt-2 border-t border-black/[0.08] space-y-2">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onOpenConsultation();
                 }}
-                className="w-full py-3.5 bg-[#1E1D1B] text-white font-semibold text-center tracking-[0.2em] text-xs hover:bg-[#9E8255] transition-colors flex items-center justify-center space-x-2"
+                className="w-full py-3 bg-[#1E1D1B] text-white font-semibold text-center tracking-[0.2em] text-xs hover:bg-[#9E8255] transition-colors flex items-center justify-center space-x-2 rounded-sm"
               >
                 <span>START YOUR PROJECT</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </button>
 
-              <div className="flex items-center justify-between text-xs text-[#635E58] pt-2">
-                <a href="tel:916282549008" className="flex items-center space-x-2 hover:text-[#9E8255]">
-                  <Phone className="w-3.5 h-3.5 text-[#9E8255]" />
+              <div className="grid grid-cols-2 gap-2 text-[10px] font-mono text-[#524D46]">
+                <a
+                  href="tel:916282549008"
+                  className="py-1.5 px-2 bg-white/60 border border-black/5 rounded flex items-center justify-center space-x-1 hover:text-[#9E8255]"
+                >
+                  <Phone className="w-3 h-3 text-[#9E8255]" />
                   <span>+91 6282549008</span>
                 </a>
                 <a
-                  href="https://www.instagram.com/hyzin.interior/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#9E8255]"
+                  href="tel:918848023041"
+                  className="py-1.5 px-2 bg-white/60 border border-black/5 rounded flex items-center justify-center space-x-1 hover:text-[#9E8255]"
                 >
-                  @hyzin.interior
+                  <Phone className="w-3 h-3 text-[#9E8255]" />
+                  <span>+91 8848023041</span>
                 </a>
               </div>
             </div>
+
           </div>
         </div>
       </header>
