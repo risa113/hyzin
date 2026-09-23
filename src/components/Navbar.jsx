@@ -19,8 +19,8 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
     { id: 'home', name: 'Home' },
     { id: '3d-house', name: '3D House' },
     { id: 'photo-vault', name: '72 Photos' },
-    { id: 'services', name: '10 Disciplines', hasDropdown: true },
-    { id: 'projects', name: 'Portfolio (50+)' },
+    { id: 'services', name: '10 Services', hasDropdown: true },
+    { id: 'projects', name: 'Portfolio' },
     { id: 'about', name: 'About' },
     { id: 'contact', name: 'Contact' },
   ];
@@ -44,14 +44,14 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
   return (
     <>
       {/* Top Regional Coordinates Bar */}
-      <div className="w-full bg-[#111215] border-b border-white/[0.08] text-[10px] uppercase tracking-[0.25em] text-[#C4BCB1] py-2 px-4 sm:px-8 hidden md:flex items-center justify-between z-40 relative">
-        <div className="flex items-center space-x-3">
+      <div className="w-full bg-[#111215] border-b border-white/[0.08] text-[10px] uppercase tracking-[0.2em] text-[#C4BCB1] py-2 px-4 sm:px-8 hidden md:flex items-center justify-between z-40 relative">
+        <div className="flex items-center space-x-3 whitespace-nowrap">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#D4B584] animate-pulse"></span>
           <span className="font-mono text-[#FAF8F5]">Interior Design & Specialized Fabrication Studio</span>
           <span className="text-white/20">•</span>
           <span className="text-[#C4BCB1]/80">Kerala • Tamil Nadu • Karnataka</span>
         </div>
-        <div className="flex items-center space-x-6 text-[10px]">
+        <div className="flex items-center space-x-6 text-[10px] whitespace-nowrap">
           <a
             href="tel:916282549008"
             className="flex items-center space-x-1.5 text-[#FAF8F5] hover:text-[#D4B584] transition-colors"
@@ -76,15 +76,15 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled
             ? 'bg-[#FAF8F5]/98 backdrop-blur-xl border-b border-black/[0.08] shadow-md shadow-black/5 py-3'
-            : 'bg-[#FAF8F5]/95 backdrop-blur-md border-b border-black/[0.04] py-4'
+            : 'bg-[#FAF8F5]/95 backdrop-blur-md border-b border-black/[0.04] py-3.5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           
           {/* Logo with Real Brand Emblem Badge */}
           <button
             onClick={() => handleNavClick('home')}
-            className="group flex items-center space-x-3 focus:outline-none text-left"
+            className="group flex items-center space-x-3 focus:outline-none text-left shrink-0 whitespace-nowrap"
           >
             <img
               src={BRAND_ASSETS.logoBadge}
@@ -92,17 +92,17 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
               className="w-10 h-10 object-contain rounded border border-[#C5A065]/30 shadow-sm group-hover:scale-105 transition-transform"
             />
             <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-2xl font-bold tracking-[0.18em] text-[#1E1D1B] group-hover:text-[#9E8255] transition-colors duration-300">
+              <span className="font-serif text-lg sm:text-xl xl:text-2xl font-bold tracking-[0.16em] text-[#1E1D1B] group-hover:text-[#9E8255] transition-colors duration-300">
                 HYZIN INTERIOR
               </span>
-              <span className="text-[9px] uppercase tracking-[0.32em] text-[#8C8275] -mt-0.5 font-mono">
+              <span className="text-[9px] uppercase tracking-[0.28em] text-[#8C8275] -mt-0.5 font-mono">
                 Interiors & Fabrication
               </span>
             </div>
           </button>
 
           {/* Desktop Navigation across 5 Dedicated Pages + Services Dropdown */}
-          <nav className="hidden lg:flex items-center space-x-7 text-[12px] uppercase tracking-[0.2em] font-medium text-[#524D46]">
+          <nav className="hidden lg:flex items-center space-x-3 xl:space-x-6 text-[11px] xl:text-[12px] uppercase tracking-[0.15em] xl:tracking-[0.18em] font-semibold text-[#524D46] whitespace-nowrap">
             {navLinks.map((link) => {
               const isActive = activePage === link.id;
 
@@ -116,8 +116,8 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
                   >
                     <button
                       onClick={() => handleNavClick('services')}
-                      className={`flex items-center space-x-1.5 py-1 transition-colors duration-300 ${
-                        isActive ? 'text-[#1E1D1B] font-semibold' : 'hover:text-[#1E1D1B]'
+                      className={`flex items-center space-x-1 py-1 transition-colors duration-300 whitespace-nowrap ${
+                        isActive ? 'text-[#1E1D1B] font-bold border-b-2 border-[#9E8255]' : 'hover:text-[#1E1D1B]'
                       }`}
                     >
                       <span>{link.name}</span>
@@ -164,8 +164,8 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
                 <button
                   key={link.id}
                   onClick={() => handleNavClick(link.id)}
-                  className={`relative py-1 transition-colors duration-300 group ${
-                    isActive ? 'text-[#1E1D1B] font-semibold' : 'hover:text-[#1E1D1B]'
+                  className={`relative py-1 transition-colors duration-300 group whitespace-nowrap ${
+                    isActive ? 'text-[#1E1D1B] font-bold' : 'hover:text-[#1E1D1B]'
                   }`}
                 >
                   <span>{link.name}</span>
@@ -180,10 +180,10 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
           </nav>
 
           {/* Right Action CTA */}
-          <div className="hidden sm:flex items-center space-x-4">
+          <div className="hidden sm:flex items-center space-x-4 shrink-0">
             <button
               onClick={onOpenConsultation}
-              className="px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] font-medium text-white bg-[#1E1D1B] hover:bg-[#9E8255] transition-all duration-300 shadow-sm flex items-center space-x-2 group"
+              className="px-4 xl:px-5 py-2.5 text-[10px] xl:text-[11px] uppercase tracking-[0.2em] font-semibold text-white bg-[#1E1D1B] hover:bg-[#9E8255] transition-all duration-300 shadow-sm flex items-center space-x-2 group whitespace-nowrap rounded-sm"
             >
               <span>START YOUR PROJECT</span>
               <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
