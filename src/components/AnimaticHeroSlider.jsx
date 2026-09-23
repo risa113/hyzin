@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, ArrowRight, Maximize2, Play, Pause, Sparkles } from 'lucide-react';
+import { ArrowRight, Maximize2, Sparkles } from 'lucide-react';
 import { HERO_SLIDES } from '../data/clientAssets';
 import { statsData } from '../data/testimonialsData';
 
@@ -164,33 +164,6 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
               </button>
             ))}
           </div>
-
-          {/* Controls & Auto Play Toggle */}
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="p-2.5 bg-white/5 hover:bg-white/15 border border-white/10 text-white/80 transition-colors shadow-sm rounded-xl"
-              title={isPlaying ? 'Pause Auto Slide' : 'Play Auto Slide'}
-            >
-              {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 text-[#D4B584]" />}
-            </button>
-
-            <button
-              onClick={handlePrev}
-              className="p-2.5 bg-white/5 hover:bg-[#D4B584] hover:text-black border border-white/10 text-white transition-colors shadow-sm rounded-xl"
-              aria-label="Previous Slide"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={handleNext}
-              className="p-2.5 bg-white/5 hover:bg-[#D4B584] hover:text-black border border-white/10 text-white transition-colors shadow-sm rounded-xl"
-              aria-label="Next Slide"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-
         </div>
 
         {/* 4 Credibility Metric Counters */}

@@ -169,30 +169,8 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                   <Maximize2 className="w-4 h-4" />
                 </button>
 
-                {/* Slideshow Progress & Navigation Overlay Controls */}
-                <div className="absolute bottom-5 inset-x-5 flex items-center justify-between z-10">
-                  <div className="flex items-center space-x-2">
-                    <button
-                      onClick={handlePrevSlide}
-                      className="p-3 rounded-full bg-black/80 hover:bg-[#C5A065] hover:text-black text-white border border-white/20 backdrop-blur-md transition-all"
-                    >
-                      <ChevronLeft className="w-5 h-5" />
-                    </button>
-                    <button
-                      onClick={handleNextSlide}
-                      className="p-3 rounded-full bg-black/80 hover:bg-[#C5A065] hover:text-black text-white border border-white/20 backdrop-blur-md transition-all"
-                    >
-                      <ChevronRight className="w-5 h-5" />
-                    </button>
-                    <button
-                      onClick={() => setIsPlaying(!isPlaying)}
-                      className="p-3 rounded-full bg-black/80 hover:bg-white hover:text-black text-[#D4B584] border border-white/20 backdrop-blur-md transition-all"
-                      title={isPlaying ? "Pause Auto-Slide" : "Play Auto-Slide"}
-                    >
-                      {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                    </button>
-                  </div>
-
+                {/* Slideshow Progress Overlay */}
+                <div className="absolute bottom-5 right-5 z-10">
                   <span className="font-mono text-xs text-[#D4B584] bg-black/80 px-4 py-2 border border-white/10 rounded tracking-widest">
                     {String(currentSlideIndex + 1).padStart(2, '0')} / {String(filteredProjects.length).padStart(2, '0')}
                   </span>
