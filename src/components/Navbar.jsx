@@ -45,7 +45,7 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
       <div className="w-full bg-[#111215] border-b border-white/[0.08] text-[10px] uppercase tracking-[0.25em] text-[#C4BCB1] py-2 px-4 sm:px-8 hidden md:flex items-center justify-between z-40 relative">
         <div className="flex items-center space-x-3">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#D4B584] animate-pulse"></span>
-          <span className="font-mono text-[#FAF8F5]">Interior Architecture & Specialized Fabrication</span>
+          <span className="font-mono text-[#FAF8F5]">Interior Design & Specialized Fabrication Studio</span>
           <span className="text-white/20">•</span>
           <span className="text-[#C4BCB1]/80">Kerala • Tamil Nadu • Karnataka</span>
         </div>

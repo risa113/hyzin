@@ -68,7 +68,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
               {category || 'HYZIN ORIGINAL CLIENT WORK'}
             </span>
             <h4 className="font-serif text-base sm:text-lg text-[#FAF8F5] line-clamp-1">
-              {title || 'Architectural Specification'}
+              {title || 'Project Specification'}
             </h4>
           </div>
         </div>

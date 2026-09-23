@@ -64,21 +64,21 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
                   onClick={() => onNavigate('about')}
                   className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.25em] text-[#1E1D1B] hover:text-[#9E8255] font-semibold transition-colors"
                 >
-                  <span>DISCOVER OUR ARCHITECTURAL ETHOS</span>
+                  <span>DISCOVER OUR DESIGN & FABRICATION ETHOS</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
-            {/* Split Architectural Image with Original Client Work */}
+            {/* Split Work Image with Original Client Work */}
             <div className="lg:col-span-5 relative">
               <div 
-                onClick={() => onOpenLightbox && onOpenLightbox(editorialImage, 0, 'HYZIN Architectural Living & Fluted Wood Detailing', 'Paneling')}
+                onClick={() => onOpenLightbox && onOpenLightbox(editorialImage, 0, 'HYZIN Living & Fluted Wood Detailing', 'Paneling')}
                 className="relative overflow-hidden border border-black/10 shadow-2xl bg-white animatic-reflection cursor-pointer group"
               >
                 <img
                   src={editorialImage}
-                  alt="HYZIN Architectural Living"
+                  alt="HYZIN Living & Paneling"
                   className="w-full h-[440px] sm:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>

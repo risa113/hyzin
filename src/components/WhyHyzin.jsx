@@ -12,7 +12,7 @@ export default function WhyHyzin() {
     },
     {
       title: "DETAIL MATTERS",
-      sub: "Millimeter-level architectural rigor",
+      sub: "Millimeter-level precision rigor",
       desc: "Proportions, shadow gaps, tactile transitions between stone and timber, and glare-free lighting angles are obsessed over down to the millimeter."
     },
     {
@@ -43,7 +43,7 @@ export default function WhyHyzin() {
               WHY HYZIN
             </h2>
             <p className="mt-4 text-sm sm:text-base text-[#a8a195] font-light leading-relaxed">
-              We operate not as a commercial contractor, but as a dedicated architectural atelier committed to enduring quality, intellectual restraint, and profound client discretion.
+              We operate not as a commercial contractor, but as a dedicated interior & fabrication atelier committed to enduring quality, intellectual restraint, and profound client discretion.
             </p>
           </div>
 

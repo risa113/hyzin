@@ -37,7 +37,7 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
               Selected Work & <span className="italic font-light text-[#D4B584]">Fabrication.</span>
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[#B3ACA0] font-light max-w-xl">
-              Original on-site photographs of bespoke residential interiors, architectural aluminium systems, and precision metal fabrication delivered across South India.
+              Original on-site photographs of bespoke residential interiors, modular aluminium systems, and precision metal fabrication delivered across South India.
             </p>
           </div>
 

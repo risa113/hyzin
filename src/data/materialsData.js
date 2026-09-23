@@ -1,9 +1,13 @@
-const assetUrl = (filename) => `/kerala-assets/${encodeURIComponent(filename)}`;
+const assetUrl = (filename) => {
+  const base = import.meta.env.BASE_URL || '/';
+  const prefix = base.endsWith('/') ? base : `${base}/`;
+  return `${prefix}kerala-assets/${encodeURIComponent(filename)}`;
+};
 
 export const materialsData = [
   {
     id: "aluminium-profiles",
-    name: "Architectural Aluminium 6063 T6",
+    name: "Structural Aluminium 6063 T6",
     category: "Structural Core",
     origin: "Precision Extruded Profiles",
     description: "100% moisture-proof, termite-proof, and corrosion-resistant aluminium core framework engineered to withstand Kerala's heavy monsoons.",

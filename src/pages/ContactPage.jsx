@@ -19,12 +19,12 @@ export default function ContactPage({ prefilledProject = '', selectedRegion = ''
       a: "Absolutely. We routinely collaborate with leading civil and landscape architects across South India during early blueprint stages to ensure electrical, plumbing, ceiling heights, and material transitions are harmonized before civil casting begins."
     },
     {
-      q: "What is the typical timeline for an architectural interior?",
+      q: "What is the typical timeline for an interior & fabrication project?",
       a: "Concept design and working drawings generally take 4–6 weeks. Turnkey execution varies based on scale: bespoke apartments (3–5 months), luxury residential villas and heritage manors (6–10 months). Every milestone is tied to strict timeline audits."
     },
     {
       q: "How can I book an on-site consultation?",
-      a: "You can submit the consultation form below, or directly message our principal architect on WhatsApp at +91 6282549008. We will schedule a site visit or studio meeting within 24 to 48 hours."
+      a: "You can submit the consultation form below, or directly message our principal team on WhatsApp at +91 6282549008. We will schedule a site visit or studio meeting within 24 to 48 hours."
     }
   ];
 
@@ -43,7 +43,7 @@ export default function ContactPage({ prefilledProject = '', selectedRegion = ''
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-[#524D46] font-light leading-relaxed">
-            Tell us about your property, architectural drawings, and lifestyle requirements. We accept a limited number of commissions per quarter to ensure obsessive attention to detail.
+            Tell us about your property, design ideas, and lifestyle requirements. We accept a limited number of commissions per quarter to ensure obsessive attention to detail.
           </p>
         </div>
       </section>

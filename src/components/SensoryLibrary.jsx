@@ -12,8 +12,8 @@ export default function SensoryLibrary() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.08] pb-8 mb-16">
           <div>
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-3">
-              <span>03 / ARCHITECTURAL ARCHIVE</span>
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-4">
+              <span>03 / MATERIAL ARCHIVE</span>
               <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
             </div>
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight">

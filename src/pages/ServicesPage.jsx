@@ -36,7 +36,7 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-black/[0.08]">
         <div className="max-w-3xl">
           <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono mb-4">
-            <span>THE 10 ARCHITECTURAL DISCIPLINES</span>
+            <span>THE 10 OFFICIAL CLIENT WORK DISCIPLINES</span>
             <span className="w-12 h-[1px] bg-[#9E8255]/40"></span>
           </div>
 
@@ -45,7 +45,7 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-[#524D46] font-light leading-relaxed">
-            Ten specialized services covering complete interior architecture, modular joinery, and structural metal fabrication across Kerala, Tamil Nadu, and Karnataka.
+            Ten specialized services covering complete interior design, modular joinery, and structural metal fabrication across Kerala, Tamil Nadu, and Karnataka.
           </p>
         </div>
       </section>
@@ -54,7 +54,7 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono block mb-2">
-            ARCHITECTURAL METHODOLOGY
+            DESIGN & FABRICATION METHODOLOGY
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-[#1E1D1B]">
             The Geometry of Quietness

@@ -161,7 +161,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
             {/* Privacy note */}
             <div className="mt-8 p-4 bg-[#111216] border border-white/[0.04] text-[11px] text-[#7d786f] font-mono leading-relaxed">
-              We respect your confidentiality. Client drawings and architectural details are handled under strict non-disclosure.
+              We respect your confidentiality. Client drawings and project details are handled under strict non-disclosure.
             </div>
           </div>
 

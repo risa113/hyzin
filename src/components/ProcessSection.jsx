@@ -6,61 +6,54 @@ export default function ProcessSection({ onOpenConsultation }) {
 
   const steps = [
     {
-      num: "01",
-      title: "DISCOVER",
-      subtitle: "Lifestyle Dialogue & Spatial Intent",
-      description: "We begin with a deep exploration of your daily rituals, aesthetic affinities, functional requirements, and family dynamics. We review architectural drawings and establish clear budget frameworks.",
-      deliverable: "Spatial Brief Document & Feasibility Matrix",
-      icon: Compass
+      number: "01",
+      title: "DISCOVERY & BRIEFING",
+      description: "We begin with a deep exploration of your daily rituals, aesthetic affinities, functional requirements, and family dynamics. We review site plans and establish clear budget frameworks.",
+      deliverable: "Spatial Program & Feasibility Dossier"
     },
     {
-      num: "02",
-      title: "CONCEPT",
-      subtitle: "Mood, Materiality & Spatial Flow",
-      description: "Our design team develops the overarching architectural narrative, mood boards, physical material palettes (stone, wood, metals), and schematic zoning layouts.",
-      deliverable: "Curated Material Trays & Conceptual 3D Moodboards",
-      icon: Lightbulb
+      number: "02",
+      title: "CONCEPTUAL DESIGN",
+      description: "Our design team develops the overarching design narrative, mood boards, physical material palettes (stone, wood, metals), and schematic zoning layouts.",
+      deliverable: "Design Vision & Material Board"
     },
     {
-      num: "03",
-      title: "DESIGN",
-      subtitle: "Millimeter Precision & 3D Visualization",
-      description: "We draft comprehensive working blueprints, 3D photorealistic cinematic renders, custom joinery details, electrical schedules, and HVAC coordinates.",
-      deliverable: "Cinematic 3D Visuals & Complete Execution Blueprints",
-      icon: PenTool
+      number: "03",
+      title: "TECHNICAL SPECIFICATION",
+      description: "Every joint, shadow gap, lighting conduit, and custom joinery section is translated into millimeter-precise CAD working drawings and structural engineering schematics.",
+      deliverable: "100% Construction Drawing Package"
     },
     {
-      num: "04",
-      title: "EXECUTE",
-      subtitle: "Master Craftsmanship & On-Site Vigilance",
-      description: "Our dedicated site engineers supervise every phase of civil modification, acoustic insulation, bespoke furniture carpentry, and quarry slab installation with zero deviation.",
-      deliverable: "Weekly Photographic Progress Reports & Milestone Audits",
-      icon: Hammer
+      number: "04",
+      title: "SHOP FABRICATION & SITE BUILD",
+      description: "Sub-assemblies are pre-fabricated in our controlled aluminium, steel, and joinery workshops before undergoing clean, white-glove site installation by master craftsmen.",
+      deliverable: "Verified Site Installation"
     },
     {
-      num: "05",
-      title: "DELIVER",
-      subtitle: "White-Glove Detailing & Sovereign Handover",
-      description: "Final styling, deep cleaning, art curation, and smart lighting commissioning before presenting your completed architectural sanctuary with full warranty documentation.",
-      deliverable: "Keys, Architectural Archive Dossier & Lifetime Support",
-      icon: KeyRound
+      number: "05",
+      title: "COMMISSIONING & HANDOVER",
+      description: "Final styling, deep cleaning, art curation, and smart lighting commissioning before presenting your completed space with full warranty documentation.",
+      deliverable: "Keys, Project Archive Dossier & Lifetime Support"
     }
   ];
 
   return (
-    <section id="process" className="py-24 sm:py-32 bg-[#09090b] border-t border-white/[0.06] relative">
+    <section id="process" className="py-24 sm:py-32 bg-[#08090a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="inline-flex items-center space-x-2 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-3">
-            <span>THE ARCHITECTURAL JOURNEY</span>
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.08] pb-8 mb-16">
+          <div>
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-3">
+              <span>THE INTERIOR & FABRICATION JOURNEY</span>
+              <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
+            </div>
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight">
+              Process & Precision
+            </h2>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight">
-            FROM IDEA TO REALITY
-          </h2>
-          <p className="mt-4 text-sm sm:text-base text-[#aba395] font-light leading-relaxed">
-            A disciplined five-stage methodology engineered to eliminate uncertainty and deliver pristine architectural fidelity.
+          <p className="mt-4 md:mt-0 text-sm text-[#9b9487] font-light max-w-sm">
+            A disciplined five-stage methodology engineered to eliminate uncertainty and deliver pristine design fidelity.
           </p>
         </div>
 

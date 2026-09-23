@@ -53,7 +53,7 @@ export default function RegionalStudios({ onSelectRegion, onOpenLightbox }) {
             </h2>
 
             <p className="mt-4 text-base text-[#aba395] font-light leading-relaxed">
-              With dedicated fabrication facilities and operational presence across South India, HYZIN delivers localized site vigilance alongside our singular standard of quiet architectural luxury.
+              With dedicated fabrication facilities and operational presence across South India, HYZIN delivers localized site vigilance alongside our singular standard of quiet design luxury.
             </p>
 
             {/* Interactive Studios Accordion List */}

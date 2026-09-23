@@ -94,7 +94,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
     },
     {
       id: 'ceiling',
-      name: 'Architectural Cove False Ceiling',
+      name: 'Cove False Ceiling & Lighting',
       icon: Layers,
       pos: new THREE.Vector3(0, 5.2, 0),
       camPos: new THREE.Vector3(4, 7, 4),
@@ -521,13 +521,13 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C5A065]/15 border border-[#C5A065]/30 text-[#8C6D3B] text-xs font-semibold tracking-wider uppercase mb-3">
-                <Sparkles className="w-3.5 h-3.5 text-[#C5A065]" /> 3D Architectural Villa Model
+                <Sparkles className="w-3.5 h-3.5 text-[#C5A065]" /> 3D Interactive House Model
               </div>
               <h2 className="text-3xl sm:text-4xl font-serif text-[#1E1D1B] font-bold">
                 Interactive 3D House <span className="italic text-[#C5A065]">Work Showcase</span>
               </h2>
               <p className="text-sm text-[#666055] mt-1 max-w-2xl">
-                Explore our integrated Kerala interior & structural craftsmanship inside an interactive 3D villa. Rotate 360°, inspect day/night cove illumination, and click hotspots to view real project photos.
+                Explore our 10 client work disciplines (Aluminium Interior, Wall Drop, Kitchen Cabinet, Loft, Accessories, Ceiling, Paneling, Steel Doors, Steel & MS Fabrication) inside an interactive 3D house model.
               </p>
             </div>
 

@@ -11,7 +11,7 @@ export default function Hero({ onOpenConsultation, onExploreWork }) {
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img
           src={heroBg}
-          alt="Luxury Architectural Living Space by HYZIN INTERIOR"
+          alt="Luxury Interior Space by HYZIN INTERIOR"
           className="w-full h-full object-cover object-center animate-slow-zoom filter brightness-[0.42] contrast-[1.08]"
         />
         {/* Gradients to blend smoothly with dark theme */}
@@ -26,7 +26,7 @@ export default function Hero({ onOpenConsultation, onExploreWork }) {
           <div className="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-none border border-[#c5a065]/30 bg-black/40 backdrop-blur-md mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#c5a065]"></span>
             <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-[#e0d6c5] font-medium">
-              Architectural Sanctuaries • South India
+              Interior Design & Specialized Fabrication • South India
             </span>
           </div>
 

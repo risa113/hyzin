@@ -33,7 +33,7 @@ export default function App() {
       isOpen: true,
       images: list,
       initialIndex: typeof initialIndex === 'number' ? initialIndex : 0,
-      title: title || 'HYZIN Architectural Work',
+      title: title || 'HYZIN Interior & Fabrication Work',
       category: category || 'Original Client Work'
     });
   };

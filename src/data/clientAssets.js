@@ -16,7 +16,7 @@ export const BRAND_ASSETS = {
 
 // All 72 Master Client Photos Index with Metadata
 export const ALL_KERALA_PHOTOS = [
-  { id: 1, title: "Master Suite Wall Drop & Loft Architecture", category: "Wall Drop", location: "Calicut, Kerala", filename: "WhatsApp Image 2026-09-22 at 3.14.03 PM.jpeg", tags: ["Wardrobe", "Wall Drop", "Loft", "Soft Mauve"] },
+  { id: 1, title: "Master Suite Wall Drop & Loft Design", category: "Wall Drop", location: "Calicut, Kerala", filename: "WhatsApp Image 2026-09-22 at 3.14.03 PM.jpeg", tags: ["Wardrobe", "Wall Drop", "Loft", "Soft Mauve"] },
   { id: 2, title: "Artisanal Living & Dining Fluted Partition", category: "Paneling", location: "Thrissur, Kerala", filename: "WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg", tags: ["Paneling", "CNC Jali", "Fluted Wood", "Divider"] },
   { id: 3, title: "Backlit Onyx Media Wall & Gypsum Ceiling", category: "Ceiling", location: "Ernakulam, Kerala", filename: "WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg", tags: ["Ceiling", "Cove Lighting", "Onyx Marble", "TV Wall"] },
   { id: 4, title: "Designer Bathroom Vanity & Pill LED Mirror", category: "Accessories", location: "Bengaluru", filename: "WhatsApp Image 2026-09-22 at 3.15.19 PM.jpeg", tags: ["Bathroom", "Vanity", "Peacock Blue", "LED Mirror"] },
@@ -31,9 +31,9 @@ export const ALL_KERALA_PHOTOS = [
   { id: 13, title: "Master Wall Drop Assembly in Progress", category: "Wall Drop", location: "Kochi", filename: "WhatsApp Image 2026-09-22 at 3.16.55 PM.jpeg", tags: ["Site Work", "Wardrobe Installation", "Frame"] },
   { id: 14, title: "Stainless Steel Glass Clamp & Handrail Joinery", category: "Steel Fabrication", location: "Kottayam", filename: "WhatsApp Image 2026-09-22 at 3.17.48 PM.jpeg", tags: ["SS 304", "Glass Clamp", "Balustrade Detail"] },
   { id: 15, title: "Interior Woodcraft & Framing Site View", category: "Paneling", location: "Ernakulam", filename: "WhatsApp Image 2026-09-22 at 3.18.17 PM.jpeg", tags: ["Site Work", "Framing", "Precision Craft"] },
-  { id: 16, title: "HYZIN 3D Architectural Brand Emblem", category: "Brand Asset", location: "Kerala Studio", filename: "WhatsApp Image 2026-09-22 at 3.18.22 PM.jpeg", tags: ["Logo 3D", "Brand Identity", "HYZIN"] },
+  { id: 16, title: "HYZIN 3D Brand Emblem", category: "Brand Asset", location: "Kerala Studio", filename: "WhatsApp Image 2026-09-22 at 3.18.22 PM.jpeg", tags: ["Logo 3D", "Brand Identity", "HYZIN"] },
   { id: 17, title: "Metallic Brass Seal & Authenticity Badge", category: "Brand Asset", location: "Kerala Studio", filename: "WhatsApp Image 2026-09-22 at 3.18.25 PM.jpeg", tags: ["Badge", "Official Seal", "Quality Proof"] },
-  { id: 18, title: "Architectural Business Suite Identity Card", category: "Brand Asset", location: "Kerala Studio", filename: "WhatsApp Image 2026-09-22 at 3.18.27 PM.jpeg", tags: ["Business Card", "Contact Suite", "Consultation"] },
+  { id: 18, title: "Business Suite Identity Card", category: "Brand Asset", location: "Kerala Studio", filename: "WhatsApp Image 2026-09-22 at 3.18.27 PM.jpeg", tags: ["Business Card", "Contact Suite", "Consultation"] },
   { id: 19, title: "Living Hall Divider Base Frame Installation", category: "Paneling", location: "Thrissur", filename: "WhatsApp Image 2026-09-22 at 3.18.30 PM.jpeg", tags: ["Partition Work", "Structure", "On Site"] },
   { id: 20, title: "Aluminium Powder-Coated Interior Cabinet", category: "Aluminium Interior", location: "Palakkad", filename: "WhatsApp Image 2026-09-22 at 3.21.51 PM.jpeg", tags: ["Aluminium", "Termite Proof", "Cabinetry"] },
   { id: 21, title: "Custom Wardrobe Internal Pullouts & Drawers", category: "Wall Drop", location: "Calicut", filename: "WhatsApp Image 2026-09-22 at 3.21.55 PM (1).jpeg", tags: ["Internal Storage", "Tandem Box", "Drawers"] },
@@ -67,7 +67,7 @@ export const ALL_KERALA_PHOTOS = [
   { id: 49, title: "Custom MS Gate Deadbolt & Lock Housing", category: "MS Fabrication", location: "Calicut", filename: "WhatsApp Image 2026-09-22 at 3.22.19 PM.jpeg", tags: ["Gate Lock", "Deadbolt", "MS Hardware"] },
   { id: 50, title: "Horizontal MS Security Window Bar Array", category: "MS Fabrication", location: "Coimbatore", filename: "WhatsApp Image 2026-09-22 at 3.22.20 PM (1).jpeg", tags: ["Window Bars", "MS Security", "Minimalist"] },
   { id: 51, title: "Balcony Mild Steel Safety Guard Railing", category: "MS Fabrication", location: "Kannur", filename: "WhatsApp Image 2026-09-22 at 3.22.20 PM.jpeg", tags: ["Balcony Guard", "MS Railing", "Safety"] },
-  { id: 52, title: "Architectural MS Window Security Grill Full View", category: "MS Fabrication", location: "Coimbatore", filename: "WhatsApp Image 2026-09-22 at 3.22.28 PM.jpeg", tags: ["Full Grill View", "Architectural MS", "Epoxy Finish"] },
+  { id: 52, title: "MS Window Security Grill Full View", category: "MS Fabrication", location: "Coimbatore", filename: "WhatsApp Image 2026-09-22 at 3.22.28 PM.jpeg", tags: ["Full Grill View", "MS Fabrication", "Epoxy Finish"] },
   { id: 53, title: "Wardrobe Glass Door & LED Sensor Shelf", category: "Wall Drop", location: "Kochi", filename: "WhatsApp Image 2026-09-22 at 3.22.29 PM.jpeg", tags: ["Glass Door", "Sensor LED", "Wardrobe"] },
   { id: 54, title: "Sage Mint Green Aluminium Modular Kitchen Suite", category: "Kitchen Cabinet", location: "Palakkad", filename: "WhatsApp Image 2026-09-22 at 3.22.32 PM (1).jpeg", tags: ["Mint Green", "Modular Kitchen", "Aluminium"] },
   { id: 55, title: "Mint Green Overhead High Storage Loft", category: "Loft", location: "Palakkad", filename: "WhatsApp Image 2026-09-22 at 3.22.32 PM.jpeg", tags: ["Mint Loft", "Overhead Storage", "Acrylic"] },
@@ -79,7 +79,7 @@ export const ALL_KERALA_PHOTOS = [
   { id: 61, title: "Staircase Glass Balustrade & SS Handrail", category: "Steel Fabrication", location: "Kottayam", filename: "WhatsApp Image 2026-09-22 at 3.22.35 PM (1).jpeg", tags: ["SS Handrail", "Staircase Balustrade", "Glass"] },
   { id: 62, title: "Stainless Steel Handrail Wall Bracket Mount", category: "Steel Fabrication", location: "Kottayam", filename: "WhatsApp Image 2026-09-22 at 3.22.35 PM (2).jpeg", tags: ["SS Bracket", "Wall Mount", "Handrail"] },
   { id: 63, title: "Granite Step Tread Concealed LED Light Strip", category: "Steel Fabrication", location: "Kottayam", filename: "WhatsApp Image 2026-09-22 at 3.22.35 PM.jpeg", tags: ["Step Tread LED", "Night Light", "Granite Steps"] },
-  { id: 64, title: "Coffered Teak Wood Living Ceiling Grid", category: "Ceiling", location: "Thiruvalla", filename: "WhatsApp Image 2026-09-22 at 3.22.36 PM (1).jpeg", tags: ["Coffered Ceiling", "Teak Grid", "Architectural"] },
+  { id: 64, title: "Coffered Teak Wood Living Ceiling Grid", category: "Ceiling", location: "Thiruvalla", filename: "WhatsApp Image 2026-09-22 at 3.22.36 PM (1).jpeg", tags: ["Coffered Ceiling", "Teak Grid", "Craftsmanship"] },
   { id: 65, title: "Gypsum False Ceiling Concealed Perimeter Cove", category: "Ceiling", location: "Kochi", filename: "WhatsApp Image 2026-09-22 at 3.22.36 PM (2).jpeg", tags: ["Gypsum Cove", "Perimeter Lighting", "Bedroom"] },
   { id: 66, title: "Full-Height Wardrobe Shutter Alignment", category: "Wall Drop", location: "Calicut", filename: "WhatsApp Image 2026-09-22 at 3.22.36 PM.jpeg", tags: ["Wardrobe Shutter", "Full Height", "Precision"] },
   { id: 67, title: "Living Hall Multi-Tier Cove Lighting Ceiling", category: "Ceiling", location: "Ernakulam", filename: "WhatsApp Image 2026-09-22 at 3.22.37 PM (1).jpeg", tags: ["Multi Tier Cove", "Ambient Light", "Living Room"] },
@@ -112,7 +112,7 @@ export const HERO_SLIDES = [
     title: "Sculpted Storage.",
     emphasis: "Flawless",
     titleEnd: "Joinery.",
-    tagline: "Floor-to-ceiling modular wardrobe architectures with custom display niches and warm LED illumination.",
+    tagline: "Floor-to-ceiling modular wardrobe systems with custom display niches and warm LED illumination.",
     locationTag: "MODULAR WARDROBE • CALICUT, KERALA",
     image: assetUrl("WhatsApp Image 2026-09-22 at 3.14.03 PM.jpeg"),
     badge: "Wall Drop • Custom Design • Smart Storage"
@@ -134,7 +134,7 @@ export const HERO_SLIDES = [
     title: "Atmospheric Caliber.",
     emphasis: "Illuminated",
     titleEnd: "Ceilings.",
-    tagline: "Architectural false ceiling designs with concealed 2700K warm cove lighting and back-lit marble media units.",
+    tagline: "False ceiling designs with concealed 2700K warm cove lighting and back-lit marble media units.",
     locationTag: "MEDIA LOUNGE • ERNAKULAM, KERALA",
     image: assetUrl("WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg"),
     badge: "Ceiling • Back-Lit Onyx • Cove Lighting"
@@ -165,7 +165,7 @@ export const BEFORE_AFTER_PAIRS = [
   },
   {
     id: "ba-2",
-    title: "Living & Dining Architectural Partition",
+    title: "Living & Dining Spatial Partition",
     category: "Paneling & Partition",
     location: "Thrissur, Kerala",
     beforeImage: assetUrl("WhatsApp Image 2026-09-22 at 3.18.30 PM.jpeg"),
@@ -174,7 +174,7 @@ export const BEFORE_AFTER_PAIRS = [
   },
   {
     id: "ba-3",
-    title: "Bedroom Wall Drop & Loft Architecture",
+    title: "Bedroom Wall Drop & Loft Design",
     category: "Wall Drop & Loft",
     location: "Calicut, Kerala",
     beforeImage: assetUrl("WhatsApp Image 2026-09-22 at 3.16.01 PM.jpeg"),
@@ -190,7 +190,7 @@ export const CLIENT_SERVICES_CONFIG = [
     number: "01",
     title: "Aluminium Interior",
     tagline: "Sleek, termite-proof, moisture-resilient structural interior engineering.",
-    description: "High-grade anodized and powder-coated aluminium interior frameworks designed specifically for Kerala's humid climate. We craft custom modular under-stair storage units, lightweight architectural cabinets, and durable interior framing that lasts decades without corrosion or warping.",
+    description: "High-grade anodized and powder-coated aluminium interior frameworks designed specifically for Kerala's humid climate. We craft custom modular under-stair storage units, lightweight custom cabinets, and durable interior framing that lasts decades without corrosion or warping.",
     deliverables: [
       "Heavy-duty powder-coated aluminium profiles",
       "Under-stair space-saving modular cabinets",
@@ -212,7 +212,7 @@ export const CLIENT_SERVICES_CONFIG = [
     tagline: "Floor-to-ceiling modular wardrobe systems crafted with surgical precision.",
     description: "Bespoke full-height wall drop wardrobes and almirahs tailored around your bedroom geometry. Featuring premium acrylic shutters, tinted reflective glass doors, integrated dressing vanity mirrors, fluted accents, and illuminated internal shelving.",
     deliverables: [
-      "Custom multi-door wardrobe architecture",
+      "Custom multi-door wardrobe systems",
       "Integrated dresser vanity and full-length mirrors",
       "Illuminated open display niches with 2700K warm LED",
       "Premium champagne gold & black profile trims"
@@ -296,12 +296,12 @@ export const CLIENT_SERVICES_CONFIG = [
     number: "06",
     title: "Ceiling",
     tagline: "Sculptural false ceilings, wooden coffered panels, and cove lighting choreography.",
-    description: "Architectural ceiling craftsmanship that transforms room ambience. We fabricate multi-tier gypsum ceilings, rich wooden coffered ceilings, chevron timber patterns, and perimeter indirect LED coves for living halls, bedrooms, and dining areas.",
+    description: "False ceiling craftsmanship that transforms room ambience. We fabricate multi-tier gypsum ceilings, rich wooden coffered ceilings, chevron timber patterns, and perimeter indirect LED coves for living halls, bedrooms, and dining areas.",
     deliverables: [
       "Geometric chevron & coffered wooden ceiling paneling",
       "Multi-layered gypsum false ceiling designs",
       "Concealed perimeter cove LED strip lighting (2700K - 4000K)",
-      "Recessed architectural anti-glare downlights"
+      "Recessed anti-glare downlights"
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM (1).jpeg"),
     gallery: [
@@ -317,11 +317,11 @@ export const CLIENT_SERVICES_CONFIG = [
     number: "07",
     title: "Paneling",
     tagline: "Fluted wooden accents, backlit marble, CNC jali dividers, and TV media walls.",
-    description: "Tactile wall paneling and spatial partition architectures that infuse warmth and character. Specializing in vertical fluted timber wall panels, backlit onyx and Italian marble media backdrops, acoustic louvers, and CNC laser-cut decorative dividers.",
+    description: "Tactile wall paneling and spatial partition design that infuses warmth and character. Specializing in vertical fluted timber wall panels, backlit onyx and Italian marble media backdrops, acoustic louvers, and CNC laser-cut decorative dividers.",
     deliverables: [
       "Vertical fluted timber & charcoal louvers",
       "Back-lit translucent onyx & marble TV wall backdrops",
-      "CNC cut jali architectural room partitions",
+      "CNC cut jali room partitions",
       "Floating TV media consoles with brass profile trims"
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg"),
@@ -344,7 +344,7 @@ export const CLIENT_SERVICES_CONFIG = [
       "Engineered multi-point locking security doors",
       "Weather-sealed frames resistant to rain and humid air",
       "Modern stainless steel long pull handles & digital lock compatibility",
-      "Custom architectural jambs and heavy-gauge hinges"
+      "Custom door jambs and heavy-gauge hinges"
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM (1).jpeg"),
     gallery: [
@@ -358,13 +358,13 @@ export const CLIENT_SERVICES_CONFIG = [
     id: "steel-fabrication",
     number: "09",
     title: "Steel Fabrication",
-    tagline: "Architectural stainless steel railings, balustrades, and structural elements.",
+    tagline: "Stainless steel railings, balustrades, and structural elements.",
     description: "Premium stainless steel fabrication for luxury homes, staircases, and balconies. Utilizing Grade 304 and 316 stainless steel with toughened glass infill panels, concealed fasteners, and integrated step tread LED lighting for safety and modern visual lightness.",
     deliverables: [
       "Stainless steel & toughened glass staircase balustrades",
       "Exterior balcony safety railings and parapet guards",
       "Integrated LED step tread illumination brackets",
-      "Mirror-finish or brushed satin architectural detailing"
+      "Mirror-finish or brushed satin metal detailing"
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM.jpeg"),
     gallery: [

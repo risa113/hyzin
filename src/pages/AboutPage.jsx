@@ -19,7 +19,7 @@ export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLi
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-[#524D46] font-light leading-relaxed">
-            HYZIN INTERIOR is an architectural interior and structural fabrication practice operating across Kerala, Tamil Nadu, and Karnataka. We sculpt private residences, modular joinery systems, and architectural metalwork that balance pure geometry, natural light, and authentic materiality.
+            HYZIN INTERIOR is an interior design and structural fabrication practice operating across Kerala, Tamil Nadu, and Karnataka. We sculpt private residences, modular joinery systems, and specialized metalwork that balance pure geometry, natural light, and authentic materiality.
           </p>
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLi
                   “Good interiors don’t simply look beautiful. They make everyday life better.”
                 </span>
                 <span className="text-[10px] uppercase font-mono tracking-widest text-[#9E8255] mt-2 block">
-                  HYZIN CORE ARCHITECTURAL PRINCIPLE
+                  HYZIN CORE DESIGN PRINCIPLE
                 </span>
               </div>
             </div>
@@ -52,10 +52,10 @@ export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLi
 
           <div className="lg:col-span-6 space-y-6 text-[#524D46] font-light text-base leading-relaxed">
             <h2 className="font-serif text-3xl sm:text-4xl text-[#1E1D1B]">
-              Integrated Interior Architecture & Fabrication
+              Integrated Interior Design & Specialized Fabrication
             </h2>
             <p>
-              Unlike conventional agencies that outsource critical elements to disparate vendors, HYZIN maintains full sovereign execution. We operate specialized workshops for architectural aluminium extrusion framing, custom stainless steel & MS metal fabrication, and computerized joinery.
+              Unlike conventional agencies that outsource critical elements to disparate vendors, HYZIN maintains full sovereign execution. We operate specialized workshops for modular aluminium extrusion framing, custom stainless steel & MS metal fabrication, and computerized joinery.
             </p>
             <p>
               This seamless marriage of heavy structural engineering with delicate interior cabinetry ensures zero structural compromises: wall drops are millimeter-level aligned, suspended ceilings carry concealed acoustic channels, and steel security doors blend into minimalist paneling.
@@ -97,7 +97,7 @@ export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLi
             Initiate a Private Spatial Dialogue
           </h3>
           <p className="mt-2 text-sm text-[#736D66] max-w-lg mx-auto">
-            Discuss your upcoming architectural residence, modular installation, or fabrication project directly with our lead team.
+            Discuss your upcoming interior design, modular installation, or fabrication project directly with our lead team.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <button

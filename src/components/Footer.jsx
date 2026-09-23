@@ -37,7 +37,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
               </h3>
             </div>
             <p className="text-xs uppercase font-mono tracking-widest text-[#D4B584] mb-4">
-              Interior Architecture & Structural Fabrication
+              Interior Design & Specialized Metal Fabrication
             </p>
             <p className="text-sm text-[#C4BCB1] font-light leading-relaxed max-w-sm">
               Creating quiet grandeur and sculpted spaces across Kerala, Tamil Nadu, and Karnataka. From raw site framing to turnkey white-glove handover.

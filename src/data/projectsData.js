@@ -55,7 +55,7 @@ export const projectsData = [
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.12 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM.jpeg")
     ],
-    concept: "An expansive master bedroom wall drop wardrobe architecture combining soft mauve-lavender acrylic shutters with brushed gold profile trims, centered around a back-lit display niche and full-height loft cabinets.",
+    concept: "An expansive master bedroom wall drop wardrobe design combining soft mauve-lavender acrylic shutters with brushed gold profile trims, centered around a back-lit display niche and full-height loft cabinets.",
     spaceHighlights: [
       "Full wall drop configuration with zero dead space from floor to ceiling",
       "Center display console with warm 2700K ambient shelf downlighting",
@@ -64,7 +64,7 @@ export const projectsData = [
     ],
     materials: [
       { name: "Premium Acrylic Shutters", role: "Scratch-resistant soft matte finish" },
-      { name: "Brushed Champagne Trims", role: "Architectural vertical handle profiles" },
+      { name: "Brushed Champagne Trims", role: "Vertical handle profiles" },
       { name: "Marine-Grade Core", role: "100% boiling waterproof internal carcass" },
       { name: "Integrated LED Micro-Strips", role: "Automated sensor-activated wardrobe lighting" }
     ],
@@ -107,7 +107,7 @@ export const projectsData = [
   {
     id: "onyx-media-cove-ceiling",
     title: "Onyx Media Wall & Ambient Ceiling",
-    tagline: "Backlit onyx marble paneling, floating console, and architectural cove false ceiling.",
+    tagline: "Backlit onyx marble paneling, floating console, and cove false ceiling.",
     location: "Ernakulam, Kerala",
     state: "Kerala",
     type: "Ceiling",
@@ -187,7 +187,7 @@ export const projectsData = [
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.35 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.17.48 PM.jpeg")
     ],
-    concept: "Architectural transformation of a dead stairwell space. Featuring high-tensile stainless steel balustrade with 12mm toughened glass, integrated step tread lighting, and custom stepped under-stair storage cupboards.",
+    concept: "Spatial transformation of a dead stairwell space. Featuring high-tensile stainless steel balustrade with 12mm toughened glass, integrated step tread lighting, and custom stepped under-stair storage cupboards.",
     spaceHighlights: [
       "Stainless steel Grade 304 precision glass clamp balustrade",
       "Integrated under-tread LED lights illuminating granite steps",
@@ -204,8 +204,8 @@ export const projectsData = [
     patron: "Mr. Biju George"
   },
   {
-    id: "architectural-ms-window-security",
-    title: "Architectural MS Window Grills & Safety Systems",
+    id: "ms-window-security",
+    title: "Precision MS Window Grills & Safety Systems",
     tagline: "Precision Mild Steel geometric window safety grills with corrosion-proof epoxy finish.",
     location: "Coimbatore, Tamil Nadu",
     state: "Tamil Nadu",
@@ -233,7 +233,7 @@ export const projectsData = [
       { name: "Polyurethane Powder Coating", role: "UV-resistant white glossy finish" },
       { name: "Concealed Wall Anchors", role: "Tamper-proof masonry anchoring" }
     ],
-    clientReview: "“Clean, modern lines that look like part of the architectural design rather than bulky grills.”",
+    clientReview: "“Clean, modern lines that look like part of the custom design rather than bulky grills.”",
     patron: "Mr. K. Ranganathan"
   },
   {
@@ -266,13 +266,13 @@ export const projectsData = [
       { name: "Waterproof Fluted PVC Panel", role: "Feature wall cladding" },
       { name: "Sensor LED Mirror", role: "Ambient and vanity task lighting" }
     ],
-    clientReview: "“The accessories and vanity detail made our master bathroom look straight out of an architectural magazine.”",
+    clientReview: "“The accessories and vanity detail made our master bathroom look straight out of a luxury magazine.”",
     patron: "Siddharth & Deepa Nambiar"
   },
   {
     id: "engineered-steel-entrance-portal",
     title: "Engineered Steel Security Door & Glass Portal",
-    tagline: "Heavy-duty steel door system with steel frame and long architectural pull handles.",
+    tagline: "Heavy-duty steel door system with steel frame and long custom pull handles.",
     location: "Kochi, Kerala",
     state: "Kerala",
     type: "Steel Doors",
@@ -289,14 +289,14 @@ export const projectsData = [
     concept: "Combining impenetrable steel security engineering with sleek modern aesthetics. Features steel box frames, multi-point deadbolt locks, and long brushed stainless steel hardware.",
     spaceHighlights: [
       "Engineered steel frame resistant to warping, swelling, and forced entry",
-      "Architectural 48-inch brushed stainless steel pull handle",
+      "Custom 48-inch brushed stainless steel pull handle",
       "Integrated double-seal acoustic and weather insulation gaskets",
       "Seamless aesthetic transition connecting interior halls"
     ],
     materials: [
       { name: "Cold-Rolled Galvanized Steel", role: "Core door leaf and reinforced frame" },
       { name: "Multi-Point Security Lock", role: "High-security anti-pick locking cylinder" },
-      { name: "Brushed SS 304 Hardware", role: "Architectural long pull handles & hinges" },
+      { name: "Brushed SS 304 Hardware", role: "Long pull handles & hinges" },
       { name: "Thermo-Acoustic Insulation", role: "High-density internal rockwool core" }
     ],
     clientReview: "“Sturdy as a bank vault, yet operates effortlessly with feather-light smoothness. Total peace of mind.”",
@@ -314,7 +314,7 @@ export const completedWorksArchive50 = [
   { id: 7, name: "Onyx Backlit Media Unit", location: "Panampilly Nagar, Kochi", type: "Ceiling", area: "310 sq.ft", year: "2025" },
   { id: 8, name: "Staircase Glass & Steel Balustrade", location: "Kottayam", type: "Steel Fabrication", area: "240 sq.ft", year: "2025" },
   { id: 9, name: "Under-Stair Modular Aluminium Storage", location: "Changanassery", type: "Aluminium Interior", area: "160 sq.ft", year: "2025" },
-  { id: 10, name: "Architectural MS Window Grills", location: "Calicut Beach Road", type: "MS Fabrication", area: "Whole Residence", year: "2025" },
+  { id: 10, name: "Precision MS Window Security Grills", location: "Calicut Beach Road", type: "MS Fabrication", area: "Whole Residence", year: "2025" },
   { id: 11, name: "Sage Mint Acrylic Kitchen Suite", location: "Palakkad", type: "Kitchen Cabinet", area: "280 sq.ft", year: "2025" },
   { id: 12, name: "Lavender 6-Door Bedroom Wall Drop", location: "Edappally, Kochi", type: "Wall Drop", area: "460 sq.ft", year: "2025" },
   { id: 13, name: "Perimeter High Loft Storage Suite", location: "Tirur, Malappuram", type: "Loft", area: "380 sq.ft", year: "2024" },

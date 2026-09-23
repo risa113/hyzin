@@ -2,7 +2,7 @@
 export const testimonialsData = [
   {
     id: 1,
-    quote: "HYZIN transformed our waterfront home into an architectural sanctuary. The discipline in light, shadow, and tactile stone makes everyday living deeply restorative.",
+    quote: "HYZIN transformed our waterfront home into an interior sanctuary. The discipline in light, shadow, and tactile stone makes everyday living deeply restorative.",
     clientName: "Private Patron",
     location: "Kochi, Kerala",
     projectType: "8,200 sq.ft Waterfront Villa",

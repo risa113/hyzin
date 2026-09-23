@@ -29,10 +29,10 @@ export default function BrandIntro({ onExploreServices, onOpenLightbox }) {
             </p>
 
             <p className="mt-4 text-sm sm:text-base text-[#a39c90] font-light leading-relaxed">
-              Operating with specialized in-house aluminium and steel fabrication workshops alongside bespoke interior joinery, our practice delivers turnkey architectural excellence across Kerala, Tamil Nadu, and Karnataka. Every detail is engineered for enduring permanence.
+              Operating with specialized in-house aluminium and steel fabrication workshops alongside bespoke interior joinery, our practice delivers turnkey interior and fabrication excellence across Kerala, Tamil Nadu, and Karnataka. Every detail is engineered for enduring permanence.
             </p>
 
-            {/* Architectural Philosophy Callout */}
+            {/* Design Philosophy Callout */}
             <div className="mt-10 p-6 sm:p-8 bg-[#131418] border-l-2 border-[#c5a065] relative">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#c5a065] font-mono block mb-2">
                 OUR PHILOSOPHY
@@ -61,7 +61,7 @@ export default function BrandIntro({ onExploreServices, onOpenLightbox }) {
             >
               <img
                 src={introImage}
-                alt="Architectural Interior by HYZIN"
+                alt="Interior Design by HYZIN"
                 className="w-full h-[460px] sm:h-[560px] object-cover object-center filter brightness-[0.95] contrast-[1.05] transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>

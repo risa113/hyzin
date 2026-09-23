@@ -89,7 +89,7 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation, onOp
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-black/10">
               <div>
                 <h3 className="font-serif text-2xl sm:text-3xl text-[#1E1D1B]">
-                  Official 50+ Architectural Commission Registry
+                  Official 50+ Verified Work Commission Registry
                 </h3>
                 <p className="text-xs sm:text-sm text-[#736D66] mt-1 font-light">
                   Showing all verified residential, modular joinery, and fabrication projects across South India.
@@ -231,7 +231,7 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation, onOp
               50+ COMMISSIONS DELIVERED
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl text-[#FAF8F5]">
-              Commission a Custom Architectural Sanctuary
+              Commission Your Custom Interior Space
             </h3>
             <p className="mt-2 text-sm text-[#D4CFCE] font-light max-w-lg">
               Join over 50+ discerning patrons across Kerala, Tamil Nadu, and Karnataka.

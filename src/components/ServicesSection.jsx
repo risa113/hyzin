@@ -20,8 +20,8 @@ export default function ServicesSection({ onOpenLightbox }) {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between border-b border-white/10 pb-8 mb-16">
           <div>
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#D4B584] font-mono mb-3">
-              <span>SPECIALIZED FABRICATION & ARCHITECTURAL INTERIORS</span>
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#C5A065] font-mono mb-4">
+              <span>SPECIALIZED FABRICATION & INTERIOR DESIGN</span>
               <span className="w-10 h-[1px] bg-[#D4B584]/50"></span>
             </div>
             <h2 className="font-serif text-4xl sm:text-6xl text-[#FAF8F5] font-normal tracking-tight">

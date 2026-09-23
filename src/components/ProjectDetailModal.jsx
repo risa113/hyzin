@@ -111,7 +111,7 @@ export default function ProjectDetailModal({ project, onClose, onCommissionProje
               <span>THE CONCEPT</span>
             </div>
             <h3 className="font-serif text-2xl sm:text-3xl text-[#f5efe6] mb-4">
-              Architectural Intent & Spatial Narrative
+              Spatial Intent & Design Narrative
             </h3>
             <p className="text-base sm:text-lg text-[#ccc4b6] font-light leading-relaxed">
               {project.concept}

@@ -30,7 +30,7 @@ export const studiosData = [
     state: "Tamil Nadu",
     coordinates: "13.0827° N, 80.2707° E",
     focus: "Heritage Vernacular Revival, Monolithic Villas, Chettinad Modernism",
-    description: "Bridging the timeless craftsmanship of Tamil Nadu stone carvers and Athangudi artisans with sharp international luxury interior architecture.",
+    description: "Bridging the timeless craftsmanship of Tamil Nadu stone carvers and Athangudi artisans with sharp international luxury interior design.",
     phone: "+91 6282549008",
     email: "chennai@hyzininterior.com",
     badge: "Heritage & Craft Guild"
