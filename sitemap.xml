@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <!-- Main Home Page -->
+  <!-- Main Home Page with all 72 Authentic Photos -->
   <url>
     <loc>https://hyzininterior.com/</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/" />
@@ -11,25 +11,389 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://hyzininterior.com/public/hyzin-logo.png</image:loc>
-      <image:title>HYZIN INTERIOR — Interior Design &amp; Fabrication Studio Kerala</image:title>
-      <image:caption>Official Studio Emblem of HYZIN INTERIOR Kochi</image:caption>
+      <image:loc>https://hyzininterior.com/hyzin-logo.png</image:loc>
+      <image:title>HYZIN INTERIOR — Logo Emblem</image:title>
+      <image:caption>HYZIN INTERIOR Official Brand Logo</image:caption>
     </image:image>
-  </url>
-
-  <!-- 3D Interactive House Model Page -->
-  <url>
-    <loc>https://hyzininterior.com/#3d-house</loc>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#3d-house" />
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://hyzininterior.com/favicon.png</image:loc>
+      <image:title>HYZIN INTERIOR Icon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.14.03%20PM.jpeg</image:loc>
+      <image:title>Master Suite Wall Drop &amp; Loft Design - Calicut</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.08%20PM.jpeg</image:loc>
+      <image:title>Artisanal Living &amp; Dining Fluted Partition - Thrissur</image:title>
+      <image:caption>HYZIN Interior Paneling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.13%20PM.jpeg</image:loc>
+      <image:title>Backlit Onyx Media Wall &amp; Gypsum Ceiling - Ernakulam</image:title>
+      <image:caption>HYZIN Interior Ceiling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.19%20PM.jpeg</image:loc>
+      <image:title>Designer Bathroom Vanity &amp; Pill LED Mirror - Bengaluru</image:title>
+      <image:caption>HYZIN Interior Accessories Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.23%20PM.jpeg</image:loc>
+      <image:title>Bedroom Wall Drop with Gold Vertical Profiles - Kochi</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.27%20PM.jpeg</image:loc>
+      <image:title>Rose Gold Acrylic Modular Kitchen Suite - Kochi</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.33%20PM.jpeg</image:loc>
+      <image:title>Luxury Sanitary Fixtures &amp; Brassware Suite - Kochi</image:title>
+      <image:caption>HYZIN Interior Accessories Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.41%20PM.jpeg</image:loc>
+      <image:title>Sensor Dimmable Vanity Mirror &amp; Counter - Trivandrum</image:title>
+      <image:caption>HYZIN Interior Accessories Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.48%20PM.jpeg</image:loc>
+      <image:title>Master Bath Rain Shower &amp; Concealed Diverter - Kottayam</image:title>
+      <image:caption>HYZIN Interior Accessories Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.55%20PM.jpeg</image:loc>
+      <image:title>Kitchen Acrylic Shutter Edge &amp; Soft-Close Hinge - Calicut</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.16.01%20PM.jpeg</image:loc>
+      <image:title>Wardrobe Carcass Frame On-Site Build - Kochi</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.16.09%20PM.jpeg</image:loc>
+      <image:title>Vertical Fluted Timber Paneling Texture - Thrissur</image:title>
+      <image:caption>HYZIN Interior Paneling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.16.55%20PM.jpeg</image:loc>
+      <image:title>Master Wall Drop Assembly in Progress - Kochi</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.17.48%20PM.jpeg</image:loc>
+      <image:title>Stainless Steel Glass Clamp &amp; Handrail Joinery - Kottayam</image:title>
+      <image:caption>HYZIN Interior Steel Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.18.17%20PM.jpeg</image:loc>
+      <image:title>Interior Woodcraft &amp; Framing Site View - Ernakulam</image:title>
+      <image:caption>HYZIN Interior Paneling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.18.22%20PM.jpeg</image:loc>
+      <image:title>HYZIN 3D Brand Emblem - Kerala Studio</image:title>
+      <image:caption>HYZIN Interior Brand Asset Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.18.25%20PM.jpeg</image:loc>
+      <image:title>Metallic Brass Seal &amp; Authenticity Badge - Kerala Studio</image:title>
+      <image:caption>HYZIN Interior Brand Asset Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.18.27%20PM.jpeg</image:loc>
+      <image:title>Business Suite Identity Card - Kerala Studio</image:title>
+      <image:caption>HYZIN Interior Brand Asset Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.18.30%20PM.jpeg</image:loc>
+      <image:title>Living Hall Divider Base Frame Installation - Thrissur</image:title>
+      <image:caption>HYZIN Interior Paneling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.51%20PM.jpeg</image:loc>
+      <image:title>Aluminium Powder-Coated Interior Cabinet - Palakkad</image:title>
+      <image:caption>HYZIN Interior Aluminium Interior Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.55%20PM%20(1).jpeg</image:loc>
+      <image:title>Custom Wardrobe Internal Pullouts &amp; Drawers - Calicut</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.55%20PM%20(2).jpeg</image:loc>
+      <image:title>High-Capacity Bedroom Almirah Storage - Kochi</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.55%20PM.jpeg</image:loc>
+      <image:title>Living Room Feature Wall Louver Paneling - Trivandrum</image:title>
+      <image:caption>HYZIN Interior Paneling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.56%20PM%20(1).jpeg</image:loc>
+      <image:title>Concealed 2700K Ceiling Cove Strip &amp; Spotlights - Kochi</image:title>
+      <image:caption>HYZIN Interior Ceiling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.56%20PM%20(2).jpeg</image:loc>
+      <image:title>Acoustic Charcoal Fluted Wall Slat Section - Ernakulam</image:title>
+      <image:caption>HYZIN Interior Paneling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.56%20PM.jpeg</image:loc>
+      <image:title>Backlit Fluted Media Wall Console - Kochi</image:title>
+      <image:caption>HYZIN Interior Paneling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.57%20PM%20(1).jpeg</image:loc>
+      <image:title>Heavy Duty Security Steel Door Frame Hinge - Kochi</image:title>
+      <image:caption>HYZIN Interior Steel Doors Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.57%20PM.jpeg</image:loc>
+      <image:title>MS Window Security Grill Laser Joinery - Coimbatore</image:title>
+      <image:caption>HYZIN Interior MS Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.59%20PM%20(1).jpeg</image:loc>
+      <image:title>L-Shaped Kitchen Quartz Countertop &amp; Sink - Palakkad</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.21.59%20PM.jpeg</image:loc>
+      <image:title>Kitchen Soft-Close Tandem Runner Mechanism - Kochi</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.01%20PM%20(1).jpeg</image:loc>
+      <image:title>Under-Stair Stepped Aluminium Cabinetry - Kottayam</image:title>
+      <image:caption>HYZIN Interior Aluminium Interior Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.01%20PM.jpeg</image:loc>
+      <image:title>Under-Stair Structural Aluminium Skeleton - Kottayam</image:title>
+      <image:caption>HYZIN Interior Aluminium Interior Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.02%20PM%20(1).jpeg</image:loc>
+      <image:title>Peacock Blue Ceramic Vessel Basin &amp; Tap - Bengaluru</image:title>
+      <image:caption>HYZIN Interior Accessories Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.02%20PM%20(2).jpeg</image:loc>
+      <image:title>Rose Gold PVD Tall Pillar Basin Mixer Tap - Bengaluru</image:title>
+      <image:caption>HYZIN Interior Accessories Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.02%20PM.jpeg</image:loc>
+      <image:title>Vanity Accent Lighting &amp; Floating Mirror - Bengaluru</image:title>
+      <image:caption>HYZIN Interior Accessories Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.03%20PM%20(1).jpeg</image:loc>
+      <image:title>Minimalist MS Window Security Bar Grid - Coimbatore</image:title>
+      <image:caption>HYZIN Interior MS Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.03%20PM.jpeg</image:loc>
+      <image:title>Security Bar Weld Corner Detail - Coimbatore</image:title>
+      <image:caption>HYZIN Interior MS Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.12%20PM%20(1).jpeg</image:loc>
+      <image:title>Anodized Black Aluminium Shutter Profile - Palakkad</image:title>
+      <image:caption>HYZIN Interior Aluminium Interior Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.12%20PM%20(2).jpeg</image:loc>
+      <image:title>Aluminium Loft Hydraulic Flap Stay Hinge - Kottayam</image:title>
+      <image:caption>HYZIN Interior Aluminium Interior Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.12%20PM.jpeg</image:loc>
+      <image:title>High-Gloss Acrylic Shutter Edge Profile - Calicut</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.13%20PM%20(1).jpeg</image:loc>
+      <image:title>Wardrobe Overhead Loft Hydraulic Lift Stay - Malappuram</image:title>
+      <image:caption>HYZIN Interior Loft Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.13%20PM.jpeg</image:loc>
+      <image:title>Illuminated Open Display Box Niche - Kochi</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.14%20PM%20(1).jpeg</image:loc>
+      <image:title>Gypsum False Ceiling Multi-Level Cove Detail - Ernakulam</image:title>
+      <image:caption>HYZIN Interior Ceiling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.14%20PM.jpeg</image:loc>
+      <image:title>Stainless Steel &amp; Toughened Glass Balustrade - Kottayam</image:title>
+      <image:caption>HYZIN Interior Steel Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.15%20PM.jpeg</image:loc>
+      <image:title>Glass Clamp Stainless Base Anchor Plate - Kottayam</image:title>
+      <image:caption>HYZIN Interior Steel Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.17%20PM.jpeg</image:loc>
+      <image:title>Teak Wood Paneling with Brass Inlay Strip - Thrissur</image:title>
+      <image:caption>HYZIN Interior Paneling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.18%20PM%20(1).jpeg</image:loc>
+      <image:title>Automated MS Perimeter Boundary Security Gate - Calicut</image:title>
+      <image:caption>HYZIN Interior MS Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.18%20PM.jpeg</image:loc>
+      <image:title>Anti-Rust Zinc Primer Coating on MS Frame - Thrissur</image:title>
+      <image:caption>HYZIN Interior MS Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.19%20PM.jpeg</image:loc>
+      <image:title>Custom MS Gate Deadbolt &amp; Lock Housing - Calicut</image:title>
+      <image:caption>HYZIN Interior MS Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.20%20PM%20(1).jpeg</image:loc>
+      <image:title>Horizontal MS Security Window Bar Array - Coimbatore</image:title>
+      <image:caption>HYZIN Interior MS Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.20%20PM.jpeg</image:loc>
+      <image:title>Balcony Mild Steel Safety Guard Railing - Kannur</image:title>
+      <image:caption>HYZIN Interior MS Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.28%20PM.jpeg</image:loc>
+      <image:title>MS Window Security Grill Full View - Coimbatore</image:title>
+      <image:caption>HYZIN Interior MS Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.29%20PM.jpeg</image:loc>
+      <image:title>Wardrobe Glass Door &amp; LED Sensor Shelf - Kochi</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.32%20PM%20(1).jpeg</image:loc>
+      <image:title>Sage Mint Green Aluminium Modular Kitchen Suite - Palakkad</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.32%20PM.jpeg</image:loc>
+      <image:title>Mint Green Overhead High Storage Loft - Palakkad</image:title>
+      <image:caption>HYZIN Interior Loft Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.33%20PM%20(1).jpeg</image:loc>
+      <image:title>Kitchen Corner Unit Soft-Close Pullout - Palakkad</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.33%20PM%20(2).jpeg</image:loc>
+      <image:title>Rose Gold Kitchen Cutlery Tandem Drawer - Kochi</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.33%20PM.jpeg</image:loc>
+      <image:title>Smoked Glass Upper Kitchen Storage Shutter - Palakkad</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.34%20PM%20(1).jpeg</image:loc>
+      <image:title>Fluted Timber TV Paneling &amp; Floating Console - Ernakulam</image:title>
+      <image:caption>HYZIN Interior Paneling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.34%20PM.jpeg</image:loc>
+      <image:title>Chevron Pattern Wooden Coffered Ceiling Slats - Wayanad</image:title>
+      <image:caption>HYZIN Interior Ceiling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.35%20PM%20(1).jpeg</image:loc>
+      <image:title>Staircase Glass Balustrade &amp; SS Handrail - Kottayam</image:title>
+      <image:caption>HYZIN Interior Steel Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.35%20PM%20(2).jpeg</image:loc>
+      <image:title>Stainless Steel Handrail Wall Bracket Mount - Kottayam</image:title>
+      <image:caption>HYZIN Interior Steel Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.35%20PM.jpeg</image:loc>
+      <image:title>Granite Step Tread Concealed LED Light Strip - Kottayam</image:title>
+      <image:caption>HYZIN Interior Steel Fabrication Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.36%20PM%20(1).jpeg</image:loc>
+      <image:title>Coffered Teak Wood Living Ceiling Grid - Thiruvalla</image:title>
+      <image:caption>HYZIN Interior Ceiling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.36%20PM%20(2).jpeg</image:loc>
+      <image:title>Gypsum False Ceiling Concealed Perimeter Cove - Kochi</image:title>
+      <image:caption>HYZIN Interior Ceiling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.36%20PM.jpeg</image:loc>
+      <image:title>Full-Height Wardrobe Shutter Alignment - Calicut</image:title>
+      <image:caption>HYZIN Interior Wall Drop Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.37%20PM%20(1).jpeg</image:loc>
+      <image:title>Living Hall Multi-Tier Cove Lighting Ceiling - Ernakulam</image:title>
+      <image:caption>HYZIN Interior Ceiling Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.37%20PM%20(2).jpeg</image:loc>
+      <image:title>Seamless Quartz Counter &amp; Backsplash Joint - Kochi</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.37%20PM.jpeg</image:loc>
+      <image:title>Modular Kitchen Breakfast Island Counter - Kochi</image:title>
+      <image:caption>HYZIN Interior Kitchen Cabinet Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.38%20PM%20(1).jpeg</image:loc>
+      <image:title>Engineered Multi-Point Steel Security Entrance Door - Kochi</image:title>
+      <image:caption>HYZIN Interior Steel Doors Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.38%20PM.jpeg</image:loc>
+      <image:title>Steel Door Stainless Steel Deadbolt Cylinder - Kochi</image:title>
+      <image:caption>HYZIN Interior Steel Doors Project</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.22.39%20PM.jpeg</image:loc>
+      <image:title>High-Capacity Wardrobe Perimeter Loft Storage - Tirur</image:title>
+      <image:caption>HYZIN Interior Loft Project</image:caption>
+    </image:image>
   </url>
 
   <!-- 72 Photo Master Vault -->
   <url>
     <loc>https://hyzininterior.com/#photo-vault</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#photo-vault" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 3D Interactive House Model -->
+  <url>
+    <loc>https://hyzininterior.com/#3d-house</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#3d-house" />
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -44,78 +408,7 @@
     <priority>0.90</priority>
   </url>
 
-  <!-- Kitchen Cabinet Service Deep Link -->
-  <url>
-    <loc>https://hyzininterior.com/#services/kitchen-cabinet</loc>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/kitchen-cabinet" />
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.88</priority>
-    <image:image>
-      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.27%20PM.jpeg</image:loc>
-      <image:title>Rose Gold Acrylic Modular Kitchen Kochi Kerala</image:title>
-    </image:image>
-  </url>
-
-  <!-- Wall Drop Wardrobe Service Deep Link -->
-  <url>
-    <loc>https://hyzininterior.com/#services/wall-drop</loc>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/wall-drop" />
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.88</priority>
-    <image:image>
-      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.14.03%20PM.jpeg</image:loc>
-      <image:title>Master Suite Wall Drop Wardrobe Calicut Kerala</image:title>
-    </image:image>
-  </url>
-
-  <!-- Paneling Service Deep Link -->
-  <url>
-    <loc>https://hyzininterior.com/#services/paneling</loc>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/paneling" />
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Ceilings Service Deep Link -->
-  <url>
-    <loc>https://hyzininterior.com/#services/ceiling</loc>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/ceiling" />
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Aluminium Interior Deep Link -->
-  <url>
-    <loc>https://hyzininterior.com/#services/aluminium-interior</loc>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/aluminium-interior" />
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.88</priority>
-  </url>
-
-  <!-- Steel Doors Deep Link -->
-  <url>
-    <loc>https://hyzininterior.com/#services/steel-doors</loc>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/steel-doors" />
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Steel Fabrication Deep Link -->
-  <url>
-    <loc>https://hyzininterior.com/#services/steel-fabrication</loc>
-    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/steel-fabrication" />
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Curated Portfolio Page -->
+  <!-- Curated Portfolio -->
   <url>
     <loc>https://hyzininterior.com/#projects</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#projects" />
@@ -124,7 +417,7 @@
     <priority>0.90</priority>
   </url>
 
-  <!-- About & Ethos Page -->
+  <!-- About & Ethos -->
   <url>
     <loc>https://hyzininterior.com/#about</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#about" />
@@ -133,7 +426,7 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- Contact & Brief Page -->
+  <!-- Contact & Brief -->
   <url>
     <loc>https://hyzininterior.com/#contact</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#contact" />
