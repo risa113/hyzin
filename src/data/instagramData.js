@@ -1,4 +1,4 @@
-const assetUrl = (filename) => `/kerala-assets/${encodeURIComponent(filename)}`;
+import { assetUrl } from './clientAssets';
 
 export const instagramData = {
   handle: "@hyzin.interior",

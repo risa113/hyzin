@@ -1,14 +1,12 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles, Box, Images } from 'lucide-react';
 import AnimaticHeroSlider from '../components/AnimaticHeroSlider';
-import House3DViewer from '../components/House3DViewer';
-import MasterPhotoVault from '../components/MasterPhotoVault';
 import ServicesSection from '../components/ServicesSection';
 import CuratedWork from '../components/CuratedWork';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import TestimonialsSection from '../components/TestimonialsSection';
 import InstagramShowcase from '../components/InstagramShowcase';
+import SensoryLibrary from '../components/SensoryLibrary';
 import { assetUrl } from '../data/clientAssets';
-import { materialsData } from '../data/materialsData';
 
 export default function HomePage({ onNavigate, onSelectProject, onOpenConsultation, onOpenLightbox }) {
   const editorialImage = assetUrl('WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg');
@@ -22,11 +20,31 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
         onOpenLightbox={onOpenLightbox}
       />
 
-      {/* 2. Interactive 3D House Visualization Section */}
-      <House3DViewer
-        onOpenLightbox={onOpenLightbox}
-        onOpenConsultation={onOpenConsultation}
-      />
+      {/* 2. 3D Interactive House Model Teaser Callout */}
+      <section className="py-12 bg-[#FAF8F5] border-b border-black/[0.06]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="p-8 sm:p-10 rounded-3xl bg-[#1E1D1B] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+            <div className="relative z-10 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C5A065]/20 border border-[#C5A065]/40 text-[#D4B584] text-xs font-semibold tracking-wider uppercase mb-3">
+                <Box className="w-3.5 h-3.5" /> 3D Interactive House Model
+              </div>
+              <h3 className="font-serif text-2xl sm:text-4xl text-[#FAF8F5] font-bold">
+                Experience Our Work in <span className="italic text-[#C5A065]">3D Interactive Space</span>
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-[#D4CFCE] font-light leading-relaxed">
+                Rotate 360°, switch between Day Sun, Night Cove Light, and Blueprint Wireframe modes, and inspect real client work hotspots across 6 room zones.
+              </p>
+            </div>
+            <button
+              onClick={() => onNavigate('3d-house')}
+              className="relative z-10 px-8 py-4 rounded-2xl bg-[#C5A065] hover:bg-[#FAF0DC] text-[#111113] text-xs uppercase tracking-[0.25em] font-semibold transition-all shadow-xl flex items-center gap-2 whitespace-nowrap"
+            >
+              <span>OPEN 3D HOUSE MODEL</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* 3. Editorial Philosophy & Original Client Craftsmanship */}
       <section className="py-24 sm:py-32 bg-[#FAF8F5] relative overflow-hidden">
@@ -98,14 +116,34 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
         </div>
       </section>
 
-      {/* 4. Complete Kerala Client Photo Vault (All 72 Photos) */}
-      <MasterPhotoVault
-        onOpenLightbox={onOpenLightbox}
-        onOpenConsultation={onOpenConsultation}
-      />
-
-      {/* 5. The 10 Core Services Interactive Showcase */}
+      {/* 4. The 10 Core Services Interactive Showcase */}
       <ServicesSection onOpenLightbox={onOpenLightbox} />
+
+      {/* 5. 72-Photo Client Gallery Banner */}
+      <section className="py-12 bg-[#FAF8F5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="p-8 sm:p-10 rounded-3xl bg-white border border-[#E5DEC9] shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C5A065]/15 border border-[#C5A065]/30 text-[#8C6D3B] text-xs font-semibold tracking-wider uppercase mb-3">
+                <Images className="w-3.5 h-3.5 text-[#C5A065]" /> Master Photo Gallery (72 Photos)
+              </div>
+              <h3 className="font-serif text-2xl sm:text-3xl text-[#1E1D1B] font-bold">
+                Browse All 72 Verified <span className="italic text-[#C5A065]">Kerala Client Photos</span>
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-[#666055] font-light leading-relaxed">
+                Filter by Kitchen Cabinet, Wall Drop, Paneling, Ceilings, Aluminium, Steel Doors, or Steel Fabrication with live search and high-res lightbox.
+              </p>
+            </div>
+            <button
+              onClick={() => onNavigate('photo-vault')}
+              className="px-8 py-4 rounded-2xl bg-[#1E1D1B] text-white text-xs uppercase tracking-[0.25em] font-semibold hover:bg-[#C5A065] transition-all shadow-xl flex items-center gap-2 whitespace-nowrap"
+            >
+              <span>OPEN PHOTO VAULT (72 PHOTOS)</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* 6. Curated Work with 10 Service Filters */}
       <CuratedWork
@@ -117,50 +155,12 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
       {/* 7. Authentic On-Site Before / After Transformation Slider */}
       <BeforeAfterSlider onOpenLightbox={onOpenLightbox} />
 
-      {/* 8. Sensory Material Archive Teaser */}
-      <section className="py-24 bg-[#FAF8F5] border-t border-black/[0.06]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-            <div>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono block mb-2">
-                AUTHENTIC MATERIALITY
-              </span>
-              <h2 className="font-serif text-3xl sm:text-5xl text-[#1E1D1B]">
-                The Sensory Library
-              </h2>
-            </div>
-            <button
-              onClick={() => onNavigate('services')}
-              className="mt-4 md:mt-0 text-xs uppercase font-mono tracking-widest text-[#9E8255] hover:text-[#1E1D1B]"
-            >
-              EXPLORE ALL SPECIMENS & SERVICES →
-            </button>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {materialsData.map((m) => (
-              <div 
-                key={m.id}
-                onClick={() => onOpenLightbox && onOpenLightbox(m.image, 0, m.name, m.category)}
-                className="p-5 bg-white border border-black/10 shadow-sm cursor-pointer hover:shadow-lg transition-all"
-              >
-                <div className="aspect-video overflow-hidden mb-4 bg-stone-100">
-                  <img src={m.image} alt={m.name} className="w-full h-full object-cover hover:scale-105 transition-transform" />
-                </div>
-                <span className="text-[9px] uppercase font-mono text-[#9E8255] block">
-                  {m.category}
-                </span>
-                <h4 className="font-serif text-lg text-[#1E1D1B] mt-1">{m.name}</h4>
-                <p className="text-xs text-[#7A746B] mt-1 line-clamp-2">{m.origin}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 8. Material Specimens */}
+      <SensoryLibrary onOpenLightbox={onOpenLightbox} />
 
       {/* 9. Testimonials & Instagram */}
       <TestimonialsSection />
-      <InstagramShowcase />
+      <InstagramShowcase onOpenLightbox={onOpenLightbox} />
 
       {/* 10. Quick Consultation Callout */}
       <section className="py-20 bg-[#141416] text-white text-center border-t border-white/[0.08]">

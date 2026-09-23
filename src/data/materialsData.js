@@ -1,8 +1,4 @@
-const assetUrl = (filename) => {
-  const base = import.meta.env.BASE_URL || '/';
-  const prefix = base.endsWith('/') ? base : `${base}/`;
-  return `${prefix}kerala-assets/${encodeURIComponent(filename)}`;
-};
+import { assetUrl } from './clientAssets';
 
 export const materialsData = [
   {

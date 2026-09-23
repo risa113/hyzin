@@ -11,6 +11,8 @@ import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
+import House3DPage from './pages/House3DPage';
+import PhotoVaultPage from './pages/PhotoVaultPage';
 
 export default function App() {
   const [activePage, setActivePage] = useState('home');
@@ -46,7 +48,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      if (['home', 'about', 'projects', 'services', 'contact'].includes(hash)) {
+      if (['home', 'about', 'projects', 'services', 'contact', '3d-house', 'photo-vault'].includes(hash)) {
         setActivePage(hash);
       }
     };
@@ -126,6 +128,21 @@ export default function App() {
           <ContactPage
             prefilledProject={prefilledProject}
             selectedRegion={selectedRegion}
+          />
+        )}
+
+        {activePage === '3d-house' && (
+          <House3DPage
+            onOpenLightbox={handleOpenLightbox}
+            onOpenConsultation={handleOpenConsultation}
+            onNavigate={navigateTo}
+          />
+        )}
+
+        {activePage === 'photo-vault' && (
+          <PhotoVaultPage
+            onOpenLightbox={handleOpenLightbox}
+            onOpenConsultation={handleOpenConsultation}
           />
         )}
       </main>

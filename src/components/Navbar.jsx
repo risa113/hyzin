@@ -17,9 +17,11 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
 
   const navLinks = [
     { id: 'home', name: 'Home' },
-    { id: 'about', name: 'About' },
+    { id: '3d-house', name: '3D House' },
+    { id: 'photo-vault', name: '72 Photos' },
     { id: 'services', name: '10 Disciplines', hasDropdown: true },
     { id: 'projects', name: 'Portfolio (50+)' },
+    { id: 'about', name: 'About' },
     { id: 'contact', name: 'Contact' },
   ];
 

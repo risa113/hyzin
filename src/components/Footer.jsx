@@ -79,8 +79,13 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNav('about')} className="hover:text-white transition-colors">
-                  About & Ethos
+                <button onClick={() => handleNav('3d-house')} className="hover:text-[#D4B584] text-[#D4B584] transition-colors">
+                  3D House Model
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('photo-vault')} className="hover:text-white transition-colors">
+                  72 Photos Vault
                 </button>
               </li>
               <li>
@@ -90,7 +95,12 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
               </li>
               <li>
                 <button onClick={() => handleNav('services')} className="hover:text-white transition-colors">
-                  Services & Materials
+                  10 Services
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('about')} className="hover:text-white transition-colors">
+                  About & Ethos
                 </button>
               </li>
               <li>
