@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Sparkles, Layers, Info } from 'lucide-react';
+import { Info } from 'lucide-react';
 import { materialsData } from '../data/materialsData';
 
 export default function SensoryLibrary() {

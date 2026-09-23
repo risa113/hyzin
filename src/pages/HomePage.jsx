@@ -1,23 +1,34 @@
-import { ArrowRight, Compass, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import AnimaticHeroSlider from '../components/AnimaticHeroSlider';
-import { projectsData } from '../data/projectsData';
-import { materialsData } from '../data/materialsData';
+import House3DViewer from '../components/House3DViewer';
+import MasterPhotoVault from '../components/MasterPhotoVault';
+import ServicesSection from '../components/ServicesSection';
+import CuratedWork from '../components/CuratedWork';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import TestimonialsSection from '../components/TestimonialsSection';
 import InstagramShowcase from '../components/InstagramShowcase';
+import { assetUrl } from '../data/clientAssets';
+import { materialsData } from '../data/materialsData';
 
-export default function HomePage({ onNavigate, onSelectProject, onOpenConsultation }) {
-  const featuredProjects = projectsData.slice(0, 4);
+export default function HomePage({ onNavigate, onSelectProject, onOpenConsultation, onOpenLightbox }) {
+  const editorialImage = assetUrl('WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg');
 
   return (
     <div className="animate-page-enter">
-      {/* 1. Multi-Slide Animatic Hero */}
+      {/* 1. Multi-Slide Animatic Hero with Client Projects */}
       <AnimaticHeroSlider
         onOpenConsultation={onOpenConsultation}
         onExploreWork={() => onNavigate('projects')}
+        onOpenLightbox={onOpenLightbox}
       />
 
-      {/* 2. Water / Glass Light Reflection Editorial Intro */}
+      {/* 2. Interactive 3D House Visualization Section */}
+      <House3DViewer
+        onOpenLightbox={onOpenLightbox}
+        onOpenConsultation={onOpenConsultation}
+      />
+
+      {/* 3. Editorial Philosophy & Original Client Craftsmanship */}
       <section className="py-24 sm:py-32 bg-[#FAF8F5] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -59,18 +70,21 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
               </div>
             </div>
 
-            {/* Split Architectural Image with Mirror Reflection */}
+            {/* Split Architectural Image with Original Client Work */}
             <div className="lg:col-span-5 relative">
-              <div className="relative overflow-hidden border border-black/10 shadow-2xl bg-white animatic-reflection">
+              <div 
+                onClick={() => onOpenLightbox && onOpenLightbox(editorialImage, 0, 'HYZIN Architectural Living & Fluted Wood Detailing', 'Paneling')}
+                className="relative overflow-hidden border border-black/10 shadow-2xl bg-white animatic-reflection cursor-pointer group"
+              >
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+                  src={editorialImage}
                   alt="HYZIN Architectural Living"
-                  className="w-full h-[440px] sm:h-[500px] object-cover"
+                  className="w-full h-[440px] sm:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md border border-black/5 shadow-md">
                   <span className="text-[9px] uppercase font-mono tracking-widest text-[#9E8255] block">
-                    REGIONAL ATELIER
+                    ORIGINAL CLIENT WORK
                   </span>
                   <span className="font-serif text-base text-[#1E1D1B] block">
                     Kerala • Tamil Nadu • Karnataka
@@ -84,75 +98,26 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
         </div>
       </section>
 
-      {/* 3. Featured Sanctuaries Carousel / Preview */}
-      <section className="py-24 bg-[#F4EFEB] border-t border-black/[0.06]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-black/[0.08] pb-6">
-            <div>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono block mb-2">
-                SELECTED PORTFOLIO
-              </span>
-              <h2 className="font-serif text-3xl sm:text-5xl text-[#1E1D1B]">
-                Curated Sanctuaries
-              </h2>
-            </div>
-            <button
-              onClick={() => onNavigate('projects')}
-              className="mt-4 md:mt-0 inline-flex items-center space-x-2 text-xs uppercase tracking-[0.25em] text-[#9E8255] hover:text-[#1E1D1B] font-mono transition-colors"
-            >
-              <span>VIEW ALL {projectsData.length} COMMISSIONS</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-          </div>
+      {/* 4. Complete Kerala Client Photo Vault (All 72 Photos) */}
+      <MasterPhotoVault
+        onOpenLightbox={onOpenLightbox}
+        onOpenConsultation={onOpenConsultation}
+      />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProjects.map((p) => (
-              <div
-                key={p.id}
-                onClick={() => onSelectProject(p)}
-                className="group cursor-pointer bg-white border border-black/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
-              >
-                <div className="relative h-64 overflow-hidden animatic-reflection">
-                  <img
-                    src={p.heroImage}
-                    alt={p.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute top-3 left-3 px-2 py-1 bg-white/90 backdrop-blur-md text-[9px] uppercase font-mono tracking-wider text-[#1E1D1B]">
-                    {p.type}
-                  </div>
-                  <div className="absolute top-3 right-3 px-2 py-1 bg-[#1E1D1B] text-white text-[9px] uppercase font-mono tracking-wider">
-                    {p.state}
-                  </div>
-                </div>
+      {/* 5. The 10 Core Services Interactive Showcase */}
+      <ServicesSection onOpenLightbox={onOpenLightbox} />
 
-                <div className="p-5 flex-1 flex flex-col justify-between">
-                  <div>
-                    <span className="text-[10px] uppercase font-mono tracking-widest text-[#9E8255] block mb-1">
-                      {p.location} • {p.year}
-                    </span>
-                    <h3 className="font-serif text-xl text-[#1E1D1B] group-hover:text-[#9E8255] transition-colors">
-                      {p.title}
-                    </h3>
-                  </div>
+      {/* 6. Curated Work with 10 Service Filters */}
+      <CuratedWork
+        onSelectProject={onSelectProject}
+        onOpenLightbox={onOpenLightbox}
+        onExploreAll={() => onNavigate('projects')}
+      />
 
-                  <div className="mt-4 pt-3 border-t border-black/[0.06] flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-[#9E8255]">
-                    <span>EXPLORE CASE STUDY</span>
-                    <span className="transition-transform group-hover:translate-x-1">→</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* 7. Authentic On-Site Before / After Transformation Slider */}
+      <BeforeAfterSlider onOpenLightbox={onOpenLightbox} />
 
-        </div>
-      </section>
-
-      {/* 4. Interactive Before & After Transformation Slider */}
-      <BeforeAfterSlider />
-
-      {/* 5. Sensory Material Archive Teaser */}
+      {/* 8. Sensory Material Archive Teaser */}
       <section className="py-24 bg-[#FAF8F5] border-t border-black/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -174,9 +139,13 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {materialsData.map((m) => (
-              <div key={m.id} className="p-5 bg-white border border-black/10 shadow-sm">
+              <div 
+                key={m.id}
+                onClick={() => onOpenLightbox && onOpenLightbox(m.image, 0, m.name, m.category)}
+                className="p-5 bg-white border border-black/10 shadow-sm cursor-pointer hover:shadow-lg transition-all"
+              >
                 <div className="aspect-video overflow-hidden mb-4 bg-stone-100">
-                  <img src={m.image} alt={m.name} className="w-full h-full object-cover" />
+                  <img src={m.image} alt={m.name} className="w-full h-full object-cover hover:scale-105 transition-transform" />
                 </div>
                 <span className="text-[9px] uppercase font-mono text-[#9E8255] block">
                   {m.category}
@@ -189,12 +158,12 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
         </div>
       </section>
 
-      {/* 6. Testimonials & Instagram */}
+      {/* 9. Testimonials & Instagram */}
       <TestimonialsSection />
       <InstagramShowcase />
 
-      {/* 7. Quick Consultation Callout */}
-      <section className="py-20 bg-[#1E1D1B] text-white text-center">
+      {/* 10. Quick Consultation Callout */}
+      <section className="py-20 bg-[#141416] text-white text-center border-t border-white/[0.08]">
         <div className="max-w-4xl mx-auto px-4">
           <span className="text-[10px] uppercase font-mono tracking-[0.3em] text-[#D4B584] block mb-3">
             COMMENCEMENT
@@ -203,14 +172,14 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
             Have a space in mind? Let’s sculpt it together.
           </h2>
           <p className="text-sm sm:text-base text-[#D4CFCE] font-light max-w-xl mx-auto mb-8">
-            Accepting residential, penthouse, and commercial commissions across Kerala, Tamil Nadu, and Karnataka.
+            Accepting residential villas, apartments, and fabrication commissions across Kerala, Tamil Nadu, and Karnataka.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={onOpenConsultation}
-              className="px-8 py-4 bg-[#D4B584] hover:bg-[#FAF0DC] text-[#111113] text-xs uppercase tracking-[0.25em] font-semibold transition-colors"
+              className="px-8 py-4 bg-[#D4B584] hover:bg-[#FAF0DC] text-[#111113] text-xs uppercase tracking-[0.25em] font-semibold transition-colors shadow-lg"
             >
-              RESERVE SPATIAL BRIEF
+              START YOUR PROJECT
             </button>
             <a
               href="https://wa.me/916282549008?text=Hi%20HYZIN%20Interior,%20I'm%20interested%20in%20discussing%20an%20interior%20design%20project."

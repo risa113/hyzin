@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import ProjectDetailModal from './components/ProjectDetailModal';
+import ImageLightboxModal from './components/ImageLightboxModal';
 
 // 5 Dedicated SPA Pages
 import HomePage from './pages/HomePage';
@@ -16,6 +17,30 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [prefilledProject, setPrefilledProject] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('');
+
+  // Global Lightbox Viewer State
+  const [lightboxState, setLightboxState] = useState({
+    isOpen: false,
+    images: [],
+    initialIndex: 0,
+    title: '',
+    category: ''
+  });
+
+  const handleOpenLightbox = (images, initialIndex = 0, title = '', category = '') => {
+    const list = Array.isArray(images) ? images : [images];
+    setLightboxState({
+      isOpen: true,
+      images: list,
+      initialIndex: typeof initialIndex === 'number' ? initialIndex : 0,
+      title: title || 'HYZIN Architectural Work',
+      category: category || 'Original Client Work'
+    });
+  };
+
+  const handleCloseLightbox = () => {
+    setLightboxState((prev) => ({ ...prev, isOpen: false }));
+  };
 
   // Handle URL hash on initial load or browser back/forward
   useEffect(() => {
@@ -70,6 +95,7 @@ export default function App() {
             onNavigate={navigateTo}
             onSelectProject={(project) => setSelectedProject(project)}
             onOpenConsultation={handleOpenConsultation}
+            onOpenLightbox={handleOpenLightbox}
           />
         )}
 
@@ -77,6 +103,7 @@ export default function App() {
           <AboutPage
             onOpenConsultation={handleOpenConsultation}
             onSelectRegion={handleSelectRegion}
+            onOpenLightbox={handleOpenLightbox}
           />
         )}
 
@@ -84,12 +111,14 @@ export default function App() {
           <ProjectsPage
             onSelectProject={(project) => setSelectedProject(project)}
             onOpenConsultation={handleOpenConsultation}
+            onOpenLightbox={handleOpenLightbox}
           />
         )}
 
         {activePage === 'services' && (
           <ServicesPage
             onOpenConsultation={handleOpenConsultation}
+            onOpenLightbox={handleOpenLightbox}
           />
         )}
 
@@ -118,6 +147,16 @@ export default function App() {
           onCommissionProject={handleCommissionProject}
         />
       )}
+
+      {/* Fullscreen High-Resolution Image Lightbox Viewer */}
+      <ImageLightboxModal
+        isOpen={lightboxState.isOpen}
+        onClose={handleCloseLightbox}
+        images={lightboxState.images}
+        initialIndex={lightboxState.initialIndex}
+        title={lightboxState.title}
+        category={lightboxState.category}
+      />
     </div>
   );
 }

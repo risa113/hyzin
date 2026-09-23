@@ -1,6 +1,9 @@
-import { ArrowRight, Compass, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { assetUrl } from '../data/clientAssets';
 
-export default function BrandIntro({ onExploreServices }) {
+export default function BrandIntro({ onExploreServices, onOpenLightbox }) {
+  const introImage = assetUrl('WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg');
+
   return (
     <section id="about" className="relative py-24 sm:py-32 bg-[#0d0e10] border-t border-white/[0.06] overflow-hidden">
       {/* Ambient background glow */}
@@ -26,7 +29,7 @@ export default function BrandIntro({ onExploreServices }) {
             </p>
 
             <p className="mt-4 text-sm sm:text-base text-[#a39c90] font-light leading-relaxed">
-              Serving the discerning architectural landscape across Kerala, Tamil Nadu, and Karnataka, our practice approaches each residence as a bespoke living portrait of the individuals who inhabit it. We reject generic trends in favor of enduring materiality, tactile serenity, and seamless spatial flow.
+              Operating with specialized in-house aluminium and steel fabrication workshops alongside bespoke interior joinery, our practice delivers turnkey architectural excellence across Kerala, Tamil Nadu, and Karnataka. Every detail is engineered for enduring permanence.
             </p>
 
             {/* Architectural Philosophy Callout */}
@@ -44,30 +47,33 @@ export default function BrandIntro({ onExploreServices }) {
                 onClick={onExploreServices}
                 className="group inline-flex items-center space-x-3 text-xs uppercase tracking-[0.25em] text-[#d4b584] hover:text-[#faf2e3] transition-colors"
               >
-                <span>DISCOVER OUR CAPABILITIES</span>
+                <span>DISCOVER OUR 10 CORE DISCIPLINES</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
               </button>
             </div>
           </div>
 
-          {/* Right Column: Architectural Photography Collage */}
+          {/* Right Column: Original Client Photography */}
           <div className="lg:col-span-6 relative">
-            <div className="relative group overflow-hidden border border-white/[0.08] shadow-2xl">
+            <div 
+              onClick={() => onOpenLightbox && onOpenLightbox(introImage, 0, 'HYZIN Living Room Paneling & Ambient Lighting', 'Paneling')}
+              className="relative group overflow-hidden border border-white/[0.08] shadow-2xl cursor-pointer"
+            >
               <img
-                src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85"
+                src={introImage}
                 alt="Architectural Interior by HYZIN"
-                className="w-full h-[460px] sm:h-[560px] object-cover object-center filter brightness-[0.92] contrast-[1.05] transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-[460px] sm:h-[560px] object-cover object-center filter brightness-[0.95] contrast-[1.05] transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
               
               {/* Floating Architectural Badge */}
               <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 bg-[#0e0f12]/90 backdrop-blur-md border border-white/10 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] uppercase tracking-[0.25em] text-[#c5a065] block font-mono">
-                    REGIONAL PRACTICE
+                    ORIGINAL CLIENT WORK
                   </span>
                   <span className="font-serif text-base sm:text-lg text-[#f7f2ea]">
-                    Kerala • Tamil Nadu • Karnataka
+                    Living Paneling & Ambient Cove
                   </span>
                 </div>
                 <div className="text-right font-mono text-[10px] text-[#a39e94]">

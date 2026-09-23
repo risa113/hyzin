@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, MapPin, MessageSquare, ChevronDown, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import { ChevronDown, ArrowUpRight } from 'lucide-react';
 import ConsultationForm from '../components/ConsultationForm';
 
 export default function ContactPage({ prefilledProject = '', selectedRegion = '' }) {

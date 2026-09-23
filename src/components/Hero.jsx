@@ -1,13 +1,16 @@
-import { ArrowRight, ChevronDown, Sparkles } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { statsData } from '../data/testimonialsData';
+import { assetUrl } from '../data/clientAssets';
 
 export default function Hero({ onOpenConsultation, onExploreWork }) {
+  const heroBg = assetUrl('WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg');
+
   return (
     <section className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#09090b]">
       {/* Cinematic Background Image with Dark Vignette */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=88"
+          src={heroBg}
           alt="Luxury Architectural Living Space by HYZIN INTERIOR"
           className="w-full h-full object-cover object-center animate-slow-zoom filter brightness-[0.42] contrast-[1.08]"
         />

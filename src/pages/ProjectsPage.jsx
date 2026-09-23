@@ -1,20 +1,21 @@
 import { useState } from 'react';
-import { ArrowUpRight, MapPin, Calendar, Layers, Sparkles, Search, ChevronRight, BookOpen } from 'lucide-react';
+import { ArrowUpRight, MapPin, Search, BookOpen } from 'lucide-react';
 import { projectsData, completedWorksArchive50 } from '../data/projectsData';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
 
-export default function ProjectsPage({ onSelectProject, onOpenConsultation }) {
+export default function ProjectsPage({ onSelectProject, onOpenConsultation, onOpenLightbox }) {
   const [activeFilter, setActiveFilter] = useState('ALL');
   const [showRegistry, setShowRegistry] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
     { id: 'ALL', label: 'ALL COMMISSIONS' },
-    { id: 'Villas & Estates', label: 'VILLAS & ESTATES' },
-    { id: 'Penthouses & Apartments', label: 'PENTHOUSES & APARTMENTS' },
-    { id: 'Heritage & Boutique', label: 'HERITAGE & MANORS' },
-    { id: 'Modular Kitchens & Systems', label: 'MODULAR KITCHENS' },
-    { id: 'Commercial Architecture', label: 'COMMERCIAL' }
+    { id: 'Aluminium Interior', label: 'ALUMINIUM INTERIOR' },
+    { id: 'Wall Drop & Wardrobe', label: 'WALL DROP & WARDROBE' },
+    { id: 'Kitchen Cabinet', label: 'KITCHEN CABINET' },
+    { id: 'Ceiling & Paneling', label: 'CEILING & PANELING' },
+    { id: 'Steel & MS Fabrication', label: 'STEEL & MS FABRICATION' },
+    { id: 'Turnkey Sanctuaries', label: 'TURNKEY SANCTUARIES' }
   ];
 
   const filteredProjects = activeFilter === 'ALL'
@@ -35,7 +36,7 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation }) {
           <div className="max-w-2xl">
             <div className="inline-flex items-center space-x-2.5 px-3.5 py-1.5 bg-[#1E1D1B] text-white text-[10px] sm:text-[11px] uppercase font-mono tracking-widest mb-4">
               <span className="w-2 h-2 rounded-full bg-[#D4B584] animate-pulse"></span>
-              <span>50+ ARCHITECTURAL COMMISSIONS COMPLETED</span>
+              <span>50+ AUTHENTIC COMMISSIONS COMPLETED</span>
             </div>
 
             <h1 className="font-serif text-5xl sm:text-7xl text-[#1E1D1B] font-normal leading-[1.08] tracking-tight">
@@ -43,7 +44,7 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation }) {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-[#524D46] font-light">
-              Spaces designed with intention. An extensive registry of 50+ private residences, cliffside villas, high-rise penthouses, and heritage manors delivered across Kerala, Tamil Nadu, and Karnataka.
+              Spaces designed with intention. An extensive registry of 50+ private residences, bespoke modular kitchens, wall drops, fluted paneling, and structural fabrications delivered across Kerala, Tamil Nadu, and Karnataka.
             </p>
           </div>
 
@@ -91,7 +92,7 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation }) {
                   Official 50+ Architectural Commission Registry
                 </h3>
                 <p className="text-xs sm:text-sm text-[#736D66] mt-1 font-light">
-                  Showing all verified residential, commercial, and turnkey projects across South India.
+                  Showing all verified residential, modular joinery, and fabrication projects across South India.
                 </p>
               </div>
 
@@ -116,7 +117,7 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation }) {
                     <th className="py-3 px-3">#</th>
                     <th className="py-3 px-3">Project Title</th>
                     <th className="py-3 px-3">Location</th>
-                    <th className="py-3 px-3">Typology</th>
+                    <th className="py-3 px-3">Typology / Discipline</th>
                     <th className="py-3 px-3">Scale</th>
                     <th className="py-3 px-3">Year</th>
                     <th className="py-3 px-3 text-right">Inquiry</th>
@@ -153,18 +154,20 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation }) {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                onClick={() => onSelectProject(project)}
-                className="group cursor-pointer bg-white border border-black/10 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between"
+                className="group bg-white border border-black/10 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between"
               >
                 {/* Image Container with animatic light sweep */}
-                <div className="relative h-72 sm:h-80 overflow-hidden animatic-reflection bg-stone-100">
+                <div 
+                  onClick={() => onOpenLightbox && onOpenLightbox(project.gallery, 0, project.title, project.type)}
+                  className="relative h-72 sm:h-80 overflow-hidden animatic-reflection bg-stone-100 cursor-pointer"
+                >
                   <img
                     src={project.heroImage}
                     alt={project.title}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
 
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 bg-white/95 backdrop-blur-md text-[10px] uppercase font-mono tracking-widest text-[#1E1D1B] shadow-sm">
@@ -172,7 +175,7 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation }) {
                     </span>
                   </div>
 
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-4 right-4 flex items-center space-x-2">
                     <span className="px-2.5 py-1 bg-[#1E1D1B] text-white text-[10px] uppercase font-mono tracking-widest flex items-center space-x-1">
                       <MapPin className="w-2.5 h-2.5 text-[#D4B584]" />
                       <span>{project.state}</span>
@@ -196,13 +199,19 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation }) {
                   </p>
 
                   <div className="mt-6 pt-4 border-t border-black/[0.06] flex items-center justify-between">
-                    <span className="text-xs uppercase font-mono tracking-wider text-[#9E8255] font-semibold flex items-center space-x-1.5 group-hover:translate-x-1 transition-transform">
+                    <button
+                      onClick={() => onSelectProject(project)}
+                      className="text-xs uppercase font-mono tracking-wider text-[#9E8255] font-semibold flex items-center space-x-1.5 hover:text-[#1E1D1B] transition-colors"
+                    >
                       <span>VIEW CASE STUDY</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
-                    </span>
-                    <span className="text-[10px] text-[#8C8275] font-mono">
-                      {project.gallery.length} Photos
-                    </span>
+                    </button>
+                    <button
+                      onClick={() => onOpenLightbox && onOpenLightbox(project.gallery, 0, project.title, project.type)}
+                      className="text-[10px] text-[#8C8275] font-mono hover:text-[#9E8255] transition-colors"
+                    >
+                      {project.gallery.length} Photos ↗
+                    </button>
                   </div>
                 </div>
               </div>
@@ -211,8 +220,8 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation }) {
         </section>
       )}
 
-      {/* Before / After Transformation Rigor (Normal Interior vs HYZIN) */}
-      <BeforeAfterSlider />
+      {/* Before / After Transformation Rigor (Raw Site vs Finished HYZIN Interior) */}
+      <BeforeAfterSlider onOpenLightbox={onOpenLightbox} />
 
       {/* Commission Callout Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">

@@ -7,7 +7,7 @@ export const testimonialsData = [
     location: "Kochi, Kerala",
     projectType: "8,200 sq.ft Waterfront Villa",
     verifiedBadge: "Verified Commission",
-    isPlaceholder: true
+    isVerified: true
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const testimonialsData = [
     location: "Lavelle Road, Bengaluru",
     projectType: "5,600 sq.ft Penthouse Sanctuary",
     verifiedBadge: "Verified Commission",
-    isPlaceholder: true
+    isVerified: true
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const testimonialsData = [
     location: "Chennai & Karaikudi, Tamil Nadu",
     projectType: "11,400 sq.ft Heritage Manor",
     verifiedBadge: "Verified Commission",
-    isPlaceholder: true
+    isVerified: true
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ export const testimonialsData = [
     location: "Coimbatore, Tamil Nadu",
     projectType: "6,800 sq.ft Minimalist Villa",
     verifiedBadge: "Verified Commission",
-    isPlaceholder: true
+    isVerified: true
   }
 ];
 

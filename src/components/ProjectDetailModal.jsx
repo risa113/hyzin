@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { X, MapPin, Calendar, Layers, CheckCircle2, ArrowRight, Share2, Compass } from 'lucide-react';
+import { X, CheckCircle2, ArrowRight, Share2 } from 'lucide-react';
 
 export default function ProjectDetailModal({ project, onClose, onCommissionProject }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);

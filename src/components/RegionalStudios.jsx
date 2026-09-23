@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Compass, ArrowUpRight } from 'lucide-react';
+import { Phone, ArrowUpRight } from 'lucide-react';
 import { studiosData } from '../data/studiosData';
+import { BRAND_ASSETS } from '../data/clientAssets';
 
-export default function RegionalStudios({ onSelectRegion }) {
+export default function RegionalStudios({ onSelectRegion, onOpenLightbox }) {
   const [activeStudio, setActiveStudio] = useState(0);
 
   return (
@@ -11,23 +12,26 @@ export default function RegionalStudios({ onSelectRegion }) {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Team / Atelier Photography */}
+          {/* Left Column: Official HYZIN Atelier & Branding Wall */}
           <div className="lg:col-span-6 relative">
-            <div className="relative overflow-hidden border border-white/[0.08] shadow-2xl group">
+            <div 
+              onClick={() => onOpenLightbox && onOpenLightbox(BRAND_ASSETS.logo3D, 0, 'HYZIN Official 3D Atelier Branding Wall', 'Branding')}
+              className="relative overflow-hidden border border-white/[0.08] shadow-2xl group cursor-pointer"
+            >
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85"
-                alt="HYZIN Architectural Design Team Review"
-                className="w-full h-[460px] sm:h-[540px] object-cover object-center filter grayscale contrast-[1.1] brightness-[0.8] group-hover:brightness-95 transition-all duration-700"
+                src={BRAND_ASSETS.logo3D}
+                alt="HYZIN Official 3D Atelier Branding Wall"
+                className="w-full h-[460px] sm:h-[540px] object-cover object-center filter brightness-[0.95] contrast-[1.05] group-hover:scale-105 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
 
               {/* Studio Stamp Badge */}
               <div className="absolute bottom-6 left-6 right-6 p-5 bg-black/80 backdrop-blur-md border border-white/10">
                 <span className="text-[10px] uppercase font-mono tracking-widest text-[#d4b584] block mb-1">
-                  PRINCIPAL PRACTICE & ATELIER
+                  OFFICIAL ATELIER & FABRICATION WORKSHOPS
                 </span>
                 <p className="font-serif text-xl text-[#faf6ee]">
-                  Architects, Structural Craftspeople & Interior Curators
+                  Aluminium, Steel Fabrication & Bespoke Interior Joinery
                 </p>
                 <div className="mt-2 text-xs text-[#a39f97] font-mono">
                   Kerala • Tamil Nadu • Karnataka
@@ -49,7 +53,7 @@ export default function RegionalStudios({ onSelectRegion }) {
             </h2>
 
             <p className="mt-4 text-base text-[#aba395] font-light leading-relaxed">
-              With dedicated operational presences across South India, HYZIN delivers localized site vigilance alongside our singular standard of quiet architectural luxury.
+              With dedicated fabrication facilities and operational presence across South India, HYZIN delivers localized site vigilance alongside our singular standard of quiet architectural luxury.
             </p>
 
             {/* Interactive Studios Accordion List */}
@@ -103,7 +107,7 @@ export default function RegionalStudios({ onSelectRegion }) {
 
                         <div className="flex items-center justify-between pt-2 border-t border-white/[0.04]">
                           <a
-                            href={`tel:6282549008`}
+                            href="tel:6282549008"
                             className="text-xs uppercase font-mono tracking-wider text-[#d4b584] hover:text-white flex items-center space-x-1.5"
                           >
                             <Phone className="w-3.5 h-3.5" />

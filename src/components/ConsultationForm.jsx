@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, Phone, Mail, MapPin, CheckCircle2, MessageSquare, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Send, Phone, MapPin, CheckCircle2, MessageSquare, ArrowUpRight } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function ConsultationForm({ prefilledProject = '', selectedRegion = '' }) {
@@ -8,7 +8,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
     phone: '',
     email: '',
     region: selectedRegion || 'Kerala',
-    projectType: prefilledProject ? `Commission for: ${prefilledProject}` : 'Luxury Residential Villa',
+    projectType: prefilledProject ? `Commission for: ${prefilledProject}` : 'Aluminium Interior',
     budget: '₹50 Lakhs – ₹1 Crore',
     message: ''
   });
@@ -17,23 +17,29 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const budgetOptions = [
+    '₹15 Lakhs – ₹30 Lakhs',
     '₹30 Lakhs – ₹50 Lakhs',
     '₹50 Lakhs – ₹1 Crore',
-    '₹1 Crore – ₹2.5 Crores',
-    '₹2.5 Crores+'
+    '₹1 Crore+'
   ];
 
   const projectTypes = [
-    'Luxury Residential Villa',
-    'Penthouse / Apartment Interior',
-    'Ancestral / Heritage Manor',
-    'Full Turnkey Execution',
-    'Modular Kitchen & Joinery',
-    'Commercial HQ / Hospitality'
+    'Aluminium Interior',
+    'Wall Drop (Wardrobes & Closets)',
+    'Kitchen Cabinet (Modular Kitchen)',
+    'Loft Conversion & Storage',
+    'Custom Accessories & Fixtures',
+    'Ceiling Works (Gypsum & Grid)',
+    'Wall Paneling & Fluted Surfaces',
+    'Steel Doors & Security Systems',
+    'Steel Fabrication & Railings',
+    'MS Fabrication & Heavy Framing',
+    'Full Turnkey Residential Villa',
+    'Full Turnkey Apartment / Commercial'
   ];
 
   const regions = [
-    'Kerala (Kochi, Calicut, Trivandrum, Wayanad)',
+    'Kerala (Kochi, Calicut, Trivandrum, Thrissur, Wayanad)',
     'Tamil Nadu (Chennai, Coimbatore, Madurai)',
     'Karnataka (Bengaluru, Mysuru, Mangaluru)'
   ];
@@ -65,8 +71,8 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
       `*Phone:* ${formData.phone || 'Not provided'}\n` +
       `*Email:* ${formData.email || 'Not provided'}\n` +
       `*Region / State:* ${formData.region}\n` +
-      `*Project Type:* ${formData.projectType}\n` +
-      `*Budget Range:* ${formData.budget}\n` +
+      `*Service / Typology:* ${formData.projectType}\n` +
+      `*Budget Framework:* ${formData.budget}\n` +
       `*Notes:* ${formData.message || 'Interested in initiating a private spatial consultation.'}`
     );
     window.open(`https://wa.me/916282549008?text=${text}`, '_blank');
@@ -110,7 +116,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                     +91 6282549008
                   </a>
                   <p className="text-xs text-[#a39f97] mt-0.5">
-                    Available Mon – Sat, 9:30 AM – 7:30 PM IST
+                    Available Mon – Sat, 9:00 AM – 8:00 PM IST
                   </p>
                 </div>
               </div>
@@ -146,7 +152,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                     rel="noopener noreferrer"
                     className="text-sm font-mono text-[#d4b584] hover:underline flex items-center space-x-1 mt-0.5"
                   >
-                    <span>Connect with Principal Architect on WhatsApp</span>
+                    <span>Connect directly on WhatsApp (+91 6282549008)</span>
                     <ArrowUpRight className="w-3 h-3" />
                   </a>
                 </div>
@@ -171,7 +177,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                   Consultation Request Received
                 </h3>
                 <p className="text-sm text-[#b5aca0] font-light max-w-md mx-auto leading-relaxed mb-8">
-                  Thank you, <span className="text-[#faf6ee] font-medium">{formData.name || 'Patron'}</span>. Our principal studio lead for {formData.region} will review your spatial brief and reach out within 24 hours.
+                  Thank you, <span className="text-[#faf6ee] font-medium">{formData.name || 'Patron'}</span>. Our studio lead for {formData.region} will review your spatial brief and reach out within 24 hours.
                 </p>
 
                 <div className="p-6 bg-[#16181f] border border-[#d4b584]/30 max-w-md mx-auto text-left mb-8">
@@ -179,7 +185,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                     FAST-TRACK YOUR COMMENCEMENT:
                   </div>
                   <p className="text-xs text-[#ded8cd] font-light mb-4">
-                    Send your project brief directly to the principal architect’s private WhatsApp for immediate review:
+                    Send your project brief directly to the principal lead’s private WhatsApp for immediate review:
                   </p>
                   <button
                     onClick={handleWhatsAppSend}
@@ -277,10 +283,10 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                   </select>
                 </div>
 
-                {/* Project Type */}
+                {/* Project Typology / 10 Services */}
                 <div>
                   <label className="block text-[11px] uppercase font-mono tracking-wider text-[#a8a195] mb-2">
-                    Project Typology
+                    Service Required *
                   </label>
                   <select
                     name="projectType"
@@ -329,7 +335,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                     rows="3"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Describe your site, approximate square footage, timeline, or special architectural requirements..."
+                    placeholder="Describe your site, approximate square footage, timeline, or special interior/fabrication requirements..."
                     className="w-full px-4 py-3 bg-[#0a0a0c] border border-white/10 focus:border-[#d4b584] text-[#faf6ee] text-sm focus:outline-none transition-colors resize-none"
                   ></textarea>
                 </div>

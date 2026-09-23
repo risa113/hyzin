@@ -1,4 +1,4 @@
-import { ArrowUpRight, Heart, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Heart } from 'lucide-react';
 import { instagramProfile } from '../data/instagramData';
 
 const InstagramIcon = ({ className = "w-4 h-4" }) => (

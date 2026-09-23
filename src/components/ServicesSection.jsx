@@ -1,174 +1,177 @@
 import { useState } from 'react';
-import { ArrowUpRight, Check, Compass, Eye, Shield, Layers } from 'lucide-react';
+import { ArrowUpRight, Check, Sparkles, Maximize2 } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 
-export default function ServicesSection({ onSelectService }) {
+export default function ServicesSection({ onOpenLightbox }) {
   const [activeService, setActiveService] = useState(0);
 
-  const geometryPillars = [
-    {
-      num: "01",
-      title: "Tactile Granite & Permanence",
-      sub: "Massive natural materials that age gracefully over generations.",
-      text: "We avoid fragile superficial laminates. Instead, we anchor spaces with flamed Kerala granite, honed travertine, and quarter-sawn solid hardwoods that develop rich character with age."
-    },
-    {
-      num: "02",
-      title: "Spatial Whispering & Shadows",
-      sub: "Lighting choreography designed to calm the senses.",
-      text: "Great interiors respect shadow as deeply as light. We sculpt indirect coves, low-glare 2700K micro-luminaires, and daylight light-wells that shift gently throughout the diurnal rhythm."
-    },
-    {
-      num: "03",
-      title: "Artisanal Millwork & Craft",
-      sub: "Concealed joinery and bespoke ergonomic proportions.",
-      text: "Every wardrobe edge, kitchen pocket door, and acoustic ceiling baffle is engineered to millimeter tolerances by master craftsmen, eliminating visual clutter completely."
+  const current = servicesData[activeService] || servicesData[0];
+
+  const handleOpenImage = (img, title, serviceTitle) => {
+    if (onOpenLightbox) {
+      onOpenLightbox(current.gallery || [img], 0, title, serviceTitle);
     }
-  ];
+  };
 
   return (
-    <section id="services" className="py-24 sm:py-32 bg-[#0d0e11] border-t border-white/[0.06] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-24 sm:py-32 bg-[#0C0D10] text-[#FAF8F5] relative overflow-hidden border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Part 1: The Geometry of Quietness (Pillars from Reference Image) */}
-        <div className="mb-24 sm:mb-32">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between border-b border-white/[0.08] pb-8 mb-12">
-            <div>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono block mb-2">
-                ARCHITECTURAL METHODOLOGY
-              </span>
-              <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight">
-                The Geometry of Quietness.
-              </h2>
+        {/* Section Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between border-b border-white/10 pb-8 mb-16">
+          <div>
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#D4B584] font-mono mb-3">
+              <span>SPECIALIZED FABRICATION & ARCHITECTURAL INTERIORS</span>
+              <span className="w-10 h-[1px] bg-[#D4B584]/50"></span>
             </div>
-            <p className="mt-4 lg:mt-0 text-sm sm:text-base text-[#a39f97] font-light max-w-md">
-              Rejecting sterile maximalism. We sculpt environments through structural discipline, honest materials, and acoustic stillness.
-            </p>
+            <h2 className="font-serif text-4xl sm:text-6xl text-[#FAF8F5] font-normal tracking-tight">
+              10 Specialized <span className="italic font-light text-[#D4B584]">Disciplines.</span>
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {geometryPillars.map((pillar) => (
-              <div
-                key={pillar.num}
-                className="p-8 bg-[#131418] border border-white/[0.08] hover:border-[#d4b584]/50 transition-all duration-500 flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex items-center justify-between font-mono text-xs text-[#c5a065] mb-6">
-                    <span>{pillar.num} / FOUNDATION</span>
-                    <span className="w-6 h-[1px] bg-[#c5a065]/40"></span>
-                  </div>
-                  <h3 className="font-serif text-2xl text-[#fbf7ef] mb-3 group-hover:text-[#d4b584] transition-colors">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-xs uppercase tracking-wider text-[#9b9386] mb-4 font-mono">
-                    {pillar.sub}
-                  </p>
-                  <p className="text-sm text-[#bab1a3] font-light leading-relaxed">
-                    {pillar.text}
-                  </p>
-                </div>
-
-                <div className="mt-8 pt-4 border-t border-white/[0.06] flex items-center justify-between text-[11px] text-[#787268] uppercase font-mono">
-                  <span>DISCIPLINE</span>
-                  <span>HYZIN GUILD</span>
-                </div>
-              </div>
-            ))}
+          <div className="mt-6 lg:mt-0 text-left lg:text-right">
+            <span className="font-mono text-xs text-[#D4B584] uppercase tracking-widest block">
+              100% In-House Workshop Fabrication
+            </span>
+            <p className="text-xs text-[#A39E96] mt-1 max-w-sm">
+              Real client work delivered across Kerala, Tamil Nadu, and Karnataka with millimeter precision.
+            </p>
           </div>
         </div>
 
-        {/* Part 2: What We Create (Full Editorial Services Layout) */}
-        <div>
-          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-3">
-            <span>OUR DISCIPLINES</span>
-            <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
-          </div>
-
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight mb-4">
-            WHAT WE CREATE
-          </h2>
-
-          <p className="text-base text-[#aba395] font-light max-w-2xl mb-12">
-            Comprehensive spatial disciplines delivered with uncompromised craft across Kerala, Tamil Nadu, and Karnataka.
-          </p>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
-            
-            {/* Left: Interactive Service List */}
-            <div className="lg:col-span-6 flex flex-col justify-between space-y-4">
-              {servicesData.map((srv, index) => {
-                const isSelected = activeService === index;
-                return (
-                  <div
-                    key={srv.number}
-                    onClick={() => setActiveService(index)}
-                    className={`p-6 cursor-pointer border transition-all duration-300 ${
-                      isSelected
-                        ? 'bg-[#15161b] border-[#d4b584] shadow-lg shadow-[#d4b584]/5'
-                        : 'bg-[#0f1013] border-white/[0.06] hover:border-white/20'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
-                        <span className="font-mono text-xs text-[#c5a065]">
-                          {srv.number}
-                        </span>
-                        <h3 className="font-serif text-xl sm:text-2xl text-[#f7f2ea]">
-                          {srv.title}
-                        </h3>
-                      </div>
-                      <ArrowUpRight
-                        className={`w-4 h-4 transition-transform duration-300 ${
-                          isSelected ? 'rotate-45 text-[#d4b584]' : 'text-[#716c64]'
-                        }`}
-                      />
+        {/* Master 10 Services Interactive Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          
+          {/* Left: 10 Service Cards List */}
+          <div className="lg:col-span-6 space-y-3 max-h-[780px] overflow-y-auto pr-1 no-scrollbar">
+            {servicesData.map((srv, idx) => {
+              const isSelected = activeService === idx;
+              return (
+                <div
+                  key={srv.id}
+                  onClick={() => setActiveService(idx)}
+                  className={`p-5 cursor-pointer border transition-all duration-300 rounded-sm relative group ${
+                    isSelected
+                      ? 'bg-[#16181F] border-[#D4B584] shadow-xl shadow-black/40 translate-x-1'
+                      : 'bg-[#101115] border-white/5 hover:border-white/20 hover:bg-[#131419]'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <span className={`font-mono text-xs font-semibold px-2 py-0.5 rounded-sm border ${
+                        isSelected ? 'text-[#D4B584] border-[#D4B584]/40 bg-[#D4B584]/10' : 'text-stone-400 border-white/10'
+                      }`}>
+                        {srv.number}
+                      </span>
+                      <h3 className={`font-serif text-lg sm:text-xl transition-colors ${
+                        isSelected ? 'text-[#FAF8F5]' : 'text-stone-300 group-hover:text-white'
+                      }`}>
+                        {srv.title}
+                      </h3>
                     </div>
 
-                    {isSelected && (
-                      <div className="mt-4 pt-4 border-t border-white/[0.08] animate-fadeIn">
-                        <p className="text-sm text-[#c5bdb0] font-light leading-relaxed mb-4">
-                          {srv.description}
-                        </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {srv.deliverables.map((item, i) => (
-                            <div key={i} className="flex items-center space-x-2 text-xs text-[#ded8cd]">
-                              <span className="w-1.5 h-1.5 rounded-full bg-[#c5a065]"></span>
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                    <ArrowUpRight
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        isSelected ? 'rotate-45 text-[#D4B584]' : 'text-stone-500 group-hover:text-stone-300'
+                      }`}
+                    />
                   </div>
-                );
-              })}
-            </div>
 
-            {/* Right: Dynamic High-Res Service Showcase */}
-            <div className="lg:col-span-6 relative min-h-[460px] lg:min-h-full">
-              <div className="relative w-full h-full min-h-[460px] border border-white/10 overflow-hidden shadow-2xl bg-[#0a0a0c]">
-                <img
-                  src={servicesData[activeService].image}
-                  alt={servicesData[activeService].title}
-                  className="w-full h-full object-cover object-center transition-all duration-700 filter brightness-[0.88] contrast-[1.05]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                  {isSelected && (
+                    <div className="mt-4 pt-4 border-t border-white/10 animate-fadeIn">
+                      <p className="text-xs sm:text-sm text-[#C4BCB1] font-light leading-relaxed mb-4">
+                        {srv.description}
+                      </p>
+                      
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                        {srv.deliverables.map((item, i) => (
+                          <div key={i} className="flex items-start space-x-2 text-[11px] text-[#E0DAD0]">
+                            <Check className="w-3.5 h-3.5 text-[#D4B584] flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
 
-                <div className="absolute bottom-6 left-6 right-6 p-6 bg-black/70 backdrop-blur-md border border-white/10">
-                  <span className="text-[10px] uppercase font-mono tracking-widest text-[#d4b584] block mb-1">
-                    SERVICE DISCIPLINE {servicesData[activeService].number}
-                  </span>
-                  <h4 className="font-serif text-2xl text-[#faf6ee]">
-                    {servicesData[activeService].title}
-                  </h4>
-                  <p className="text-xs text-[#c5bdb0] mt-1 font-light">
-                    {servicesData[activeService].tagline}
-                  </p>
+                      <div className="flex items-center justify-between pt-2">
+                        <span className="text-[10px] uppercase font-mono tracking-wider text-[#D4B584]">
+                          {srv.gallery ? `${srv.gallery.length} REAL SITE PHOTOS` : 'VERIFIED CLIENT WORK'}
+                        </span>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleOpenImage(srv.image, srv.title, srv.title);
+                          }}
+                          className="text-[10px] uppercase font-mono tracking-widest text-white/80 hover:text-[#D4B584] flex items-center space-x-1"
+                        >
+                          <Maximize2 className="w-3 h-3 mr-1" />
+                          <span>EXPAND PHOTO</span>
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
+              );
+            })}
+          </div>
+
+          {/* Right: Dynamic High-Definition Client Showcase */}
+          <div className="lg:col-span-6 relative min-h-[500px] lg:min-h-full flex flex-col">
+            <div className="relative flex-1 w-full border border-white/10 overflow-hidden shadow-2xl bg-[#08080A] rounded-sm group">
+              <img
+                key={current.id}
+                src={current.image}
+                alt={current.title}
+                className="w-full h-full object-cover object-center transition-all duration-700 filter brightness-[0.9] contrast-[1.05] group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0C0D10] via-transparent to-black/30 pointer-events-none"></div>
+
+              {/* Lightbox Trigger overlay button */}
+              <button
+                onClick={() => handleOpenImage(current.image, current.title, current.title)}
+                className="absolute top-4 right-4 p-3 bg-black/60 hover:bg-[#D4B584] hover:text-black text-white rounded-full backdrop-blur-md border border-white/10 transition-all shadow-lg"
+                title="View in Fullscreen Lightbox"
+              >
+                <Maximize2 className="w-4 h-4" />
+              </button>
+
+              {/* Top Discipline Tag */}
+              <div className="absolute top-4 left-4">
+                <span className="px-3 py-1 bg-black/70 backdrop-blur-md border border-[#D4B584]/40 text-[10px] uppercase font-mono tracking-widest text-[#D4B584]">
+                  DISCIPLINE {current.number} • REAL CLIENT WORK
+                </span>
+              </div>
+
+              {/* Bottom Information Glass Card */}
+              <div className="absolute bottom-6 left-6 right-6 p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-sm">
+                <div className="flex items-center space-x-2 text-[10px] uppercase font-mono tracking-widest text-[#D4B584] mb-1">
+                  <Sparkles className="w-3 h-3 text-[#D4B584]" />
+                  <span>ORIGINAL CLIENT SITE EXECUTION</span>
+                </div>
+                <h4 className="font-serif text-2xl sm:text-3xl text-[#FAF8F5]">
+                  {current.title}
+                </h4>
+                <p className="text-xs sm:text-sm text-[#C4BCB1] mt-2 font-light line-clamp-2">
+                  {current.tagline}
+                </p>
+
+                {/* Micro Thumbnail Strip */}
+                {current.gallery && current.gallery.length > 1 && (
+                  <div className="mt-4 pt-3 border-t border-white/10 flex items-center space-x-2 overflow-x-auto no-scrollbar">
+                    {current.gallery.map((thumb, tIdx) => (
+                      <button
+                        key={tIdx}
+                        onClick={() => handleOpenImage(thumb, `${current.title} - View ${tIdx + 1}`, current.title)}
+                        className="w-12 h-12 flex-shrink-0 border border-white/20 hover:border-[#D4B584] rounded overflow-hidden transition-all hover:scale-105"
+                      >
+                        <img src={thumb} alt="thumbnail" className="w-full h-full object-cover" />
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
-
           </div>
+
         </div>
 
       </div>

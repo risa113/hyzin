@@ -1,371 +1,354 @@
+const assetUrl = (filename) => `/kerala-assets/${encodeURIComponent(filename)}`;
+
 export const projectsData = [
   {
-    id: "bolgatty-waterfront-pavilion",
-    title: "The Bolgatty Waterfront Pavilion",
-    tagline: "Fluid indoor-outdoor living framing panoramic backwater vistas.",
+    id: "royal-palms-modular-kitchen",
+    title: "The Rose Gold Culinary Suite",
+    tagline: "High-gloss acrylic cabinetry with warm ambient lighting & quartz countertops.",
     location: "Kochi, Kerala",
     state: "Kerala",
-    type: "Waterfront Villa",
-    category: "Villas & Estates",
+    type: "Kitchen Cabinet",
+    category: "Kitchen Cabinet",
     year: "2025",
-    area: "8,200 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85",
+    area: "320 sq.ft",
+    heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.27 PM.jpeg"),
     gallery: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=85"
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.27 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM (2).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.33 PM (2).jpeg")
     ],
-    concept: "Designed to dissolve boundaries between Kerala's backwater ecology and contemporary architectural minimalism. The residence utilizes massive floor-to-ceiling glass expanses, cantilevered teak ceilings, and flamed granite terraces that appear to hover effortlessly above the reflective water line.",
+    concept: "Designed for a luxury Kochi residence, this culinary suite features custom rose gold / champagne metallic acrylic shutters with anti-fingerprint coating, seamless under-cabinet LED strip illumination, and heavy-duty soft-close drawer runners.",
     spaceHighlights: [
-      "Double-height living atrium overlooking Vembanad backwaters",
-      "Monolithic cantilevered staircase in micro-cement and brushed bronze",
-      "Sunken cocktail lounge with fluted acoustic panelling",
-      "Integrated wellness wing featuring outdoor basalt soaking tub"
+      "Custom rose gold acrylic modular kitchen cabinetry with black accent profiles",
+      "Concealed LED cove and task lighting beneath upper wall cabinets",
+      "Heat & scratch resistant black marble-pattern quartz countertop",
+      "Overhead high-capacity storage lofts framing the kitchen boundary"
     ],
     materials: [
-      { name: "Silver Travertine", role: "Continuous flooring and vertical spine walls" },
-      { name: "Sustainably Aged Teak", role: "Slatted acoustic ceiling baffles & custom credenzas" },
-      { name: "Brushed Antique Bronze", role: "Architectural trim, pivot door hardware, and lighting" },
-      { name: "Low-Iron Acoustic Glass", role: "Frameless floor-to-ceiling panoramic fenestration" }
+      { name: "High-Gloss Acrylic", role: "Rose gold shutter panels with seamless edge banding" },
+      { name: "Anodized Aluminium", role: "Concealed Gola profile handles and door framing" },
+      { name: "Engineered Quartz", role: "Continuous counter surfaces & heat-resistant backsplash" },
+      { name: "German Blum Hardware", role: "Soft-close tandem drawers and hydraulic lift-up stays" }
     ],
-    clientReview: "“HYZIN transformed our waterfront property into an architectural sanctuary that feels timeless, tranquil, and distinctly ours. The attention to light and raw materiality is unmatched.”",
-    patron: "Dr. K. Mathew & Family"
+    clientReview: "“HYZIN built a kitchen that looks like a 5-star hotel suite while handling daily traditional cooking with zero maintenance issues.”",
+    patron: "Mr. Shaji Varghese & Family"
   },
   {
-    id: "penthouse-v-sky-gallery",
-    title: "Penthouse V — Sky Gallery",
-    tagline: "A moody, sculpted sky sanctuary suspended above Bangalore's canopy.",
-    location: "Lavelle Road, Bengaluru",
-    state: "Karnataka",
-    type: "Penthouse",
-    category: "Penthouses & Apartments",
-    year: "2025",
-    area: "5,600 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85",
-    gallery: [
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85"
-    ],
-    concept: "Created for a prominent venture capitalist and art collector. The penthouse balances dark tactile surfaces with museum-grade gallery illumination. Hidden pocket doors and monolithic marble islands curate an atmosphere of profound serenity amidst urban density.",
-    spaceHighlights: [
-      "Curated art corridor with 3000K museum-grade linear illumination",
-      "Monolithic Nero Marquina kitchen island with recessed induction surfaces",
-      "Floor-to-ceiling customized library lounge with leather-wrapped shelving",
-      "Panoramic observatory terrace with brass gas fire feature"
-    ],
-    materials: [
-      { name: "Nero Marquina Marble", role: "Waterfall kitchen monolith & fireplace surrounds" },
-      { name: "Smoked European Oak", role: "Herringbone timber flooring and wall paneling" },
-      { name: "Hand-Stitched Saddle Leather", role: "Integrated joinery handles & reading nooks" },
-      { name: "Architectural Raw Brass", role: "Accent trims, bespoke linear luminaires" }
-    ],
-    clientReview: "“HYZIN brought an editorial restraint rarely seen in modern high-rises. Every evening as dusk falls, the lighting choreography transforms the penthouse into a live art installation.”",
-    patron: "Aditya & Sanjana Rao"
-  },
-  {
-    id: "chettinad-modernist-manor",
-    title: "Chettinad Modernist Manor",
-    tagline: "Honoring Tamil architectural heritage through razor-sharp contemporary lines.",
-    location: "Karaikudi / Chennai",
-    state: "Tamil Nadu",
-    type: "Heritage Manor",
-    category: "Heritage & Boutique",
-    year: "2024",
-    area: "11,400 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85",
-    gallery: [
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=85"
-    ],
-    concept: "A dialogue between time-honored Chettinad courtyard spatial wisdom and modernist purity. Reclaimed carved pillars coexist with frameless glass, micro-cement courtyard pools, and custom terrazzo flooring cast on-site.",
-    spaceHighlights: [
-      "Central open-to-sky central courtyard with rainwater reflection basin",
-      "Bespoke dining chamber with a 16-seater monolithic timber banquet table",
-      "Heritage verandah reimagined with concealed motorized climate shutters",
-      "Private devotional chamber crafted entirely in carved teak and brass lattice"
-    ],
-    materials: [
-      { name: "Athangudi Reinterpreted Tiles", role: "Handcrafted geometric floor borders" },
-      { name: "Burmese Teak", role: "Restored architectural pillars and roof rafters" },
-      { name: "Fluted Cast Bronze", role: "Louvered screens & threshold transitions" },
-      { name: "Lime Plaster & Stucco", role: "Breathable natural mineral wall finish" }
-    ],
-    clientReview: "“They preserved the soul of our ancestral vernacular while gifting us a home engineered for supreme 21st-century comfort and effortless entertaining.”",
-    patron: "Alagappan & Meenakshi Chidambaram"
-  },
-  {
-    id: "the-monolith-estate",
-    title: "The Monolith Estate",
-    tagline: "Brutalist stone architecture anchored deeply into the mist-covered Western Ghats.",
-    location: "Wayanad, Kerala",
-    state: "Kerala",
-    type: "Highland Estate",
-    category: "Villas & Estates",
-    year: "2024",
-    area: "9,500 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85",
-    gallery: [
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85"
-    ],
-    concept: "Carved into the granite foothills of Wayanad, this retreat explores heavy stone geometry against soft mist and rainforest flora. Features board-marked concrete, natural dry-stacked local stone, and fireplaces in every chamber.",
-    spaceHighlights: [
-      "Infinity plunge pool extending into coffee estate canopy",
-      "Sunken subterranean screening salon with sound-absorbing felt upholstery",
-      "Dual-sided basalt hearth dividing private library and formal living lounge",
-      "Observation cantilever terrace with heated volcanic stone flooring"
-    ],
-    materials: [
-      { name: "Basalt & Dry Stone", role: "Retaining structural spine and exterior facade" },
-      { name: "Board-Marked Concrete", role: "Exposed architectural soffits and cantilever slabs" },
-      { name: "Forest Olive Velvet", role: "Custom bespoke lounge modular seating" },
-      { name: "Blackened Steel", role: "Minimalist hearth structures and pivot fenestrations" }
-    ],
-    clientReview: "“HYZIN has built something that feels like it grew out of the mountainside. The tactile warmth of the spaces during monsoons is pure poetry.”",
-    patron: "Rahul & Nina Varma"
-  },
-  {
-    id: "jubilee-minimalist-villa",
-    title: "The Courtyard Minimalist Villa",
-    tagline: "Purity of geometry, serene natural light wells, and refined monolithic finishes.",
-    location: "Race Course / Coimbatore",
-    state: "Tamil Nadu",
-    type: "Urban Villa",
-    category: "Villas & Estates",
-    year: "2025",
-    area: "6,800 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1800&q=85",
-    gallery: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85"
-    ],
-    concept: "Conceived as an introverted urban fortress that opens upward into a canopy of sky and sunlight. The design is anchored by an indoor olive grove, linear water rills, and seamless micro-terrazzo surfaces throughout.",
-    spaceHighlights: [
-      "Internal climate-controlled courtyard with solitary 40-year-old bonsai feature",
-      "Chef's presentation kitchen with concealed back-of-house scullery",
-      "Master dressing suite featuring smoked glass wardrobes and leather details",
-      "Rooftop star-gazing lounge with concealed bar joinery"
-    ],
-    materials: [
-      { name: "Seamless Micro-Terrazzo", role: "Continuous jointless flooring across interior & exterior" },
-      { name: "Bleached White Ash", role: "Custom interior millwork and concealed acoustic doors" },
-      { name: "Brushed Nickel & Matte Stone", role: "Sanitary ware and architectural ironmongery" }
-    ],
-    clientReview: "“A masterclass in restraint. We have two energetic children yet our home feels like an effortlessly orderly, serene private resort.”",
-    patron: "Suresh & Deepa Sundaram"
-  },
-  {
-    id: "glasshouse-atelier-hq",
-    title: "The Glasshouse Atelier & Boardroom",
-    tagline: "Tactile corporate architecture built for high-stakes leadership and hospitality.",
-    location: "Indiranagar, Bengaluru",
-    state: "Karnataka",
-    type: "Commercial Atelier",
-    category: "Commercial Architecture",
-    year: "2024",
-    area: "4,200 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=85",
-    gallery: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=85"
-    ],
-    concept: "A boutique headquarters for an international technology fund. Stripping away the sterile conventions of office design, HYZIN infused the warmth of a luxury private members' club with acoustic glass pods and custom walnut desks.",
-    spaceHighlights: [
-      "Acoustically isolated executive boardroom with 22-seater walnut slab table",
-      "Private whisky bar and barista lounge for client negotiations",
-      "Biophilic interior atrium with air-purifying moss installations",
-      "Private partner phone suites lined with bespoke soundproof wool felt"
-    ],
-    materials: [
-      { name: "American Walnut", role: "Boardroom surfaces, fluted partitions and credenzas" },
-      { name: "Double-Glazed Acoustic Glass", role: "Sound attenuation with seamless transparency" },
-      { name: "Cognac Full-Grain Leather", role: "Executive armchairs and boardroom wall cladding" }
-    ],
-    clientReview: "“Our partners and international guests are blown away every single visit. HYZIN created an office that feels like a 5-star private lounge.”",
-    patron: "Naveen Krishnan, Managing Partner"
-  },
-  {
-    id: "nilambur-teak-kitchen",
-    title: "Minimalist Teak Modular Kitchen",
-    tagline: "Surgical ergonomics paired with the warm organic touch of quarter-sawn Nilambur teak.",
+    id: "manor-master-wall-drop",
+    title: "Master Suite Wall Drop & Loft",
+    tagline: "Floor-to-ceiling modular wardrobe with integrated display niche and warm LED illumination.",
     location: "Calicut, Kerala",
     state: "Kerala",
-    type: "Modular Kitchen",
-    category: "Modular Kitchens & Systems",
+    type: "Wall Drop",
+    category: "Wall Drop",
     year: "2025",
-    area: "900 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1800&q=85",
+    area: "480 sq.ft",
+    heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.14.03 PM.jpeg"),
     gallery: [
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
+      assetUrl("WhatsApp Image 2026-09-22 at 3.14.03 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.23 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.12 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM.jpeg")
     ],
-    concept: "Engineered around the choreography of high-end South Indian culinary craft. Seamless zero-handle fronts conceal Blum Aventos servo-drive mechanisms, downdraft ventilation, and temperature-controlled spice larder.",
+    concept: "An expansive master bedroom wall drop wardrobe architecture combining soft mauve-lavender acrylic shutters with brushed gold profile trims, centered around a back-lit display niche and full-height loft cabinets.",
     spaceHighlights: [
-      "Continuous Dekton countertop impervious to heat, turmeric, and citrus acids",
-      "Motorized pocket doors concealing the secondary wet preparation kitchen",
-      "Integrated under-counter wine climate unit and warm brass glass display",
-      "Zero-edge undermount granite sink with instant boiling & chilled filtered tap"
+      "Full wall drop configuration with zero dead space from floor to ceiling",
+      "Center display console with warm 2700K ambient shelf downlighting",
+      "Concealed gold vertical edge handles and hydraulic soft-closing hinges",
+      "Full-depth overhead loft modules for seasonal luggage storage"
     ],
     materials: [
-      { name: "Quarter-Sawn Nilambur Teak", role: "Water-repellent nanocoated cabinet fascias" },
-      { name: "Dekton Laurent Ceramic", role: "Heat-resistant monolithic island worktops" },
-      { name: "Fluted Smoked Glass", role: "Dimmable illuminated vitrine cabinetry" }
+      { name: "Premium Acrylic Shutters", role: "Scratch-resistant soft matte finish" },
+      { name: "Brushed Champagne Trims", role: "Architectural vertical handle profiles" },
+      { name: "Marine-Grade Core", role: "100% boiling waterproof internal carcass" },
+      { name: "Integrated LED Micro-Strips", role: "Automated sensor-activated wardrobe lighting" }
     ],
-    clientReview: "“It is as functional as a professional restaurant kitchen, yet as gorgeous as a piece of sculpture in our living room.”",
-    patron: "Sajid & Farhana Rahman"
+    clientReview: "“The craftsmanship and finishing of the wardrobe is exceptional. The lighting inside the display niche gives our bedroom an unbelievable warmth.”",
+    patron: "Dr. K. Rahim & Dr. Zeenath"
   },
   {
-    id: "master-suite-sanctuary",
-    title: "The Kovalam Cliffside Master Sanctuary",
-    tagline: "A cocoon of whisper-soft textiles, warm limestone, and endless ocean horizons.",
-    location: "Kovalam, Kerala",
+    id: "heritage-living-dining-partition",
+    title: "Artisanal Living & Dining Partition",
+    tagline: "Fluted timber paneling paired with CNC floral jali cutwork and illuminated alcoves.",
+    location: "Thrissur, Kerala",
     state: "Kerala",
-    type: "Master Suite",
-    category: "Penthouses & Apartments",
+    type: "Paneling",
+    category: "Paneling",
     year: "2025",
-    area: "1,850 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1800&q=85",
+    area: "260 sq.ft",
+    heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg"),
     gallery: [
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85"
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.18.30 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.17 PM.jpeg")
     ],
-    concept: "The ultimate private retreat inside a clifftop residence. Designed to maximize deep restorative sleep, the room features acoustic velvet headboard walls, motorized blackout drapery, and a stone bathroom overlooking the Arabian Sea.",
+    concept: "A dramatic spatial divider separating living and culinary areas without obstructing natural light. Features fluted natural wood battens, brass strip inlays, backlit display niches, and an overhead laser-cut botanical frieze.",
     spaceHighlights: [
-      "Custom floating platform bed with integrated ambient foot lighting",
-      "His-and-hers walk-through wardrobe in back-lit reeded bronze and suede",
-      "Free-standing monolithic travertine bathtub facing the sunset horizon",
-      "Private balcony with outdoor rain shower concealed by lush tropical palms"
+      "Botanical laser-cut CNC illuminated ceiling beam with soft backlighting",
+      "Fluted timber base cabinet counter with fluted wood textures",
+      "Open see-through display cubes framing the modular kitchen behind",
+      "High-durability natural wood polish resistant to temperature shifts"
     ],
     materials: [
-      { name: "Raw Bouclé & Organic Linen", role: "Upholstered wall panels and acoustic drapery" },
-      { name: "Honed Jura Beige Limestone", role: "Bathroom surfaces and walk-in rain shower" },
-      { name: "Muted Smoked Teak", role: "Custom floating platform bed and nightstands" }
+      { name: "Seasoned Teak Timber", role: "Structural partition pillars and fluted front panels" },
+      { name: "CNC Cut Acoustic Acrylic", role: "Backlit floral lintel frieze" },
+      { name: "Brushed Brass Inlays", role: "Vertical accent fluting details" },
+      { name: "Black Granite Cap", role: "Durable breakfast partition threshold" }
     ],
-    clientReview: "“Waking up here feels like waking up in the world's most peaceful private luxury resort. HYZIN's lighting design is sheer genius.”",
-    patron: "Vikram & Ananya Nair"
+    clientReview: "“Everyone who steps into our house stops at this partition. It perfectly connects the living room and kitchen while keeping privacy intact.”",
+    patron: "Mr. Paulson V. J."
   },
   {
-    id: "coimbatore-estate-villa",
-    title: "The Nilgiri Foothills Residence",
-    tagline: "Expansive courtyards and cantilevered limestone verandas.",
+    id: "onyx-media-cove-ceiling",
+    title: "Onyx Media Wall & Ambient Ceiling",
+    tagline: "Backlit onyx marble paneling, floating console, and architectural cove false ceiling.",
+    location: "Ernakulam, Kerala",
+    state: "Kerala",
+    type: "Ceiling",
+    category: "Ceiling",
+    year: "2025",
+    area: "380 sq.ft",
+    heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg"),
+    gallery: [
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.34 PM.jpeg")
+    ],
+    concept: "A luxurious home entertainment sanctuary engineered with indirect cove ceiling lighting, rich wooden louvered wall paneling, and an illuminated translucent marble TV backdrop.",
+    spaceHighlights: [
+      "Custom false ceiling with perimeter cove lighting eliminating direct glare",
+      "Translucent backlit onyx panel with warm internal diffuser",
+      "Floating TV media console with fluted wood doors and glass display tower",
+      "Acoustic treatment integrated behind vertical wall slats"
+    ],
+    materials: [
+      { name: "Translucent Onyx Sheet", role: "Backlit television focal wall" },
+      { name: "Fluted Wood Veneer", role: "Vertical acoustic wall slats" },
+      { name: "High-Grade Gypsum", role: "Zero-crack seamless cove false ceiling" },
+      { name: "CRI 95+ 2700K LED", role: "Circadian evening cove lighting" }
+    ],
+    clientReview: "“Movie nights feel like a private cinema. The backlit marble wall and gentle ceiling glow are pure perfection.”",
+    patron: "Adv. Thomas Kuruvilla"
+  },
+  {
+    id: "mint-culinary-aluminium-suite",
+    title: "Mint Green Aluminium Modular Kitchen",
+    tagline: "L-shaped modular kitchen with black aluminium profiles and high-capacity overhead lofts.",
+    location: "Palakkad, Kerala",
+    state: "Kerala",
+    type: "Aluminium Interior",
+    category: "Aluminium Interior",
+    year: "2025",
+    area: "280 sq.ft",
+    heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.32 PM (1).jpeg"),
+    gallery: [
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.32 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.55 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.51 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.33 PM (2).jpeg")
+    ],
+    concept: "Engineered entirely with precision aluminium framework and sage mint acrylic panels. Resistant to heavy moisture, steam, and everyday cooking spices.",
+    spaceHighlights: [
+      "Continuous L-shape configuration with floor skirting LED strips",
+      "Integrated smoke glass display cabinets with warm interior spotlights",
+      "Floor-to-ceiling loft cabinets maximizing storage efficiency",
+      "Solid black quartz counter with undermount sink"
+    ],
+    materials: [
+      { name: "Extruded Aluminium 6063", role: "Modular carcass framing & shutter border profiles" },
+      { name: "Sage Mint Acrylic", role: "High-gloss, stain-resistant shutter surfaces" },
+      { name: "Smoked Fluted Glass", role: "Upper display cabinet door inserts" },
+      { name: "Stainless Steel 304", role: "Pull-out wire spice and plate baskets" }
+    ],
+    clientReview: "“Zero worries about termites or water damage. The aluminium build is rock solid and looks stunning.”",
+    patron: "Mrs. Revathi Menon"
+  },
+  {
+    id: "stair-balustrade-understair-suite",
+    title: "Stainless Steel Railing & Under-Stair Storage",
+    tagline: "Grade 304 stainless steel glass balustrade paired with custom under-stair aluminium storage.",
+    location: "Kottayam, Kerala",
+    state: "Kerala",
+    type: "Steel Fabrication",
+    category: "Steel Fabrication",
+    year: "2025",
+    area: "190 sq.ft",
+    heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM.jpeg"),
+    gallery: [
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.01 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.35 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.17.48 PM.jpeg")
+    ],
+    concept: "Architectural transformation of a dead stairwell space. Featuring high-tensile stainless steel balustrade with 12mm toughened glass, integrated step tread lighting, and custom stepped under-stair storage cupboards.",
+    spaceHighlights: [
+      "Stainless steel Grade 304 precision glass clamp balustrade",
+      "Integrated under-tread LED lights illuminating granite steps",
+      "Stepped triangular aluminium modular cupboards maximizing storage",
+      "Concealed ventilation louvers preventing under-stair dampness"
+    ],
+    materials: [
+      { name: "SS 304 Stainless Steel", role: "Handrails, base brackets, and glass clamps" },
+      { name: "12mm Toughened Glass", role: "Seamless frameless safety panels" },
+      { name: "Aluminium Composite Panel", role: "Under-stair flush cupboard doors" },
+      { name: "Warm LED Step Luminaires", role: "Nighttime safety step illumination" }
+    ],
+    clientReview: "“The staircase was dark and the space underneath was wasted. HYZIN turned it into one of the most stylish features of our foyer.”",
+    patron: "Mr. Biju George"
+  },
+  {
+    id: "architectural-ms-window-security",
+    title: "Architectural MS Window Grills & Safety Systems",
+    tagline: "Precision Mild Steel geometric window safety grills with corrosion-proof epoxy finish.",
     location: "Coimbatore, Tamil Nadu",
     state: "Tamil Nadu",
-    type: "Estate Villa",
-    category: "Villas & Estates",
-    year: "2024",
-    area: "8,900 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1800&q=85",
+    type: "MS Fabrication",
+    category: "MS Fabrication",
+    year: "2025",
+    area: "Whole Residence",
+    heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.28 PM.jpeg"),
     gallery: [
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85"
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.28 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.20 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.18 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.29 PM.jpeg")
     ],
-    concept: "Surrounded by lush coconut groves and mountain mist, this private sanctuary creates framed vistas through massive floor-to-ceiling glass and continuous natural granite terraces.",
+    concept: "Custom-designed Mild Steel (MS) window security grills engineered with minimalist horizontal spacing. Provides maximum security without creating a prison-like feel, allowing uninterrupted garden views and breeze.",
     spaceHighlights: [
-      "Open-air pavilion dining overlooking the Western Ghats",
-      "Internal reflecting water garden with indigenous water lilies",
-      "Sculpted stone master bath with sunken garden shower"
+      "Custom laser-cut and square tube geometric MS security fabrication",
+      "Double anti-corrosive primer coating with baked enamel white finish",
+      "Flush installation aligned perfectly with wooden window reveals",
+      "Engineered weld joints hand-finished for seamless smoothness"
     ],
     materials: [
-      { name: "Sadahalli Grey Granite", role: "Terrace paving & monolithic boundary walls" },
-      { name: "Aged Teak Wood", role: "Cantilevered pergola shading & custom credenzas" }
+      { name: "Solid Mild Steel Square Bar", role: "Structural security gridwork" },
+      { name: "Zinc-Chromate Anti-Rust Primer", role: "Deep anti-corrosive protection" },
+      { name: "Polyurethane Powder Coating", role: "UV-resistant white glossy finish" },
+      { name: "Concealed Wall Anchors", role: "Tamper-proof masonry anchoring" }
     ],
-    clientReview: "“A seamless extension of nature. Every guest is mesmerized by the quiet serenity HYZIN sculpted into this home.”",
-    patron: "P. R. Soundararajan & Family"
+    clientReview: "“Clean, modern lines that look like part of the architectural design rather than bulky grills.”",
+    patron: "Mr. K. Ranganathan"
   },
   {
-    id: "panampilly-waterfront-lounge",
-    title: "The Panampilly Double-Height Living Atrium",
-    tagline: "Dramatic verticality balanced with warm acoustic felt and travertine.",
-    location: "Kochi, Kerala",
-    state: "Kerala",
-    type: "Living Atrium",
-    category: "Villas & Estates",
+    id: "designer-vanity-bathroom-suite",
+    title: "Luxury Sanitary Accessories & Vanity Suite",
+    tagline: "Designer wash basin vanity, smart LED pill mirror, and matte black Kohler accessories.",
+    location: "Bengaluru, Karnataka",
+    state: "Karnataka",
+    type: "Accessories",
+    category: "Accessories",
     year: "2025",
-    area: "4,500 sq.ft",
-    heroImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85",
+    area: "140 sq.ft",
+    heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.41 PM.jpeg"),
     gallery: [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85"
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.41 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.33 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.48 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.02 PM (1).jpeg")
     ],
-    concept: "Designed to maximize natural light diffusion. Features a 24-foot soaring double-height travertine feature wall, custom curved boucle lounge seating, and subtle recessed ambient light coves.",
+    concept: "A high-end bathroom vanity installation combining fluted wall panelling, Peacock & Rose Gold sanitary accessories, an illuminated pill mirror, and custom black metal floating vanity counter.",
     spaceHighlights: [
-      "24-foot bookmatched silver travertine feature spine",
-      "Concealed motorized acoustic blinds with circadian sunlight sensors",
-      "Sculptural bronze spiral stair connecting private mezzanine library"
+      "Matte peacock blue counter-top ceramic basin with rose gold faucet",
+      "Sensor-dimmable pill LED mirror with backlighting",
+      "Fluted waterproof wall paneling behind vanity with concealed plumbing",
+      "Floating storage drawers with soft-close Blum runners"
     ],
     materials: [
-      { name: "Italian Silver Travertine", role: "24-foot double-height feature spine" },
-      { name: "Custom Wool & Bouclé", role: "Curved modular lounge seating" }
+      { name: "Kohler / Kubix Prime Sanitaryware", role: "Vitreous china wash basins & wall-hung WCs" },
+      { name: "Rose Gold PVD Brassware", role: "Faucets, hand showers, and flush plates" },
+      { name: "Waterproof Fluted PVC Panel", role: "Feature wall cladding" },
+      { name: "Sensor LED Mirror", role: "Ambient and vanity task lighting" }
     ],
-    clientReview: "“It has the acoustic silence of a sanctuary with the grandeur of an art museum.”",
-    patron: "Kurian & Mary Thomas"
+    clientReview: "“The accessories and vanity detail made our master bathroom look straight out of an architectural magazine.”",
+    patron: "Siddharth & Deepa Nambiar"
+  },
+  {
+    id: "engineered-steel-entrance-portal",
+    title: "Engineered Steel Security Door & Glass Portal",
+    tagline: "Heavy-duty steel door system with steel frame and long architectural pull handles.",
+    location: "Kochi, Kerala",
+    state: "Kerala",
+    type: "Steel Doors",
+    category: "Steel Doors",
+    year: "2025",
+    area: "Entrance Portal",
+    heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM (1).jpeg"),
+    gallery: [
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.23 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM.jpeg")
+    ],
+    concept: "Combining impenetrable steel security engineering with sleek modern aesthetics. Features steel box frames, multi-point deadbolt locks, and long brushed stainless steel hardware.",
+    spaceHighlights: [
+      "Engineered steel frame resistant to warping, swelling, and forced entry",
+      "Architectural 48-inch brushed stainless steel pull handle",
+      "Integrated double-seal acoustic and weather insulation gaskets",
+      "Seamless aesthetic transition connecting interior halls"
+    ],
+    materials: [
+      { name: "Cold-Rolled Galvanized Steel", role: "Core door leaf and reinforced frame" },
+      { name: "Multi-Point Security Lock", role: "High-security anti-pick locking cylinder" },
+      { name: "Brushed SS 304 Hardware", role: "Architectural long pull handles & hinges" },
+      { name: "Thermo-Acoustic Insulation", role: "High-density internal rockwool core" }
+    ],
+    clientReview: "“Sturdy as a bank vault, yet operates effortlessly with feather-light smoothness. Total peace of mind.”",
+    patron: "Mr. Abraham Koshy"
   }
 ];
 
-// Complete Registry of 50+ Completed Architectural Works across Kerala, Tamil Nadu & Karnataka
 export const completedWorksArchive50 = [
-  { id: 1, name: "The Bolgatty Waterfront Pavilion", location: "Kochi, Kerala", type: "Waterfront Villa", year: "2025", area: "8,200 sq.ft" },
-  { id: 2, name: "Penthouse V — Sky Gallery", location: "Lavelle Rd, Bengaluru", type: "Luxury Penthouse", year: "2025", area: "5,600 sq.ft" },
-  { id: 3, name: "Chettinad Modernist Manor", location: "Chennai & Karaikudi, TN", type: "Heritage Manor", year: "2024", area: "11,400 sq.ft" },
-  { id: 4, name: "The Monolith Estate", location: "Wayanad, Kerala", type: "Highland Retreat", year: "2024", area: "9,500 sq.ft" },
-  { id: 5, name: "The Courtyard Minimalist Villa", location: "Coimbatore, TN", type: "Urban Villa", year: "2025", area: "6,800 sq.ft" },
-  { id: 6, name: "The Glasshouse Atelier HQ", location: "Indiranagar, Bengaluru", type: "Commercial Atelier", year: "2024", area: "4,200 sq.ft" },
-  { id: 7, name: "Minimalist Teak Modular Kitchen", location: "Calicut, Kerala", type: "Culinary Suite", year: "2025", area: "900 sq.ft" },
-  { id: 8, name: "Kovalam Cliffside Master Sanctuary", location: "Kovalam, Kerala", type: "Master Suite", year: "2025", area: "1,850 sq.ft" },
-  { id: 9, name: "The Nilgiri Foothills Residence", location: "Coimbatore, TN", type: "Estate Villa", year: "2024", area: "8,900 sq.ft" },
-  { id: 10, name: "The Panampilly Double-Height Atrium", location: "Kochi, Kerala", type: "Living Atrium", year: "2025", area: "4,500 sq.ft" },
-  { id: 11, name: "Sadashivanagar Family Sanctuary", location: "Bengaluru, Karnataka", type: "Urban Residence", year: "2024", area: "6,200 sq.ft" },
-  { id: 12, name: "Boat Club Road Contemporary Manor", location: "Chennai, Tamil Nadu", type: "Bespoke Manor", year: "2025", area: "10,200 sq.ft" },
-  { id: 13, name: "Vembanad Lakefront Pavilion", location: "Kumarakom, Kerala", type: "Resort Villa", year: "2024", area: "7,400 sq.ft" },
-  { id: 14, name: "Koramangala Executive Duplex", location: "Bengaluru, Karnataka", type: "Penthouse Duplex", year: "2024", area: "4,800 sq.ft" },
-  { id: 15, name: "Jubilee Hills Minimalist Residence", location: "Coimbatore, TN", type: "Private Villa", year: "2025", area: "5,900 sq.ft" },
-  { id: 16, name: "Marine Drive Sky Sanctuary", location: "Kochi, Kerala", type: "Waterfront Penthouse", year: "2024", area: "4,100 sq.ft" },
-  { id: 17, name: "Poes Garden Private Salon", location: "Chennai, Tamil Nadu", type: "Heritage Residence", year: "2025", area: "7,100 sq.ft" },
-  { id: 18, name: "Mysuru Heritage Teak Pavilion", location: "Mysuru, Karnataka", type: "Ancestral Villa", year: "2024", area: "6,500 sq.ft" },
-  { id: 19, name: "Malabar Teak Architectural Villa", location: "Calicut, Kerala", type: "Courtyard Villa", year: "2025", area: "7,800 sq.ft" },
-  { id: 20, name: "Alwarpet Modernist Penthouse", location: "Chennai, Tamil Nadu", type: "Luxury Apartment", year: "2024", area: "3,900 sq.ft" },
-  { id: 21, name: "Cunningham Road Private Guild", location: "Bengaluru, Karnataka", type: "Boutique Office", year: "2025", area: "3,600 sq.ft" },
-  { id: 22, name: "Kakkanad Hilltop Villa", location: "Kochi, Kerala", type: "Contemporary Home", year: "2024", area: "5,400 sq.ft" },
-  { id: 23, name: "Madurai Stone Courtyard Manor", location: "Madurai, Tamil Nadu", type: "Heritage Manor", year: "2024", area: "8,500 sq.ft" },
-  { id: 24, name: "Whitefield Minimalist Sanctuary", location: "Bengaluru, Karnataka", type: "Gated Villa", year: "2025", area: "6,100 sq.ft" },
-  { id: 25, name: "Trivandrum Golf Club Residence", location: "Trivandrum, Kerala", type: "Bespoke Residence", year: "2024", area: "5,200 sq.ft" },
-  { id: 26, name: "ECR Coastal Glasshouse", location: "Chennai, Tamil Nadu", type: "Beachfront Villa", year: "2025", area: "9,000 sq.ft" },
-  { id: 27, name: "Hebbal Lake Observatory Home", location: "Bengaluru, Karnataka", type: "Sky Villa", year: "2024", area: "4,900 sq.ft" },
-  { id: 28, name: "Fort Kochi Colonial Restoration", location: "Kochi, Kerala", type: "Heritage Boutique", year: "2024", area: "4,400 sq.ft" },
-  { id: 29, name: "Race Course Road Penthouse", location: "Coimbatore, TN", type: "Penthouse", year: "2025", area: "3,800 sq.ft" },
-  { id: 30, name: "Munnar Tea Estate Glass Sanctuary", location: "Munnar, Kerala", type: "Highland Retreat", year: "2024", area: "6,700 sq.ft" },
-  { id: 31, name: "Richmond Town Art Collector Suite", location: "Bengaluru, Karnataka", type: "Luxury Apartment", year: "2025", area: "4,300 sq.ft" },
-  { id: 32, name: "Besant Nagar Seaside Villa", location: "Chennai, Tamil Nadu", type: "Coastal Villa", year: "2024", area: "5,800 sq.ft" },
-  { id: 33, name: "Edappally Contemporary Residence", location: "Kochi, Kerala", type: "Turnkey Home", year: "2025", area: "4,600 sq.ft" },
-  { id: 34, name: "HSR Layout Modernist Villa", location: "Bengaluru, Karnataka", type: "Urban Villa", year: "2024", area: "5,300 sq.ft" },
-  { id: 35, name: "Salem Monolithic Granite Home", location: "Salem, Tamil Nadu", type: "Private Villa", year: "2024", area: "6,900 sq.ft" },
-  { id: 36, name: "Kottayam Rubber Estate Pavilion", location: "Kottayam, Kerala", type: "Country Villa", year: "2025", area: "7,200 sq.ft" },
-  { id: 37, name: "Jayanagar Teak & Stone Residence", location: "Bengaluru, Karnataka", type: "Family Residence", year: "2024", area: "5,100 sq.ft" },
-  { id: 38, name: "Anna Nagar Modernist Villa", location: "Chennai, Tamil Nadu", type: "Turnkey Villa", year: "2025", area: "5,700 sq.ft" },
-  { id: 39, name: "Thrissur Cultural Manor", location: "Thrissur, Kerala", type: "Ancestral Manor", year: "2024", area: "8,100 sq.ft" },
-  { id: 40, name: "Mangaluru Coastal Cliff Villa", location: "Mangaluru, Karnataka", type: "Cliff Villa", year: "2024", area: "6,400 sq.ft" },
-  { id: 41, name: "Ooty Botanical Glass Residence", location: "Ooty, Tamil Nadu", type: "Hill Villa", year: "2025", area: "5,500 sq.ft" },
-  { id: 42, name: "Aluva Riverfront Sanctuary", location: "Kochi, Kerala", type: "Riverfront Villa", year: "2024", area: "6,300 sq.ft" },
-  { id: 43, name: "Bellary Road Monolithic Estate", location: "Bengaluru, Karnataka", type: "Private Estate", year: "2025", area: "12,000 sq.ft" },
-  { id: 44, name: "Tirupur Industrialist Residence", location: "Tirupur, Tamil Nadu", type: "Bespoke Villa", year: "2024", area: "7,600 sq.ft" },
-  { id: 45, name: "Kannur Handloom Textile Atelier", location: "Kannur, Kerala", type: "Commercial Boutique", year: "2024", area: "3,500 sq.ft" },
-  { id: 46, name: "JP Nagar Minimalist Courtyard", location: "Bengaluru, Karnataka", type: "Contemporary Villa", year: "2025", area: "4,700 sq.ft" },
-  { id: 47, name: "Thanjavur Bronze & Teak Manor", location: "Thanjavur, Tamil Nadu", type: "Heritage Revival", year: "2024", area: "9,100 sq.ft" },
-  { id: 48, name: "Wayanad Coffee Plantation Villa", location: "Meppadi, Kerala", type: "Estate Residence", year: "2025", area: "7,900 sq.ft" },
-  { id: 49, name: "Sarjapur Private Club Residence", location: "Bengaluru, Karnataka", type: "Gated Community Villa", year: "2024", area: "5,800 sq.ft" },
-  { id: 50, name: "Kowdiar Royal Avenue Residence", location: "Trivandrum, Kerala", type: "Luxury Residence", year: "2025", area: "6,600 sq.ft" },
-  { id: 51, name: "Nungambakkam Contemporary Duplex", location: "Chennai, Tamil Nadu", type: "Duplex Apartment", year: "2024", area: "4,400 sq.ft" },
-  { id: 52, name: "Palakkad Courtyard Heritage Manor", location: "Palakkad, Kerala", type: "Ancestral Home", year: "2025", area: "8,700 sq.ft" }
+  { id: 1, name: "Skyline Waterfront Kitchen Suite", location: "Marine Drive, Kochi", type: "Kitchen Cabinet", area: "340 sq.ft", year: "2025" },
+  { id: 2, name: "Windsor Grand Master Wall Drop", location: "Kakkanad, Kochi", type: "Wall Drop", area: "520 sq.ft", year: "2025" },
+  { id: 3, name: "Emerald Heights Modular Kitchen", location: "Kaloor, Kochi", type: "Kitchen Cabinet", area: "290 sq.ft", year: "2025" },
+  { id: 4, name: "Royal Teak Living Paneling", location: "Aluva, Ernakulam", type: "Paneling", area: "410 sq.ft", year: "2025" },
+  { id: 5, name: "Palm Grove Fluted Jali Partition", location: "Thrissur Town", type: "Paneling", area: "180 sq.ft", year: "2025" },
+  { id: 6, name: "Highland Villa False Ceiling Suite", location: "Wayanad", type: "Ceiling", area: "650 sq.ft", year: "2025" },
+  { id: 7, name: "Onyx Backlit Media Unit", location: "Panampilly Nagar, Kochi", type: "Ceiling", area: "310 sq.ft", year: "2025" },
+  { id: 8, name: "Staircase Glass & Steel Balustrade", location: "Kottayam", type: "Steel Fabrication", area: "240 sq.ft", year: "2025" },
+  { id: 9, name: "Under-Stair Modular Aluminium Storage", location: "Changanassery", type: "Aluminium Interior", area: "160 sq.ft", year: "2025" },
+  { id: 10, name: "Architectural MS Window Grills", location: "Calicut Beach Road", type: "MS Fabrication", area: "Whole Residence", year: "2025" },
+  { id: 11, name: "Sage Mint Acrylic Kitchen Suite", location: "Palakkad", type: "Kitchen Cabinet", area: "280 sq.ft", year: "2025" },
+  { id: 12, name: "Lavender 6-Door Bedroom Wall Drop", location: "Edappally, Kochi", type: "Wall Drop", area: "460 sq.ft", year: "2025" },
+  { id: 13, name: "Perimeter High Loft Storage Suite", location: "Tirur, Malappuram", type: "Loft", area: "380 sq.ft", year: "2024" },
+  { id: 14, name: "Kubix Prime Luxury Sanitary Suite", location: "Indiranagar, Bengaluru", type: "Accessories", area: "150 sq.ft", year: "2024" },
+  { id: 15, name: "Engineered Multi-Point Steel Door", location: "Vyttila, Kochi", type: "Steel Doors", area: "Entrance Portal", year: "2024" },
+  { id: 16, name: "Balcony Stainless Steel Railings", location: "Kannur Town", type: "Steel Fabrication", area: "220 sq.ft", year: "2024" },
+  { id: 17, name: "U-Shaped Quartz Modular Kitchen", location: "Perinthalmanna", type: "Kitchen Cabinet", area: "310 sq.ft", year: "2024" },
+  { id: 18, name: "Teal Gloss Master Bedroom Wall Drop", location: "Thalassery", type: "Wall Drop", area: "440 sq.ft", year: "2024" },
+  { id: 19, name: "Double-Height Wooden Coffered Ceiling", location: "Muvattupuzha", type: "Ceiling", area: "580 sq.ft", year: "2024" },
+  { id: 20, name: "Breakfast Counter Fluted Marble Bar", location: "Angamaly", type: "Paneling", area: "190 sq.ft", year: "2024" },
+  { id: 21, name: "Heavy Duty MS Security Grills", location: "RS Puram, Coimbatore", type: "MS Fabrication", area: "Whole Villa", year: "2024" },
+  { id: 22, name: "Aluminium Modular Kitchen Framework", location: "Ottapalam", type: "Aluminium Interior", area: "270 sq.ft", year: "2024" },
+  { id: 23, name: "Full-Height Window-Surround Loft", location: "Kanhangad", type: "Loft", area: "360 sq.ft", year: "2024" },
+  { id: 24, name: "Designer Sensor Pill Mirror & Vanity", location: "Anna Nagar, Chennai", type: "Accessories", area: "130 sq.ft", year: "2024" },
+  { id: 25, name: "Main Entrance Steel Security Door", location: "Kollam Town", type: "Steel Doors", area: "Entrance", year: "2024" },
+  { id: 26, name: "Champagne Gold Kitchen Cabinets", location: "Palarivattom, Kochi", type: "Kitchen Cabinet", area: "305 sq.ft", year: "2024" },
+  { id: 27, name: "Rose Gold Wall Drop & Vanity", location: "Manjeri", type: "Wall Drop", area: "490 sq.ft", year: "2024" },
+  { id: 28, name: "Chevron Timber False Ceiling", location: "Thiruvalla", type: "Ceiling", area: "420 sq.ft", year: "2024" },
+  { id: 29, name: "Charcoal Vertical Fluted TV Panel", location: "Kaloor", type: "Paneling", area: "230 sq.ft", year: "2024" },
+  { id: 30, name: "Toughened Glass Terrace Railing", location: "Fort Kochi", type: "Steel Fabrication", area: "310 sq.ft", year: "2024" },
+  { id: 31, name: "Custom Under-Stair Golden Cabinets", location: "Guruvayur", type: "Aluminium Interior", area: "140 sq.ft", year: "2024" },
+  { id: 32, name: "Minimalist MS Balcony Security Grill", location: "Race Course, Coimbatore", type: "MS Fabrication", area: "Whole Floor", year: "2024" },
+  { id: 33, name: "Bedroom Window Perimeter Loft Storage", location: "Attingal, Trivandrum", type: "Loft", area: "320 sq.ft", year: "2024" },
+  { id: 34, name: "Pooja Niche Cabinet with Brass Bells", location: "Tripunithura", type: "Accessories", area: "110 sq.ft", year: "2024" },
+  { id: 35, name: "Steel Security Utility Door", location: "Cherthala", type: "Steel Doors", area: "Rear Entrance", year: "2024" },
+  { id: 36, name: "Parallel Chef Modular Kitchen", location: "Kowdiar, Trivandrum", type: "Kitchen Cabinet", area: "330 sq.ft", year: "2023" },
+  { id: 37, name: "Dark Walnut Wall Drop & Dresser", location: "Vazhakkala, Kochi", type: "Wall Drop", area: "510 sq.ft", year: "2023" },
+  { id: 38, name: "Gypsum Multi-Tier Living Ceiling", location: "Perumbavoor", type: "Ceiling", area: "490 sq.ft", year: "2023" },
+  { id: 39, name: "Italian Marble Gold-T Wall Paneling", location: "Maradu, Kochi", type: "Paneling", area: "280 sq.ft", year: "2023" },
+  { id: 40, name: "Internal Staircase Stainless Handrail", location: "Changanassery", type: "Steel Fabrication", area: "210 sq.ft", year: "2023" },
+  { id: 41, name: "Waterproof Aluminium Pantry Unit", location: "Thodupuzha", type: "Aluminium Interior", area: "175 sq.ft", year: "2023" },
+  { id: 42, name: "MS Structural Carport & Gate", location: "Palayam, Calicut", type: "MS Fabrication", area: "Driveway", year: "2023" },
+  { id: 43, name: "High-Capacity Wardrobe Overhead Loft", location: "Vadakara", type: "Loft", area: "350 sq.ft", year: "2023" },
+  { id: 44, name: "Kohler Rain Shower Diverter Suite", location: "Sadashivnagar, Bengaluru", type: "Accessories", area: "165 sq.ft", year: "2023" },
+  { id: 45, name: "Double Leaf Steel Safety Entrance", location: "Gandhinagar, Kottayam", type: "Steel Doors", area: "Foyer", year: "2023" },
+  { id: 46, name: "Peacock Teal Acrylic Kitchen Suite", location: "Kunnamkulam", type: "Kitchen Cabinet", area: "295 sq.ft", year: "2023" },
+  { id: 47, name: "3-Door Modern Wall Drop Wardrobe", location: "Irinjalakuda", type: "Wall Drop", area: "390 sq.ft", year: "2023" },
+  { id: 48, name: "Cove Illumination Bedroom Ceiling", location: "Chalakudy", type: "Ceiling", area: "340 sq.ft", year: "2023" },
+  { id: 49, name: "CNC Botanical Living Partition", location: "Kothamangalam", type: "Paneling", area: "195 sq.ft", year: "2023" },
+  { id: 50, name: "Exterior Balcony Stainless Glass Guard", location: "Pattambi", type: "Steel Fabrication", area: "250 sq.ft", year: "2023" }
 ];
-

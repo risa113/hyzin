@@ -1,46 +1,36 @@
+const assetUrl = (filename) => `/kerala-assets/${encodeURIComponent(filename)}`;
+
 export const materialsData = [
   {
-    id: "silver-travertine",
-    name: "Honed Silver Travertine",
-    category: "Natural Stone",
-    origin: "Tivoli, Italy & Sourced Quarry Cut",
-    finish: "Cross-Cut, Matte Honed & Nano-Sealed",
-    description: "Characterized by subtle linear silver-grey veining and warm ivory pores. We utilize cross-cut travertine across monolithic feature walls, cantilevered steps, and continuous flooring for grounded permanence.",
-    image: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80",
-    application: "Primary flooring, outdoor courtyards, bathroom slabs",
-    tactileNote: "Velvety underfoot, naturally cool during tropical Kerala afternoons."
+    id: "aluminium-profiles",
+    name: "Architectural Aluminium 6063 T6",
+    category: "Structural Core",
+    origin: "Precision Extruded Profiles",
+    description: "100% moisture-proof, termite-proof, and corrosion-resistant aluminium core framework engineered to withstand Kerala's heavy monsoons.",
+    image: assetUrl("WhatsApp Image 2026-09-22 at 3.22.01 PM (1).jpeg")
   },
   {
-    id: "monolithic-aged-teak",
-    name: "Monolithic Aged Teak",
-    category: "Hardwood Millwork",
-    origin: "Nilambur & Sustainable Plantation Forestry",
-    finish: "Quarter-Sawn, Matte Organic Oil & Wax",
-    description: "Sustainably harvested teak seasoned over years to prevent warping in coastal humidities. Expressed through acoustic ceiling louvers, pivot entry doors, and seamless handle-less cabinetry.",
-    image: "https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=800&q=80",
-    application: "Acoustic ceiling baffles, bespoke joinery, master beds",
-    tactileNote: "Rich natural grain oils, warm honey-to-cinnamon undertones."
+    id: "luxury-acrylic-shutters",
+    name: "High-Gloss Anti-Fingerprint Acrylic",
+    category: "Cabinetry & Surfaces",
+    origin: "European Acrylic Panels",
+    description: "Ultra-smooth gloss and matte acrylic finishes in champagne gold, rose gold, sage mint, and deep teal, sealed with laser edge banding.",
+    image: assetUrl("WhatsApp Image 2026-09-22 at 3.15.27 PM.jpeg")
   },
   {
-    id: "raw-silk-boucle",
-    name: "Hand-Loomed Raw Silk & Bouclé",
-    category: "Architectural Textiles",
-    origin: "Artisanal Weavers of Tamil Nadu & Karnataka",
-    finish: "Unbleached Organic Weave, Stain-Resistant Barrier",
-    description: "Sensory upholstery combining heavy looped bouclé wool with wild raw silk fibers. Imparts effortless acoustic dampening to spacious double-height living sanctuaries.",
-    image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80",
-    application: "Custom lounge modulars, wall paneling, acoustic headboards",
-    tactileNote: "Deep three-dimensional hand-feel with light-scattering texture."
+    id: "backlit-onyx-marble",
+    name: "Translucent Onyx & Italian Marble",
+    category: "Natural & Engineered Stone",
+    origin: "Honed Natural Stone",
+    description: "Backlit translucent stone surfaces with diffuse internal illumination for media focal walls, partition counters, and luxury vanities.",
+    image: assetUrl("WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg")
   },
   {
-    id: "antique-patinated-bronze",
-    name: "Brushed Antique Bronze",
-    category: "Architectural Metalwork",
-    origin: "Hand-Formed & Patinated in Studio Guild",
-    finish: "Micro-Brushed, Chemical Patina & Carnauba Wax",
-    description: "Living architectural hardware that acquires a subtle, graceful patina over decades of touch. Applied to concealed door trims, recessed lighting coves, and custom kitchen details.",
-    image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80",
-    application: "Pivot hardware, custom luminaires, kitchen frame trims",
-    tactileNote: "Substantial, cool metal with soft satin sheen and zero glare."
+    id: "stainless-steel-glass",
+    name: "Grade 304 Stainless Steel & Glass",
+    category: "Metal & Balustrades",
+    origin: "Satin Brushed & Mirror Polish",
+    description: "High-tensile Grade 304/316 stainless steel combined with 12mm toughened frameless glass panels for internal stairs and exterior balconies.",
+    image: assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM.jpeg")
   }
 ];
