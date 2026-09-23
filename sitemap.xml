@@ -1,39 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Main Home Page -->
   <url>
     <loc>https://hyzininterior.com/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hyzininterior.com/public/hyzin-logo.png</image:loc>
+      <image:title>HYZIN INTERIOR — Interior Design &amp; Fabrication Studio Kerala</image:title>
+      <image:caption>Official Studio Emblem of HYZIN INTERIOR Kochi</image:caption>
+    </image:image>
   </url>
+
+  <!-- 3D Interactive House Model Page -->
   <url>
-    <loc>https://hyzininterior.com/#portfolio</loc>
-    <lastmod>2026-09-21</lastmod>
+    <loc>https://hyzininterior.com/#3d-house</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#3d-house" />
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
+
+  <!-- 72 Photo Master Vault -->
+  <url>
+    <loc>https://hyzininterior.com/#photo-vault</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#photo-vault" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 10 Core Services Page -->
   <url>
     <loc>https://hyzininterior.com/#services</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
+
+  <!-- Kitchen Cabinet Service Deep Link -->
   <url>
-    <loc>https://hyzininterior.com/#materials</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://hyzininterior.com/#services/kitchen-cabinet</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/kitchen-cabinet" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.15.27%20PM.jpeg</image:loc>
+      <image:title>Rose Gold Acrylic Modular Kitchen Kochi Kerala</image:title>
+    </image:image>
   </url>
+
+  <!-- Wall Drop Wardrobe Service Deep Link -->
   <url>
-    <loc>https://hyzininterior.com/#studios</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://hyzininterior.com/#services/wall-drop</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/wall-drop" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://hyzininterior.com/kerala-assets/WhatsApp%20Image%202026-09-22%20at%203.14.03%20PM.jpeg</image:loc>
+      <image:title>Master Suite Wall Drop Wardrobe Calicut Kerala</image:title>
+    </image:image>
   </url>
+
+  <!-- Paneling Service Deep Link -->
+  <url>
+    <loc>https://hyzininterior.com/#services/paneling</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/paneling" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Ceilings Service Deep Link -->
+  <url>
+    <loc>https://hyzininterior.com/#services/ceiling</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/ceiling" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Aluminium Interior Deep Link -->
+  <url>
+    <loc>https://hyzininterior.com/#services/aluminium-interior</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/aluminium-interior" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- Steel Doors Deep Link -->
+  <url>
+    <loc>https://hyzininterior.com/#services/steel-doors</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/steel-doors" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Steel Fabrication Deep Link -->
+  <url>
+    <loc>https://hyzininterior.com/#services/steel-fabrication</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services/steel-fabrication" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Curated Portfolio Page -->
+  <url>
+    <loc>https://hyzininterior.com/#projects</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#projects" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- About & Ethos Page -->
+  <url>
+    <loc>https://hyzininterior.com/#about</loc>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#about" />
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact & Brief Page -->
   <url>
     <loc>https://hyzininterior.com/#contact</loc>
-    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#contact" />
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.92</priority>
   </url>
 </urlset>
