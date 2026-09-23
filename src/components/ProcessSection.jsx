@@ -6,32 +6,42 @@ export default function ProcessSection({ onOpenConsultation }) {
 
   const steps = [
     {
-      number: "01",
+      num: "01",
+      icon: Compass,
       title: "DISCOVERY & BRIEFING",
+      subtitle: "Site Survey & Spatial Program",
       description: "We begin with a deep exploration of your daily rituals, aesthetic affinities, functional requirements, and family dynamics. We review site plans and establish clear budget frameworks.",
       deliverable: "Spatial Program & Feasibility Dossier"
     },
     {
-      number: "02",
+      num: "02",
+      icon: Lightbulb,
       title: "CONCEPTUAL DESIGN",
+      subtitle: "Material Palettes & Layouts",
       description: "Our design team develops the overarching design narrative, mood boards, physical material palettes (stone, wood, metals), and schematic zoning layouts.",
       deliverable: "Design Vision & Material Board"
     },
     {
-      number: "03",
+      num: "03",
+      icon: PenTool,
       title: "TECHNICAL SPECIFICATION",
+      subtitle: "Precision CAD Working Drawings",
       description: "Every joint, shadow gap, lighting conduit, and custom joinery section is translated into millimeter-precise CAD working drawings and structural engineering schematics.",
       deliverable: "100% Construction Drawing Package"
     },
     {
-      number: "04",
+      num: "04",
+      icon: Hammer,
       title: "SHOP FABRICATION & SITE BUILD",
+      subtitle: "Workshop & Site Execution",
       description: "Sub-assemblies are pre-fabricated in our controlled aluminium, steel, and joinery workshops before undergoing clean, white-glove site installation by master craftsmen.",
       deliverable: "Verified Site Installation"
     },
     {
-      number: "05",
+      num: "05",
+      icon: KeyRound,
       title: "COMMISSIONING & HANDOVER",
+      subtitle: "Final Styling & Turnkey Delivery",
       description: "Final styling, deep cleaning, art curation, and smart lighting commissioning before presenting your completed space with full warranty documentation.",
       deliverable: "Keys, Project Archive Dossier & Lifetime Support"
     }
