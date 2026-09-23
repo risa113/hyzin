@@ -23,7 +23,6 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
     { id: 'projects', name: 'Portfolio' },
     { id: 'about', name: 'About' },
     { id: 'contact', name: 'Contact' },
-    { id: 'seo-os', name: 'SEO OS' },
   ];
 
   const handleNavClick = (pageId) => {
