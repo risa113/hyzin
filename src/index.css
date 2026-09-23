@@ -174,3 +174,35 @@
 .animate-page-enter {
   animation: pageEnter 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Top-to-Bottom (Up-to-Down) Text Reveal Animations */
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDownFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideDownFast {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down-fast {
+  animation: slideDownFast 0.4s ease-out forwards;
+}
+

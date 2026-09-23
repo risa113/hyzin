@@ -1,12 +1,15 @@
-import { useState } from 'react';
-import { ArrowUpRight, MapPin, Maximize2 } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ArrowUpRight, MapPin, Maximize2, ChevronLeft, ChevronRight, LayoutGrid, Play, Pause, Sparkles } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
 
 export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
   const [activeFilter, setActiveFilter] = useState('ALL');
+  const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'slideshow'
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const categories = [
-    { id: 'ALL', label: 'ALL DISCIPLINES' },
+    { id: 'ALL', label: 'ALL SERVICES' },
     { id: 'Kitchen Cabinet', label: 'KITCHEN CABINET' },
     { id: 'Wall Drop', label: 'WALL DROP' },
     { id: 'Paneling', label: 'PANELING' },
@@ -22,45 +25,103 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
     ? projectsData
     : projectsData.filter((p) => p.category === activeFilter || p.type === activeFilter);
 
+  // Auto-play for Slideshow mode
+  useEffect(() => {
+    let timer;
+    if (viewMode === 'slideshow' && isPlaying && filteredProjects.length > 0) {
+      timer = setInterval(() => {
+        setCurrentSlideIndex((prev) => (prev + 1) % filteredProjects.length);
+      }, 5000);
+    }
+    return () => clearInterval(timer);
+  }, [viewMode, isPlaying, filteredProjects.length]);
+
+  // Reset slide index if filter changes
+  useEffect(() => {
+    setCurrentSlideIndex(0);
+  }, [activeFilter]);
+
+  const currentProject = filteredProjects[currentSlideIndex] || filteredProjects[0];
+
+  const handlePrevSlide = () => {
+    setCurrentSlideIndex((prev) => (prev === 0 ? filteredProjects.length - 1 : prev - 1));
+  };
+
+  const handleNextSlide = () => {
+    setCurrentSlideIndex((prev) => (prev + 1) % filteredProjects.length);
+  };
+
   return (
     <section id="portfolio" className="py-24 sm:py-32 bg-[#090A0D] text-[#FAF8F5] relative overflow-hidden border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      {/* Background Animatic Ambient Glows */}
+      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#C5A065]/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-[#25D366]/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-white/10 pb-8">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 pb-8 border-b border-white/10 gap-6">
           <div>
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#D4B584] font-mono mb-3">
-              <span>AUTHENTIC PORTFOLIO SURVEY</span>
-              <span className="w-8 h-[1px] bg-[#D4B584]/50"></span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C5A065]/15 border border-[#C5A065]/30 text-[#D4B584] text-[11px] font-mono uppercase tracking-[0.25em] mb-4">
+              <Sparkles className="w-3.5 h-3.5 text-[#D4B584]" />
+              <span>AUTHENTIC CLIENT WORK SHOWCASE</span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#FAF8F5] font-normal tracking-tight">
+            
+            {/* Top-to-Bottom Animated Title */}
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#FAF8F5] font-normal tracking-tight leading-[1.08] animate-slide-down">
               Selected Work & <span className="italic font-light text-[#D4B584]">Fabrication.</span>
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-[#B3ACA0] font-light max-w-xl">
-              Original on-site photographs of bespoke residential interiors, modular aluminium systems, and precision metal fabrication delivered across South India.
+            
+            <p className="mt-3 text-sm sm:text-base text-[#B3ACA0] font-light max-w-2xl leading-relaxed animate-slide-down" style={{ animationDelay: '100ms' }}>
+              Original on-site photography of bespoke residential interiors, modular aluminium suites, and precision metal fabrication commissioned across Kerala, Tamil Nadu, and Karnataka.
             </p>
           </div>
 
-          <div className="mt-6 md:mt-0 text-left md:text-right">
-            <span className="font-mono text-xs text-[#D4B584] uppercase tracking-widest block">
-              {filteredProjects.length} Verified Commissions
-            </span>
-            <span className="text-[11px] text-[#716C64] uppercase tracking-wider font-mono">
-              Kerala • Tamil Nadu • Karnataka
+          {/* View Mode Switcher (Grid vs Slideshow) */}
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <div className="bg-[#121318] border border-white/15 p-1 rounded-lg flex items-center gap-1 shadow-lg">
+              <button
+                onClick={() => setViewMode('grid')}
+                className={`px-4 py-2 rounded-md text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all ${
+                  viewMode === 'grid'
+                    ? 'bg-[#C5A065] text-[#0A0A0C] font-bold shadow-md'
+                    : 'text-[#9E978D] hover:text-white hover:bg-white/5'
+                }`}
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span>PROPER GRID</span>
+              </button>
+
+              <button
+                onClick={() => setViewMode('slideshow')}
+                className={`px-4 py-2 rounded-md text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all ${
+                  viewMode === 'slideshow'
+                    ? 'bg-[#C5A065] text-[#0A0A0C] font-bold shadow-md'
+                    : 'text-[#9E978D] hover:text-white hover:bg-white/5'
+                }`}
+              >
+                <Play className="w-3.5 h-3.5" />
+                <span>SLIDESHOW</span>
+              </button>
+            </div>
+
+            <span className="font-mono text-xs text-[#D4B584] uppercase tracking-widest hidden sm:inline-block px-3 py-2 bg-white/5 border border-white/10 rounded-md">
+              {filteredProjects.length} Works
             </span>
           </div>
         </div>
 
         {/* Filter Pills */}
-        <div className="flex items-center space-x-2 sm:space-x-3 overflow-x-auto pb-4 mb-12 no-scrollbar">
+        <div className="flex items-center space-x-2 sm:space-x-3 overflow-x-auto pb-4 mb-10 no-scrollbar">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveFilter(cat.id)}
-              className={`px-4 sm:px-5 py-2 text-[11px] uppercase tracking-[0.2em] font-medium whitespace-nowrap transition-all duration-300 border ${
+              className={`px-4 sm:px-5 py-2 text-[11px] uppercase tracking-[0.2em] font-mono font-medium whitespace-nowrap transition-all duration-300 border rounded-sm ${
                 activeFilter === cat.id
-                  ? 'bg-[#D4B584] text-[#0A0A0C] border-[#D4B584] shadow-md shadow-[#D4B584]/20 font-semibold'
-                  : 'bg-transparent text-[#9E978D] border-white/10 hover:border-white/30 hover:text-white'
+                  ? 'bg-[#D4B584] text-[#0A0A0C] border-[#D4B584] shadow-md shadow-[#D4B584]/20 font-bold'
+                  : 'bg-[#121318]/80 text-[#9E978D] border-white/10 hover:border-white/30 hover:text-white'
               }`}
             >
               {cat.label}
@@ -68,48 +129,205 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
           ))}
         </div>
 
-        {/* Editorial Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
-          {filteredProjects.map((project, idx) => {
-            const isWide = idx % 3 === 0;
-            const colSpanClass = isWide ? 'md:col-span-8' : 'md:col-span-4';
-            const heightClass = isWide ? 'h-[440px] sm:h-[500px]' : 'h-[380px] sm:h-[460px]';
+        {/* MODE 1: ANIMATIC INTERACTIVE SLIDESHOW */}
+        {viewMode === 'slideshow' && currentProject && (
+          <div className="bg-[#121318] border border-white/15 rounded-2xl overflow-hidden shadow-2xl relative mb-12 animate-page-enter">
+            <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[550px]">
+              
+              {/* Left Column: Full-Height Image Slider */}
+              <div className="lg:col-span-7 relative overflow-hidden bg-black group min-h-[380px] lg:min-h-[550px]">
+                <img
+                  key={currentProject.id}
+                  src={currentProject.heroImage}
+                  alt={currentProject.title}
+                  className="w-full h-full object-cover object-center filter brightness-95 transition-transform duration-1000 ease-out group-hover:scale-105"
+                />
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
 
-            return (
+                {/* Top Badges */}
+                <div className="absolute top-5 left-5 right-5 flex items-center justify-between z-10">
+                  <span className="px-3.5 py-1.5 bg-black/80 backdrop-blur-md border border-[#C5A065]/40 text-[11px] font-mono uppercase tracking-widest text-[#D4B584] rounded">
+                    {currentProject.category}
+                  </span>
+                  <span className="px-3.5 py-1.5 bg-black/80 backdrop-blur-md border border-white/10 text-[11px] font-mono uppercase tracking-widest text-white flex items-center gap-1.5 rounded">
+                    <MapPin className="w-3 h-3 text-[#D4B584]" />
+                    <span>{currentProject.location}</span>
+                  </span>
+                </div>
+
+                {/* Fullscreen Lightbox Trigger */}
+                <button
+                  onClick={() => {
+                    if (onOpenLightbox) {
+                      onOpenLightbox(currentProject.gallery || [currentProject.heroImage], 0, currentProject.title, currentProject.category);
+                    }
+                  }}
+                  className="absolute top-5 right-5 z-20 p-3 rounded-full bg-black/70 hover:bg-[#D4B584] hover:text-black text-white border border-white/20 backdrop-blur-md transition-all shadow-xl hover:scale-110"
+                  title="Expand Fullscreen Lightbox"
+                >
+                  <Maximize2 className="w-4 h-4" />
+                </button>
+
+                {/* Slideshow Progress & Navigation Overlay Controls */}
+                <div className="absolute bottom-5 inset-x-5 flex items-center justify-between z-10">
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={handlePrevSlide}
+                      className="p-3 rounded-full bg-black/80 hover:bg-[#C5A065] hover:text-black text-white border border-white/20 backdrop-blur-md transition-all"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={handleNextSlide}
+                      className="p-3 rounded-full bg-black/80 hover:bg-[#C5A065] hover:text-black text-white border border-white/20 backdrop-blur-md transition-all"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={() => setIsPlaying(!isPlaying)}
+                      className="p-3 rounded-full bg-black/80 hover:bg-white hover:text-black text-[#D4B584] border border-white/20 backdrop-blur-md transition-all"
+                      title={isPlaying ? "Pause Auto-Slide" : "Play Auto-Slide"}
+                    >
+                      {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                    </button>
+                  </div>
+
+                  <span className="font-mono text-xs text-[#D4B584] bg-black/80 px-4 py-2 border border-white/10 rounded tracking-widest">
+                    {String(currentSlideIndex + 1).padStart(2, '0')} / {String(filteredProjects.length).padStart(2, '0')}
+                  </span>
+                </div>
+              </div>
+
+              {/* Right Column: Top-to-Bottom Animated Content Box */}
+              <div className="lg:col-span-5 p-8 sm:p-12 flex flex-col justify-between bg-[#121318] border-t lg:border-t-0 lg:border-l border-white/10">
+                <div key={currentProject.id} className="space-y-6">
+                  
+                  {/* Top-to-Bottom Animated Category Subtitle */}
+                  <div className="animate-slide-down flex items-center space-x-3 text-xs uppercase tracking-[0.25em] text-[#D4B584] font-mono">
+                    <span>{currentProject.state}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4B584]"></span>
+                    <span>{currentProject.year}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4B584]"></span>
+                    <span>{currentProject.area}</span>
+                  </div>
+
+                  {/* Top-to-Bottom Animated Title */}
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#FAF8F5] leading-tight font-normal animate-slide-down" style={{ animationDelay: '100ms' }}>
+                    {currentProject.title}
+                  </h3>
+
+                  {/* Top-to-Bottom Animated Tagline & Concept */}
+                  <p className="text-sm sm:text-base text-[#D9D3C7] font-light leading-relaxed animate-slide-down" style={{ animationDelay: '150ms' }}>
+                    {currentProject.concept || currentProject.tagline}
+                  </p>
+
+                  {/* Highlights Bullet List */}
+                  {currentProject.spaceHighlights && (
+                    <div className="pt-4 border-t border-white/10 space-y-2 animate-slide-down" style={{ animationDelay: '200ms' }}>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#D4B584] block mb-2">
+                        COMMISSION HIGHLIGHTS:
+                      </span>
+                      {currentProject.spaceHighlights.slice(0, 3).map((hl, i) => (
+                        <div key={i} className="text-xs text-[#B5AEA1] flex items-start space-x-2">
+                          <span className="text-[#C5A065]">•</span>
+                          <span>{hl}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Client Review quote */}
+                  {currentProject.clientReview && (
+                    <blockquote className="p-4 bg-white/5 border-l-2 border-[#C5A065] text-xs font-serif italic text-[#FAF8F5] animate-slide-down" style={{ animationDelay: '250ms' }}>
+                      {currentProject.clientReview}
+                      <span className="block mt-1 font-mono not-italic text-[10px] text-[#D4B584] uppercase">
+                        — {currentProject.patron || 'Private Patron'}
+                      </span>
+                    </blockquote>
+                  )}
+                </div>
+
+                {/* Bottom Action Bar */}
+                <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between gap-4">
+                  <button
+                    onClick={() => {
+                      if (onOpenLightbox) {
+                        onOpenLightbox(currentProject.gallery || [currentProject.heroImage], 0, currentProject.title, currentProject.category);
+                      } else if (onSelectProject) {
+                        onSelectProject(currentProject);
+                      }
+                    }}
+                    className="flex-1 py-3.5 bg-[#C5A065] hover:bg-[#D4B584] text-[#0A0A0C] font-bold text-xs uppercase tracking-[0.2em] font-mono transition-all flex items-center justify-center space-x-2 rounded-sm shadow-md"
+                  >
+                    <span>VIEW FULL GALLERY & SPECS</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Thumbnail Strip Below Slider */}
+            <div className="p-4 bg-[#0A0A0C] border-t border-white/10 flex items-center gap-3 overflow-x-auto no-scrollbar">
+              {filteredProjects.map((proj, i) => (
+                <button
+                  key={proj.id}
+                  onClick={() => setCurrentSlideIndex(i)}
+                  className={`relative flex-shrink-0 w-24 h-16 rounded overflow-hidden border-2 transition-all ${
+                    currentSlideIndex === i ? 'border-[#C5A065] scale-105 opacity-100 shadow-lg' : 'border-transparent opacity-50 hover:opacity-80'
+                  }`}
+                >
+                  <img src={proj.heroImage} alt={proj.title} className="w-full h-full object-cover" />
+                  <span className="absolute bottom-1 right-1 text-[9px] font-mono bg-black/80 text-white px-1">
+                    0{i + 1}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* MODE 2: HIGH-PRECISION PROPER GRID VIEW */}
+        {viewMode === 'grid' && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 animate-page-enter">
+            {filteredProjects.map((project, idx) => (
               <div
                 key={project.id}
-                className={`group relative overflow-hidden bg-[#121318] border border-white/10 transition-all duration-500 hover:border-[#D4B584]/60 ${colSpanClass}`}
+                className="group relative bg-[#121318] border border-white/15 rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#C5A065]/70 hover:-translate-y-1.5 flex flex-col justify-between"
               >
-                {/* Image Container with Zoom */}
-                <div className={`relative w-full ${heightClass} overflow-hidden cursor-pointer`}>
+                {/* Image Container with Precise 16:11 Aspect Ratio */}
+                <div
+                  onClick={() => {
+                    if (onOpenLightbox) {
+                      onOpenLightbox(project.gallery || [project.heroImage], 0, project.title, project.category);
+                    } else if (onSelectProject) {
+                      onSelectProject(project);
+                    }
+                  }}
+                  className="relative w-full aspect-[16/11] overflow-hidden cursor-pointer bg-black"
+                >
                   <img
                     src={project.heroImage}
                     alt={project.title}
                     loading="lazy"
-                    onClick={() => {
-                      if (onOpenLightbox) {
-                        onOpenLightbox(project.gallery || [project.heroImage], 0, project.title, project.category);
-                      } else if (onSelectProject) {
-                        onSelectProject(project);
-                      }
-                    }}
-                    className="w-full h-full object-cover object-center filter brightness-[0.9] contrast-[1.05] transition-transform duration-700 ease-out group-hover:scale-105 group-hover:brightness-95"
+                    className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.05] transition-transform duration-700 ease-out group-hover:scale-108 group-hover:brightness-95"
                   />
+                  
                   {/* Subtle Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#090A0D] via-[#090A0D]/30 to-black/30 group-hover:via-[#090A0D]/50 transition-all duration-500 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#090A0D] via-transparent to-black/40 group-hover:via-black/20 transition-all duration-500 pointer-events-none"></div>
 
-                  {/* Top Tag Badges */}
-                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10 pointer-events-none">
-                    <span className="px-3 py-1 bg-black/70 backdrop-blur-md border border-white/10 text-[10px] uppercase font-mono tracking-widest text-[#D4B584]">
+                  {/* Top Category & Location Badges */}
+                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
+                    <span className="px-2.5 py-1 bg-black/80 backdrop-blur-md border border-[#C5A065]/30 text-[10px] uppercase font-mono tracking-wider text-[#D4B584] rounded">
                       {project.category}
                     </span>
-                    <span className="px-2.5 py-1 bg-black/70 backdrop-blur-md border border-white/10 text-[10px] uppercase font-mono tracking-widest text-white flex items-center space-x-1">
+                    <span className="px-2 py-1 bg-black/80 backdrop-blur-md border border-white/10 text-[10px] uppercase font-mono tracking-wider text-white flex items-center gap-1 rounded">
                       <MapPin className="w-2.5 h-2.5 text-[#D4B584]" />
                       <span>{project.state}</span>
                     </span>
                   </div>
 
-                  {/* Expand button hover indicator */}
+                  {/* Expand Lightbox Button */}
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
@@ -117,51 +335,59 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                         onOpenLightbox(project.gallery || [project.heroImage], 0, project.title, project.category);
                       }
                     }}
-                    className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-black/60 hover:bg-[#D4B584] hover:text-black text-white border border-white/10 backdrop-blur-md transition-all shadow-lg"
-                    title="View Fullscreen"
+                    className="absolute top-3 right-3 z-20 p-2 rounded-full bg-black/70 hover:bg-[#C5A065] hover:text-black text-white border border-white/20 backdrop-blur-md transition-all shadow-lg hover:scale-110 opacity-90 group-hover:opacity-100"
+                    title="View Fullscreen Lightbox"
                   >
                     <Maximize2 className="w-3.5 h-3.5" />
                   </button>
+                </div>
 
-                  {/* Bottom Information Card */}
-                  <div className="absolute bottom-0 inset-x-0 p-6 sm:p-7 z-10">
-                    <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-[#D4B584] font-mono mb-1.5 flex items-center space-x-2">
+                {/* Card Content with Top-to-Bottom Hover Animation */}
+                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                  <div>
+                    {/* Top-to-Bottom Location Tag */}
+                    <div className="text-[10px] uppercase tracking-[0.2em] text-[#D4B584] font-mono mb-2 flex items-center justify-between">
                       <span>{project.location}</span>
-                      <span>•</span>
                       <span>{project.year}</span>
-                      <span>•</span>
-                      <span>{project.area}</span>
                     </div>
 
+                    {/* Top-to-Bottom Title Animation on hover */}
                     <h3
                       onClick={() => onSelectProject && onSelectProject(project)}
-                      className="font-serif text-2xl sm:text-3xl text-[#FAF8F5] font-normal leading-tight group-hover:text-[#D4B584] transition-colors cursor-pointer"
+                      className="font-serif text-2xl text-[#FAF8F5] font-normal leading-snug group-hover:text-[#D4B584] transition-colors cursor-pointer group-hover:animate-slide-down-fast"
                     >
                       {project.title}
                     </h3>
 
-                    <p className="mt-2 text-xs sm:text-sm text-[#C4BCB1] font-light line-clamp-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">
-                      {project.concept}
+                    <p className="mt-2 text-xs text-[#B3ACA0] font-light line-clamp-2 leading-relaxed">
+                      {project.concept || project.tagline}
                     </p>
+                  </div>
 
-                    <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
-                      <button
-                        onClick={() => onSelectProject && onSelectProject(project)}
-                        className="text-[11px] uppercase tracking-[0.25em] text-[#D4B584] font-mono flex items-center space-x-2 group-hover:translate-x-1 transition-transform"
-                      >
-                        <span>VIEW SPECIFICATIONS</span>
-                        <ArrowUpRight className="w-3.5 h-3.5" />
-                      </button>
-                      <span className="text-[10px] text-stone-400 uppercase font-mono">
-                        {project.gallery ? `${project.gallery.length} Photos` : 'Original Asset'}
-                      </span>
-                    </div>
+                  {/* Card Bottom CTA */}
+                  <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                    <button
+                      onClick={() => {
+                        if (onOpenLightbox) {
+                          onOpenLightbox(project.gallery || [project.heroImage], 0, project.title, project.category);
+                        } else if (onSelectProject) {
+                          onSelectProject(project);
+                        }
+                      }}
+                      className="text-[11px] uppercase tracking-[0.2em] text-[#D4B584] font-mono flex items-center gap-1.5 font-bold group-hover:text-white transition-colors"
+                    >
+                      <span>VIEW SPECS</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </button>
+                    <span className="text-[10px] text-[#716C64] uppercase font-mono">
+                      {project.gallery ? `${project.gallery.length} Photos` : 'Original Asset'}
+                    </span>
                   </div>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
+        )}
 
       </div>
     </section>
