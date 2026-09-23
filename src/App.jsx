@@ -13,6 +13,7 @@ import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import House3DPage from './pages/House3DPage';
 import PhotoVaultPage from './pages/PhotoVaultPage';
+import SeoOSPage from './pages/SeoOSPage';
 
 import ParticleBackground from './components/ParticleBackground';
 
@@ -50,7 +51,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      if (['home', 'about', 'projects', 'services', 'contact', '3d-house', 'photo-vault'].includes(hash)) {
+      if (['home', 'about', 'projects', 'services', 'contact', '3d-house', 'photo-vault', 'seo-os'].includes(hash)) {
         setActivePage(hash);
       }
     };
@@ -149,6 +150,10 @@ export default function App() {
             onOpenLightbox={handleOpenLightbox}
             onOpenConsultation={handleOpenConsultation}
           />
+        )}
+
+        {activePage === 'seo-os' && (
+          <SeoOSPage />
         )}
       </main>
 
