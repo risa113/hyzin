@@ -1,7 +1,11 @@
 // Central Client Assets Registry
 // Connects and organizes all authentic Kerala assets (72 Authentic Client Photos)
 
-export const assetUrl = (filename) => `/kerala-assets/${encodeURIComponent(filename)}`;
+export const assetUrl = (filename) => {
+  const base = import.meta.env.BASE_URL || '/';
+  const prefix = base.endsWith('/') ? base : `${base}/`;
+  return `${prefix}kerala-assets/${encodeURIComponent(filename)}`;
+};
 
 // Key Brand Assets
 export const BRAND_ASSETS = {
