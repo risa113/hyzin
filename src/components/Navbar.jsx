@@ -51,14 +51,23 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
           <span className="text-white/20">•</span>
           <span className="text-[#C4BCB1]/80">Kerala • Tamil Nadu • Karnataka</span>
         </div>
-        <div className="flex items-center space-x-6 text-[10px] whitespace-nowrap">
+        <div className="flex items-center space-x-4 text-[10px] whitespace-nowrap font-mono">
           <a
             href="tel:916282549008"
-            className="flex items-center space-x-1.5 text-[#FAF8F5] hover:text-[#D4B584] transition-colors"
+            className="flex items-center space-x-1 text-[#FAF8F5] hover:text-[#D4B584] transition-colors"
           >
             <Phone className="w-3 h-3 text-[#D4B584]" />
-            <span className="font-mono">+91 6282549008</span>
+            <span>+91 6282549008</span>
           </a>
+          <span className="text-white/20">|</span>
+          <a
+            href="tel:918848023041"
+            className="flex items-center space-x-1 text-[#FAF8F5] hover:text-[#D4B584] transition-colors"
+          >
+            <Phone className="w-3 h-3 text-[#D4B584]" />
+            <span>+91 8848023041</span>
+          </a>
+          <span className="text-white/20">|</span>
           <a
             href="https://www.instagram.com/hyzin.interior/"
             target="_blank"

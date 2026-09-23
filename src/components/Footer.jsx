@@ -112,10 +112,16 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
 
             <div className="mt-6 text-xs font-mono text-[#8C8275]">
               DIRECT STUDIO DESK: <br />
-              <a href="tel:6282549008" className="text-[#FAF8F5] hover:text-[#D4B584] text-sm font-sans font-medium flex items-center space-x-1 mt-1">
-                <Phone className="w-3.5 h-3.5 text-[#D4B584]" />
-                <span>+91 6282549008</span>
-              </a>
+              <div className="space-y-1 mt-1">
+                <a href="tel:916282549008" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-sans font-medium flex items-center space-x-1">
+                  <Phone className="w-3 h-3 text-[#D4B584]" />
+                  <span>+91 6282549008</span>
+                </a>
+                <a href="tel:918848023041" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-sans font-medium flex items-center space-x-1">
+                  <Phone className="w-3 h-3 text-[#D4B584]" />
+                  <span>+91 8848023041</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -159,10 +165,10 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
           <div>
             © 2026 HYZIN INTERIOR. All Rights Reserved. Original Client Photography.
           </div>
-          <div className="mt-3 sm:mt-0 flex items-center space-x-6">
+          <div className="mt-3 sm:mt-0 flex items-center space-x-4">
             <span>KERALA • TAMIL NADU • KARNATAKA</span>
             <span>|</span>
-            <span>+91 6282549008</span>
+            <span>+91 6282549008 / +91 8848023041</span>
           </div>
         </div>
 
