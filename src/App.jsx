@@ -14,6 +14,8 @@ import ContactPage from './pages/ContactPage';
 import House3DPage from './pages/House3DPage';
 import PhotoVaultPage from './pages/PhotoVaultPage';
 
+import ParticleBackground from './components/ParticleBackground';
+
 export default function App() {
   const [activePage, setActivePage] = useState('home');
   const [selectedProject, setSelectedProject] = useState(null);
@@ -82,7 +84,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#2D2B29] selection:bg-[#C5A065]/30 selection:text-[#1E1D1B] flex flex-col justify-between">
+    <div className="min-h-screen bg-[#FAF8F5] text-[#2D2B29] selection:bg-[#C5A065]/30 selection:text-[#1E1D1B] flex flex-col justify-between relative">
+      {/* Ambient Cursor-Reactive Particles */}
+      <ParticleBackground />
+
       {/* Universal Floating Header */}
       <Navbar
         activePage={activePage}

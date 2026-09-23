@@ -28,6 +28,8 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
   const [activeZone, setActiveZone] = useState('overview');
   const [selectedHotspot, setSelectedHotspot] = useState(null);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [explodedFactor, setExplodedFactor] = useState(0); // 0 (assembled) to 1 (fully exploded)
+  const [isFlyingThrough, setIsFlyingThrough] = useState(false);
 
   // References for animation & render loop
   const sceneRef = useRef(null);
@@ -39,6 +41,14 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
   const currentLookAtRef = useRef(new THREE.Vector3(0, 2, 0));
   const lightsGroupRef = useRef(null);
   const wireframeMaterialsRef = useRef([]);
+
+  // Architectural Mesh Component References for Exploded View
+  const roofMeshRef = useRef(null);
+  const ffBodyMeshRef = useRef(null);
+  const ffFloorMeshRef = useRef(null);
+  const balconyMeshRef = useRef(null);
+  const gfBodyMeshRef = useRef(null);
+  const wardrobeMeshRef = useRef(null);
 
   // Hotspots 3D Coordinates & Associated Real Photos
   const hotspotsData = [
@@ -324,6 +334,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
     ffFloor.position.set(0, 3.85, 0);
     ffFloor.castShadow = true;
     houseGroup.add(ffFloor);
+    ffFloorMeshRef.current = ffFloor;
 
     // FF Body
     const ffBodyGeo = new THREE.BoxGeometry(10.5, 3.0, 10.5);
@@ -332,6 +343,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
     ffBody.position.set(0.5, 5.5, -0.5);
     ffBody.castShadow = true;
     houseGroup.add(ffBody);
+    ffBodyMeshRef.current = ffBody;
 
     // Master Bedroom Wall Drop & Loft Cabinet Representation
     const wardrobeMat = createMat(0x8a7090, 0.3); // Mauve Lavender tone
@@ -339,6 +351,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
     const wardrobe = new THREE.Mesh(wardrobeGeo, wardrobeMat);
     wardrobe.position.set(3.5, 5.35, -2.5);
     houseGroup.add(wardrobe);
+    wardrobeMeshRef.current = wardrobe;
 
     // Stainless Steel Glass Balcony Railing
     const balconyGlassMat = createMat(0x88ddff, 0.1, 0.9, true, 0.4);
@@ -346,6 +359,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
     const balconyGlass = new THREE.Mesh(balconyGlassGeo, balconyGlassMat);
     balconyGlass.position.set(0.5, 4.55, 4.8);
     houseGroup.add(balconyGlass);
+    balconyMeshRef.current = balconyGlass;
 
     const ssHandrailMat = createMat(0xdddddd, 0.1, 0.95);
     const ssHandrailGeo = new THREE.CylinderGeometry(0.05, 0.05, 6.3);
@@ -361,6 +375,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
     roofSlab.position.set(0.5, 7.2, -0.5);
     roofSlab.castShadow = true;
     houseGroup.add(roofSlab);
+    roofMeshRef.current = roofSlab;
 
     // Ceiling Cove Lighting Strip
     const coveLightMat = createMat(0xffd27f, 0.1, 0.1);
@@ -445,6 +460,13 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
       if (autoRotate && !isDragging) {
         houseGroup.rotation.y += 0.003;
       }
+
+      // Dynamic Exploded View Component Offsets
+      if (roofMeshRef.current) roofMeshRef.current.position.y = 7.2 + explodedFactor * 4.5;
+      if (ffBodyMeshRef.current) ffBodyMeshRef.current.position.y = 5.5 + explodedFactor * 2.8;
+      if (wardrobeMeshRef.current) wardrobeMeshRef.current.position.y = 5.35 + explodedFactor * 2.8;
+      if (balconyMeshRef.current) balconyMeshRef.current.position.y = 4.55 + explodedFactor * 2.0;
+      if (ffFloorMeshRef.current) ffFloorMeshRef.current.position.y = 3.85 + explodedFactor * 1.4;
 
       // Smooth camera interpolation
       camera.position.lerp(targetCamPosRef.current, 0.05);
@@ -563,7 +585,37 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
               >
                 <Layers className="w-3.5 h-3.5 text-cyan-400" /> Blueprint
               </button>
+
               <div className="w-px h-5 bg-[#E5DEC9]" />
+
+              {/* Exploded View Toggle Button & Slider */}
+              <button
+                onClick={() => setExplodedFactor(explodedFactor > 0 ? 0 : 0.8)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium transition-all ${
+                  explodedFactor > 0
+                    ? 'bg-[#C5A065] text-black font-bold shadow-md'
+                    : 'text-[#666055] hover:text-[#1E1D1B]'
+                }`}
+              >
+                <SlidersHorizontal className="w-3.5 h-3.5" /> 
+                <span>Exploded View {explodedFactor > 0 ? `(${Math.round(explodedFactor * 100)}%)` : ''}</span>
+              </button>
+
+              {explodedFactor > 0 && (
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value={explodedFactor}
+                  onChange={(e) => setExplodedFactor(parseFloat(e.target.value))}
+                  className="w-20 accent-[#C5A065] cursor-pointer"
+                  title="Adjust Exploded Elevation Factor"
+                />
+              )}
+
+              <div className="w-px h-5 bg-[#E5DEC9]" />
+
               <button
                 onClick={() => setAutoRotate(!autoRotate)}
                 className={`p-1.5 rounded-xl transition-all ${
