@@ -18,7 +18,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
   };
 
   return (
-    <footer className="bg-[#141416] text-[#A69F93] border-t border-white/[0.08] pt-10 pb-20 sm:pt-16 sm:pb-16 text-xs">
+    <footer className="bg-[#141416] text-[#A69F93] border-t border-white/[0.08] pt-10 pb-12 sm:pt-16 sm:pb-16 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* MOBILE COMPACT FOOTER (Visible on Mobile only: sm:hidden) */}
