@@ -83,6 +83,40 @@ export default function App() {
     navigateTo('contact');
   };
 
+  // Global Down-to-Top Scroll Pop-Up IntersectionObserver (All Pages & Content)
+  useEffect(() => {
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    const timer = setTimeout(() => {
+      const targets = document.querySelectorAll(
+        'section:not(.no-reveal), .reveal-up, .scroll-reveal, .editorial-card, .service-card, .scroll-card'
+      );
+      targets.forEach((el) => {
+        if (!el.classList.contains('no-reveal')) {
+          el.classList.add('reveal-up');
+          observer.observe(el);
+        }
+      });
+    }, 60);
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, [activePage]);
+
   return (
     <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#FAF8F5] text-[#2D2B29] selection:bg-[#C5A065]/30 selection:text-[#1E1D1B] flex flex-col justify-between relative">
       {/* Ambient Cursor-Reactive Particles */}
@@ -95,8 +129,8 @@ export default function App() {
         onOpenConsultation={handleOpenConsultation}
       />
 
-      {/* Main Page Body (Zero Page Refresh Routing) */}
-      <main className="flex-1">
+      {/* Main Page Body (Zero Page Refresh Routing with Pop-up Page Enter) */}
+      <main key={activePage} className="flex-1 animate-page-enter">
         {activePage === 'home' && (
           <HomePage
             onNavigate={navigateTo}

@@ -238,17 +238,92 @@
 @keyframes pageEnter {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(24px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
 .animate-page-enter {
-  animation: pageEnter 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: pageEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* ========================================================
+   GLOBAL DOWN-TO-TOP SCROLL POP-UP & SLIDE-RIGHT SYSTEM
+   ======================================================== */
+
+/* 1. Scroll-Triggered Down-to-Top Pop-up Reveal */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(32px) scale(0.98);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 2. Down-to-Top Keyframe Pop-Up */
+@keyframes popUpDown {
+  0% {
+    opacity: 0;
+    transform: translateY(36px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-pop-up {
+  animation: popUpDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3. Slide-Right Pop-Up Animation (For all slide switches & carousels) */
+@keyframes slideRightPop {
+  0% {
+    opacity: 0;
+    transform: translateX(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.animate-slide-right-pop {
+  animation: slideRightPop 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes slideLeftPop {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.animate-slide-left-pop {
+  animation: slideLeftPop 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Stagger Delay Classes */
+.delay-75 { transition-delay: 75ms; animation-delay: 75ms; }
+.delay-100 { transition-delay: 100ms; animation-delay: 100ms; }
+.delay-150 { transition-delay: 150ms; animation-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; animation-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; animation-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; animation-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; animation-delay: 500ms; }
 
 /* Top-to-Bottom (Up-to-Down) Text Reveal Animations */
 @keyframes slideDownFade {

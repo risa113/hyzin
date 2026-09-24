@@ -50,7 +50,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
 
   return (
     <section
-      className="relative min-h-[calc(100svh-64px)] sm:min-h-[90vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#0D0E11] select-none w-full max-w-full"
+      className="relative min-h-[calc(100svh-64px)] sm:min-h-[90vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#0D0E11] select-none w-full max-w-full no-reveal"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -78,12 +78,12 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
         ))}
       </div>
 
-      {/* Main Slide Content */}
+      {/* Main Slide Content - Slide-Right Pop-Up Animation on Slide Change */}
       <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-28 lg:pt-36 pb-4 sm:pb-8 flex-1 flex flex-col justify-center">
-        <div className="max-w-3xl">
+        <div key={currentSlide} className="max-w-3xl animate-slide-right-pop">
           
           {/* Location & Discipline Badge */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1 sm:px-3.5 sm:py-1.5 bg-black/60 backdrop-blur-md border border-[#D4B584]/40 shadow-sm mb-3 sm:mb-6 animate-fadeIn">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 sm:px-3.5 sm:py-1.5 bg-black/60 backdrop-blur-md border border-[#D4B584]/40 shadow-sm mb-3 sm:mb-6 animate-slide-right-pop">
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4B584] animate-pulse" />
             <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#FAF8F5] font-medium">
               {active.locationTag}
@@ -91,7 +91,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
           </div>
 
           {/* Editorial Headline */}
-          <h1 className="text-2xl sm:text-5xl lg:text-7xl font-extrabold text-[#FAF8F5] leading-[1.15] sm:leading-[1.1] tracking-tight drop-shadow-md transition-all duration-500">
+          <h1 className="text-2xl sm:text-5xl lg:text-7xl font-extrabold text-[#FAF8F5] leading-[1.15] sm:leading-[1.1] tracking-tight drop-shadow-md transition-all duration-500 animate-slide-right-pop delay-100">
             {active.title}{' '}
             <span className="text-[#D4B584] font-extrabold">
               {active.emphasis}
@@ -100,16 +100,16 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
           </h1>
 
           {/* Supporting Statement */}
-          <p className="mt-2.5 sm:mt-6 text-xs sm:text-base lg:text-lg text-[#DCD6CE] font-normal leading-relaxed max-w-2xl transition-all duration-500 line-clamp-3 sm:line-clamp-none">
+          <p className="mt-2.5 sm:mt-6 text-xs sm:text-base lg:text-lg text-[#DCD6CE] font-normal leading-relaxed max-w-2xl transition-all duration-500 line-clamp-3 sm:line-clamp-none animate-slide-right-pop delay-150">
             {active.tagline}
           </p>
 
-          <p className="mt-1.5 sm:mt-3 text-[10px] sm:text-sm uppercase tracking-[0.18em] sm:tracking-[0.2em] text-[#D4B584] font-medium">
+          <p className="mt-1.5 sm:mt-3 text-[10px] sm:text-sm uppercase tracking-[0.18em] sm:tracking-[0.2em] text-[#D4B584] font-medium animate-slide-right-pop delay-200">
             {active.badge}
           </p>
 
           {/* Dual Action CTAs */}
-          <div className="mt-4 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-5">
+          <div className="mt-4 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-5 animate-pop-up delay-300">
             <button
               onClick={onOpenConsultation}
               className="px-6 py-3 sm:px-8 sm:py-4 bg-[#D4B584] hover:bg-[#FAF0DC] text-[#111113] text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-semibold transition-all duration-300 shadow-xl flex items-center justify-center space-x-2.5 group rounded-sm"

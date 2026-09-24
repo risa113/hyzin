@@ -128,14 +128,15 @@ export default function MasterPhotoVault({ onOpenLightbox, onOpenConsultation })
           </div>
         </div>
 
-        {/* 72 Photo Grid Showcase */}
+        {/* 72 Photo Grid Showcase with Slide-Right Pop on Filter Switch */}
         {displayedPhotos.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div key={`${selectedCategory}-${searchQuery}`} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-slide-right-pop">
             {displayedPhotos.map((photo, idx) => (
               <div
                 key={photo.id}
                 onClick={() => handleOpenPhoto(idx)}
-                className="group relative bg-white rounded-3xl overflow-hidden border border-[#E8E1D3] shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                className="group relative bg-white rounded-3xl overflow-hidden border border-[#E8E1D3] shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col justify-between reveal-up"
+                style={{ transitionDelay: `${(idx % 8) * 60}ms` }}
               >
                 {/* Image Container with Hover Zoom & Badges */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#F0ECE1]">

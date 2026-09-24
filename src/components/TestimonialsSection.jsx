@@ -22,10 +22,11 @@ export default function TestimonialsSection() {
 
         {/* 3–4 Testimonial Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonialsData.map((item) => (
+          {testimonialsData.map((item, idx) => (
             <div
               key={item.id}
-              className="p-8 bg-[#121317] border border-white/[0.08] hover:border-[#d4b584]/40 transition-all duration-300 flex flex-col justify-between"
+              className="p-8 bg-[#121317] border border-white/[0.08] hover:border-[#d4b584]/40 transition-all duration-300 flex flex-col justify-between reveal-up"
+              style={{ transitionDelay: `${idx * 100}ms` }}
             >
               <div>
                 <div className="flex items-center space-x-1 text-[#d4b584] mb-4">

@@ -91,12 +91,13 @@ export default function BeforeAfterSlider({ onOpenLightbox }) {
           ))}
         </div>
 
-        {/* Comparison Viewer */}
+        {/* Comparison Viewer with Slide-Right Pop Animation */}
         <div
+          key={activeTab}
           ref={containerRef}
           onMouseDown={() => setIsDragging(true)}
           onTouchStart={() => setIsDragging(true)}
-          className="relative w-full h-[460px] sm:h-[600px] lg:h-[660px] border border-black/10 shadow-2xl overflow-hidden cursor-ew-resize select-none bg-stone-900 rounded-sm"
+          className="relative w-full h-[460px] sm:h-[600px] lg:h-[660px] border border-black/10 shadow-2xl overflow-hidden cursor-ew-resize select-none bg-stone-900 rounded-sm animate-slide-right-pop"
         >
           {/* After Image (Background Layer - 100% width) */}
           <div className="absolute inset-0 w-full h-full">

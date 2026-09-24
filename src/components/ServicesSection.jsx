@@ -116,9 +116,9 @@ export default function ServicesSection({ onOpenLightbox }) {
             })}
           </div>
 
-          {/* Right: Dynamic High-Definition Client Showcase */}
+          {/* Right: Dynamic High-Definition Client Showcase with Slide-Right Pop Animation */}
           <div className="lg:col-span-6 relative min-h-[500px] lg:min-h-full flex flex-col">
-            <div className="relative flex-1 w-full border border-white/10 overflow-hidden shadow-2xl bg-[#08080A] rounded-sm group">
+            <div key={current.id} className="relative flex-1 w-full border border-white/10 overflow-hidden shadow-2xl bg-[#08080A] rounded-sm group animate-slide-right-pop">
               <img
                 key={current.id}
                 src={current.image}

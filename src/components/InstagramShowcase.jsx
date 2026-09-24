@@ -182,12 +182,13 @@ export default function InstagramShowcase({ onOpenLightbox }) {
           </div>
         </div>
 
-        {/* Instagram 6-Grid / Responsive Gallery */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPosts.map((post) => (
+        {/* Instagram 6-Grid / Responsive Gallery with Slide-Right Pop on Filter Switch */}
+        <div key={activeCategory} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-slide-right-pop">
+          {filteredPosts.map((post, idx) => (
             <div
               key={post.id}
-              className="group bg-[#141519] border border-white/[0.08] hover:border-[#d4b584]/50 rounded-xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
+              className="group bg-[#141519] border border-white/[0.08] hover:border-[#d4b584]/50 rounded-xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer reveal-up"
+              style={{ transitionDelay: `${(idx % 6) * 75}ms` }}
               onClick={() => handlePostClick(post)}
             >
               {/* Image & Overlay */}

@@ -134,13 +134,13 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
           <div className="bg-[#121318] border border-white/15 rounded-2xl overflow-hidden shadow-2xl relative mb-12 animate-page-enter">
             <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[550px]">
               
-              {/* Left Column: Full-Height Image Slider */}
+              {/* Left Column: Full-Height Image Slider with Slide-Right Pop Animation */}
               <div className="lg:col-span-7 relative overflow-hidden bg-black group min-h-[380px] lg:min-h-[550px]">
                 <img
                   key={currentProject.id}
                   src={currentProject.heroImage}
                   alt={currentProject.title}
-                  className="w-full h-full object-cover object-center filter brightness-95 transition-transform duration-1000 ease-out group-hover:scale-105"
+                  className="w-full h-full object-cover object-center filter brightness-95 transition-transform duration-1000 ease-out group-hover:scale-105 animate-slide-right-pop"
                 />
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
@@ -178,9 +178,9 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                 </div>
               </div>
 
-              {/* Right Column: Top-to-Bottom Animated Content Box */}
+              {/* Right Column: Slide-Right Pop Animated Content Box */}
               <div className="lg:col-span-5 p-8 sm:p-12 flex flex-col justify-between bg-[#121318] border-t lg:border-t-0 lg:border-l border-white/10">
-                <div key={currentProject.id} className="space-y-6">
+                <div key={currentProject.id} className="space-y-6 animate-slide-right-pop">
                   
                   {/* Top-to-Bottom Animated Category Subtitle */}
                   <div className="animate-slide-down flex items-center space-x-3 text-xs uppercase tracking-[0.2em] text-[#D4B584] font-medium">
@@ -272,7 +272,8 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
             {filteredProjects.map((project, idx) => (
               <div
                 key={project.id}
-                className="group relative bg-[#121318] border border-white/15 rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#C5A065]/70 hover:-translate-y-1.5 flex flex-col justify-between"
+                className="group relative bg-[#121318] border border-white/15 rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#C5A065]/70 hover:-translate-y-1.5 flex flex-col justify-between reveal-up"
+                style={{ transitionDelay: `${(idx % 6) * 75}ms` }}
               >
                 {/* Image Container with Precise 16:11 Aspect Ratio */}
                 <div

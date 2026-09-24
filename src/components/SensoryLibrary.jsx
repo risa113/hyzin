@@ -27,13 +27,14 @@ export default function SensoryLibrary() {
 
         {/* 4 Swatches Grid (Matching Reference Screenshot) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {materialsData.map((item) => {
+          {materialsData.map((item, idx) => {
             const isSelected = selectedMaterial.id === item.id;
             return (
               <div
                 key={item.id}
                 onClick={() => setSelectedMaterial(item)}
-                className={`group cursor-pointer bg-[#121317] border transition-all duration-500 overflow-hidden flex flex-col justify-between ${
+                style={{ transitionDelay: `${(idx % 4) * 80}ms` }}
+                className={`group cursor-pointer bg-[#121317] border transition-all duration-500 overflow-hidden flex flex-col justify-between reveal-up ${
                   isSelected
                     ? 'border-[#d4b584] shadow-xl shadow-[#d4b584]/10 -translate-y-1'
                     : 'border-white/[0.08] hover:border-white/20'
@@ -76,9 +77,9 @@ export default function SensoryLibrary() {
           })}
         </div>
 
-        {/* Selected Swatch Detailed Breakdown */}
+        {/* Selected Swatch Detailed Breakdown with Slide-Right Pop Animation */}
         {selectedMaterial && (
-          <div className="mt-12 p-8 sm:p-10 bg-[#14151a] border border-[#c5a065]/30 relative overflow-hidden animate-fadeIn">
+          <div key={selectedMaterial.id} className="mt-12 p-8 sm:p-10 bg-[#14151a] border border-[#c5a065]/30 relative overflow-hidden animate-slide-right-pop">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#c5a065]/5 rounded-full blur-3xl pointer-events-none"></div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
