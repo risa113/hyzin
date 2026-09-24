@@ -98,14 +98,25 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative max-w-5xl max-h-[85vh] flex items-center justify-center overflow-hidden">
-          <img
-            src={currentImg}
-            alt={title}
-            className={`max-h-[82vh] max-w-full object-contain transition-transform duration-300 rounded-sm shadow-2xl ${
-              isZoomed ? 'scale-150 cursor-zoom-out' : 'cursor-zoom-in'
-            }`}
-            onClick={toggleZoom}
-          />
+          {currentImg?.includes('.mp4') ? (
+            <video
+              src={currentImg}
+              controls
+              autoPlay
+              loop
+              playsInline
+              className="max-h-[82vh] max-w-full rounded-sm shadow-2xl"
+            />
+          ) : (
+            <img
+              src={currentImg}
+              alt={title}
+              className={`max-h-[82vh] max-w-full object-contain transition-transform duration-300 rounded-sm shadow-2xl ${
+                isZoomed ? 'scale-150 cursor-zoom-out' : 'cursor-zoom-in'
+              }`}
+              onClick={toggleZoom}
+            />
+          )}
         </div>
 
         {/* Previous Button */}

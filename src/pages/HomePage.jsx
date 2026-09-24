@@ -8,6 +8,7 @@ import InstagramShowcase from '../components/InstagramShowcase';
 import SensoryLibrary from '../components/SensoryLibrary';
 import SeoFaqSection from '../components/SeoFaqSection';
 import StudioLocationSection from '../components/StudioLocationSection';
+import ExplodedScrollSection from '../components/ExplodedScrollSection';
 import { assetUrl } from '../data/clientAssets';
 
 export default function HomePage({ onNavigate, onSelectProject, onOpenConsultation, onOpenLightbox }) {
@@ -101,13 +102,26 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
                   alt="HYZIN Living & Paneling"
                   className="w-full h-[440px] sm:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md border border-black/5 shadow-md">
-                  <span className="text-[9px] uppercase tracking-wider text-[#9E8255] font-medium block">
-                    ORIGINAL CLIENT WORK
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                
+                {/* Top Badge: Exploded Animatic Link */}
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 bg-black/80 backdrop-blur-md border border-[#D4B584]/50 text-[10px] uppercase font-mono tracking-widest text-[#D4B584] rounded-sm">
+                    EXPLODED SPATIAL ANATOMY ↓
                   </span>
-                  <span className="text-base font-semibold text-[#1E1D1B] block">
-                    Kerala • Tamil Nadu • Karnataka
+                </div>
+
+                <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md border border-black/5 shadow-md flex items-center justify-between">
+                  <div>
+                    <span className="text-[9px] uppercase tracking-wider text-[#9E8255] font-semibold block">
+                      ARCHITECTURAL DECONSTRUCTION
+                    </span>
+                    <span className="text-sm font-bold text-[#1E1D1B] block">
+                      Scroll to Explode Room Below
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#9E8255] font-semibold">
+                    1:1 CRAFT ↓
                   </span>
                 </div>
               </div>
@@ -117,6 +131,12 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
 
         </div>
       </section>
+
+      {/* 3B. Signature Scroll-Driven Exploded Video Animatic Background */}
+      <ExplodedScrollSection
+        onOpenConsultation={onOpenConsultation}
+        onOpenLightbox={onOpenLightbox}
+      />
 
       {/* 4. The 10 Core Services Interactive Showcase */}
       <ServicesSection onOpenLightbox={onOpenLightbox} />
