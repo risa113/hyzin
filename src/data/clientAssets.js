@@ -7,18 +7,11 @@ export const assetUrl = (filename) => {
   return `${prefix}kerala-assets/${encodeURIComponent(filename)}`;
 };
 
-export const videoUrl = (filename) => {
-  const base = import.meta.env.BASE_URL || '/';
-  const prefix = base.endsWith('/') ? base : `${base}/`;
-  return `${prefix}videos/${encodeURIComponent(filename)}`;
-};
-
 // Key Brand Assets
 export const BRAND_ASSETS = {
   logo3D: assetUrl("WhatsApp Image 2026-09-22 at 3.18.22 PM.jpeg"),
   logoBadge: assetUrl("WhatsApp Image 2026-09-22 at 3.18.25 PM.jpeg"),
-  businessCard: assetUrl("WhatsApp Image 2026-09-22 at 3.18.27 PM.jpeg"),
-  explodedVideo: videoUrl("exploded-animatic.mp4")
+  businessCard: assetUrl("WhatsApp Image 2026-09-22 at 3.18.27 PM.jpeg")
 };
 
 // All 72 Master Client Photos Index with Metadata

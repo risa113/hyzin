@@ -24,4 +24,3 @@ dist-ssr
 *.sw?
 scratch/
 *.mp4
-!public/videos/*.mp4
