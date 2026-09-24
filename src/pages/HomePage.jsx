@@ -11,7 +11,7 @@ import StudioLocationSection from '../components/StudioLocationSection';
 import { assetUrl } from '../data/clientAssets';
 
 export default function HomePage({ onNavigate, onSelectProject, onOpenConsultation, onOpenLightbox }) {
-  const editorialImage = assetUrl('WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg');
+  const editorialImage = assetUrl('WhatsApp Image 2026-09-22 at 3.21.55 PM.jpeg');
 
   return (
     <div className="animate-page-enter">
@@ -93,7 +93,7 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
             {/* Split Work Image with Original Client Work */}
             <div className="lg:col-span-5 relative">
               <div 
-                onClick={() => onOpenLightbox && onOpenLightbox(editorialImage, 0, 'HYZIN Living & Fluted Wood Detailing', 'Paneling')}
+                onClick={() => onOpenLightbox && onOpenLightbox(editorialImage, 0, 'HYZIN Living Room Feature Wall Louver Paneling', 'Paneling')}
                 className="relative overflow-hidden border border-black/10 shadow-2xl bg-white animatic-reflection cursor-pointer group"
               >
                 <img

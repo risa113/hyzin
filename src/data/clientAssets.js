@@ -199,10 +199,10 @@ export const CLIENT_SERVICES_CONFIG = [
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.01 PM (1).jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.01 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.21.51 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.12 PM (2).jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.01 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.12 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.12 PM (2).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.51 PM.jpeg")
     ]
   },
   {
@@ -219,12 +219,12 @@ export const CLIENT_SERVICES_CONFIG = [
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.14.03 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.14.03 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.15.23 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.55 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.55 PM (2).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.12 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.29 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.39 PM.jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM.jpeg")
     ]
   },
   {
@@ -241,11 +241,13 @@ export const CLIENT_SERVICES_CONFIG = [
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.27 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.27 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.59 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.59 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.32 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM (2).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.33 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.33 PM (2).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM (2).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.15.55 PM.jpeg")
     ]
   },
@@ -261,12 +263,12 @@ export const CLIENT_SERVICES_CONFIG = [
       "Color-matched finishes to base wardrobes and walls",
       "Reinforced heavy-load structural framework"
     ],
-    primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.23 PM.jpeg"),
+    primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.32 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.23 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.39 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.13 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.18 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.20 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.13 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.21.51 PM.jpeg")
     ]
   },
@@ -284,11 +286,12 @@ export const CLIENT_SERVICES_CONFIG = [
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.19 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.19 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.15.33 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.15.41 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.15.48 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.02 PM (1).jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.02 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.02 PM (2).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.02 PM.jpeg")
     ]
   },
   {
@@ -305,10 +308,11 @@ export const CLIENT_SERVICES_CONFIG = [
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM (1).jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.34 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM (2).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM (1).jpeg")
     ]
   },
@@ -326,12 +330,14 @@ export const CLIENT_SERVICES_CONFIG = [
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.16.09 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.18.17 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.18.30 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.55 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM (2).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.17 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.34 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.16.09 PM.jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.34 PM (1).jpeg")
     ]
   },
   {
@@ -348,10 +354,8 @@ export const CLIENT_SERVICES_CONFIG = [
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM (1).jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.23 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM.jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.57 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM.jpeg")
     ]
   },
   {
@@ -368,10 +372,11 @@ export const CLIENT_SERVICES_CONFIG = [
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.35 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.17.48 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM (1).jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.15 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.35 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.35 PM (2).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.35 PM.jpeg")
     ]
   },
   {
@@ -388,11 +393,14 @@ export const CLIENT_SERVICES_CONFIG = [
     ],
     primaryImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.28 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.28 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.20 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.57 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.03 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.03 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.18 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.29 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.03 PM.jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.18 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.19 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.20 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.20 PM.jpeg")
     ]
   }
 ];

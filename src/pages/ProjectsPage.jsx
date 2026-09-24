@@ -158,7 +158,10 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation, onOp
               >
                 {/* Image Container with animatic light sweep */}
                 <div 
-                  onClick={() => onOpenLightbox && onOpenLightbox(project.gallery, 0, project.title, project.type)}
+                  onClick={() => {
+                    const allPhotos = Array.from(new Set([project.heroImage, ...(project.gallery || [])]));
+                    onOpenLightbox && onOpenLightbox(allPhotos, 0, project.title, project.type);
+                  }}
                   className="relative h-72 sm:h-80 overflow-hidden animatic-reflection bg-stone-100 cursor-pointer"
                 >
                   <img
@@ -207,10 +210,13 @@ export default function ProjectsPage({ onSelectProject, onOpenConsultation, onOp
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </button>
                     <button
-                      onClick={() => onOpenLightbox && onOpenLightbox(project.gallery, 0, project.title, project.type)}
+                      onClick={() => {
+                        const allPhotos = Array.from(new Set([project.heroImage, ...(project.gallery || [])]));
+                        onOpenLightbox && onOpenLightbox(allPhotos, 0, project.title, project.type);
+                      }}
                       className="text-[10px] text-[#8C8275] font-medium hover:text-[#9E8255] transition-colors"
                     >
-                      {project.gallery.length} Photos ↗
+                      {1 + (project.gallery?.length || 0)} Photos ↗
                     </button>
                   </div>
                 </div>

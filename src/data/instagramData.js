@@ -20,21 +20,21 @@ export const instagramData = {
     {
       id: "story-2",
       title: "Handover Days",
-      cover: assetUrl("WhatsApp Image 2026-09-22 at 3.15.27 PM.jpeg"),
+      cover: assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM.jpeg"),
       count: 18,
       tag: "Completed"
     },
     {
       id: "story-3",
       title: "3D vs Real",
-      cover: assetUrl("WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg"),
+      cover: assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM (2).jpeg"),
       count: 32,
       tag: "Comparison"
     },
     {
       id: "story-4",
       title: "Kerala Vistas",
-      cover: assetUrl("WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg"),
+      cover: assetUrl("WhatsApp Image 2026-09-22 at 3.16.09 PM.jpeg"),
       count: 15,
       tag: "Locations"
     },

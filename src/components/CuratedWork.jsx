@@ -160,7 +160,8 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                 <button
                   onClick={() => {
                     if (onOpenLightbox) {
-                      onOpenLightbox(currentProject.gallery || [currentProject.heroImage], 0, currentProject.title, currentProject.category);
+                      const projectImages = Array.from(new Set([currentProject.heroImage, ...(currentProject.gallery || [])]));
+                      onOpenLightbox(projectImages, 0, currentProject.title, currentProject.category);
                     }
                   }}
                   className="absolute top-5 right-5 z-20 p-3 rounded-full bg-black/70 hover:bg-[#D4B584] hover:text-black text-white border border-white/20 backdrop-blur-md transition-all shadow-xl hover:scale-110"
@@ -277,7 +278,8 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                 <div
                   onClick={() => {
                     if (onOpenLightbox) {
-                      onOpenLightbox(project.gallery || [project.heroImage], 0, project.title, project.category);
+                      const projectImages = Array.from(new Set([project.heroImage, ...(project.gallery || [])]));
+                      onOpenLightbox(projectImages, 0, project.title, project.category);
                     } else if (onSelectProject) {
                       onSelectProject(project);
                     }
@@ -299,7 +301,7 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                     <span className="px-2.5 py-1 bg-black/80 backdrop-blur-md border border-[#C5A065]/30 text-[10px] uppercase font-mono tracking-wider text-[#D4B584] rounded">
                       {project.category}
                     </span>
-                    <span className="px-2 py-1 bg-black/80 backdrop-blur-md border border-white/10 text-[10px] uppercase font-mono tracking-wider text-white flex items-center gap-1 rounded">
+                    <span className="px-2.5 py-1 bg-black/80 backdrop-blur-md border border-white/10 text-[10px] uppercase font-mono tracking-wider text-white flex items-center gap-1 rounded">
                       <MapPin className="w-2.5 h-2.5 text-[#D4B584]" />
                       <span>{project.state}</span>
                     </span>
@@ -310,7 +312,8 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                     onClick={(e) => {
                       e.stopPropagation();
                       if (onOpenLightbox) {
-                        onOpenLightbox(project.gallery || [project.heroImage], 0, project.title, project.category);
+                        const projectImages = Array.from(new Set([project.heroImage, ...(project.gallery || [])]));
+                        onOpenLightbox(projectImages, 0, project.title, project.category);
                       }
                     }}
                     className="absolute top-3 right-3 z-20 p-2 rounded-full bg-black/70 hover:bg-[#C5A065] hover:text-black text-white border border-white/20 backdrop-blur-md transition-all shadow-lg hover:scale-110 opacity-90 group-hover:opacity-100"

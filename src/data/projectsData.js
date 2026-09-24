@@ -13,10 +13,11 @@ export const projectsData = [
     area: "320 sq.ft",
     heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.27 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.27 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM (2).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.33 PM (2).jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.59 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.59 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.33 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.33 PM (2).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM (2).jpeg")
     ],
     concept: "Designed for a luxury Kochi residence, this culinary suite features custom rose gold / champagne metallic acrylic shutters with anti-fingerprint coating, seamless under-cabinet LED strip illumination, and heavy-duty soft-close drawer runners.",
     spaceHighlights: [
@@ -46,9 +47,11 @@ export const projectsData = [
     area: "480 sq.ft",
     heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.14.03 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.14.03 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.15.23 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.55 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.55 PM (2).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.12 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.13 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM.jpeg")
     ],
     concept: "An expansive master bedroom wall drop wardrobe design combining soft mauve-lavender acrylic shutters with brushed gold profile trims, centered around a back-lit display niche and full-height loft cabinets.",
@@ -79,10 +82,11 @@ export const projectsData = [
     area: "260 sq.ft",
     heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.16.09 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.18.30 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.17 PM.jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM (2).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.17 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.34 PM (1).jpeg")
     ],
     concept: "A dramatic spatial divider separating living and culinary areas without obstructing natural light. Features fluted natural wood battens, brass strip inlays, backlit display niches, and an overhead laser-cut botanical frieze.",
     spaceHighlights: [
@@ -112,10 +116,11 @@ export const projectsData = [
     area: "380 sq.ft",
     heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.13 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM (1).jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.34 PM.jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.34 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.36 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.37 PM (1).jpeg")
     ],
     concept: "A luxurious home entertainment sanctuary engineered with indirect cove ceiling lighting, rich wooden louvered wall paneling, and an illuminated translucent marble TV backdrop.",
     spaceHighlights: [
@@ -145,10 +150,11 @@ export const projectsData = [
     area: "280 sq.ft",
     heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.32 PM (1).jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.32 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.55 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.21.51 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.33 PM (2).jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.01 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.01 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.12 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.12 PM (2).jpeg")
     ],
     concept: "Engineered entirely with precision aluminium framework and sage mint acrylic panels. Resistant to heavy moisture, steam, and everyday cooking spices.",
     spaceHighlights: [
@@ -178,10 +184,11 @@ export const projectsData = [
     area: "190 sq.ft",
     heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.01 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.17.48 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.15 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.35 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.17.48 PM.jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.35 PM (2).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.35 PM.jpeg")
     ],
     concept: "Spatial transformation of a dead stairwell space. Featuring high-tensile stainless steel balustrade with 12mm toughened glass, integrated step tread lighting, and custom stepped under-stair storage cupboards.",
     spaceHighlights: [
@@ -211,10 +218,14 @@ export const projectsData = [
     area: "Whole Residence",
     heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.28 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.28 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.20 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.57 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.03 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.03 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.22.18 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.29 PM.jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.18 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.19 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.20 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.20 PM.jpeg")
     ],
     concept: "Custom-designed Mild Steel (MS) window security grills engineered with minimalist horizontal spacing. Provides maximum security without creating a prison-like feel, allowing uninterrupted garden views and breeze.",
     spaceHighlights: [
@@ -244,10 +255,12 @@ export const projectsData = [
     area: "140 sq.ft",
     heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.15.41 PM.jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.41 PM.jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.15.19 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.15.33 PM.jpeg"),
       assetUrl("WhatsApp Image 2026-09-22 at 3.15.48 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.02 PM (1).jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.02 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.02 PM (2).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.02 PM.jpeg")
     ],
     concept: "A high-end bathroom vanity installation combining fluted wall panelling, Peacock & Rose Gold sanitary accessories, an illuminated pill mirror, and custom black metal floating vanity counter.",
     spaceHighlights: [
@@ -277,10 +290,8 @@ export const projectsData = [
     area: "Entrance Portal",
     heroImage: assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM (1).jpeg"),
     gallery: [
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.22.14 PM (1).jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.15.23 PM.jpeg"),
-      assetUrl("WhatsApp Image 2026-09-22 at 3.21.56 PM.jpeg")
+      assetUrl("WhatsApp Image 2026-09-22 at 3.21.57 PM (1).jpeg"),
+      assetUrl("WhatsApp Image 2026-09-22 at 3.22.38 PM.jpeg")
     ],
     concept: "Combining impenetrable steel security engineering with sleek modern aesthetics. Features steel box frames, multi-point deadbolt locks, and long brushed stainless steel hardware.",
     spaceHighlights: [

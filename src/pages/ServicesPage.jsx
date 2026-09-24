@@ -136,7 +136,10 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
           {/* Right Column: High-Res Original Client Image & Service Detail Gallery */}
           <div className="lg:col-span-6 sticky top-28 space-y-6">
             <div 
-              onClick={() => onOpenLightbox && onOpenLightbox(selected.gallery, 0, selected.title, selected.title)}
+              onClick={() => {
+                const allServicePhotos = [selected.image, ...(selected.gallery || [])];
+                onOpenLightbox && onOpenLightbox(allServicePhotos, 0, selected.title, selected.title);
+              }}
               className="relative w-full h-[460px] border border-black/10 overflow-hidden shadow-2xl bg-white animatic-reflection cursor-pointer group"
             >
               <img
@@ -162,23 +165,28 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
                 </p>
                 <div className="mt-3 pt-2 border-t border-black/10 flex items-center justify-between text-[11px] text-[#9E8255] font-medium">
                   <span>CLICK TO VIEW FULLSCREEN LIGHTBOX</span>
-                  <span>{selected.gallery.length} IMAGES</span>
+                  <span>{1 + (selected.gallery?.length || 0)} IMAGES</span>
                 </div>
               </div>
             </div>
 
             {/* Gallery Thumbnails Strip */}
-            <div className="flex items-center space-x-3 overflow-x-auto pb-2">
-              {selected.gallery.map((img, i) => (
-                <div
-                  key={i}
-                  onClick={() => onOpenLightbox && onOpenLightbox(selected.gallery, i, selected.title, selected.title)}
-                  className="w-24 h-16 flex-shrink-0 border border-black/10 overflow-hidden cursor-pointer hover:border-[#9E8255] transition-all hover:scale-105 shadow-sm"
-                >
-                  <img src={img} alt="Project detail" className="w-full h-full object-cover" />
-                </div>
-              ))}
-            </div>
+            {selected.gallery && selected.gallery.length > 0 && (
+              <div className="flex items-center space-x-3 overflow-x-auto pb-2">
+                {selected.gallery.map((img, i) => (
+                  <div
+                    key={i}
+                    onClick={() => {
+                      const allServicePhotos = [selected.image, ...(selected.gallery || [])];
+                      onOpenLightbox && onOpenLightbox(allServicePhotos, i + 1, selected.title, selected.title);
+                    }}
+                    className="w-24 h-16 flex-shrink-0 border border-black/10 overflow-hidden cursor-pointer hover:border-[#9E8255] transition-all hover:scale-105 shadow-sm"
+                  >
+                    <img src={img} alt="Project detail" className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Action CTA */}
             <div className="p-6 bg-white border border-black/10 shadow-sm flex items-center justify-between">

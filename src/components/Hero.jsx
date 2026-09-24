@@ -3,7 +3,7 @@ import { statsData } from '../data/testimonialsData';
 import { assetUrl } from '../data/clientAssets';
 
 export default function Hero({ onOpenConsultation, onExploreWork }) {
-  const heroBg = assetUrl('WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg');
+  const heroBg = assetUrl('WhatsApp Image 2026-09-22 at 3.18.27 PM.jpeg');
 
   return (
     <section className="relative min-h-[92vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#09090b]">

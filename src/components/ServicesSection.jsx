@@ -9,7 +9,9 @@ export default function ServicesSection({ onOpenLightbox }) {
 
   const handleOpenImage = (img, title, serviceTitle) => {
     if (onOpenLightbox) {
-      onOpenLightbox(current.gallery || [img], 0, title, serviceTitle);
+      const allPhotos = [current.image, ...(current.gallery || [])];
+      const startIdx = allPhotos.indexOf(img);
+      onOpenLightbox(allPhotos, startIdx >= 0 ? startIdx : 0, title, serviceTitle);
     }
   };
 
@@ -94,7 +96,7 @@ export default function ServicesSection({ onOpenLightbox }) {
 
                       <div className="flex items-center justify-between pt-2">
                         <span className="text-[10px] uppercase font-mono tracking-wider text-[#D4B584]">
-                          {srv.gallery ? `${srv.gallery.length} REAL SITE PHOTOS` : 'VERIFIED CLIENT WORK'}
+                          {srv.gallery ? `${srv.gallery.length + 1} REAL SITE PHOTOS` : 'VERIFIED CLIENT WORK'}
                         </span>
                         <button
                           onClick={(e) => {
@@ -155,7 +157,7 @@ export default function ServicesSection({ onOpenLightbox }) {
                 </p>
 
                 {/* Micro Thumbnail Strip */}
-                {current.gallery && current.gallery.length > 1 && (
+                {current.gallery && current.gallery.length > 0 && (
                   <div className="mt-4 pt-3 border-t border-white/10 flex items-center space-x-2 overflow-x-auto no-scrollbar">
                     {current.gallery.map((thumb, tIdx) => (
                       <button

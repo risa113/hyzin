@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { assetUrl } from '../data/clientAssets';
 
 export default function BrandIntro({ onExploreServices, onOpenLightbox }) {
-  const introImage = assetUrl('WhatsApp Image 2026-09-22 at 3.15.08 PM.jpeg');
+  const introImage = assetUrl('WhatsApp Image 2026-09-22 at 3.18.17 PM.jpeg');
 
   return (
     <section id="about" className="relative py-24 sm:py-32 bg-[#0d0e10] border-t border-white/[0.06] overflow-hidden">
@@ -56,7 +56,7 @@ export default function BrandIntro({ onExploreServices, onOpenLightbox }) {
           {/* Right Column: Original Client Photography */}
           <div className="lg:col-span-6 relative">
             <div 
-              onClick={() => onOpenLightbox && onOpenLightbox(introImage, 0, 'HYZIN Living Room Paneling & Ambient Lighting', 'Paneling')}
+              onClick={() => onOpenLightbox && onOpenLightbox(introImage, 0, 'HYZIN Precision Interior Woodcraft & Framing Site Execution', 'Craftsmanship')}
               className="relative group overflow-hidden border border-white/[0.08] shadow-2xl cursor-pointer"
             >
               <img

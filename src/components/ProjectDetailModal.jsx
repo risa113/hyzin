@@ -14,6 +14,11 @@ export default function ProjectDetailModal({ project, onClose, onCommissionProje
 
   if (!project) return null;
 
+  const allImages = Array.from(new Set([
+    project.heroImage,
+    ...(project.gallery || [])
+  ].filter(Boolean)));
+
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/90 backdrop-blur-2xl flex justify-center items-start sm:p-4 md:p-6 lg:p-8 animate-fadeIn">
       {/* Backdrop click closer */}
@@ -57,7 +62,7 @@ export default function ProjectDetailModal({ project, onClose, onCommissionProje
         {/* Hero Banner with Main Selected Image */}
         <div className="relative w-full h-[400px] sm:h-[520px] bg-black overflow-hidden">
           <img
-            src={project.gallery[activeImageIndex] || project.heroImage}
+            src={allImages[activeImageIndex] || project.heroImage}
             alt={project.title}
             className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.05] transition-all duration-700"
           />
@@ -85,7 +90,7 @@ export default function ProjectDetailModal({ project, onClose, onCommissionProje
 
         {/* Gallery Thumbnails Carousel */}
         <div className="px-6 sm:px-10 py-4 bg-[#0a0a0c] border-b border-white/[0.08] flex items-center space-x-3 overflow-x-auto">
-          {project.gallery.map((img, idx) => (
+          {allImages.map((img, idx) => (
             <button
               key={idx}
               onClick={() => setActiveImageIndex(idx)}
