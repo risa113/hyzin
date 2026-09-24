@@ -82,13 +82,13 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
 
       {/* Main Floating Header */}
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-40 w-full max-w-full overflow-hidden transition-all duration-300 ${
           isScrolled
             ? 'bg-[#FAF8F5]/98 backdrop-blur-xl border-b border-black/[0.08] shadow-md shadow-black/5 py-3'
             : 'bg-[#FAF8F5]/95 backdrop-blur-md border-b border-black/[0.04] py-3.5'
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+        <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           
           {/* Logo with Real Brand Emblem Badge */}
           <button

@@ -84,7 +84,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#2D2B29] selection:bg-[#C5A065]/30 selection:text-[#1E1D1B] flex flex-col justify-between relative">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#FAF8F5] text-[#2D2B29] selection:bg-[#C5A065]/30 selection:text-[#1E1D1B] flex flex-col justify-between relative">
       {/* Ambient Cursor-Reactive Particles */}
       <ParticleBackground />
 

@@ -38,7 +38,7 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
         <div
           role="dialog"
           aria-label="Direct studio channels"
-          className="fixed z-50 bottom-20 sm:bottom-24 right-4 sm:right-6 left-4 sm:left-auto sm:w-96 max-w-sm sm:max-w-none mx-auto sm:mx-0 bg-[#111216]/98 backdrop-blur-2xl border border-[#d4b584]/50 shadow-[0_12px_45px_rgba(0,0,0,0.85)] p-4 sm:p-5 rounded-2xl text-left text-white animate-slide-down-fast"
+          className="fixed z-50 bottom-20 sm:bottom-24 right-3 sm:right-6 left-3 sm:left-auto sm:w-96 max-w-[calc(100vw-24px)] mx-auto sm:mx-0 bg-[#111216]/98 backdrop-blur-2xl border border-[#d4b584]/50 shadow-[0_12px_45px_rgba(0,0,0,0.85)] p-4 sm:p-5 rounded-2xl text-left text-white animate-slide-down-fast"
         >
           {/* Header */}
           <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
@@ -185,7 +185,7 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
       )}
 
       {/* Floating Single Integration Contact Trigger (Available across mobile & desktop) */}
-      <aside aria-label="Quick contact trigger" className="fixed bottom-5 sm:bottom-6 right-4 sm:right-6 z-50">
+      <aside aria-label="Quick contact trigger" className="fixed bottom-5 sm:bottom-6 right-3 sm:right-6 z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`group relative flex items-center space-x-2.5 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-full border-2 transition-all duration-300 shadow-[0_6px_30px_rgba(212,181,132,0.35)] active:scale-95 ${
@@ -196,9 +196,9 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
           title="Direct Contact via WhatsApp, Instagram or Email"
           aria-expanded={isOpen}
         >
-          {/* Subtle accent halo pulse when closed */}
+          {/* Subtle accent halo pulse without overflow-causing scale transform */}
           {!isOpen && (
-            <div className="absolute inset-0 bg-[#d4b584]/25 animate-ping rounded-full -z-10 opacity-75 pointer-events-none" />
+            <span className="absolute inset-0 rounded-full shadow-[0_0_18px_rgba(212,181,132,0.6)] animate-pulse pointer-events-none -z-10" />
           )}
 
           {isOpen ? (

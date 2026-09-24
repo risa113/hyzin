@@ -50,7 +50,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
 
   return (
     <section
-      className="relative min-h-[calc(100svh-64px)] sm:min-h-[90vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#0D0E11] select-none"
+      className="relative min-h-[calc(100svh-64px)] sm:min-h-[90vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#0D0E11] select-none w-full max-w-full"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -140,8 +140,8 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
       </div>
 
       {/* Slide Navigation Controls & Interactive Thumbnails */}
-      <div className="relative z-20 w-full border-t border-white/10 bg-[#0D0E11]/90 backdrop-blur-md mt-4 sm:mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4">
+      <div className="relative z-20 w-full max-w-full overflow-hidden border-t border-white/10 bg-[#0D0E11]/90 backdrop-blur-md mt-4 sm:mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4 overflow-hidden">
           
           {/* Visual Slide Thumbnails Preview Bar */}
           <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto max-w-full pb-1 scrollbar-none w-full sm:w-auto">
