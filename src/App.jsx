@@ -15,12 +15,14 @@ import House3DPage from './pages/House3DPage';
 import PhotoVaultPage from './pages/PhotoVaultPage';
 
 import ParticleBackground from './components/ParticleBackground';
+import AnimaticCursor from './components/AnimaticCursor';
 
 export default function App() {
   const [activePage, setActivePage] = useState('home');
   const [selectedProject, setSelectedProject] = useState(null);
   const [prefilledProject, setPrefilledProject] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('');
+  const [selectedServiceId, setSelectedServiceId] = useState(null);
 
   // Global Lightbox Viewer State
   const [lightboxState, setLightboxState] = useState({
@@ -83,6 +85,11 @@ export default function App() {
     navigateTo('contact');
   };
 
+  const handleSelectService = (serviceId) => {
+    setSelectedServiceId(serviceId);
+    navigateTo('services');
+  };
+
   // Global Down-to-Top Scroll Pop-Up IntersectionObserver (All Pages & Content)
   useEffect(() => {
     const handleIntersection = (entries, observer) => {
@@ -118,7 +125,10 @@ export default function App() {
   }, [activePage]);
 
   return (
-    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#FAF8F5] text-[#2D2B29] selection:bg-[#C5A065]/30 selection:text-[#1E1D1B] flex flex-col justify-between relative">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#4E342E] text-[#FAF7F0] selection:bg-[#D4AF37]/30 selection:text-[#FAF7F0] flex flex-col justify-between relative">
+      {/* Luxury Animatic Custom Cursor */}
+      <AnimaticCursor />
+
       {/* Ambient Cursor-Reactive Particles */}
       <ParticleBackground />
 
@@ -127,6 +137,7 @@ export default function App() {
         activePage={activePage}
         onNavigate={navigateTo}
         onOpenConsultation={handleOpenConsultation}
+        onSelectService={handleSelectService}
       />
 
       {/* Main Page Body (Zero Page Refresh Routing with Pop-up Page Enter) */}
@@ -160,6 +171,8 @@ export default function App() {
           <ServicesPage
             onOpenConsultation={handleOpenConsultation}
             onOpenLightbox={handleOpenLightbox}
+            activeServiceId={selectedServiceId}
+            onClearActiveService={() => setSelectedServiceId(null)}
           />
         )}
 

@@ -31,8 +31,8 @@
   }
 
   body {
-    background-color: #FAF8F5;
-    color: #2D2B29;
+    background-color: #4E342E;
+    color: #FAF7F0;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     line-height: 1.6;
@@ -53,6 +53,7 @@
     max-width: 100%;
     width: 100%;
     min-height: 100vh;
+    background-color: #4E342E;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -60,6 +61,7 @@
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
+    color: #FAF7F0;
   }
 
   h1 {
@@ -99,37 +101,63 @@
   }
 }
 
-/* Custom Light Luxury Scrollbar */
+/* Coffee & Sand Luxury Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #F3EFE8;
+  background: #2B1C19;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D9D2C7;
+  background: #C9B29B;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C5A065;
+  background: #D4AF37;
 }
 
-/* Luxury Light Theme Variables & Classes */
-.bg-alabaster {
-  background-color: #FAF8F5;
+/* Coffee & Sand Luxury Theme Tokens */
+.bg-coffee {
+  background-color: #4E342E;
 }
-.bg-travertine {
-  background-color: #F4EFEB;
+.bg-coffee-deep {
+  background-color: #2B1C19;
 }
-.bg-stone-soft {
-  background-color: #EAE4DB;
+.bg-coffee-surface {
+  background-color: #3E2723;
 }
-.text-charcoal-deep {
-  color: #1E1D1B;
+.bg-beige-brown {
+  background-color: #C9B29B;
 }
-.text-charcoal-muted {
-  color: #635E58;
+.bg-gold-sand {
+  background-color: #D4AF37;
+}
+.bg-ivory-beige {
+  background-color: #FAF7F0;
+}
+
+.text-coffee {
+  color: #4E342E;
+}
+.text-beige-brown {
+  color: #C9B29B;
+}
+.text-gold-sand {
+  color: #D4AF37;
+}
+.text-ivory-beige {
+  color: #FAF7F0;
+}
+
+.border-coffee {
+  border-color: #4E342E;
+}
+.border-beige-brown {
+  border-color: #C9B29B;
+}
+.border-gold-sand {
+  border-color: #D4AF37;
 }
 
 /* Animatic Light Reflection Ribbon */

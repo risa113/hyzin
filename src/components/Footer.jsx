@@ -18,19 +18,19 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
   };
 
   return (
-    <footer className="bg-[#141416] text-[#A69F93] border-t border-white/[0.08] pt-10 pb-12 sm:pt-16 sm:pb-16 text-xs">
+    <footer className="bg-[#2B1C19] text-[#C9B29B] border-t border-[#C9B29B]/20 pt-10 pb-12 sm:pt-16 sm:pb-16 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* MOBILE COMPACT FOOTER (Visible on Mobile only: sm:hidden) */}
-        <div className="block sm:hidden space-y-6 pb-8 border-b border-white/[0.08]">
+        <div className="block sm:hidden space-y-6 pb-8 border-b border-[#C9B29B]/20">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2.5">
               <img
                 src={BRAND_ASSETS.logoBadge}
                 alt="HYZIN Logo"
-                className="w-7 h-7 rounded-full object-cover border border-[#c5a065]/40"
+                className="w-7 h-7 rounded-full object-cover border border-[#D4AF37]/40"
               />
-              <span className="text-lg font-bold tracking-wider text-[#FAF8F5]">
+              <span className="text-lg font-bold tracking-wider text-[#FAF7F0]">
                 HYZIN INTERIOR
               </span>
             </div>
@@ -38,14 +38,14 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
               href="https://www.instagram.com/hyzin.interior/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-[#1b1c20] border border-white/10 rounded text-[#D4B584] flex items-center space-x-1 text-[10px] font-medium"
+              className="p-2 bg-[#3E2723] border border-[#C9B29B]/20 rounded text-[#D4AF37] flex items-center space-x-1 text-[10px] font-medium"
             >
               <InstagramIcon className="w-3.5 h-3.5" />
               <span>@hyzin</span>
             </a>
           </div>
 
-          <p className="text-[11px] text-[#C4BCB1] font-normal leading-snug">
+          <p className="text-[11px] text-[#C9B29B] font-normal leading-snug">
             Interior Design & Specialized Fabrication • Kerala • Tamil Nadu • Karnataka
           </p>
 
@@ -53,25 +53,25 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
           <div className="grid grid-cols-2 gap-2 text-[10px] uppercase font-medium tracking-wider">
             <button
               onClick={() => handleNav('3d-house')}
-              className="p-2.5 bg-[#1b1c20] border border-white/10 text-[#D4B584] text-left rounded"
+              className="p-2.5 bg-[#3E2723] border border-[#C9B29B]/20 text-[#D4AF37] text-left rounded font-bold"
             >
               3D House Model →
             </button>
             <button
               onClick={() => handleNav('photo-vault')}
-              className="p-2.5 bg-[#1b1c20] border border-white/10 text-[#FAF8F5] text-left rounded"
+              className="p-2.5 bg-[#3E2723] border border-[#C9B29B]/20 text-[#FAF7F0] text-left rounded"
             >
               72 Photos Vault →
             </button>
             <button
               onClick={() => handleNav('services')}
-              className="p-2.5 bg-[#1b1c20] border border-white/10 text-[#FAF8F5] text-left rounded"
+              className="p-2.5 bg-[#3E2723] border border-[#C9B29B]/20 text-[#FAF7F0] text-left rounded"
             >
               10 Services →
             </button>
             <button
               onClick={() => handleNav('contact')}
-              className="p-2.5 bg-[#1b1c20] border border-white/10 text-[#FAF8F5] text-left rounded"
+              className="p-2.5 bg-[#3E2723] border border-[#C9B29B]/20 text-[#FAF7F0] text-left rounded"
             >
               Contact Brief →
             </button>
@@ -81,30 +81,30 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
           <div className="pt-2 space-y-2">
             <button
               onClick={onOpenConsultation}
-              className="w-full py-3 bg-[#D4B584] text-[#111113] font-bold uppercase tracking-widest text-[10px] rounded-sm flex items-center justify-center space-x-1"
+              className="w-full py-3 bg-[#D4AF37] text-[#2B1C19] font-bold uppercase tracking-widest text-[10px] rounded-sm flex items-center justify-center space-x-1"
             >
               <span>START YOUR PROJECT</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
 
             <div className="grid grid-cols-2 gap-2 text-[10px] font-medium text-center">
-              <a href="tel:916282549008" className="p-2 bg-white/5 border border-white/10 rounded text-[#FAF8F5] flex items-center justify-center gap-1">
-                <Phone className="w-3 h-3 text-[#D4B584]" />
+              <a href="tel:916282549008" className="p-2 bg-[#3E2723] border border-[#C9B29B]/20 rounded text-[#FAF7F0] flex items-center justify-center gap-1">
+                <Phone className="w-3 h-3 text-[#D4AF37]" />
                 <span>Line 1</span>
               </a>
-              <a href="tel:918848023041" className="p-2 bg-white/5 border border-white/10 rounded text-[#FAF8F5] flex items-center justify-center gap-1">
-                <Phone className="w-3 h-3 text-[#D4B584]" />
+              <a href="tel:918848023041" className="p-2 bg-[#3E2723] border border-[#C9B29B]/20 rounded text-[#FAF7F0] flex items-center justify-center gap-1">
+                <Phone className="w-3 h-3 text-[#D4AF37]" />
                 <span>Line 2</span>
               </a>
             </div>
 
             <div className="space-y-1.5 pt-1">
-              <a href="mailto:Muhammedashad395@gmail.com" className="p-2 bg-white/5 border border-white/10 rounded text-[#FAF8F5] text-[10px] font-medium flex items-center justify-center gap-1.5 break-all">
-                <Mail className="w-3 h-3 text-[#D4B584] flex-shrink-0" />
+              <a href="mailto:Muhammedashad395@gmail.com" className="p-2 bg-[#3E2723] border border-[#C9B29B]/20 rounded text-[#FAF7F0] text-[10px] font-medium flex items-center justify-center gap-1.5 break-all">
+                <Mail className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
                 <span>Muhammedashad395@gmail.com</span>
               </a>
-              <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 border border-white/10 rounded text-[#D4B584] text-[10px] font-medium flex items-center justify-center gap-1.5">
-                <MapPin className="w-3 h-3 text-[#D4B584] flex-shrink-0" />
+              <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#3E2723] border border-[#C9B29B]/20 rounded text-[#D4AF37] text-[10px] font-medium flex items-center justify-center gap-1.5">
+                <MapPin className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
                 <span>Studio Workshop on Google Maps</span>
               </a>
             </div>
@@ -113,7 +113,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
 
         {/* DESKTOP FULL FOOTER (Visible on Tablets & Desktops: hidden sm:block) */}
         <div className="hidden sm:block">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-white/[0.08]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-[#C9B29B]/20">
             
             {/* Brand Col */}
             <div className="lg:col-span-4">
@@ -121,36 +121,36 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 <img
                   src={BRAND_ASSETS.logoBadge}
                   alt="HYZIN Logo"
-                  className="w-8 h-8 rounded-full object-cover border border-[#c5a065]/40"
+                  className="w-8 h-8 rounded-full object-cover border border-[#D4AF37]/40"
                 />
-                <h3 className="text-2xl font-bold tracking-[0.12em] text-[#FAF8F5]">
+                <h3 className="text-2xl font-bold tracking-[0.12em] text-[#FAF7F0]">
                   HYZIN INTERIOR
                 </h3>
               </div>
-              <p className="text-xs uppercase font-medium tracking-widest text-[#D4B584] mb-4">
+              <p className="text-xs uppercase font-medium tracking-widest text-[#D4AF37] mb-4">
                 Interior Design & Specialized Metal Fabrication
               </p>
-              <p className="text-sm text-[#C4BCB1] font-normal leading-relaxed max-w-sm">
+              <p className="text-sm text-[#C9B29B] font-normal leading-relaxed max-w-sm">
                 Creating quiet grandeur and sculpted spaces across Kerala, Tamil Nadu, and Karnataka. From raw site framing to turnkey white-glove handover.
               </p>
-              <div className="mt-6 italic text-sm font-medium text-[#FAF8F5]">
+              <div className="mt-6 italic text-sm font-medium text-[#FAF7F0]">
                 “Good interiors don’t simply look beautiful. They make everyday life better.”
               </div>
             </div>
 
             {/* 10 Core Services Col */}
             <div className="lg:col-span-3">
-              <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-[#D4B584] block mb-4">
+              <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-[#D4AF37] block mb-4">
                 10 CORE SERVICES
               </span>
-              <ul className="space-y-2 text-xs text-[#EAE5DC]">
+              <ul className="space-y-2 text-xs text-[#FAF7F0]/90">
                 {CLIENT_SERVICES_CONFIG.map((srv) => (
                   <li key={srv.id}>
                     <button
                       onClick={() => handleNav('services')}
-                      className="hover:text-[#D4B584] transition-colors flex items-center space-x-2 text-left"
+                      className="hover:text-[#D4AF37] transition-colors flex items-center space-x-2 text-left"
                     >
-                      <span className="w-1 h-1 rounded-full bg-[#C5A065]"></span>
+                      <span className="w-1 h-1 rounded-full bg-[#D4AF37]"></span>
                       <span>{srv.title}</span>
                     </button>
                   </li>
@@ -160,64 +160,64 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
 
             {/* 5-Page Navigation Links */}
             <div className="lg:col-span-2">
-              <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-[#D4B584] block mb-4">
+              <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-[#D4AF37] block mb-4">
                 EXPLORE
               </span>
-              <ul className="space-y-3 text-xs uppercase tracking-wider font-medium">
+              <ul className="space-y-3 text-xs uppercase tracking-wider font-medium text-[#FAF7F0]/90">
                 <li>
-                  <button onClick={() => handleNav('home')} className="hover:text-white transition-colors">
+                  <button onClick={() => handleNav('home')} className="hover:text-[#D4AF37] transition-colors">
                     Home
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleNav('3d-house')} className="hover:text-[#D4B584] text-[#D4B584] transition-colors">
+                  <button onClick={() => handleNav('3d-house')} className="hover:text-[#FAF7F0] text-[#D4AF37] font-bold transition-colors">
                     3D House Model
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleNav('photo-vault')} className="hover:text-white transition-colors">
+                  <button onClick={() => handleNav('photo-vault')} className="hover:text-[#D4AF37] transition-colors">
                     72 Photos Vault
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleNav('projects')} className="hover:text-white transition-colors">
+                  <button onClick={() => handleNav('projects')} className="hover:text-[#D4AF37] transition-colors">
                     Selected Work
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleNav('services')} className="hover:text-white transition-colors">
+                  <button onClick={() => handleNav('services')} className="hover:text-[#D4AF37] transition-colors">
                     10 Services
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleNav('about')} className="hover:text-white transition-colors">
+                  <button onClick={() => handleNav('about')} className="hover:text-[#D4AF37] transition-colors">
                     About & Ethos
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleNav('contact')} className="hover:text-white transition-colors">
+                  <button onClick={() => handleNav('contact')} className="hover:text-[#D4AF37] transition-colors">
                     Contact & Brief
                   </button>
                 </li>
               </ul>
 
-              <div className="mt-6 text-xs text-[#8C8275]">
+              <div className="mt-6 text-xs text-[#C9B29B]">
                 DIRECT STUDIO DESK: <br />
                 <div className="space-y-1.5 mt-1.5">
-                  <a href="tel:916282549008" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-medium flex items-center space-x-1.5">
-                    <Phone className="w-3 h-3 text-[#D4B584]" />
+                  <a href="tel:916282549008" className="text-[#FAF7F0] hover:text-[#D4AF37] text-xs font-medium flex items-center space-x-1.5">
+                    <Phone className="w-3 h-3 text-[#D4AF37]" />
                     <span>+91 6282549008 (Line 1)</span>
                   </a>
-                  <a href="tel:918848023041" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-medium flex items-center space-x-1.5">
-                    <Phone className="w-3 h-3 text-[#D4B584]" />
+                  <a href="tel:918848023041" className="text-[#FAF7F0] hover:text-[#D4AF37] text-xs font-medium flex items-center space-x-1.5">
+                    <Phone className="w-3 h-3 text-[#D4AF37]" />
                     <span>+91 8848023041 (Line 2)</span>
                   </a>
-                  <a href="mailto:Muhammedashad395@gmail.com" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-medium flex items-center space-x-1.5 break-all">
-                    <Mail className="w-3 h-3 text-[#D4B584] flex-shrink-0" />
+                  <a href="mailto:Muhammedashad395@gmail.com" className="text-[#FAF7F0] hover:text-[#D4AF37] text-xs font-medium flex items-center space-x-1.5 break-all">
+                    <Mail className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
                     <span>Muhammedashad395@gmail.com</span>
                   </a>
-                  <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="text-[#D4B584] hover:underline text-xs font-medium flex items-center space-x-1.5 pt-0.5">
-                    <MapPin className="w-3 h-3 text-[#D4B584] flex-shrink-0" />
+                  <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline text-xs font-medium flex items-center space-x-1.5 pt-0.5">
+                    <MapPin className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
                     <span>Studio & Workshop Location</span>
                   </a>
                 </div>
@@ -227,7 +227,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
             {/* Direct Social & Brief Initiation */}
             <div className="lg:col-span-3 flex flex-col justify-between">
               <div>
-                <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-[#D4B584] block mb-4">
+                <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-[#D4AF37] block mb-4">
                   VISUAL DISPATCH
                 </span>
                 <div className="space-y-2">
@@ -235,26 +235,26 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                     href="https://www.instagram.com/hyzin.interior/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-[#1b1c20] border border-white/[0.08] hover:border-[#D4B584]/50 flex items-center justify-between group transition-all rounded"
+                    className="p-3 bg-[#3E2723] border border-[#C9B29B]/20 hover:border-[#D4AF37]/50 flex items-center justify-between group transition-all rounded"
                   >
                     <div className="flex items-center space-x-3">
-                      <InstagramIcon className="w-5 h-5 text-[#D4B584]" />
+                      <InstagramIcon className="w-5 h-5 text-[#D4AF37]" />
                       <div>
-                        <span className="font-medium text-white block">@hyzin.interior</span>
-                        <span className="text-[10px] text-[#8C8275]">14.8k Followers • Daily Stories</span>
+                        <span className="font-medium text-[#FAF7F0] block">@hyzin.interior</span>
+                        <span className="text-[10px] text-[#C9B29B]">14.8k Followers • Daily Stories</span>
                       </div>
                     </div>
-                    <ArrowUpRight className="w-4 h-4 text-[#A69F93] group-hover:text-white transition-colors" />
+                    <ArrowUpRight className="w-4 h-4 text-[#C9B29B] group-hover:text-[#D4AF37] transition-colors" />
                   </a>
 
                   <a
                     href="https://ig.me/m/hyzin.interior"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 bg-[#1b1c20]/60 border border-[#D4B584]/30 hover:border-[#D4B584] text-[#D4B584] text-[10px] uppercase tracking-wider flex items-center justify-between group transition-all rounded font-medium"
+                    className="p-2.5 bg-[#3E2723]/60 border border-[#D4AF37]/30 hover:border-[#D4AF37] text-[#D4AF37] text-[10px] uppercase tracking-wider flex items-center justify-between group transition-all rounded font-medium"
                   >
                     <span>Send Instagram DM</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-[#D4B584] group-hover:translate-x-0.5 transition-transform" />
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-0.5 transition-transform" />
                   </a>
                 </div>
               </div>
@@ -262,7 +262,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
               <div className="mt-6">
                 <button
                   onClick={onOpenConsultation}
-                  className="w-full py-3.5 bg-[#D4B584] hover:bg-[#FAF0DC] text-[#111113] font-semibold uppercase tracking-widest text-[11px] transition-colors shadow-lg shadow-[#D4B584]/10"
+                  className="w-full py-3.5 bg-[#D4AF37] hover:bg-[#FAF7F0] text-[#2B1C19] font-bold uppercase tracking-widest text-[11px] transition-colors shadow-lg shadow-[#D4AF37]/10"
                 >
                   START YOUR PROJECT
                 </button>
@@ -273,7 +273,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
         </div>
 
         {/* Bottom Micro Row */}
-        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] sm:text-[11px] text-[#7A746B] font-medium gap-2 text-center sm:text-left">
+        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] sm:text-[11px] text-[#C9B29B]/70 font-medium gap-2 text-center sm:text-left">
           <div>
             © 2026 HYZIN INTERIOR. Original Client Work.
           </div>

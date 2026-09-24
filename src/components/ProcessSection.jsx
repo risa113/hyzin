@@ -48,21 +48,21 @@ export default function ProcessSection({ onOpenConsultation }) {
   ];
 
   return (
-    <section id="process" className="py-24 sm:py-32 bg-[#08090a]">
+    <section id="process" className="py-24 sm:py-32 bg-[#2B1C19]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.08] pb-8 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#C9B29B]/20 pb-8 mb-16">
           <div>
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#c5a065] font-medium mb-3">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#D4AF37] font-medium mb-3">
               <span>THE INTERIOR & FABRICATION JOURNEY</span>
-              <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
+              <span className="w-8 h-[1px] bg-[#D4AF37]/40"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#faf6ee] font-bold tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FAF7F0] font-bold tracking-tight">
               Process & Precision
             </h2>
           </div>
-          <p className="mt-4 md:mt-0 text-sm text-[#9b9487] font-normal leading-relaxed max-w-sm">
+          <p className="mt-4 md:mt-0 text-sm text-[#C9B29B] font-normal leading-relaxed max-w-sm">
             A disciplined five-stage methodology engineered to eliminate uncertainty and deliver pristine design fidelity.
           </p>
         </div>
@@ -77,36 +77,36 @@ export default function ProcessSection({ onOpenConsultation }) {
               <div
                 key={step.num}
                 onClick={() => setActiveStep(idx)}
-                className={`p-6 sm:p-7 bg-[#121317] border cursor-pointer transition-all duration-500 flex flex-col justify-between group ${
+                className={`p-6 sm:p-7 border cursor-pointer transition-all duration-500 flex flex-col justify-between group shadow-lg ${
                   isActive
-                    ? 'border-[#d4b584] shadow-xl shadow-[#d4b584]/10 bg-[#161820]'
-                    : 'border-white/[0.08] hover:border-white/20'
+                    ? 'border-[#D4AF37] shadow-xl shadow-[#D4AF37]/10 bg-[#4E342E]'
+                    : 'bg-[#3E2723] border-[#C9B29B]/20 hover:border-[#D4AF37]/50'
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl text-[#d4b584] font-bold">
+                    <span className="text-2xl text-[#D4AF37] font-bold">
                       {step.num}
                     </span>
-                    <Icon className={`w-5 h-5 transition-colors ${isActive ? 'text-[#d4b584]' : 'text-[#716c64]'}`} />
+                    <Icon className={`w-5 h-5 transition-colors ${isActive ? 'text-[#D4AF37]' : 'text-[#C9B29B]'}`} />
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl text-[#faf6ee] font-bold tracking-tight mb-1 group-hover:text-[#d4b584] transition-colors">
+                  <h3 className="text-xl sm:text-2xl text-[#FAF7F0] font-bold tracking-tight mb-1 group-hover:text-[#D4AF37] transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-[11px] uppercase tracking-wider text-[#918a7f] mb-4 font-medium">
+                  <p className="text-[11px] uppercase tracking-wider text-[#C9B29B]/80 mb-4 font-medium">
                     {step.subtitle}
                   </p>
-                  <p className="text-xs text-[#b8b0a2] font-normal leading-relaxed">
+                  <p className="text-xs text-[#C9B29B] font-normal leading-relaxed">
                     {step.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/[0.06]">
-                  <span className="text-[9px] uppercase tracking-wider text-[#d4b584] font-semibold block mb-1">
+                <div className="mt-6 pt-4 border-t border-[#C9B29B]/20">
+                  <span className="text-[9px] uppercase tracking-wider text-[#D4AF37] font-semibold block mb-1">
                     DELIVERABLE
                   </span>
-                  <span className="text-[11px] text-[#faf6ee] font-medium leading-tight block">
+                  <span className="text-[11px] text-[#FAF7F0] font-medium leading-tight block">
                     {step.deliverable}
                   </span>
                 </div>
@@ -119,7 +119,7 @@ export default function ProcessSection({ onOpenConsultation }) {
         <div className="mt-16 text-center">
           <button
             onClick={onOpenConsultation}
-            className="px-8 py-4 bg-transparent border border-[#d4b584] text-[#d4b584] hover:bg-[#d4b584] hover:text-[#0b0c0e] text-xs uppercase tracking-[0.25em] font-semibold transition-all duration-300 inline-flex items-center space-x-3"
+            className="px-8 py-4 bg-transparent border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#2B1C19] text-xs uppercase tracking-[0.25em] font-bold transition-all duration-300 inline-flex items-center space-x-3 shadow-lg"
           >
             <span>DISCUSS YOUR PROJECT TIMELINE</span>
             <ArrowRight className="w-4 h-4" />

@@ -127,41 +127,41 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-[#09090b] border-t border-white/[0.08] relative">
+    <section id="contact" className="py-24 sm:py-32 bg-[#2B1C19] border-t border-[#C9B29B]/20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Studio Desk & Direct Details */}
           <div className="lg:col-span-5">
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#c5a065] font-semibold mb-3">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#D4AF37] font-semibold mb-3">
               <span>05 / INITIATION</span>
-              <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
+              <span className="w-8 h-[1px] bg-[#D4AF37]/40"></span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#faf6ee] font-bold tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FAF7F0] font-bold tracking-tight leading-[1.15]">
               Reserve a Private Spatial Consultation.
             </h2>
 
-            <p className="mt-6 text-base text-[#bbb1a2] font-normal leading-relaxed">
+            <p className="mt-6 text-base text-[#C9B29B] font-normal leading-relaxed">
               Tell us about your space, your ideas, and what you envision. Let’s turn them into an interior that feels truly yours.
             </p>
 
             {/* Direct Channel Badges with Both Numbers, Email, and Map Location */}
-            <div className="mt-10 space-y-5 pt-6 border-t border-white/[0.08]">
+            <div className="mt-10 space-y-5 pt-6 border-t border-[#C9B29B]/20">
               
               {/* Studio Email */}
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#d4b584]">
+                <div className="w-10 h-10 bg-[#3E2723] border border-[#C9B29B]/20 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9B29B]/70 block">
                     OFFICIAL STUDIO EMAIL
                   </span>
                   <a
                     href="mailto:Muhammedashad395@gmail.com"
-                    className="text-base sm:text-lg text-[#faf6ee] font-semibold hover:text-[#d4b584] transition-colors break-all"
+                    className="text-base sm:text-lg text-[#FAF7F0] font-semibold hover:text-[#D4AF37] transition-colors break-all"
                   >
                     Muhammedashad395@gmail.com
                   </a>
@@ -170,16 +170,16 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
               {/* Studio Line 1 */}
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#d4b584]">
+                <div className="w-10 h-10 bg-[#3E2723] border border-[#C9B29B]/20 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9B29B]/70 block">
                     STUDIO LINE 1 (CALL / WHATSAPP)
                   </span>
                   <a
                     href="tel:916282549008"
-                    className="text-xl sm:text-2xl text-[#faf6ee] font-semibold hover:text-[#d4b584] transition-colors tracking-tight"
+                    className="text-xl sm:text-2xl text-[#FAF7F0] font-semibold hover:text-[#D4AF37] transition-colors tracking-tight"
                   >
                     +91 6282549008
                   </a>
@@ -188,16 +188,16 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
               {/* Studio Line 2 */}
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#d4b584]">
+                <div className="w-10 h-10 bg-[#3E2723] border border-[#C9B29B]/20 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9B29B]/70 block">
                     STUDIO LINE 2 (CALL / WHATSAPP)
                   </span>
                   <a
                     href="tel:918848023041"
-                    className="text-xl sm:text-2xl text-[#faf6ee] font-semibold hover:text-[#d4b584] transition-colors tracking-tight"
+                    className="text-xl sm:text-2xl text-[#FAF7F0] font-semibold hover:text-[#D4AF37] transition-colors tracking-tight"
                   >
                     +91 8848023041
                   </a>
@@ -206,23 +206,23 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
               {/* Studio Workshop Map Location */}
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#d4b584]">
+                <div className="w-10 h-10 bg-[#3E2723] border border-[#C9B29B]/20 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9B29B]/70 block">
                     WORKSHOP & STUDIO MAP LOCATION
                   </span>
                   <a
                     href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-semibold text-[#faf6ee] hover:text-[#d4b584] transition-colors flex items-center gap-1.5"
+                    className="text-sm font-semibold text-[#FAF7F0] hover:text-[#D4AF37] transition-colors flex items-center gap-1.5"
                   >
                     <span>View Pinned Location on Google Maps</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-[#d4b584]" />
+                    <ExternalLink className="w-3.5 h-3.5 text-[#D4AF37]" />
                   </a>
-                  <p className="text-xs text-[#a39f97] mt-0.5">
+                  <p className="text-xs text-[#C9B29B] mt-0.5">
                     Coordinates: 10°40'35.2"N 76°40'52.1"E (Kerala)
                   </p>
                 </div>
@@ -230,17 +230,17 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
               {/* Regional Coverage */}
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#d4b584]">
+                <div className="w-10 h-10 bg-[#3E2723] border border-[#C9B29B]/20 flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9B29B]/70 block">
                     REGIONAL COVERAGE
                   </span>
-                  <span className="text-base sm:text-lg text-[#faf6ee] font-medium block">
+                  <span className="text-base sm:text-lg text-[#FAF7F0] font-medium block">
                     Kerala • Tamil Nadu • Karnataka
                   </span>
-                  <p className="text-xs text-[#a39f97] mt-0.5">
+                  <p className="text-xs text-[#C9B29B] mt-0.5">
                     Kochi • Calicut • Trivandrum • Bengaluru • Chennai
                   </p>
                 </div>
@@ -248,11 +248,11 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
               {/* Instant WhatsApp Quick Links */}
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#25D366]">
+                <div className="w-10 h-10 bg-[#3E2723] border border-[#C9B29B]/20 flex items-center justify-center flex-shrink-0 text-[#25D366]">
                   <MessageSquare className="w-4 h-4" />
                 </div>
                 <div className="space-y-1.5">
-                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9B29B]/70 block">
                     INSTANT WHATSAPP DIRECT
                   </span>
                   <div className="flex flex-col sm:flex-row gap-2">
@@ -260,7 +260,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                       href="https://wa.me/916282549008?text=Hi%20HYZIN%20Interior,%20I'm%20interested%20in%20discussing%20an%20interior%20project."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-1 text-xs text-[#d4b584] hover:underline font-medium"
+                      className="inline-flex items-center space-x-1 text-xs text-[#D4AF37] hover:underline font-medium"
                     >
                       <span>Line 1 (+91 6282549008)</span>
                       <ArrowUpRight className="w-3 h-3" />
@@ -270,7 +270,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                       href="https://wa.me/918848023041?text=Hi%20HYZIN%20Interior,%20I'm%20interested%20in%20discussing%20an%20interior%20project."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-1 text-xs text-[#d4b584] hover:underline font-medium"
+                      className="inline-flex items-center space-x-1 text-xs text-[#D4AF37] hover:underline font-medium"
                     >
                       <span>Line 2 (+91 8848023041)</span>
                       <ArrowUpRight className="w-3 h-3" />
@@ -281,59 +281,59 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
             </div>
 
             {/* Confidentiality note */}
-            <div className="mt-8 p-4 bg-[#111216] border border-white/[0.04] text-[11px] text-[#7d786f] leading-relaxed">
+            <div className="mt-8 p-4 bg-[#3E2723] border border-[#C9B29B]/20 text-[11px] text-[#C9B29B] leading-relaxed">
               We respect your confidentiality. Client drawings and project details are handled under strict non-disclosure.
             </div>
           </div>
 
           {/* Right Column: High-Conversion Form */}
-          <div className="lg:col-span-7 bg-[#111216] border border-white/[0.08] p-8 sm:p-12 shadow-2xl relative">
+          <div className="lg:col-span-7 bg-[#3E2723] border border-[#C9B29B]/20 p-8 sm:p-12 shadow-2xl relative">
             
             {isSubmitted ? (
               <div className="text-center py-10 animate-fadeIn">
                 <div className="w-16 h-16 rounded-full bg-[#25D366]/15 border border-[#25D366] text-[#25D366] flex items-center justify-center mx-auto mb-6">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#faf6ee] mb-2 tracking-tight">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#FAF7F0] mb-2 tracking-tight">
                   Dual-Channel Submission Complete!
                 </h3>
-                <p className="text-sm text-[#b5aca0] font-normal max-w-md mx-auto leading-relaxed mb-6">
-                  Thank you, <span className="text-[#faf6ee] font-medium">{formData.name || 'Patron'}</span>. Your spatial consultation brief has been dispatched simultaneously via WhatsApp and sent to our official studio email.
+                <p className="text-sm text-[#C9B29B] font-normal max-w-md mx-auto leading-relaxed mb-6">
+                  Thank you, <span className="text-[#FAF7F0] font-medium">{formData.name || 'Patron'}</span>. Your spatial consultation brief has been dispatched simultaneously via WhatsApp and sent to our official studio email.
                 </p>
 
                 {/* Dual Transmission Status Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto mb-8 text-left">
                   {/* WhatsApp Status */}
-                  <div className="p-3.5 bg-[#171922] border border-[#25D366]/40 rounded-lg">
+                  <div className="p-3.5 bg-[#2B1C19] border border-[#25D366]/40 rounded-lg">
                     <div className="flex items-center gap-2 text-[#25D366] text-xs font-bold mb-1">
                       <CheckCircle2 className="w-4 h-4" />
                       <span>1. WHATSAPP OPENED</span>
                     </div>
-                    <p className="text-[11px] text-[#b0a89d]">
+                    <p className="text-[11px] text-[#C9B29B]">
                       Formatted brief loaded for Line {formData.selectedWhatsApp === '916282549008' ? '1 (+91 6282549008)' : '2 (+91 8848023041)'}.
                     </p>
                   </div>
 
                   {/* Email Status */}
-                  <div className="p-3.5 bg-[#171922] border border-[#d4b584]/40 rounded-lg">
-                    <div className="flex items-center gap-2 text-[#d4b584] text-xs font-bold mb-1">
+                  <div className="p-3.5 bg-[#2B1C19] border border-[#D4AF37]/40 rounded-lg">
+                    <div className="flex items-center gap-2 text-[#D4AF37] text-xs font-bold mb-1">
                       <Mail className="w-4 h-4" />
                       <span>2. STUDIO EMAIL SENT</span>
                     </div>
-                    <p className="text-[11px] text-[#b0a89d] break-all">
-                      Delivered to: <span className="text-[#faf6ee] font-medium">Muhammedashad395@gmail.com</span>
+                    <p className="text-[11px] text-[#C9B29B] break-all">
+                      Delivered to: <span className="text-[#FAF7F0] font-medium">Muhammedashad395@gmail.com</span>
                     </p>
                   </div>
                 </div>
 
-                <div className="p-6 bg-[#16181f] border border-[#d4b584]/30 max-w-md mx-auto text-left mb-8 space-y-3">
-                  <div className="text-xs font-semibold text-[#d4b584] uppercase tracking-wider mb-2">
+                <div className="p-6 bg-[#2B1C19] border border-[#D4AF37]/30 max-w-md mx-auto text-left mb-8 space-y-3 shadow-xl">
+                  <div className="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider mb-2">
                     DISPATCH TO EITHER WHATSAPP LINE AGAIN:
                   </div>
                   
                   <button
                     onClick={() => sendToWhatsAppNumber('916282549008')}
-                    className="w-full py-3 bg-[#25D366] hover:bg-[#20ba59] text-black font-semibold text-xs uppercase tracking-widest flex items-center justify-center space-x-2 transition-colors rounded-sm"
+                    className="w-full py-3 bg-[#25D366] hover:bg-[#20ba59] text-black font-semibold text-xs uppercase tracking-widest flex items-center justify-center space-x-2 transition-colors rounded-sm shadow-md"
                   >
                     <MessageSquare className="w-4 h-4 fill-black" />
                     <span>SEND TO WHATSAPP LINE 1 (+91 6282549008)</span>
@@ -341,7 +341,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
                   <button
                     onClick={() => sendToWhatsAppNumber('918848023041')}
-                    className="w-full py-3 bg-[#1E1D1B] border border-[#25D366] hover:bg-[#25D366]/20 text-[#25D366] font-semibold text-xs uppercase tracking-widest flex items-center justify-center space-x-2 transition-colors rounded-sm"
+                    className="w-full py-3 bg-[#3E2723] border border-[#25D366] hover:bg-[#25D366]/20 text-[#25D366] font-semibold text-xs uppercase tracking-widest flex items-center justify-center space-x-2 transition-colors rounded-sm"
                   >
                     <MessageSquare className="w-4 h-4" />
                     <span>SEND TO WHATSAPP LINE 2 (+91 8848023041)</span>
@@ -352,16 +352,16 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                     href={`mailto:Muhammedashad395@gmail.com?subject=Spatial%20Consultation%20Inquiry%20from%20${encodeURIComponent(formData.name || 'Patron')}&body=${encodeURIComponent(
                       `Patron Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nRegion: ${formData.region}\nService: ${formData.projectType}\nBudget: ${formData.budget}\nNotes: ${formData.message}`
                     )}`}
-                    className="w-full py-2.5 bg-transparent border border-white/10 hover:border-white/30 text-[#d4cfc7] text-xs font-medium uppercase tracking-wider flex items-center justify-center space-x-2 transition-colors rounded-sm"
+                    className="w-full py-2.5 bg-transparent border border-[#C9B29B]/20 hover:border-[#D4AF37] text-[#FAF7F0] text-xs font-medium uppercase tracking-wider flex items-center justify-center space-x-2 transition-colors rounded-sm"
                   >
-                    <Mail className="w-3.5 h-3.5" />
+                    <Mail className="w-3.5 h-3.5 text-[#D4AF37]" />
                     <span>Open in Email App (Backup)</span>
                   </a>
                 </div>
 
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="text-xs text-[#8e887e] hover:text-[#d4b584] uppercase tracking-widest font-semibold"
+                  className="text-xs text-[#C9B29B] hover:text-[#D4AF37] uppercase tracking-widest font-semibold"
                 >
                   ← Submit Another Project Inquiry
                 </button>
@@ -369,9 +369,9 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 
-                <div className="border-b border-white/[0.06] pb-4 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="border-b border-[#C9B29B]/20 pb-4 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs uppercase font-semibold tracking-wider text-[#d4b584]">
+                    <span className="text-xs uppercase font-semibold tracking-wider text-[#D4AF37]">
                       DUAL-SUBMISSION CONSULTATION BRIEF
                     </span>
                   </div>
@@ -384,7 +384,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Name */}
                   <div>
-                    <label className="block text-[11px] uppercase font-mono tracking-wider text-[#a8a195] mb-2">
+                    <label className="block text-[11px] uppercase font-mono tracking-wider text-[#C9B29B] mb-2">
                       Your Full Name *
                     </label>
                     <input
@@ -394,13 +394,13 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. Dr. K. Mathew"
-                      className="w-full px-4 py-3 bg-[#0a0a0c] border border-white/10 focus:border-[#d4b584] text-[#faf6ee] text-sm focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-[#2B1C19] border border-[#C9B29B]/20 focus:border-[#D4AF37] text-[#FAF7F0] placeholder-[#C9B29B]/50 text-sm focus:outline-none transition-colors"
                     />
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label className="block text-[11px] uppercase font-mono tracking-wider text-[#a8a195] mb-2">
+                    <label className="block text-[11px] uppercase font-mono tracking-wider text-[#C9B29B] mb-2">
                       Phone Number *
                     </label>
                     <input
@@ -410,14 +410,14 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+91 98765 43210"
-                      className="w-full px-4 py-3 bg-[#0a0a0c] border border-white/10 focus:border-[#d4b584] text-[#faf6ee] text-sm focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-[#2B1C19] border border-[#C9B29B]/20 focus:border-[#D4AF37] text-[#FAF7F0] placeholder-[#C9B29B]/50 text-sm focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#a8a195] mb-2">
+                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#C9B29B] mb-2">
                     Email Address
                   </label>
                   <input
@@ -426,23 +426,23 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@domain.com"
-                    className="w-full px-4 py-3 bg-[#0a0a0c] border border-white/10 focus:border-[#d4b584] text-[#faf6ee] text-sm focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-[#2B1C19] border border-[#C9B29B]/20 focus:border-[#D4AF37] text-[#FAF7F0] placeholder-[#C9B29B]/50 text-sm focus:outline-none transition-colors"
                   />
                 </div>
 
                 {/* Region */}
                 <div>
-                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#a8a195] mb-2">
+                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#C9B29B] mb-2">
                     Project Location / State *
                   </label>
                   <select
                     name="region"
                     value={formData.region}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#0a0a0c] border border-white/10 focus:border-[#d4b584] text-[#faf6ee] text-sm focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-[#2B1C19] border border-[#C9B29B]/20 focus:border-[#D4AF37] text-[#FAF7F0] text-sm focus:outline-none transition-colors"
                   >
                     {regions.map((reg) => (
-                      <option key={reg} value={reg} className="bg-[#0a0a0c] text-white">
+                      <option key={reg} value={reg} className="bg-[#2B1C19] text-[#FAF7F0]">
                         {reg}
                       </option>
                     ))}
@@ -451,17 +451,17 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
                 {/* Project Typology / 10 Services */}
                 <div>
-                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#a8a195] mb-2">
+                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#C9B29B] mb-2">
                     Service Required *
                   </label>
                   <select
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-[#0a0a0c] border border-white/10 focus:border-[#d4b584] text-[#faf6ee] text-sm focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-[#2B1C19] border border-[#C9B29B]/20 focus:border-[#D4AF37] text-[#FAF7F0] text-sm focus:outline-none transition-colors"
                   >
                     {projectTypes.map((type) => (
-                      <option key={type} value={type} className="bg-[#0a0a0c] text-white">
+                      <option key={type} value={type} className="bg-[#2B1C19] text-[#FAF7F0]">
                         {type}
                       </option>
                     ))}
@@ -470,7 +470,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
                 {/* Approximate Budget */}
                 <div>
-                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#a8a195] mb-2">
+                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#C9B29B] mb-2">
                     Anticipated Budget Framework
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -481,8 +481,8 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                         onClick={() => setFormData({ ...formData, budget: opt })}
                         className={`py-2.5 px-2 text-[10px] font-mono uppercase tracking-wider text-center border transition-all ${
                           formData.budget === opt
-                            ? 'bg-[#d4b584] text-[#0a0a0c] font-semibold border-[#d4b584]'
-                            : 'bg-[#0a0a0c] text-[#a39f97] border-white/10 hover:border-white/30'
+                            ? 'bg-[#D4AF37] text-[#2B1C19] font-bold border-[#D4AF37] shadow-md'
+                            : 'bg-[#2B1C19] text-[#C9B29B] border-[#C9B29B]/20 hover:border-[#D4AF37]/50'
                         }`}
                       >
                         {opt}
@@ -493,7 +493,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
                 {/* Message */}
                 <div>
-                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#a8a195] mb-2">
+                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#C9B29B] mb-2">
                     Project Vision / Spatial Notes
                   </label>
                   <textarea
@@ -502,13 +502,13 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Describe your site, approximate square footage, timeline, or special interior/fabrication requirements..."
-                    className="w-full px-4 py-3 bg-[#0a0a0c] border border-white/10 focus:border-[#d4b584] text-[#faf6ee] text-sm focus:outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-[#2B1C19] border border-[#C9B29B]/20 focus:border-[#D4AF37] text-[#FAF7F0] placeholder-[#C9B29B]/50 text-sm focus:outline-none transition-colors resize-none"
                   ></textarea>
                 </div>
 
                 {/* Select WhatsApp Line Choice */}
                 <div>
-                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#a8a195] mb-2">
+                  <label className="block text-[11px] uppercase font-mono tracking-wider text-[#C9B29B] mb-2">
                     Destination WhatsApp Number
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -517,16 +517,16 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                       onClick={() => setFormData({ ...formData, selectedWhatsApp: '916282549008' })}
                       className={`p-3 text-left border flex items-center justify-between transition-all ${
                         formData.selectedWhatsApp === '916282549008'
-                          ? 'bg-[#25D366]/15 border-[#25D366] text-white'
-                          : 'bg-[#0a0a0c] border-white/10 text-[#a39f97] hover:border-white/30'
+                          ? 'bg-[#25D366]/20 border-[#25D366] text-white shadow-md'
+                          : 'bg-[#2B1C19] border-[#C9B29B]/20 text-[#C9B29B] hover:border-[#D4AF37]/40'
                       }`}
                     >
                       <div className="text-xs">
-                        <span className="font-bold block text-white">Line 1: +91 6282549008</span>
-                        <span className="text-[10px] text-[#a39f97] font-mono">Primary Studio Desk</span>
+                        <span className="font-bold block text-[#FAF7F0]">Line 1: +91 6282549008</span>
+                        <span className="text-[10px] text-[#C9B29B] font-mono">Primary Studio Desk</span>
                       </div>
                       <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${
-                        formData.selectedWhatsApp === '916282549008' ? 'border-[#25D366] bg-[#25D366]' : 'border-white/30'
+                        formData.selectedWhatsApp === '916282549008' ? 'border-[#25D366] bg-[#25D366]' : 'border-[#C9B29B]/30'
                       }`}></span>
                     </button>
 
@@ -535,16 +535,16 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                       onClick={() => setFormData({ ...formData, selectedWhatsApp: '918848023041' })}
                       className={`p-3 text-left border flex items-center justify-between transition-all ${
                         formData.selectedWhatsApp === '918848023041'
-                          ? 'bg-[#25D366]/15 border-[#25D366] text-white'
-                          : 'bg-[#0a0a0c] border-white/10 text-[#a39f97] hover:border-white/30'
+                          ? 'bg-[#25D366]/20 border-[#25D366] text-white shadow-md'
+                          : 'bg-[#2B1C19] border-[#C9B29B]/20 text-[#C9B29B] hover:border-[#D4AF37]/40'
                       }`}
                     >
                       <div className="text-xs">
-                        <span className="font-bold block text-white">Line 2: +91 8848023041</span>
-                        <span className="text-[10px] text-[#a39f97] font-mono">Direct Lead Line</span>
+                        <span className="font-bold block text-[#FAF7F0]">Line 2: +91 8848023041</span>
+                        <span className="text-[10px] text-[#C9B29B] font-mono">Direct Lead Line</span>
                       </div>
                       <span className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${
-                        formData.selectedWhatsApp === '918848023041' ? 'border-[#25D366] bg-[#25D366]' : 'border-white/30'
+                        formData.selectedWhatsApp === '918848023041' ? 'border-[#25D366] bg-[#25D366]' : 'border-[#C9B29B]/30'
                       }`}></span>
                     </button>
                   </div>
@@ -570,8 +570,8 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                       </>
                     )}
                   </button>
-                  <p className="text-[10px] text-center text-[#8e887e]">
-                    Single submit simultaneously opens WhatsApp brief & delivers a verified copy to <span className="text-[#faf6ee] font-medium">Muhammedashad395@gmail.com</span>
+                  <p className="text-[10px] text-center text-[#C9B29B]">
+                    Single submit simultaneously opens WhatsApp brief & delivers a verified copy to <span className="text-[#FAF7F0] font-medium">Muhammedashad395@gmail.com</span>
                   </p>
                 </div>
 
