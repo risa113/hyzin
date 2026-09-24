@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /dist/
 
+# Sitemap URLs for Google, Bing, Yahoo & DuckDuckGo
 Sitemap: https://hyzininterior.com/sitemap.xml
+Sitemap: https://risa113.github.io/hyzin/sitemap.xml

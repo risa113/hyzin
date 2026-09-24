@@ -12,15 +12,15 @@ export default function SensoryLibrary() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.08] pb-8 mb-16">
           <div>
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-4">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#c5a065] font-medium mb-4">
               <span>03 / MATERIAL ARCHIVE</span>
               <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-bold tracking-tight">
               The Sensory Library
             </h2>
           </div>
-          <p className="mt-4 md:mt-0 text-sm sm:text-base text-[#aba395] font-light max-w-md">
+          <p className="mt-4 md:mt-0 text-sm sm:text-base text-[#aba395] font-normal leading-relaxed max-w-md">
             Physical manifestation over superficial trends. Every surface is chosen for tactile resonance, acoustic softness, and perpetual endurance.
           </p>
         </div>
@@ -48,26 +48,26 @@ export default function SensoryLibrary() {
                       className="w-full h-full object-cover object-center filter contrast-[1.08] transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#121317] via-transparent to-transparent"></div>
-                    <span className="absolute top-3 left-3 px-2.5 py-1 bg-black/70 backdrop-blur-md border border-white/10 text-[9px] uppercase font-mono tracking-widest text-[#d4b584]">
+                    <span className="absolute top-3 left-3 px-2.5 py-1 bg-black/70 backdrop-blur-md border border-white/10 text-[9px] uppercase font-semibold tracking-wider text-[#d4b584]">
                       {item.category}
                     </span>
                   </div>
 
                   {/* Swatch Content */}
                   <div className="p-6">
-                    <div className="text-[10px] uppercase font-mono tracking-widest text-[#8a8479] mb-1">
+                    <div className="text-[10px] uppercase font-medium tracking-wider text-[#8a8479] mb-1">
                       {item.origin}
                     </div>
-                    <h3 className="font-serif text-xl text-[#faf6ee] font-normal group-hover:text-[#d4b584] transition-colors">
+                    <h3 className="text-lg sm:text-xl text-[#faf6ee] font-bold tracking-tight group-hover:text-[#d4b584] transition-colors">
                       {item.name}
                     </h3>
-                    <p className="mt-2 text-xs text-[#a8a195] font-light leading-relaxed line-clamp-2">
+                    <p className="mt-2 text-xs text-[#a8a195] font-normal leading-relaxed line-clamp-2">
                       {item.finish}
                     </p>
                   </div>
                 </div>
 
-                <div className="px-6 pb-6 pt-2 border-t border-white/[0.04] flex items-center justify-between text-[10px] uppercase tracking-widest font-mono text-[#c5a065]">
+                <div className="px-6 pb-6 pt-2 border-t border-white/[0.04] flex items-center justify-between text-[10px] uppercase tracking-wider font-semibold text-[#c5a065]">
                   <span>{isSelected ? 'ACTIVE SELECTION' : 'EXPLORE SPECS'}</span>
                   <span>→</span>
                 </div>
@@ -83,18 +83,18 @@ export default function SensoryLibrary() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8">
-                <div className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.25em] text-[#d4b584] font-mono mb-2">
+                <div className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.2em] text-[#d4b584] font-medium mb-2">
                   <Info className="w-3.5 h-3.5" />
                   <span>MATERIAL SPECIFICATION • {selectedMaterial.category}</span>
                 </div>
-                <h4 className="font-serif text-3xl sm:text-4xl text-[#faf6ee] mb-4">
+                <h4 className="text-2xl sm:text-3xl lg:text-4xl text-[#faf6ee] font-bold tracking-tight mb-4">
                   {selectedMaterial.name}
                 </h4>
-                <p className="text-base text-[#ccc5b8] font-light leading-relaxed mb-6">
+                <p className="text-base text-[#ccc5b8] font-normal leading-relaxed mb-6">
                   {selectedMaterial.description}
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                   <div className="p-3 bg-black/40 border border-white/[0.06]">
                     <span className="text-[#8e887e] block">PROVENANCE</span>
                     <span className="text-[#faf6ee]">{selectedMaterial.origin}</span>

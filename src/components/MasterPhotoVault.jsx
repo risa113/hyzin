@@ -68,8 +68,8 @@ export default function MasterPhotoVault({ onOpenLightbox, onOpenConsultation })
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C5A065]/15 border border-[#C5A065]/30 text-[#8C6D3B] text-xs font-semibold tracking-wider uppercase mb-4">
             <Sparkles className="w-3.5 h-3.5 text-[#C5A065]" /> Master Photo Gallery (72 Client Photos)
           </div>
-          <h2 className="text-3xl sm:text-5xl font-serif text-[#1E1D1B] font-bold mb-4">
-            Complete Kerala Client <span className="italic text-[#C5A065]">Work Archive</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E1D1B] mb-4">
+            Complete Kerala Client <span className="text-[#C5A065]">Work Archive</span>
           </h2>
           <p className="text-base text-[#666055] leading-relaxed">
             Browse all 72 authentic on-site photos of our completed luxury modular kitchens, wall drops, fluted paneling, ceiling cove lighting, and structural steel works across Kerala.
@@ -165,7 +165,7 @@ export default function MasterPhotoVault({ onOpenLightbox, onOpenConsultation })
 
                 {/* Card Description Footer */}
                 <div className="p-4 bg-white">
-                  <h3 className="text-sm font-bold text-[#1E1D1B] font-serif group-hover:text-[#C5A065] transition-colors line-clamp-1 mb-2">
+                  <h3 className="text-sm font-semibold text-[#1E1D1B] group-hover:text-[#C5A065] transition-colors line-clamp-1 mb-2">
                     {photo.title}
                   </h3>
 
@@ -184,7 +184,7 @@ export default function MasterPhotoVault({ onOpenLightbox, onOpenConsultation })
         ) : (
           <div className="text-center py-16 bg-white rounded-3xl border border-[#E8E1D3]">
             <ImageIcon className="w-12 h-12 text-[#C5A065] mx-auto mb-3 opacity-50" />
-            <h3 className="text-lg font-bold text-[#1E1D1B] font-serif">No client photos matched your search</h3>
+            <h3 className="text-lg font-bold text-[#1E1D1B] tracking-tight">No client photos matched your search</h3>
             <p className="text-xs text-[#776F62] mt-1">Try clearing your search query or selecting another category tab.</p>
             <button
               onClick={() => {

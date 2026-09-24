@@ -12,11 +12,11 @@ export default function House3DPage({ onOpenLightbox, onOpenConsultation, onNavi
             <Sparkles className="w-3.5 h-3.5 text-[#C5A065]" /> 3D Interactive House Model
           </div>
 
-          <h1 className="font-serif text-5xl sm:text-7xl text-[#1E1D1B] font-normal leading-[1.08] tracking-tight">
-            3D Interactive <span className="italic text-[#C5A065]">House Showcase.</span>
+          <h1 className="text-4xl sm:text-6xl text-[#1E1D1B] font-extrabold leading-[1.12] tracking-tight">
+            3D Interactive <span className="text-[#C5A065]">House Showcase.</span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-[#524D46] font-light leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-[#524D46] font-normal leading-relaxed">
             Orbit our 3D villa model in 360°, switch between Day Sun, Night Cove Light, and Blueprint Wireframe modes, and click 3D hotspots to inspect real Kerala client work.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function House3DPage({ onOpenLightbox, onOpenConsultation, onNavi
       {/* Feature Bullet Points */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#E5DEC9] shadow-xl">
-          <h3 className="font-serif text-2xl sm:text-3xl text-[#1E1D1B] mb-6">
+          <h3 className="text-2xl sm:text-3xl text-[#1E1D1B] font-bold tracking-tight mb-6">
             Key Highlights of Our 3D Interactive House Model
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

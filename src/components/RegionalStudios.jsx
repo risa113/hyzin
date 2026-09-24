@@ -27,13 +27,13 @@ export default function RegionalStudios({ onSelectRegion, onOpenLightbox }) {
 
               {/* Studio Stamp Badge */}
               <div className="absolute bottom-6 left-6 right-6 p-5 bg-black/80 backdrop-blur-md border border-white/10">
-                <span className="text-[10px] uppercase font-mono tracking-widest text-[#d4b584] block mb-1">
+                <span className="text-[10px] uppercase tracking-wider text-[#d4b584] block mb-1 font-semibold">
                   OFFICIAL ATELIER & FABRICATION WORKSHOPS
                 </span>
-                <p className="font-serif text-xl text-[#faf6ee]">
+                <p className="text-lg sm:text-xl font-bold tracking-tight text-[#faf6ee]">
                   Aluminium, Steel Fabrication & Bespoke Interior Joinery
                 </p>
-                <div className="mt-2 text-xs text-[#a39f97] font-mono">
+                <div className="mt-2 text-xs text-[#a39f97] font-medium">
                   Kerala • Tamil Nadu • Karnataka
                 </div>
               </div>
@@ -42,17 +42,17 @@ export default function RegionalStudios({ onSelectRegion, onOpenLightbox }) {
 
           {/* Right Column: Three Regional Studios Breakdown */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-3">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#c5a065] font-medium mb-3">
               <span>REGIONAL PRESENCE</span>
               <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-bold tracking-tight leading-tight">
               Three Regional Studios. <br />
-              <span className="italic text-[#d4b584] font-serif">One Cohesive Vision.</span>
+              <span className="text-[#d4b584] font-bold">One Cohesive Vision.</span>
             </h2>
 
-            <p className="mt-4 text-base text-[#aba395] font-light leading-relaxed">
+            <p className="mt-4 text-base text-[#aba395] font-normal leading-relaxed">
               With dedicated fabrication facilities and operational presence across South India, HYZIN delivers localized site vigilance alongside our singular standard of quiet design luxury.
             </p>
 
@@ -72,19 +72,19 @@ export default function RegionalStudios({ onSelectRegion, onOpenLightbox }) {
                   >
                     <div className="flex items-center justify-between">
                       <div>
-                        <span className="text-[10px] uppercase font-mono tracking-widest text-[#c5a065] block mb-1">
+                        <span className="text-[10px] uppercase tracking-wider text-[#c5a065] block mb-1 font-semibold">
                           {studio.badge}
                         </span>
-                        <h3 className="font-serif text-2xl text-[#f7f2ea]">
+                        <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#f7f2ea]">
                           {studio.region}
                         </h3>
-                        <p className="text-xs text-[#8e887e] font-mono mt-0.5">
+                        <p className="text-xs text-[#8e887e] font-medium mt-0.5">
                           {studio.location}
                         </p>
                       </div>
 
                       <div className="flex items-center space-x-2">
-                        <span className="font-mono text-[10px] text-[#716c64] hidden sm:block">
+                        <span className="text-[10px] font-medium text-[#716c64] hidden sm:block">
                           {studio.coordinates}
                         </span>
                         <ArrowUpRight
@@ -97,11 +97,11 @@ export default function RegionalStudios({ onSelectRegion, onOpenLightbox }) {
 
                     {isActive && (
                       <div className="mt-4 pt-4 border-t border-white/[0.08] animate-fadeIn text-sm">
-                        <p className="text-[#ccc4b6] font-light leading-relaxed mb-4">
+                        <p className="text-[#ccc4b6] font-normal leading-relaxed mb-4">
                           {studio.description}
                         </p>
-                        <div className="text-xs text-[#a39f97] font-mono mb-4">
-                          <span className="text-[#d4b584]">FOCUS: </span>
+                        <div className="text-xs text-[#a39f97] font-medium mb-4">
+                          <span className="text-[#d4b584] font-semibold">FOCUS: </span>
                           <span>{studio.focus}</span>
                         </div>
 

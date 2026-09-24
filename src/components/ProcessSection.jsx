@@ -54,15 +54,15 @@ export default function ProcessSection({ onOpenConsultation }) {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-white/[0.08] pb-8 mb-16">
           <div>
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-3">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#c5a065] font-medium mb-3">
               <span>THE INTERIOR & FABRICATION JOURNEY</span>
               <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#faf6ee] font-bold tracking-tight">
               Process & Precision
             </h2>
           </div>
-          <p className="mt-4 md:mt-0 text-sm text-[#9b9487] font-light max-w-sm">
+          <p className="mt-4 md:mt-0 text-sm text-[#9b9487] font-normal leading-relaxed max-w-sm">
             A disciplined five-stage methodology engineered to eliminate uncertainty and deliver pristine design fidelity.
           </p>
         </div>
@@ -85,25 +85,25 @@ export default function ProcessSection({ onOpenConsultation }) {
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-2xl text-[#d4b584] font-light">
+                    <span className="text-2xl text-[#d4b584] font-bold">
                       {step.num}
                     </span>
                     <Icon className={`w-5 h-5 transition-colors ${isActive ? 'text-[#d4b584]' : 'text-[#716c64]'}`} />
                   </div>
 
-                  <h3 className="font-serif text-2xl text-[#faf6ee] mb-1 group-hover:text-[#d4b584] transition-colors">
+                  <h3 className="text-xl sm:text-2xl text-[#faf6ee] font-bold tracking-tight mb-1 group-hover:text-[#d4b584] transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-[11px] uppercase font-mono tracking-wider text-[#918a7f] mb-4">
+                  <p className="text-[11px] uppercase tracking-wider text-[#918a7f] mb-4 font-medium">
                     {step.subtitle}
                   </p>
-                  <p className="text-xs text-[#b8b0a2] font-light leading-relaxed">
+                  <p className="text-xs text-[#b8b0a2] font-normal leading-relaxed">
                     {step.description}
                   </p>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-white/[0.06]">
-                  <span className="text-[9px] uppercase font-mono tracking-widest text-[#d4b584] block mb-1">
+                  <span className="text-[9px] uppercase tracking-wider text-[#d4b584] font-semibold block mb-1">
                     DELIVERABLE
                   </span>
                   <span className="text-[11px] text-[#faf6ee] font-medium leading-tight block">

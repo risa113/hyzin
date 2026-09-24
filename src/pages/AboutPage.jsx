@@ -9,16 +9,16 @@ export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLi
       {/* Page Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-b border-black/[0.08]">
         <div className="max-w-3xl">
-          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono mb-4">
+          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#9E8255] font-medium mb-4">
             <span>ABOUT HYZIN INTERIOR</span>
             <span className="w-12 h-[1px] bg-[#9E8255]/40"></span>
           </div>
 
-          <h1 className="font-serif text-5xl sm:text-7xl text-[#1E1D1B] font-normal leading-[1.08] tracking-tight">
-            Designing with <span className="italic text-[#9E8255]">Purpose</span> & Quiet Permanence.
+          <h1 className="text-4xl sm:text-6xl text-[#1E1D1B] font-extrabold leading-[1.12] tracking-tight">
+            Designing with <span className="text-[#9E8255]">Purpose</span> & Quiet Permanence.
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-[#524D46] font-light leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-[#524D46] font-normal leading-relaxed">
             HYZIN INTERIOR is an interior design and structural fabrication practice operating across Kerala, Tamil Nadu, and Karnataka. We sculpt private residences, modular joinery systems, and specialized metalwork that balance pure geometry, natural light, and authentic materiality.
           </p>
         </div>
@@ -40,18 +40,18 @@ export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLi
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/95 backdrop-blur-md border border-black/5">
-                <span className="font-serif italic text-xl text-[#1E1D1B] block">
+                <span className="text-lg sm:text-xl font-medium text-[#1E1D1B] block leading-snug">
                   “Good interiors don’t simply look beautiful. They make everyday life better.”
                 </span>
-                <span className="text-[10px] uppercase font-mono tracking-widest text-[#9E8255] mt-2 block">
+                <span className="text-[10px] uppercase font-semibold tracking-wider text-[#9E8255] mt-2 block">
                   HYZIN CORE DESIGN PRINCIPLE
                 </span>
               </div>
             </div>
           </div>
 
-          <div className="lg:col-span-6 space-y-6 text-[#524D46] font-light text-base leading-relaxed">
-            <h2 className="font-serif text-3xl sm:text-4xl text-[#1E1D1B]">
+          <div className="lg:col-span-6 space-y-6 text-[#524D46] font-normal text-base leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#1E1D1B] font-bold tracking-tight">
               Integrated Interior Design & Specialized Fabrication
             </h2>
             <p>
@@ -65,18 +65,18 @@ export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLi
             </p>
 
             {/* Credibility metric grid */}
-            <div className="pt-6 grid grid-cols-3 gap-4 border-t border-black/10 font-mono text-xs">
+            <div className="pt-6 grid grid-cols-3 gap-4 border-t border-black/10 text-xs">
               <div className="p-4 bg-white border border-black/5">
-                <span className="font-serif text-3xl text-[#1E1D1B] block font-light">10</span>
-                <span className="text-[#9E8255] uppercase text-[10px] mt-1 block">Core Disciplines</span>
+                <span className="text-2xl sm:text-3xl text-[#1E1D1B] block font-bold tracking-tight">10</span>
+                <span className="text-[#9E8255] uppercase text-[10px] font-semibold mt-1 block">Core Disciplines</span>
               </div>
               <div className="p-4 bg-white border border-black/5">
-                <span className="font-serif text-3xl text-[#1E1D1B] block font-light">50+</span>
-                <span className="text-[#9E8255] uppercase text-[10px] mt-1 block">Delivered Works</span>
+                <span className="text-2xl sm:text-3xl text-[#1E1D1B] block font-bold tracking-tight">50+</span>
+                <span className="text-[#9E8255] uppercase text-[10px] font-semibold mt-1 block">Delivered Works</span>
               </div>
               <div className="p-4 bg-white border border-black/5">
-                <span className="font-serif text-3xl text-[#1E1D1B] block font-light">3 States</span>
-                <span className="text-[#9E8255] uppercase text-[10px] mt-1 block">Kerala • TN • KA</span>
+                <span className="text-2xl sm:text-3xl text-[#1E1D1B] block font-bold tracking-tight">3 States</span>
+                <span className="text-[#9E8255] uppercase text-[10px] font-semibold mt-1 block">Kerala • TN • KA</span>
               </div>
             </div>
           </div>
@@ -93,10 +93,10 @@ export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLi
       {/* Bottom CTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
         <div className="p-10 sm:p-14 bg-white border border-black/10 shadow-lg">
-          <h3 className="font-serif text-3xl sm:text-4xl text-[#1E1D1B]">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl text-[#1E1D1B] font-bold tracking-tight">
             Initiate a Private Spatial Dialogue
           </h3>
-          <p className="mt-2 text-sm text-[#736D66] max-w-lg mx-auto">
+          <p className="mt-2 text-sm text-[#736D66] max-w-lg mx-auto font-normal">
             Discuss your upcoming interior design, modular installation, or fabrication project directly with our lead team.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
@@ -108,7 +108,7 @@ export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLi
             </button>
             <a
               href="tel:6282549008"
-              className="px-8 py-4 border border-black/20 hover:border-[#9E8255] text-[#1E1D1B] text-xs uppercase tracking-[0.25em] font-mono transition-colors flex items-center space-x-2"
+              className="px-8 py-4 border border-black/20 hover:border-[#9E8255] text-[#1E1D1B] text-xs uppercase tracking-[0.2em] font-semibold transition-colors flex items-center space-x-2"
             >
               <Phone className="w-3.5 h-3.5 text-[#9E8255]" />
               <span>+91 6282549008</span>

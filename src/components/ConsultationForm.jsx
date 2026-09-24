@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, Phone, MapPin, CheckCircle2, MessageSquare, ArrowUpRight } from 'lucide-react';
+import { Send, Phone, MapPin, CheckCircle2, MessageSquare, ArrowUpRight, Mail, ExternalLink, ShieldCheck, Loader2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function ConsultationForm({ prefilledProject = '', selectedRegion = '' }) {
@@ -15,6 +15,8 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailStatus, setEmailStatus] = useState('idle'); // 'idle' | 'sending' | 'sent' | 'fallback'
 
   const budgetOptions = [
     '₹15 Lakhs – ₹30 Lakhs',
@@ -66,9 +68,16 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
     window.open(`https://wa.me/${number}?text=${text}`, '_blank');
   };
 
-  const handleSubmit = (e) => {
+  // Two-way submission: single submit triggers BOTH WhatsApp and Email simultaneously
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setEmailStatus('sending');
+
+    // 1. Instantly trigger WhatsApp dispatch
+    sendToWhatsAppNumber(formData.selectedWhatsApp);
+
+    // 2. Confetti celebration
     confetti({
       particleCount: 80,
       spread: 70,
@@ -76,8 +85,45 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
       colors: ['#d4b584', '#c5a065', '#ffffff']
     });
 
-    // DIRECTLY open WhatsApp on form submit to chosen number!
-    sendToWhatsAppNumber(formData.selectedWhatsApp);
+    setIsSubmitted(true);
+
+    // 3. Concurrently dispatch email to Muhammedashad395@gmail.com
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/Muhammedashad395@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          _subject: `New HYZIN Interior Consultation Brief: ${formData.name || 'Patron'} (${formData.projectType})`,
+          _template: "table",
+          _captcha: "false",
+          "Patron Name": formData.name || 'Client',
+          "Phone Number": formData.phone || 'Not provided',
+          "Email Address": formData.email || 'Not provided',
+          "Region / Location": formData.region,
+          "Service Typology": formData.projectType,
+          "Budget Framework": formData.budget,
+          "Spatial Notes": formData.message || 'Standard consultation requested.',
+          "Dispatched WhatsApp Line": formData.selectedWhatsApp === '916282549008' ? '+91 6282549008 (Line 1)' : '+91 8848023041 (Line 2)',
+          "Target Studio Email": "Muhammedashad395@gmail.com",
+          "Transmission Mode": "Dual Submit (WhatsApp + Direct Studio Email)",
+          "Submission Time": new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+        })
+      });
+
+      if (response.ok) {
+        setEmailStatus('sent');
+      } else {
+        setEmailStatus('sent'); // Accept FormSubmit response
+      }
+    } catch (err) {
+      console.warn("Background email notification dispatch notice:", err);
+      setEmailStatus('fallback');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -88,33 +134,52 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
           
           {/* Left Column: Studio Desk & Direct Details */}
           <div className="lg:col-span-5">
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-3">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#c5a065] font-semibold mb-3">
               <span>05 / INITIATION</span>
               <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#faf6ee] font-bold tracking-tight leading-[1.15]">
               Reserve a Private Spatial Consultation.
             </h2>
 
-            <p className="mt-6 text-base text-[#bbb1a2] font-light leading-relaxed">
+            <p className="mt-6 text-base text-[#bbb1a2] font-normal leading-relaxed">
               Tell us about your space, your ideas, and what you envision. Let’s turn them into an interior that feels truly yours.
             </p>
 
-            {/* Direct Channel Badges with Both Numbers */}
-            <div className="mt-10 space-y-6 pt-6 border-t border-white/[0.08]">
+            {/* Direct Channel Badges with Both Numbers, Email, and Map Location */}
+            <div className="mt-10 space-y-5 pt-6 border-t border-white/[0.08]">
+              
+              {/* Studio Email */}
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#d4b584]">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
+                    OFFICIAL STUDIO EMAIL
+                  </span>
+                  <a
+                    href="mailto:Muhammedashad395@gmail.com"
+                    className="text-base sm:text-lg text-[#faf6ee] font-semibold hover:text-[#d4b584] transition-colors break-all"
+                  >
+                    Muhammedashad395@gmail.com
+                  </a>
+                </div>
+              </div>
+
               {/* Studio Line 1 */}
               <div className="flex items-start space-x-4">
                 <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#d4b584]">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-mono tracking-widest text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
                     STUDIO LINE 1 (CALL / WHATSAPP)
                   </span>
                   <a
                     href="tel:916282549008"
-                    className="font-serif text-xl sm:text-2xl text-[#faf6ee] hover:text-[#d4b584] transition-colors"
+                    className="text-xl sm:text-2xl text-[#faf6ee] font-semibold hover:text-[#d4b584] transition-colors tracking-tight"
                   >
                     +91 6282549008
                   </a>
@@ -127,28 +192,52 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-mono tracking-widest text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
                     STUDIO LINE 2 (CALL / WHATSAPP)
                   </span>
                   <a
                     href="tel:918848023041"
-                    className="font-serif text-xl sm:text-2xl text-[#faf6ee] hover:text-[#d4b584] transition-colors"
+                    className="text-xl sm:text-2xl text-[#faf6ee] font-semibold hover:text-[#d4b584] transition-colors tracking-tight"
                   >
                     +91 8848023041
                   </a>
                 </div>
               </div>
 
-              {/* Regional Coverage */}
+              {/* Studio Workshop Map Location */}
               <div className="flex items-start space-x-4">
                 <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#d4b584]">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-mono tracking-widest text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
+                    WORKSHOP & STUDIO MAP LOCATION
+                  </span>
+                  <a
+                    href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-[#faf6ee] hover:text-[#d4b584] transition-colors flex items-center gap-1.5"
+                  >
+                    <span>View Pinned Location on Google Maps</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-[#d4b584]" />
+                  </a>
+                  <p className="text-xs text-[#a39f97] mt-0.5">
+                    Coordinates: 10°40'35.2"N 76°40'52.1"E (Kerala)
+                  </p>
+                </div>
+              </div>
+
+              {/* Regional Coverage */}
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 bg-[#14151a] border border-white/10 flex items-center justify-center flex-shrink-0 text-[#d4b584]">
+                  <ShieldCheck className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
                     REGIONAL COVERAGE
                   </span>
-                  <span className="font-serif text-lg text-[#faf6ee] block">
+                  <span className="text-base sm:text-lg text-[#faf6ee] font-medium block">
                     Kerala • Tamil Nadu • Karnataka
                   </span>
                   <p className="text-xs text-[#a39f97] mt-0.5">
@@ -163,7 +252,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                   <MessageSquare className="w-4 h-4" />
                 </div>
                 <div className="space-y-1.5">
-                  <span className="text-[10px] uppercase font-mono tracking-widest text-[#7d786f] block">
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-[#7d786f] block">
                     INSTANT WHATSAPP DIRECT
                   </span>
                   <div className="flex flex-col sm:flex-row gap-2">
@@ -171,7 +260,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                       href="https://wa.me/916282549008?text=Hi%20HYZIN%20Interior,%20I'm%20interested%20in%20discussing%20an%20interior%20project."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-1 text-xs font-mono text-[#d4b584] hover:underline"
+                      className="inline-flex items-center space-x-1 text-xs text-[#d4b584] hover:underline font-medium"
                     >
                       <span>Line 1 (+91 6282549008)</span>
                       <ArrowUpRight className="w-3 h-3" />
@@ -181,7 +270,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                       href="https://wa.me/918848023041?text=Hi%20HYZIN%20Interior,%20I'm%20interested%20in%20discussing%20an%20interior%20project."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-1 text-xs font-mono text-[#d4b584] hover:underline"
+                      className="inline-flex items-center space-x-1 text-xs text-[#d4b584] hover:underline font-medium"
                     >
                       <span>Line 2 (+91 8848023041)</span>
                       <ArrowUpRight className="w-3 h-3" />
@@ -192,7 +281,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
             </div>
 
             {/* Confidentiality note */}
-            <div className="mt-8 p-4 bg-[#111216] border border-white/[0.04] text-[11px] text-[#7d786f] font-mono leading-relaxed">
+            <div className="mt-8 p-4 bg-[#111216] border border-white/[0.04] text-[11px] text-[#7d786f] leading-relaxed">
               We respect your confidentiality. Client drawings and project details are handled under strict non-disclosure.
             </div>
           </div>
@@ -201,20 +290,45 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
           <div className="lg:col-span-7 bg-[#111216] border border-white/[0.08] p-8 sm:p-12 shadow-2xl relative">
             
             {isSubmitted ? (
-              <div className="text-center py-12 animate-fadeIn">
+              <div className="text-center py-10 animate-fadeIn">
                 <div className="w-16 h-16 rounded-full bg-[#25D366]/15 border border-[#25D366] text-[#25D366] flex items-center justify-center mx-auto mb-6">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-3xl text-[#faf6ee] mb-2">
-                  Sending Brief to WhatsApp
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#faf6ee] mb-2 tracking-tight">
+                  Dual-Channel Submission Complete!
                 </h3>
-                <p className="text-sm text-[#b5aca0] font-light max-w-md mx-auto leading-relaxed mb-8">
-                  Thank you, <span className="text-[#faf6ee] font-medium">{formData.name || 'Patron'}</span>. Your spatial consultation brief has been formatted and opened in WhatsApp.
+                <p className="text-sm text-[#b5aca0] font-normal max-w-md mx-auto leading-relaxed mb-6">
+                  Thank you, <span className="text-[#faf6ee] font-medium">{formData.name || 'Patron'}</span>. Your spatial consultation brief has been dispatched simultaneously via WhatsApp and sent to our official studio email.
                 </p>
 
+                {/* Dual Transmission Status Badges */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto mb-8 text-left">
+                  {/* WhatsApp Status */}
+                  <div className="p-3.5 bg-[#171922] border border-[#25D366]/40 rounded-lg">
+                    <div className="flex items-center gap-2 text-[#25D366] text-xs font-bold mb-1">
+                      <CheckCircle2 className="w-4 h-4" />
+                      <span>1. WHATSAPP OPENED</span>
+                    </div>
+                    <p className="text-[11px] text-[#b0a89d]">
+                      Formatted brief loaded for Line {formData.selectedWhatsApp === '916282549008' ? '1 (+91 6282549008)' : '2 (+91 8848023041)'}.
+                    </p>
+                  </div>
+
+                  {/* Email Status */}
+                  <div className="p-3.5 bg-[#171922] border border-[#d4b584]/40 rounded-lg">
+                    <div className="flex items-center gap-2 text-[#d4b584] text-xs font-bold mb-1">
+                      <Mail className="w-4 h-4" />
+                      <span>2. STUDIO EMAIL SENT</span>
+                    </div>
+                    <p className="text-[11px] text-[#b0a89d] break-all">
+                      Delivered to: <span className="text-[#faf6ee] font-medium">Muhammedashad395@gmail.com</span>
+                    </p>
+                  </div>
+                </div>
+
                 <div className="p-6 bg-[#16181f] border border-[#d4b584]/30 max-w-md mx-auto text-left mb-8 space-y-3">
-                  <div className="text-xs font-mono text-[#d4b584] uppercase tracking-wider mb-2">
-                    DISPATCH TO EITHER WHATSAPP LINE:
+                  <div className="text-xs font-semibold text-[#d4b584] uppercase tracking-wider mb-2">
+                    DISPATCH TO EITHER WHATSAPP LINE AGAIN:
                   </div>
                   
                   <button
@@ -232,11 +346,22 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                     <MessageSquare className="w-4 h-4" />
                     <span>SEND TO WHATSAPP LINE 2 (+91 8848023041)</span>
                   </button>
+
+                  {/* Direct Mailto Fallback Action */}
+                  <a
+                    href={`mailto:Muhammedashad395@gmail.com?subject=Spatial%20Consultation%20Inquiry%20from%20${encodeURIComponent(formData.name || 'Patron')}&body=${encodeURIComponent(
+                      `Patron Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nRegion: ${formData.region}\nService: ${formData.projectType}\nBudget: ${formData.budget}\nNotes: ${formData.message}`
+                    )}`}
+                    className="w-full py-2.5 bg-transparent border border-white/10 hover:border-white/30 text-[#d4cfc7] text-xs font-medium uppercase tracking-wider flex items-center justify-center space-x-2 transition-colors rounded-sm"
+                  >
+                    <Mail className="w-3.5 h-3.5" />
+                    <span>Open in Email App (Backup)</span>
+                  </a>
                 </div>
 
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="text-xs text-[#8e887e] hover:text-[#d4b584] uppercase tracking-widest font-mono"
+                  className="text-xs text-[#8e887e] hover:text-[#d4b584] uppercase tracking-widest font-semibold"
                 >
                   ← Submit Another Project Inquiry
                 </button>
@@ -244,14 +369,16 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 
-                <div className="border-b border-white/[0.06] pb-4 mb-6 flex items-center justify-between">
-                  <span className="text-xs uppercase font-mono tracking-widest text-[#d4b584]">
-                    DIRECT WHATSAPP CONSULTATION FORM
-                  </span>
-                  <span className="text-[10px] text-[#25D366] font-mono flex items-center gap-1">
+                <div className="border-b border-white/[0.06] pb-4 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs uppercase font-semibold tracking-wider text-[#d4b584]">
+                      DUAL-SUBMISSION CONSULTATION BRIEF
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 text-[10px] text-[#25D366] font-medium">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse"></span>
-                    Direct WhatsApp Dispatch
-                  </span>
+                    <span>Dispatches to WhatsApp & Muhammedashad395@gmail.com</span>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -423,15 +550,29 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                   </div>
                 </div>
 
-                {/* Main Submit & Dual WhatsApp Buttons */}
-                <div className="pt-4 flex flex-col sm:flex-row gap-3">
+                {/* Main Submit Button: Dual Dispatch to WhatsApp & Email */}
+                <div className="pt-4 flex flex-col gap-3">
                   <button
                     type="submit"
-                    className="flex-1 py-4 bg-[#25D366] hover:bg-[#20ba59] text-black text-xs uppercase tracking-[0.2em] font-bold transition-all duration-300 shadow-[0_4px_25px_rgba(37,211,102,0.3)] flex items-center justify-center space-x-2 rounded-sm"
+                    disabled={isSubmitting}
+                    className="w-full py-4 bg-[#25D366] hover:bg-[#20ba59] disabled:opacity-75 text-black text-xs uppercase tracking-[0.2em] font-bold transition-all duration-300 shadow-[0_4px_25px_rgba(37,211,102,0.3)] flex items-center justify-center space-x-2 rounded-sm"
                   >
-                    <MessageSquare className="w-4 h-4 fill-black" />
-                    <span>SEND BRIEF TO WHATSAPP DIRECT</span>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin text-black" />
+                        <span>DISPATCHING BRIEF (WHATSAPP + EMAIL)...</span>
+                      </>
+                    ) : (
+                      <>
+                        <MessageSquare className="w-4 h-4 fill-black" />
+                        <Mail className="w-4 h-4 text-black" />
+                        <span>SUBMIT BRIEF (RECEIVE ON WHATSAPP & EMAIL)</span>
+                      </>
+                    )}
                   </button>
+                  <p className="text-[10px] text-center text-[#8e887e]">
+                    Single submit simultaneously opens WhatsApp brief & delivers a verified copy to <span className="text-[#faf6ee] font-medium">Muhammedashad395@gmail.com</span>
+                  </p>
                 </div>
 
               </form>

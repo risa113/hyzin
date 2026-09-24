@@ -35,16 +35,16 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
       {/* Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-black/[0.08]">
         <div className="max-w-3xl">
-          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono mb-4">
+          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#9E8255] font-medium mb-4">
             <span>THE 10 OFFICIAL CLIENT WORK DISCIPLINES</span>
             <span className="w-12 h-[1px] bg-[#9E8255]/40"></span>
           </div>
 
-          <h1 className="font-serif text-5xl sm:text-7xl text-[#1E1D1B] font-normal leading-[1.08] tracking-tight">
-            What We <span className="italic text-[#9E8255]">Create.</span>
+          <h1 className="text-4xl sm:text-6xl text-[#1E1D1B] font-extrabold leading-[1.12] tracking-tight">
+            What We <span className="text-[#9E8255]">Create.</span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-[#524D46] font-light leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-[#524D46] font-normal leading-relaxed">
             Ten specialized services covering complete interior design, modular joinery, and structural metal fabrication across Kerala, Tamil Nadu, and Karnataka.
           </p>
         </div>
@@ -53,13 +53,13 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
       {/* Geometry Pillars */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono block mb-2">
+          <span className="text-[11px] uppercase tracking-[0.25em] text-[#9E8255] font-medium block mb-2">
             DESIGN & FABRICATION METHODOLOGY
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl text-[#1E1D1B]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#1E1D1B] font-bold tracking-tight">
             The Geometry of Quietness
           </h2>
-          <p className="mt-3 text-sm text-[#736D66] font-light">
+          <p className="mt-3 text-sm text-[#736D66] font-normal">
             Three core foundations that govern every interior and fabrication project we deliver.
           </p>
         </div>
@@ -67,12 +67,12 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {geometryPillars.map((p) => (
             <div key={p.num} className="p-8 bg-white border border-black/10 shadow-sm hover:shadow-xl transition-all duration-300">
-              <span className="font-mono text-xs text-[#9E8255] block mb-4">
+              <span className="text-xs font-semibold text-[#9E8255] block mb-4">
                 {p.num} / FOUNDATION
               </span>
-              <h3 className="font-serif text-2xl text-[#1E1D1B] mb-2">{p.title}</h3>
-              <p className="text-xs uppercase font-mono tracking-wider text-[#8C8275] mb-4">{p.sub}</p>
-              <p className="text-sm text-[#666057] font-light leading-relaxed">{p.text}</p>
+              <h3 className="text-xl sm:text-2xl text-[#1E1D1B] font-bold tracking-tight mb-2">{p.title}</h3>
+              <p className="text-xs uppercase tracking-wider text-[#8C8275] mb-4 font-medium">{p.sub}</p>
+              <p className="text-sm text-[#666057] font-normal leading-relaxed">{p.text}</p>
             </div>
           ))}
         </div>
@@ -81,10 +81,10 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
       {/* Interactive 10 Services Showcase */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="mb-8">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono block mb-2">
+          <span className="text-[11px] uppercase tracking-[0.25em] text-[#9E8255] font-medium block mb-2">
             DISCIPLINE CATALOGUE
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-[#1E1D1B]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#1E1D1B] font-bold tracking-tight">
             Explore All 10 Services
           </h2>
         </div>
@@ -107,15 +107,15 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
-                      <span className="font-mono text-xs text-[#9E8255] font-semibold">{srv.number}</span>
-                      <h3 className="font-serif text-xl sm:text-2xl text-[#1E1D1B]">{srv.title}</h3>
+                      <span className="text-xs text-[#9E8255] font-semibold">{srv.number}</span>
+                      <h3 className="text-lg sm:text-xl text-[#1E1D1B] font-bold tracking-tight">{srv.title}</h3>
                     </div>
                     <ArrowUpRight className={`w-4 h-4 transition-transform ${isSelected ? 'rotate-45 text-[#9E8255]' : 'text-stone-400'}`} />
                   </div>
 
                   {isSelected && (
                     <div className="mt-4 pt-4 border-t border-black/10 animate-fadeIn">
-                      <p className="text-sm text-[#524D46] font-light leading-relaxed mb-4">
+                      <p className="text-sm text-[#524D46] font-normal leading-relaxed mb-4">
                         {srv.description}
                       </p>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -151,16 +151,16 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
               </button>
 
               <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/95 backdrop-blur-md border border-black/5 shadow-md">
-                <span className="text-[10px] uppercase font-mono tracking-widest text-[#9E8255] block mb-1">
+                <span className="text-[10px] uppercase tracking-wider text-[#9E8255] block mb-1 font-semibold">
                   DISCIPLINE {selected.number} • ORIGINAL CLIENT WORK
                 </span>
-                <h4 className="font-serif text-2xl text-[#1E1D1B]">
+                <h4 className="text-xl sm:text-2xl text-[#1E1D1B] font-bold tracking-tight">
                   {selected.title}
                 </h4>
-                <p className="text-xs text-[#666057] mt-1 font-light">
+                <p className="text-xs text-[#666057] mt-1 font-normal">
                   {selected.tagline}
                 </p>
-                <div className="mt-3 pt-2 border-t border-black/10 flex items-center justify-between text-[11px] font-mono text-[#9E8255]">
+                <div className="mt-3 pt-2 border-t border-black/10 flex items-center justify-between text-[11px] text-[#9E8255] font-medium">
                   <span>CLICK TO VIEW FULLSCREEN LIGHTBOX</span>
                   <span>{selected.gallery.length} IMAGES</span>
                 </div>
@@ -183,12 +183,12 @@ export default function ServicesPage({ onOpenConsultation, onOpenLightbox }) {
             {/* Action CTA */}
             <div className="p-6 bg-white border border-black/10 shadow-sm flex items-center justify-between">
               <div>
-                <span className="text-[10px] uppercase font-mono text-[#9E8255] block">READY TO COMMISSION?</span>
-                <span className="font-serif text-lg text-[#1E1D1B]">Inquire for {selected.title}</span>
+                <span className="text-[10px] uppercase text-[#9E8255] block font-semibold">READY TO COMMISSION?</span>
+                <span className="text-base sm:text-lg font-bold text-[#1E1D1B]">Inquire for {selected.title}</span>
               </div>
               <button
                 onClick={onOpenConsultation}
-                className="px-6 py-3 bg-[#1E1D1B] hover:bg-[#9E8255] text-white text-xs uppercase font-mono tracking-widest transition-colors"
+                className="px-6 py-3 bg-[#1E1D1B] hover:bg-[#9E8255] text-white text-xs uppercase tracking-widest font-semibold transition-colors"
               >
                 START YOUR PROJECT
               </button>

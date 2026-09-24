@@ -54,19 +54,19 @@ export default function BeforeAfterSlider({ onOpenLightbox }) {
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-black/[0.08] pb-6">
           <div>
-            <div className="inline-flex items-center space-x-2 text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono mb-2">
+            <div className="inline-flex items-center space-x-2 text-[11px] uppercase tracking-[0.25em] text-[#9E8255] font-medium mb-2">
               <Sparkles className="w-3.5 h-3.5 text-[#9E8255]" />
               <span>ON-SITE TRANSFORMATION RIGOR</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-5xl text-[#1E1D1B]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#1E1D1B] font-bold tracking-tight">
               Before & After Handover
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#524D46] font-light max-w-xl">
+            <p className="mt-2 text-sm sm:text-base text-[#524D46] font-normal leading-relaxed max-w-xl">
               Authentic on-site transformations. Compare raw site execution with our finalized, precision-crafted handovers.
             </p>
           </div>
 
-          <div className="mt-4 md:mt-0 font-mono text-xs text-[#8C8275]">
+          <div className="mt-4 md:mt-0 font-medium text-xs text-[#8C8275]">
             PAIR 0{activeTab + 1} OF 0{BEFORE_AFTER_PAIRS.length}
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function BeforeAfterSlider({ onOpenLightbox }) {
                 setActiveTab(idx);
                 setSliderPosition(50);
               }}
-              className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-mono transition-all duration-300 border whitespace-nowrap ${
+              className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300 border whitespace-nowrap ${
                 activeTab === idx
                   ? 'bg-[#1E1D1B] text-[#FAF8F5] border-[#1E1D1B] shadow-md'
                   : 'bg-white text-[#736D66] border-black/10 hover:border-black/30'
@@ -106,7 +106,7 @@ export default function BeforeAfterSlider({ onOpenLightbox }) {
               className="w-full h-full object-cover object-center"
             />
             {/* After Tag */}
-            <div className="absolute top-6 right-6 z-10 px-4 py-1.5 bg-[#D4B584] text-[#111113] text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest shadow-lg">
+            <div className="absolute top-6 right-6 z-10 px-4 py-1.5 bg-[#D4B584] text-[#111113] text-[10px] sm:text-xs font-bold uppercase tracking-widest shadow-lg">
               HYZIN FINISHED HANDOVER (AFTER)
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function BeforeAfterSlider({ onOpenLightbox }) {
               className="w-full h-full object-cover object-center filter grayscale-[25%] brightness-[0.85]"
             />
             {/* Before Tag */}
-            <div className="absolute top-6 left-6 z-10 px-4 py-1.5 bg-black/80 text-white text-[10px] sm:text-xs font-mono uppercase tracking-widest border border-white/20 shadow-lg">
+            <div className="absolute top-6 left-6 z-10 px-4 py-1.5 bg-black/80 text-white text-[10px] sm:text-xs font-semibold uppercase tracking-widest border border-white/20 shadow-lg">
               RAW ON-SITE STAGE (BEFORE)
             </div>
           </div>
@@ -142,10 +142,10 @@ export default function BeforeAfterSlider({ onOpenLightbox }) {
           {/* Bottom Information Overlay */}
           <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 bg-black/80 backdrop-blur-md border border-white/10 text-white z-20 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pointer-events-none rounded-sm">
             <div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-[#D4B584] block">
+              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#D4B584] block">
                 {currentPair.category} • {currentPair.location}
               </span>
-              <p className="text-xs sm:text-sm text-[#D4CFCE] font-light mt-0.5">
+              <p className="text-xs sm:text-sm text-[#D4CFCE] font-normal mt-0.5">
                 {currentPair.description}
               </p>
             </div>
@@ -155,7 +155,7 @@ export default function BeforeAfterSlider({ onOpenLightbox }) {
                   e.stopPropagation();
                   onOpenLightbox([currentPair.beforeImage, currentPair.afterImage], 1, currentPair.title, currentPair.category);
                 }}
-                className="text-[11px] font-mono text-[#D4B584] hover:text-white uppercase tracking-wider flex-shrink-0 pointer-events-auto underline"
+                className="text-[11px] font-semibold text-[#D4B584] hover:text-white uppercase tracking-wider flex-shrink-0 pointer-events-auto underline"
               >
                 View High-Res Lightbox ↗
               </button>

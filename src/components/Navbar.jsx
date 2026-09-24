@@ -47,11 +47,11 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
       <div className="w-full bg-[#111215] border-b border-white/[0.08] text-[10px] uppercase tracking-[0.2em] text-[#C4BCB1] py-2 px-4 sm:px-8 hidden md:flex items-center justify-between z-40 relative">
         <div className="flex items-center space-x-3 whitespace-nowrap">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#D4B584] animate-pulse"></span>
-          <span className="font-mono text-[#FAF8F5]">Interior Design & Specialized Fabrication Studio</span>
+          <span className="font-medium text-[#FAF8F5]">Interior Design & Specialized Fabrication Studio</span>
           <span className="text-white/20">•</span>
           <span className="text-[#C4BCB1]/80">Kerala • Tamil Nadu • Karnataka</span>
         </div>
-        <div className="flex items-center space-x-4 text-[10px] whitespace-nowrap font-mono">
+        <div className="flex items-center space-x-4 text-[10px] whitespace-nowrap font-medium">
           <a
             href="tel:916282549008"
             className="flex items-center space-x-1 text-[#FAF8F5] hover:text-[#D4B584] transition-colors"
@@ -101,10 +101,10 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
               className="w-10 h-10 object-contain rounded border border-[#C5A065]/30 shadow-sm group-hover:scale-105 transition-transform"
             />
             <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-xl xl:text-2xl font-bold tracking-[0.16em] text-[#1E1D1B] group-hover:text-[#9E8255] transition-colors duration-300">
+              <span className="text-lg sm:text-xl xl:text-2xl font-bold tracking-[0.14em] text-[#1E1D1B] group-hover:text-[#9E8255] transition-colors duration-300">
                 HYZIN INTERIOR
               </span>
-              <span className="text-[9px] uppercase tracking-[0.28em] text-[#8C8275] -mt-0.5 font-mono">
+              <span className="text-[9px] uppercase tracking-[0.24em] text-[#8C8275] -mt-0.5 font-medium">
                 Interiors & Fabrication
               </span>
             </div>
@@ -139,7 +139,7 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
                         servicesDropdownOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-2 pointer-events-none'
                       }`}
                     >
-                      <div className="text-[10px] uppercase font-mono tracking-widest text-[#9E8255] mb-3 pb-2 border-b border-black/[0.06] flex items-center justify-between">
+                      <div className="text-[10px] uppercase font-semibold tracking-wider text-[#9E8255] mb-3 pb-2 border-b border-black/[0.06] flex items-center justify-between">
                         <span>10 CERTIFIED CLIENT SERVICES</span>
                         <span>ZERO SHORTCUTS</span>
                       </div>
@@ -150,12 +150,12 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
                             onClick={() => handleServiceClick(srv.id)}
                             className="p-2.5 text-left rounded hover:bg-[#FAF8F5] hover:text-[#9E8255] transition-colors flex items-center space-x-2.5 group/item"
                           >
-                            <span className="font-mono text-[10px] text-[#9E8255]">{srv.number}</span>
+                            <span className="font-semibold text-[10px] text-[#9E8255]">{srv.number}</span>
                             <span className="font-medium text-[#1E1D1B] group-hover/item:text-[#9E8255] transition-colors">{srv.title}</span>
                           </button>
                         ))}
                       </div>
-                      <div className="mt-4 pt-3 border-t border-black/[0.06] flex items-center justify-between text-[11px] text-[#8C8275] font-mono">
+                      <div className="mt-4 pt-3 border-t border-black/[0.06] flex items-center justify-between text-[11px] text-[#8C8275]">
                         <span>Original Kerala Assets Showcase</span>
                         <button
                           onClick={() => handleNavClick('services')}
@@ -218,7 +218,7 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
           <div className="px-5 space-y-3">
             
             {/* Quick 2-Column Key Navigation Grid */}
-            <div className="grid grid-cols-2 gap-2 text-xs uppercase tracking-wider font-semibold font-mono">
+            <div className="grid grid-cols-2 gap-2 text-xs uppercase tracking-wider font-semibold">
               {navLinks.map((link) => {
                 const isActive = activePage === link.id;
                 return (
@@ -251,7 +251,7 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </button>
 
-              <div className="grid grid-cols-2 gap-2 text-[10px] font-mono text-[#524D46]">
+              <div className="grid grid-cols-2 gap-2 text-[10px] font-medium text-[#524D46]">
                 <a
                   href="tel:916282549008"
                   className="py-1.5 px-2 bg-white/60 border border-black/5 rounded flex items-center justify-center space-x-1 hover:text-[#9E8255]"
@@ -260,11 +260,12 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
                   <span>+91 6282549008</span>
                 </a>
                 <a
-                  href="tel:918848023041"
-                  className="py-1.5 px-2 bg-white/60 border border-black/5 rounded flex items-center justify-center space-x-1 hover:text-[#9E8255]"
+                  href="https://ig.me/m/hyzin.interior"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="py-1.5 px-2 bg-[#E1306C]/10 border border-[#E1306C]/30 text-[#E1306C] font-semibold rounded flex items-center justify-center space-x-1 hover:bg-[#E1306C]/20"
                 >
-                  <Phone className="w-3 h-3 text-[#9E8255]" />
-                  <span>+91 8848023041</span>
+                  <span>Instagram DM ↗</span>
                 </a>
               </div>
             </div>

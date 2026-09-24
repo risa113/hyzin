@@ -85,26 +85,26 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
           {/* Location & Discipline Badge */}
           <div className="inline-flex items-center space-x-2.5 px-3.5 py-1.5 bg-black/60 backdrop-blur-md border border-[#D4B584]/40 shadow-sm mb-6 animate-fadeIn">
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4B584] animate-pulse" />
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-[#FAF8F5] font-mono font-medium">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-[#FAF8F5] font-medium">
               {active.locationTag}
             </span>
           </div>
 
           {/* Editorial Headline */}
-          <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal text-[#FAF8F5] leading-[1.05] tracking-tight drop-shadow-md transition-all duration-500">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#FAF8F5] leading-[1.1] tracking-tight drop-shadow-md transition-all duration-500">
             {active.title}{' '}
-            <span className="italic font-light text-[#D4B584] font-serif">
+            <span className="text-[#D4B584] font-extrabold">
               {active.emphasis}
             </span>{' '}
             {active.titleEnd}
           </h1>
 
           {/* Supporting Statement */}
-          <p className="mt-6 text-base sm:text-xl text-[#DCD6CE] font-light leading-relaxed max-w-2xl transition-all duration-500">
+          <p className="mt-6 text-base sm:text-lg text-[#DCD6CE] font-normal leading-relaxed max-w-2xl transition-all duration-500">
             {active.tagline}
           </p>
 
-          <p className="mt-3 text-xs sm:text-sm uppercase tracking-[0.25em] text-[#D4B584] font-mono font-medium">
+          <p className="mt-3 text-xs sm:text-sm uppercase tracking-[0.2em] text-[#D4B584] font-medium">
             {active.badge}
           </p>
 
@@ -158,7 +158,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
                 <div className="w-10 h-7 rounded-lg overflow-hidden flex-shrink-0">
                   <img src={s.image} alt={s.service} className="w-full h-full object-cover" />
                 </div>
-                <span className="text-[10px] font-mono text-white/90 whitespace-nowrap hidden md:inline pr-1">
+                <span className="text-[10px] font-medium text-white/90 whitespace-nowrap hidden md:inline pr-1">
                   0{idx + 1}. {s.service}
                 </span>
               </button>
@@ -175,10 +175,10 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
                   key={idx}
                   className="flex flex-col border-l border-white/10 pl-4 sm:pl-6 first:border-l-0"
                 >
-                  <span className="font-serif text-2xl sm:text-3xl text-[#FAF8F5] font-light tracking-tight">
+                  <span className="text-2xl sm:text-3xl text-[#FAF8F5] font-bold tracking-tight">
                     {stat.value}
                   </span>
-                  <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-[#D4B584] font-medium mt-0.5">
+                  <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-[#D4B584] font-medium mt-0.5">
                     {stat.label}
                   </span>
                   <span className="text-[10px] text-[#8C867D] tracking-wider hidden sm:block">

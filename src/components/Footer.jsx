@@ -1,4 +1,4 @@
-import { ArrowUpRight, Phone } from 'lucide-react';
+import { ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
 import { CLIENT_SERVICES_CONFIG, BRAND_ASSETS } from '../data/clientAssets';
 
 const InstagramIcon = ({ className = "w-4 h-4" }) => (
@@ -30,7 +30,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 alt="HYZIN Logo"
                 className="w-7 h-7 rounded-full object-cover border border-[#c5a065]/40"
               />
-              <span className="font-cinzel text-lg font-bold tracking-widest text-[#FAF8F5]">
+              <span className="text-lg font-bold tracking-wider text-[#FAF8F5]">
                 HYZIN INTERIOR
               </span>
             </div>
@@ -38,19 +38,19 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
               href="https://www.instagram.com/hyzin.interior/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-[#1b1c20] border border-white/10 rounded text-[#D4B584] flex items-center space-x-1 text-[10px] font-mono"
+              className="p-2 bg-[#1b1c20] border border-white/10 rounded text-[#D4B584] flex items-center space-x-1 text-[10px] font-medium"
             >
               <InstagramIcon className="w-3.5 h-3.5" />
               <span>@hyzin</span>
             </a>
           </div>
 
-          <p className="text-[11px] text-[#C4BCB1] font-light leading-snug">
+          <p className="text-[11px] text-[#C4BCB1] font-normal leading-snug">
             Interior Design & Specialized Fabrication • Kerala • Tamil Nadu • Karnataka
           </p>
 
           {/* Quick Key Links Grid */}
-          <div className="grid grid-cols-2 gap-2 text-[10px] uppercase font-mono tracking-wider">
+          <div className="grid grid-cols-2 gap-2 text-[10px] uppercase font-medium tracking-wider">
             <button
               onClick={() => handleNav('3d-house')}
               className="p-2.5 bg-[#1b1c20] border border-white/10 text-[#D4B584] text-left rounded"
@@ -87,7 +87,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
               <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
 
-            <div className="grid grid-cols-2 gap-2 text-[10px] font-mono text-center">
+            <div className="grid grid-cols-2 gap-2 text-[10px] font-medium text-center">
               <a href="tel:916282549008" className="p-2 bg-white/5 border border-white/10 rounded text-[#FAF8F5] flex items-center justify-center gap-1">
                 <Phone className="w-3 h-3 text-[#D4B584]" />
                 <span>Line 1</span>
@@ -95,6 +95,17 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
               <a href="tel:918848023041" className="p-2 bg-white/5 border border-white/10 rounded text-[#FAF8F5] flex items-center justify-center gap-1">
                 <Phone className="w-3 h-3 text-[#D4B584]" />
                 <span>Line 2</span>
+              </a>
+            </div>
+
+            <div className="space-y-1.5 pt-1">
+              <a href="mailto:Muhammedashad395@gmail.com" className="p-2 bg-white/5 border border-white/10 rounded text-[#FAF8F5] text-[10px] font-medium flex items-center justify-center gap-1.5 break-all">
+                <Mail className="w-3 h-3 text-[#D4B584] flex-shrink-0" />
+                <span>Muhammedashad395@gmail.com</span>
+              </a>
+              <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 border border-white/10 rounded text-[#D4B584] text-[10px] font-medium flex items-center justify-center gap-1.5">
+                <MapPin className="w-3 h-3 text-[#D4B584] flex-shrink-0" />
+                <span>Studio Workshop on Google Maps</span>
               </a>
             </div>
           </div>
@@ -112,24 +123,24 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                   alt="HYZIN Logo"
                   className="w-8 h-8 rounded-full object-cover border border-[#c5a065]/40"
                 />
-                <h3 className="font-cinzel text-2xl font-bold tracking-[0.2em] text-[#FAF8F5]">
+                <h3 className="text-2xl font-bold tracking-[0.12em] text-[#FAF8F5]">
                   HYZIN INTERIOR
                 </h3>
               </div>
-              <p className="text-xs uppercase font-mono tracking-widest text-[#D4B584] mb-4">
+              <p className="text-xs uppercase font-medium tracking-widest text-[#D4B584] mb-4">
                 Interior Design & Specialized Metal Fabrication
               </p>
-              <p className="text-sm text-[#C4BCB1] font-light leading-relaxed max-w-sm">
+              <p className="text-sm text-[#C4BCB1] font-normal leading-relaxed max-w-sm">
                 Creating quiet grandeur and sculpted spaces across Kerala, Tamil Nadu, and Karnataka. From raw site framing to turnkey white-glove handover.
               </p>
-              <div className="mt-6 font-serif italic text-base text-[#FAF8F5]">
+              <div className="mt-6 italic text-sm font-medium text-[#FAF8F5]">
                 “Good interiors don’t simply look beautiful. They make everyday life better.”
               </div>
             </div>
 
             {/* 10 Core Services Col */}
             <div className="lg:col-span-3">
-              <span className="text-[10px] uppercase font-mono tracking-[0.25em] text-[#D4B584] block mb-4">
+              <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-[#D4B584] block mb-4">
                 10 CORE SERVICES
               </span>
               <ul className="space-y-2 text-xs text-[#EAE5DC]">
@@ -149,10 +160,10 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
 
             {/* 5-Page Navigation Links */}
             <div className="lg:col-span-2">
-              <span className="text-[10px] uppercase font-mono tracking-[0.25em] text-[#D4B584] block mb-4">
+              <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-[#D4B584] block mb-4">
                 EXPLORE
               </span>
-              <ul className="space-y-3 text-xs uppercase tracking-widest font-mono">
+              <ul className="space-y-3 text-xs uppercase tracking-wider font-medium">
                 <li>
                   <button onClick={() => handleNav('home')} className="hover:text-white transition-colors">
                     Home
@@ -190,16 +201,24 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 </li>
               </ul>
 
-              <div className="mt-6 text-xs font-mono text-[#8C8275]">
+              <div className="mt-6 text-xs text-[#8C8275]">
                 DIRECT STUDIO DESK: <br />
-                <div className="space-y-1 mt-1">
-                  <a href="tel:916282549008" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-sans font-medium flex items-center space-x-1">
+                <div className="space-y-1.5 mt-1.5">
+                  <a href="tel:916282549008" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-medium flex items-center space-x-1.5">
                     <Phone className="w-3 h-3 text-[#D4B584]" />
-                    <span>+91 6282549008</span>
+                    <span>+91 6282549008 (Line 1)</span>
                   </a>
-                  <a href="tel:918848023041" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-sans font-medium flex items-center space-x-1">
+                  <a href="tel:918848023041" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-medium flex items-center space-x-1.5">
                     <Phone className="w-3 h-3 text-[#D4B584]" />
-                    <span>+91 8848023041</span>
+                    <span>+91 8848023041 (Line 2)</span>
+                  </a>
+                  <a href="mailto:Muhammedashad395@gmail.com" className="text-[#FAF8F5] hover:text-[#D4B584] text-xs font-medium flex items-center space-x-1.5 break-all">
+                    <Mail className="w-3 h-3 text-[#D4B584] flex-shrink-0" />
+                    <span>Muhammedashad395@gmail.com</span>
+                  </a>
+                  <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="text-[#D4B584] hover:underline text-xs font-medium flex items-center space-x-1.5 pt-0.5">
+                    <MapPin className="w-3 h-3 text-[#D4B584] flex-shrink-0" />
+                    <span>Studio & Workshop Location</span>
                   </a>
                 </div>
               </div>
@@ -208,24 +227,36 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
             {/* Direct Social & Brief Initiation */}
             <div className="lg:col-span-3 flex flex-col justify-between">
               <div>
-                <span className="text-[10px] uppercase font-mono tracking-[0.25em] text-[#D4B584] block mb-4">
+                <span className="text-[10px] uppercase font-semibold tracking-[0.2em] text-[#D4B584] block mb-4">
                   VISUAL DISPATCH
                 </span>
-                <a
-                  href="https://www.instagram.com/hyzin.interior/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-4 bg-[#1b1c20] border border-white/[0.08] hover:border-[#D4B584]/50 flex items-center justify-between group transition-all"
-                >
-                  <div className="flex items-center space-x-3">
-                    <InstagramIcon className="w-5 h-5 text-[#D4B584]" />
-                    <div>
-                      <span className="font-medium text-white block">@hyzin.interior</span>
-                      <span className="text-[10px] text-[#8C8275]">Daily On-Site Stories</span>
+                <div className="space-y-2">
+                  <a
+                    href="https://www.instagram.com/hyzin.interior/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-[#1b1c20] border border-white/[0.08] hover:border-[#D4B584]/50 flex items-center justify-between group transition-all rounded"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <InstagramIcon className="w-5 h-5 text-[#D4B584]" />
+                      <div>
+                        <span className="font-medium text-white block">@hyzin.interior</span>
+                        <span className="text-[10px] text-[#8C8275]">14.8k Followers • Daily Stories</span>
+                      </div>
                     </div>
-                  </div>
-                  <ArrowUpRight className="w-4 h-4 text-[#A69F93] group-hover:text-white transition-colors" />
-                </a>
+                    <ArrowUpRight className="w-4 h-4 text-[#A69F93] group-hover:text-white transition-colors" />
+                  </a>
+
+                  <a
+                    href="https://ig.me/m/hyzin.interior"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 bg-[#1b1c20]/60 border border-[#D4B584]/30 hover:border-[#D4B584] text-[#D4B584] text-[10px] uppercase tracking-wider flex items-center justify-between group transition-all rounded font-medium"
+                  >
+                    <span>Send Instagram DM</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#D4B584] group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
               </div>
 
               <div className="mt-6">
@@ -242,7 +273,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
         </div>
 
         {/* Bottom Micro Row */}
-        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] sm:text-[11px] text-[#7A746B] font-mono gap-2 text-center sm:text-left">
+        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] sm:text-[11px] text-[#7A746B] font-medium gap-2 text-center sm:text-left">
           <div>
             © 2026 HYZIN INTERIOR. Original Client Work.
           </div>

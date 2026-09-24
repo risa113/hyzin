@@ -31,21 +31,21 @@ export default function Hero({ onOpenConsultation, onExploreWork }) {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-normal leading-[1.05] tracking-tight text-[#fbf8f3] drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-[#fbf8f3] drop-shadow-2xl">
             Quiet Grandeur.{' '}
-            <span className="italic font-light text-[#d4b584] block sm:inline font-serif">
+            <span className="text-[#d4b584] block sm:inline font-extrabold">
               Sculpted
             </span>{' '}
             Spaces.
           </h1>
 
           {/* Supporting Statement */}
-          <p className="mt-6 sm:mt-8 text-base sm:text-xl text-[#d4cfc5] font-light leading-relaxed max-w-2xl">
+          <p className="mt-6 sm:mt-8 text-base sm:text-lg text-[#d4cfc5] font-normal leading-relaxed max-w-2xl">
             Thoughtfully designed spaces for modern living. We balance spatial purity, raw materiality, and effortless comfort to craft environments that feel timeless and uniquely yours.
           </p>
 
           {/* Service Area Pill Line */}
-          <p className="mt-3 text-xs sm:text-sm uppercase tracking-[0.25em] text-[#a39f97] font-medium">
+          <p className="mt-3 text-xs sm:text-sm uppercase tracking-[0.2em] text-[#a39f97] font-medium">
             Residential • Commercial • Turnkey Interiors
           </p>
 
@@ -78,7 +78,7 @@ export default function Hero({ onOpenConsultation, onExploreWork }) {
                 key={idx}
                 className="flex flex-col border-l border-white/[0.1] pl-4 sm:pl-6 first:border-l-0"
               >
-                <span className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#faf4e8] font-light tracking-tight">
+                <span className="text-2xl sm:text-3xl lg:text-4xl text-[#faf4e8] font-bold tracking-tight">
                   {stat.value}
                 </span>
                 <span className="text-[11px] uppercase tracking-[0.2em] text-[#d4b584] font-medium mt-1">

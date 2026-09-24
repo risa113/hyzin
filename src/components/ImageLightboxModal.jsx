@@ -64,10 +64,10 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
         <div className="flex items-center space-x-3 text-white">
           <div className="w-2 h-2 rounded-full bg-[#D4B584] animate-pulse"></div>
           <div>
-            <span className="text-[10px] uppercase font-mono tracking-[0.25em] text-[#D4B584] block">
+            <span className="text-[10px] uppercase font-medium tracking-[0.2em] text-[#D4B584] block">
               {category || 'HYZIN ORIGINAL CLIENT WORK'}
             </span>
-            <h4 className="font-serif text-base sm:text-lg text-[#FAF8F5] line-clamp-1">
+            <h4 className="text-base sm:text-lg font-bold tracking-tight text-[#FAF8F5] line-clamp-1">
               {title || 'Project Specification'}
             </h4>
           </div>
@@ -136,7 +136,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
         className="absolute bottom-0 inset-x-0 p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between z-50 bg-gradient-to-t from-black/80 via-black/40 to-transparent gap-3"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="font-mono text-xs text-[#D4B584] tracking-widest">
+        <div className="text-xs text-[#D4B584] font-medium tracking-wider">
           IMAGE {currentIndex + 1} OF {images.length}
         </div>
 
@@ -161,7 +161,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
           </div>
         )}
 
-        <div className="text-[11px] font-mono text-stone-400">
+        <div className="text-[11px] text-stone-400 font-normal">
           Click image or zoom button to toggle 1.5x zoom
         </div>
       </div>

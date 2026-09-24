@@ -1,26 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-cinzel: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
 @layer base {
   :root {
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-cinzel: 'Cinzel', serif;
-    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-cinzel: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
     background-color: #FAF8F5;
     color: #2D2B29;
-    font-family: var(--font-sans);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.011em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
-    letter-spacing: -0.01em;
   }
 
-  h1, h2, h3, .font-serif {
-    font-family: var(--font-serif);
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
   }
 
+  h1 {
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.18;
+  }
+
+  h3 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    font-family: "Inter", sans-serif;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  /* Ensure legacy font classes adhere strictly to Inter */
+  .font-serif,
   .font-cinzel {
-    font-family: var(--font-cinzel);
+    font-family: "Inter", sans-serif !important;
   }
 }
 

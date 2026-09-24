@@ -63,17 +63,17 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 pb-8 border-b border-white/10 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C5A065]/15 border border-[#C5A065]/30 text-[#D4B584] text-[11px] font-mono uppercase tracking-[0.25em] mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C5A065]/15 border border-[#C5A065]/30 text-[#D4B584] text-[11px] font-medium uppercase tracking-[0.2em] mb-4">
               <Sparkles className="w-3.5 h-3.5 text-[#D4B584]" />
               <span>AUTHENTIC CLIENT WORK SHOWCASE</span>
             </div>
             
             {/* Top-to-Bottom Animated Title */}
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#FAF8F5] font-normal tracking-tight leading-[1.08] animate-slide-down">
-              Selected Work & <span className="italic font-light text-[#D4B584]">Fabrication.</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FAF8F5] font-bold tracking-tight leading-[1.15] animate-slide-down">
+              Selected Work & <span className="text-[#D4B584] font-bold">Fabrication.</span>
             </h2>
             
-            <p className="mt-3 text-sm sm:text-base text-[#B3ACA0] font-light max-w-2xl leading-relaxed animate-slide-down" style={{ animationDelay: '100ms' }}>
+            <p className="mt-3 text-sm sm:text-base text-[#B3ACA0] font-normal max-w-2xl leading-relaxed animate-slide-down" style={{ animationDelay: '100ms' }}>
               Original on-site photography of bespoke residential interiors, modular aluminium suites, and precision metal fabrication commissioned across Kerala, Tamil Nadu, and Karnataka.
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
             <div className="bg-[#121318] border border-white/15 p-1 rounded-lg flex items-center gap-1 shadow-lg">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`px-4 py-2 rounded-md text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all ${
+                className={`px-4 py-2 rounded-md text-xs font-semibold uppercase tracking-wider flex items-center gap-2 transition-all ${
                   viewMode === 'grid'
                     ? 'bg-[#C5A065] text-[#0A0A0C] font-bold shadow-md'
                     : 'text-[#9E978D] hover:text-white hover:bg-white/5'
@@ -95,7 +95,7 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
 
               <button
                 onClick={() => setViewMode('slideshow')}
-                className={`px-4 py-2 rounded-md text-xs font-mono uppercase tracking-wider flex items-center gap-2 transition-all ${
+                className={`px-4 py-2 rounded-md text-xs font-semibold uppercase tracking-wider flex items-center gap-2 transition-all ${
                   viewMode === 'slideshow'
                     ? 'bg-[#C5A065] text-[#0A0A0C] font-bold shadow-md'
                     : 'text-[#9E978D] hover:text-white hover:bg-white/5'
@@ -106,7 +106,7 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
               </button>
             </div>
 
-            <span className="font-mono text-xs text-[#D4B584] uppercase tracking-widest hidden sm:inline-block px-3 py-2 bg-white/5 border border-white/10 rounded-md">
+            <span className="text-xs text-[#D4B584] font-semibold uppercase tracking-widest hidden sm:inline-block px-3 py-2 bg-white/5 border border-white/10 rounded-md">
               {filteredProjects.length} Works
             </span>
           </div>
@@ -182,7 +182,7 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                 <div key={currentProject.id} className="space-y-6">
                   
                   {/* Top-to-Bottom Animated Category Subtitle */}
-                  <div className="animate-slide-down flex items-center space-x-3 text-xs uppercase tracking-[0.25em] text-[#D4B584] font-mono">
+                  <div className="animate-slide-down flex items-center space-x-3 text-xs uppercase tracking-[0.2em] text-[#D4B584] font-medium">
                     <span>{currentProject.state}</span>
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D4B584]"></span>
                     <span>{currentProject.year}</span>
@@ -191,19 +191,19 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                   </div>
 
                   {/* Top-to-Bottom Animated Title */}
-                  <h3 className="font-serif text-3xl sm:text-4xl text-[#FAF8F5] leading-tight font-normal animate-slide-down" style={{ animationDelay: '100ms' }}>
+                  <h3 className="text-2xl sm:text-3xl text-[#FAF8F5] leading-tight font-bold animate-slide-down" style={{ animationDelay: '100ms' }}>
                     {currentProject.title}
                   </h3>
 
                   {/* Top-to-Bottom Animated Tagline & Concept */}
-                  <p className="text-sm sm:text-base text-[#D9D3C7] font-light leading-relaxed animate-slide-down" style={{ animationDelay: '150ms' }}>
+                  <p className="text-sm sm:text-base text-[#D9D3C7] font-normal leading-relaxed animate-slide-down" style={{ animationDelay: '150ms' }}>
                     {currentProject.concept || currentProject.tagline}
                   </p>
 
                   {/* Highlights Bullet List */}
                   {currentProject.spaceHighlights && (
                     <div className="pt-4 border-t border-white/10 space-y-2 animate-slide-down" style={{ animationDelay: '200ms' }}>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#D4B584] block mb-2">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider text-[#D4B584] block mb-2">
                         COMMISSION HIGHLIGHTS:
                       </span>
                       {currentProject.spaceHighlights.slice(0, 3).map((hl, i) => (
@@ -217,9 +217,9 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
 
                   {/* Client Review quote */}
                   {currentProject.clientReview && (
-                    <blockquote className="p-4 bg-white/5 border-l-2 border-[#C5A065] text-xs font-serif italic text-[#FAF8F5] animate-slide-down" style={{ animationDelay: '250ms' }}>
+                    <blockquote className="p-4 bg-white/5 border-l-2 border-[#C5A065] text-xs font-normal text-[#FAF8F5] leading-relaxed animate-slide-down" style={{ animationDelay: '250ms' }}>
                       {currentProject.clientReview}
-                      <span className="block mt-1 font-mono not-italic text-[10px] text-[#D4B584] uppercase">
+                      <span className="block mt-1 font-semibold not-italic text-[10px] text-[#D4B584] uppercase">
                         — {currentProject.patron || 'Private Patron'}
                       </span>
                     </blockquote>
@@ -236,7 +236,7 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                         onSelectProject(currentProject);
                       }
                     }}
-                    className="flex-1 py-3.5 bg-[#C5A065] hover:bg-[#D4B584] text-[#0A0A0C] font-bold text-xs uppercase tracking-[0.2em] font-mono transition-all flex items-center justify-center space-x-2 rounded-sm shadow-md"
+                    className="flex-1 py-3.5 bg-[#C5A065] hover:bg-[#D4B584] text-[#0A0A0C] font-bold text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center space-x-2 rounded-sm shadow-md"
                   >
                     <span>VIEW FULL GALLERY & SPECS</span>
                     <ArrowUpRight className="w-4 h-4" />
@@ -324,7 +324,7 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div>
                     {/* Top-to-Bottom Location Tag */}
-                    <div className="text-[10px] uppercase tracking-[0.2em] text-[#D4B584] font-mono mb-2 flex items-center justify-between">
+                    <div className="text-[10px] uppercase tracking-[0.2em] text-[#D4B584] font-medium mb-2 flex items-center justify-between">
                       <span>{project.location}</span>
                       <span>{project.year}</span>
                     </div>
@@ -332,12 +332,12 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                     {/* Top-to-Bottom Title Animation on hover */}
                     <h3
                       onClick={() => onSelectProject && onSelectProject(project)}
-                      className="font-serif text-2xl text-[#FAF8F5] font-normal leading-snug group-hover:text-[#D4B584] transition-colors cursor-pointer group-hover:animate-slide-down-fast"
+                      className="text-xl sm:text-2xl text-[#FAF8F5] font-bold leading-snug group-hover:text-[#D4B584] transition-colors cursor-pointer group-hover:animate-slide-down-fast"
                     >
                       {project.title}
                     </h3>
 
-                    <p className="mt-2 text-xs text-[#B3ACA0] font-light line-clamp-2 leading-relaxed">
+                    <p className="mt-2 text-xs text-[#B3ACA0] font-normal line-clamp-2 leading-relaxed">
                       {project.concept || project.tagline}
                     </p>
                   </div>
@@ -352,12 +352,12 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
                           onSelectProject(project);
                         }
                       }}
-                      className="text-[11px] uppercase tracking-[0.2em] text-[#D4B584] font-mono flex items-center gap-1.5 font-bold group-hover:text-white transition-colors"
+                      className="text-[11px] uppercase tracking-[0.2em] text-[#D4B584] flex items-center gap-1.5 font-bold group-hover:text-white transition-colors"
                     >
                       <span>VIEW SPECS</span>
                       <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </button>
-                    <span className="text-[10px] text-[#716C64] uppercase font-mono">
+                    <span className="text-[10px] text-[#716C64] uppercase font-medium">
                       {project.gallery ? `${project.gallery.length} Photos` : 'Original Asset'}
                     </span>
                   </div>

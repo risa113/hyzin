@@ -545,10 +545,10 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C5A065]/15 border border-[#C5A065]/30 text-[#8C6D3B] text-xs font-semibold tracking-wider uppercase mb-3">
                 <Sparkles className="w-3.5 h-3.5 text-[#C5A065]" /> 3D Interactive House Model
               </div>
-              <h2 className="text-3xl sm:text-4xl font-serif text-[#1E1D1B] font-bold">
-                Interactive 3D House <span className="italic text-[#C5A065]">Work Showcase</span>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1E1D1B]">
+                Interactive 3D House <span className="text-[#C5A065]">Work Showcase</span>
               </h2>
-              <p className="text-sm text-[#666055] mt-1 max-w-2xl">
+              <p className="text-sm text-[#666055] mt-1 max-w-2xl leading-relaxed">
                 Explore our 10 client work disciplines (Aluminium Interior, Wall Drop, Kitchen Cabinet, Loft, Accessories, Ceiling, Paneling, Steel Doors, Steel & MS Fabrication) inside an interactive 3D house model.
               </p>
             </div>
@@ -725,7 +725,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                     {React.createElement(selectedHotspot.icon, { className: 'w-4 h-4' })}
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-[#1E1D1B] font-serif">{selectedHotspot.name}</h4>
+                    <h4 className="text-sm font-bold text-[#1E1D1B] tracking-tight">{selectedHotspot.name}</h4>
                     <span className="text-[10px] uppercase tracking-wider text-[#C5A065] font-semibold">Verified Client Work</span>
                   </div>
                 </div>

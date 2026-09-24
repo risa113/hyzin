@@ -6,6 +6,8 @@ import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import TestimonialsSection from '../components/TestimonialsSection';
 import InstagramShowcase from '../components/InstagramShowcase';
 import SensoryLibrary from '../components/SensoryLibrary';
+import SeoFaqSection from '../components/SeoFaqSection';
+import StudioLocationSection from '../components/StudioLocationSection';
 import { assetUrl } from '../data/clientAssets';
 
 export default function HomePage({ onNavigate, onSelectProject, onOpenConsultation, onOpenLightbox }) {
@@ -28,10 +30,10 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C5A065]/20 border border-[#C5A065]/40 text-[#D4B584] text-xs font-semibold tracking-wider uppercase mb-3">
                 <Box className="w-3.5 h-3.5" /> 3D Interactive House Model
               </div>
-              <h3 className="font-serif text-2xl sm:text-4xl text-[#FAF8F5] font-bold">
-                Experience Our Work in <span className="italic text-[#C5A065]">3D Interactive Space</span>
+              <h3 className="text-2xl sm:text-4xl text-[#FAF8F5] font-bold tracking-tight">
+                Experience Our Work in <span className="text-[#C5A065]">3D Interactive Space</span>
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-[#D4CFCE] font-light leading-relaxed">
+              <p className="mt-2 text-xs sm:text-sm text-[#D4CFCE] font-normal leading-relaxed">
                 Rotate 360°, switch between Day Sun, Night Cove Light, and Blueprint Wireframe modes, and inspect real client work hotspots across 6 room zones.
               </p>
             </div>
@@ -53,26 +55,26 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             <div className="lg:col-span-7">
-              <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#9E8255] font-mono mb-4">
+              <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#9E8255] font-medium mb-4">
                 <span>01 / ABOUT HYZIN</span>
                 <span className="w-12 h-[1px] bg-[#9E8255]/40"></span>
               </div>
 
-              <h2 className="font-serif text-4xl sm:text-6xl text-[#1E1D1B] font-normal leading-[1.12]">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#1E1D1B] font-bold leading-[1.12] tracking-tight">
                 WE DESIGN SPACES <br />
-                <span className="italic font-light text-[#9E8255]">WITH CHARACTER.</span>
+                <span className="text-[#9E8255] font-bold">WITH CHARACTER.</span>
               </h2>
 
-              <p className="mt-6 text-base sm:text-lg text-[#524D46] font-light leading-relaxed">
+              <p className="mt-6 text-base sm:text-lg text-[#524D46] font-normal leading-relaxed">
                 HYZIN INTERIOR creates thoughtfully designed spaces that balance aesthetics, functionality, comfort, and personality. From concept to completion, we transform ordinary spaces into environments that feel intentional, timeless, and uniquely yours.
               </p>
 
               {/* Water & Glass Reflective Quote Card */}
               <div className="mt-8 p-6 sm:p-8 bg-white border-l-2 border-[#9E8255] shadow-lg shadow-black/5 relative animatic-reflection">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#9E8255] font-mono block mb-2">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-[#9E8255] font-medium block mb-2">
                   OUR PHILOSOPHY
                 </span>
-                <blockquote className="font-serif text-xl sm:text-2xl text-[#1E1D1B] italic leading-snug">
+                <blockquote className="text-lg sm:text-xl text-[#1E1D1B] font-medium leading-relaxed">
                   “Good interiors don’t simply look beautiful. They make everyday life better.”
                 </blockquote>
               </div>
@@ -101,10 +103,10 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md border border-black/5 shadow-md">
-                  <span className="text-[9px] uppercase font-mono tracking-widest text-[#9E8255] block">
+                  <span className="text-[9px] uppercase tracking-wider text-[#9E8255] font-medium block">
                     ORIGINAL CLIENT WORK
                   </span>
-                  <span className="font-serif text-base text-[#1E1D1B] block">
+                  <span className="text-base font-semibold text-[#1E1D1B] block">
                     Kerala • Tamil Nadu • Karnataka
                   </span>
                 </div>
@@ -127,10 +129,10 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C5A065]/15 border border-[#C5A065]/30 text-[#8C6D3B] text-xs font-semibold tracking-wider uppercase mb-3">
                 <Images className="w-3.5 h-3.5 text-[#C5A065]" /> Master Photo Gallery (72 Photos)
               </div>
-              <h3 className="font-serif text-2xl sm:text-3xl text-[#1E1D1B] font-bold">
-                Browse All 72 Verified <span className="italic text-[#C5A065]">Kerala Client Photos</span>
+              <h3 className="text-2xl sm:text-3xl text-[#1E1D1B] font-bold tracking-tight">
+                Browse All 72 Verified <span className="text-[#C5A065]">Kerala Client Photos</span>
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-[#666055] font-light leading-relaxed">
+              <p className="mt-2 text-xs sm:text-sm text-[#666055] font-normal leading-relaxed">
                 Filter by Kitchen Cabinet, Wall Drop, Paneling, Ceilings, Aluminium, Steel Doors, or Steel Fabrication with live search and high-res lightbox.
               </p>
             </div>
@@ -158,20 +160,24 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
       {/* 8. Material Specimens */}
       <SensoryLibrary onOpenLightbox={onOpenLightbox} />
 
-      {/* 9. Testimonials & Instagram */}
+      {/* 9. Testimonials & FAQs */}
       <TestimonialsSection />
+      <SeoFaqSection onOpenConsultation={onOpenConsultation} />
       <InstagramShowcase onOpenLightbox={onOpenLightbox} />
 
-      {/* 10. Quick Consultation Callout */}
+      {/* 10. Studio Workshop & Official Map Location */}
+      <StudioLocationSection onOpenConsultation={onOpenConsultation} />
+
+      {/* 11. Quick Consultation Callout */}
       <section className="py-20 bg-[#141416] text-white text-center border-t border-white/[0.08]">
         <div className="max-w-4xl mx-auto px-4">
-          <span className="text-[10px] uppercase font-mono tracking-[0.3em] text-[#D4B584] block mb-3">
+          <span className="text-[10px] uppercase font-semibold tracking-[0.25em] text-[#D4B584] block mb-3">
             COMMENCEMENT
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl text-[#FAF8F5] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FAF8F5] font-bold tracking-tight mb-4">
             Have a space in mind? Let’s sculpt it together.
           </h2>
-          <p className="text-sm sm:text-base text-[#D4CFCE] font-light max-w-xl mx-auto mb-8">
+          <p className="text-sm sm:text-base text-[#D4CFCE] font-normal max-w-xl mx-auto mb-8">
             Accepting residential villas, apartments, and fabrication commissions across Kerala, Tamil Nadu, and Karnataka.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -185,7 +191,7 @@ export default function HomePage({ onNavigate, onSelectProject, onOpenConsultati
               href="https://wa.me/916282549008?text=Hi%20HYZIN%20Interior,%20I'm%20interested%20in%20discussing%20an%20interior%20design%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 border border-white/20 hover:border-[#D4B584] text-[#FAF8F5] text-xs uppercase tracking-[0.25em] font-mono transition-colors"
+              className="px-8 py-4 border border-white/20 hover:border-[#D4B584] text-[#FAF8F5] text-xs uppercase tracking-[0.2em] font-semibold transition-colors"
             >
               WHATSAPP DIRECT (+91 6282549008)
             </a>

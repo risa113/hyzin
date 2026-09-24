@@ -35,14 +35,14 @@ export default function WhyHyzin() {
           
           {/* Left Title Sticky Column */}
           <div className="lg:col-span-4 lg:sticky lg:top-28">
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#c5a065] font-mono mb-3">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#c5a065] font-medium mb-3">
               <span>04 / THE HYZIN CODE</span>
               <span className="w-8 h-[1px] bg-[#c5a065]/40"></span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-normal tracking-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#faf6ee] font-bold tracking-tight">
               WHY HYZIN
             </h2>
-            <p className="mt-4 text-sm sm:text-base text-[#a8a195] font-light leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-[#a8a195] font-normal leading-relaxed">
               We operate not as a commercial contractor, but as a dedicated interior & fabrication atelier committed to enduring quality, intellectual restraint, and profound client discretion.
             </p>
           </div>
@@ -54,16 +54,16 @@ export default function WhyHyzin() {
                 key={p.title}
                 className="p-8 sm:p-10 bg-[#121318] border border-white/[0.06] hover:border-[#d4b584]/40 transition-all duration-300 group"
               >
-                <div className="flex items-center justify-between font-mono text-xs text-[#c5a065] mb-2">
+                <div className="flex items-center justify-between text-xs text-[#c5a065] font-semibold mb-2">
                   <span>0{index + 1} / FOUNDATION</span>
-                  <span className="text-[10px] text-[#716c64] uppercase">{p.sub}</span>
+                  <span className="text-[10px] text-[#716c64] uppercase font-medium">{p.sub}</span>
                 </div>
 
-                <h3 className="font-serif text-2xl sm:text-3xl text-[#faf6ee] group-hover:text-[#d4b584] transition-colors">
+                <h3 className="text-xl sm:text-2xl text-[#faf6ee] font-bold tracking-tight group-hover:text-[#d4b584] transition-colors">
                   {p.title}
                 </h3>
 
-                <p className="mt-3 text-sm sm:text-base text-[#b5ada0] font-light leading-relaxed">
+                <p className="mt-3 text-sm sm:text-base text-[#b5ada0] font-normal leading-relaxed">
                   {p.desc}
                 </p>
               </div>

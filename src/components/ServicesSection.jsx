@@ -20,20 +20,20 @@ export default function ServicesSection({ onOpenLightbox }) {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between border-b border-white/10 pb-8 mb-16">
           <div>
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.3em] text-[#C5A065] font-mono mb-4">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#C5A065] font-medium mb-4">
               <span>SPECIALIZED FABRICATION & INTERIOR DESIGN</span>
               <span className="w-10 h-[1px] bg-[#D4B584]/50"></span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-6xl text-[#FAF8F5] font-normal tracking-tight">
-              10 Specialized <span className="italic font-light text-[#D4B584]">Disciplines.</span>
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#FAF8F5] font-bold tracking-tight">
+              10 Specialized <span className="text-[#D4B584] font-bold">Disciplines.</span>
             </h2>
           </div>
 
           <div className="mt-6 lg:mt-0 text-left lg:text-right">
-            <span className="font-mono text-xs text-[#D4B584] uppercase tracking-widest block">
+            <span className="text-xs text-[#D4B584] uppercase tracking-widest block font-medium">
               100% In-House Workshop Fabrication
             </span>
-            <p className="text-xs text-[#A39E96] mt-1 max-w-sm">
+            <p className="text-xs text-[#A39E96] mt-1 max-w-sm font-normal">
               Real client work delivered across Kerala, Tamil Nadu, and Karnataka with millimeter precision.
             </p>
           </div>
@@ -58,12 +58,12 @@ export default function ServicesSection({ onOpenLightbox }) {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
-                      <span className={`font-mono text-xs font-semibold px-2 py-0.5 rounded-sm border ${
+                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-sm border ${
                         isSelected ? 'text-[#D4B584] border-[#D4B584]/40 bg-[#D4B584]/10' : 'text-stone-400 border-white/10'
                       }`}>
                         {srv.number}
                       </span>
-                      <h3 className={`font-serif text-lg sm:text-xl transition-colors ${
+                      <h3 className={`text-lg sm:text-xl font-bold tracking-tight transition-colors ${
                         isSelected ? 'text-[#FAF8F5]' : 'text-stone-300 group-hover:text-white'
                       }`}>
                         {srv.title}
@@ -136,21 +136,21 @@ export default function ServicesSection({ onOpenLightbox }) {
 
               {/* Top Discipline Tag */}
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 bg-black/70 backdrop-blur-md border border-[#D4B584]/40 text-[10px] uppercase font-mono tracking-widest text-[#D4B584]">
+                <span className="px-3 py-1 bg-black/70 backdrop-blur-md border border-[#D4B584]/40 text-[10px] uppercase font-semibold tracking-wider text-[#D4B584]">
                   DISCIPLINE {current.number} • REAL CLIENT WORK
                 </span>
               </div>
 
               {/* Bottom Information Glass Card */}
               <div className="absolute bottom-6 left-6 right-6 p-6 bg-black/80 backdrop-blur-md border border-white/10 rounded-sm">
-                <div className="flex items-center space-x-2 text-[10px] uppercase font-mono tracking-widest text-[#D4B584] mb-1">
+                <div className="flex items-center space-x-2 text-[10px] uppercase font-semibold tracking-wider text-[#D4B584] mb-1">
                   <Sparkles className="w-3 h-3 text-[#D4B584]" />
                   <span>ORIGINAL CLIENT SITE EXECUTION</span>
                 </div>
-                <h4 className="font-serif text-2xl sm:text-3xl text-[#FAF8F5]">
+                <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-[#FAF8F5]">
                   {current.title}
                 </h4>
-                <p className="text-xs sm:text-sm text-[#C4BCB1] mt-2 font-light line-clamp-2">
+                <p className="text-xs sm:text-sm text-[#C4BCB1] mt-2 font-normal line-clamp-2 leading-relaxed">
                   {current.tagline}
                 </p>
 
