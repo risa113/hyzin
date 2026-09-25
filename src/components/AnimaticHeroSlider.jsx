@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowRight, Maximize2, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { HERO_SLIDES } from '../data/clientAssets';
 import { statsData } from '../data/testimonialsData';
 
@@ -126,52 +126,15 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
             >
               <span>EXPLORE ALL 10 DISCIPLINES</span>
             </button>
-
-            {onOpenLightbox && (
-              <button
-                onClick={() => onOpenLightbox(slides.map(s => s.image), currentSlide, active.title, active.service)}
-                className="hidden sm:inline-flex p-4 bg-[#341910]/60 hover:bg-[#CFB291] hover:text-[#341910] text-[#FCFCF6] border border-[#CFB291]/20 transition-colors backdrop-blur-md"
-                title="View Fullscreen High-Res Photo"
-              >
-                <Maximize2 className="w-4 h-4" />
-              </button>
-            )}
           </div>
 
         </div>
       </div>
 
-      {/* Slide Navigation Controls & Interactive Thumbnails */}
-      <div className="relative z-20 w-full max-w-full overflow-hidden border-t border-[#CFB291]/20 bg-[#341910]/95 backdrop-blur-md mt-4 sm:mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4 overflow-hidden">
-          
-          {/* Visual Slide Thumbnails Preview Bar */}
-          <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto max-w-full pb-1 scrollbar-none w-full sm:w-auto">
-            {slides.map((s, idx) => (
-              <button
-                key={s.id}
-                onClick={() => setCurrentSlide(idx)}
-                className={`relative flex items-center gap-1.5 sm:gap-2 p-1 sm:p-1.5 rounded-lg sm:rounded-xl border transition-all flex-shrink-0 ${
-                  idx === currentSlide 
-                    ? 'bg-[#5A3122] border-[#CFB291] shadow-md scale-105' 
-                    : 'bg-[#341910]/60 border-[#CFB291]/20 opacity-70 hover:opacity-100 hover:border-[#CFB291]/50'
-                }`}
-              >
-                <div className="w-8 h-6 sm:w-10 sm:h-7 rounded-md sm:rounded-lg overflow-hidden flex-shrink-0">
-                  <img src={s.image} alt={s.service} className="w-full h-full object-cover" />
-                </div>
-                <span className="text-[9px] sm:text-[10px] font-medium text-[#FCFCF6] whitespace-nowrap hidden sm:inline pr-1">
-                  0{idx + 1}. {s.service}
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* 4 Credibility Metric Counters */}
-        <div className="border-t border-[#CFB291]/15 py-3 sm:py-5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 items-center text-white">
+      {/* 4 Credibility Metric Counters */}
+      <div className="relative z-20 w-full max-w-full overflow-hidden border-t border-[#CFB291]/20 bg-[#341910]/95 backdrop-blur-md mt-4 sm:mt-12 py-3 sm:py-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 items-center text-white">
               {statsData.map((stat, idx) => (
                 <div
                   key={idx}
@@ -192,7 +155,6 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
           </div>
         </div>
 
-      </div>
     </section>
   );
 }
