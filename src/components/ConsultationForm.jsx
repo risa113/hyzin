@@ -9,7 +9,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
     email: '',
     region: selectedRegion || 'Kerala',
     projectType: prefilledProject ? `Commission for: ${prefilledProject}` : 'Aluminium Interior',
-    budget: '₹50 Lakhs – ₹1 Crore',
+    budget: '',
     message: '',
     selectedWhatsApp: '916282549008' // Default to Line 1
   });
@@ -18,12 +18,6 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailStatus, setEmailStatus] = useState('idle'); // 'idle' | 'sending' | 'sent' | 'fallback'
 
-  const budgetOptions = [
-    '₹15 Lakhs – ₹30 Lakhs',
-    '₹30 Lakhs – ₹50 Lakhs',
-    '₹50 Lakhs – ₹1 Crore',
-    '₹1 Crore+'
-  ];
 
   const projectTypes = [
     'Aluminium Interior',
@@ -58,7 +52,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
       `*Email:* ${formData.email || 'Not provided'}\n` +
       `*Region / Location:* ${formData.region}\n` +
       `*Service Required:* ${formData.projectType}\n` +
-      `*Budget Framework:* ${formData.budget}\n` +
+      `*Budget Framework:* ${formData.budget.trim() || 'Flexible / To be discussed'}\n` +
       `*Project Notes:* ${formData.message || 'Interested in initiating a private spatial consultation.'}`
     );
   };
@@ -104,7 +98,7 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
           "Email Address": formData.email || 'Not provided',
           "Region / Location": formData.region,
           "Service Typology": formData.projectType,
-          "Budget Framework": formData.budget,
+          "Budget Framework": formData.budget.trim() || 'Flexible / To be discussed',
           "Spatial Notes": formData.message || 'Standard consultation requested.',
           "Dispatched WhatsApp Line": formData.selectedWhatsApp === '916282549008' ? '+91 6282549008 (Line 1)' : '+91 8848023041 (Line 2)',
           "Target Studio Email": "Muhammedashad395@gmail.com",
@@ -473,22 +467,14 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
                   <label className="block text-[11px] uppercase font-mono tracking-wider text-[#CFB291] mb-2">
                     Anticipated Budget Framework
                   </label>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    {budgetOptions.map((opt) => (
-                      <button
-                        type="button"
-                        key={opt}
-                        onClick={() => setFormData({ ...formData, budget: opt })}
-                        className={`py-2.5 px-2 text-[10px] font-mono uppercase tracking-wider text-center border transition-all ${
-                          formData.budget === opt
-                            ? 'bg-[#CFB291] text-[#341910] font-bold border-[#CFB291] shadow-md'
-                            : 'bg-[#341910] text-[#CFB291] border-[#CFB291]/20 hover:border-[#CFB291]/50'
-                        }`}
-                      >
-                        {opt}
-                      </button>
-                    ))}
-                  </div>
+                  <input
+                    type="text"
+                    name="budget"
+                    value={formData.budget}
+                    onChange={handleChange}
+                    placeholder="e.g. ₹25 Lakhs, ₹50 Lakhs – ₹1 Crore, ₹1 Crore+"
+                    className="w-full px-4 py-3 bg-[#341910] border border-[#CFB291]/20 focus:border-[#CFB291] text-[#FCFCF6] placeholder-[#CFB291]/50 text-sm focus:outline-none transition-colors"
+                  />
                 </div>
 
                 {/* Message */}
