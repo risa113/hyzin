@@ -38,21 +38,21 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
         <div
           role="dialog"
           aria-label="Direct studio channels"
-          className="fixed z-50 bottom-20 sm:bottom-24 right-3 sm:right-6 left-3 sm:left-auto sm:w-96 max-w-[calc(100vw-24px)] mx-auto sm:mx-0 bg-[#0A0A0B]/98 backdrop-blur-2xl border border-[#C9A84C]/50 shadow-[0_12px_45px_rgba(0,0,0,0.85)] p-4 sm:p-5 rounded-2xl text-left text-[#F2EDE4] animate-slide-down-fast"
+          className="fixed z-50 bottom-20 sm:bottom-24 right-3 sm:right-6 left-3 sm:left-auto sm:w-96 max-w-[calc(100vw-24px)] mx-auto sm:mx-0 bg-[#341910]/98 backdrop-blur-2xl border border-[#CFB291]/50 shadow-[0_12px_45px_rgba(0,0,0,0.85)] p-4 sm:p-5 rounded-2xl text-left text-[#FCFCF6] animate-slide-down-fast"
         >
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-[#C9A84C]/20 pb-3 mb-3">
+          <div className="flex items-center justify-between border-b border-[#CFB291]/20 pb-3 mb-3">
             <div>
-              <span className="text-[10px] uppercase font-mono tracking-[0.2em] text-[#C9A84C] block font-semibold">
+              <span className="text-[10px] uppercase font-mono tracking-[0.2em] text-[#CFB291] block font-semibold">
                 DIRECT STUDIO CHANNELS
               </span>
-              <span className="text-xs text-[#F2EDE4] font-semibold">
+              <span className="text-xs text-[#FCFCF6] font-semibold">
                 Connect with HYZIN Interior
               </span>
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="w-7 h-7 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-[#C9A84C] hover:text-[#F2EDE4] transition-colors"
+              className="w-7 h-7 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-[#CFB291] hover:text-[#FCFCF6] transition-colors"
               aria-label="Close channels menu"
             >
               <X className="w-4 h-4" />
@@ -62,7 +62,7 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
           {/* 3 Unified Channels List */}
           <div className="space-y-2.5">
             {/* 1. WhatsApp Channel */}
-            <div className="p-3 bg-[#141416] hover:bg-[#25D366]/15 border border-[#C9A84C]/20 hover:border-[#25D366]/70 rounded-xl transition-all group">
+            <div className="p-3 bg-[#45241A] hover:bg-[#25D366]/15 border border-[#CFB291]/20 hover:border-[#25D366]/70 rounded-xl transition-all group">
               <a
                 href={whatsapp1}
                 target="_blank"
@@ -75,17 +75,17 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-[#F2EDE4] group-hover:text-[#25D366] transition-colors">
+                    <span className="text-xs font-bold text-[#FCFCF6] group-hover:text-[#25D366] transition-colors">
                       WhatsApp Direct
                     </span>
                     <span className="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-[#25D366]/20 text-[#25D366] font-semibold">
                       Instant
                     </span>
                   </div>
-                  <span className="text-[11px] text-[#C9A84C] block truncate font-mono mt-0.5">
+                  <span className="text-[11px] text-[#CFB291] block truncate font-mono mt-0.5">
                     +91 6282549008
                   </span>
-                  <span className="text-[9px] text-[#C9A84C]/70 block truncate">
+                  <span className="text-[9px] text-[#CFB291]/70 block truncate">
                     Primary Studio Desk • Floor Plans & Quotes
                   </span>
                 </div>
@@ -93,7 +93,7 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
 
               {/* Secondary WhatsApp Line Quick Trigger */}
               <div className="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[10px]">
-                <span className="text-[#C9A84C] font-mono">Line 2: +91 8848023041</span>
+                <span className="text-[#CFB291] font-mono">Line 2: +91 8848023041</span>
                 <a
                   href={whatsapp2}
                   target="_blank"
@@ -113,14 +113,14 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleChannelClick}
-              className="p-3 bg-[#141416] hover:bg-[#E1306C]/15 border border-[#C9A84C]/20 hover:border-[#E1306C]/70 rounded-xl flex items-center space-x-3 transition-all group"
+              className="p-3 bg-[#45241A] hover:bg-[#E1306C]/15 border border-[#CFB291]/20 hover:border-[#E1306C]/70 rounded-xl flex items-center space-x-3 transition-all group"
             >
               <div className="w-10 h-10 rounded-xl bg-[#E1306C]/20 border border-[#E1306C]/40 flex items-center justify-center text-[#E1306C] flex-shrink-0 group-hover:scale-105 transition-transform">
                 <Send className="w-5 h-5" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-[#F2EDE4] group-hover:text-[#E1306C] transition-colors flex items-center space-x-1">
+                  <span className="text-xs font-bold text-[#FCFCF6] group-hover:text-[#E1306C] transition-colors flex items-center space-x-1">
                     <span>Instagram Direct DM</span>
                     <ArrowUpRight className="w-3 h-3 text-[#E1306C]" />
                   </span>
@@ -128,10 +128,10 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
                     Reels & DM
                   </span>
                 </div>
-                <span className="text-[11px] text-[#C9A84C] block truncate font-mono mt-0.5">
+                <span className="text-[11px] text-[#CFB291] block truncate font-mono mt-0.5">
                   @hyzin.interior
                 </span>
-                <span className="text-[9px] text-[#C9A84C]/70 block truncate">
+                <span className="text-[9px] text-[#CFB291]/70 block truncate">
                   Send reels, design references & photos
                 </span>
               </div>
@@ -141,25 +141,25 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
             <a
               href={emailUrl}
               onClick={handleChannelClick}
-              className="p-3 bg-[#141416] hover:bg-[#C9A84C]/15 border border-[#C9A84C]/20 hover:border-[#C9A84C]/70 rounded-xl flex items-center space-x-3 transition-all group"
+              className="p-3 bg-[#45241A] hover:bg-[#CFB291]/15 border border-[#CFB291]/20 hover:border-[#CFB291]/70 rounded-xl flex items-center space-x-3 transition-all group"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#C9A84C]/20 border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] flex-shrink-0 group-hover:scale-105 transition-transform">
+              <div className="w-10 h-10 rounded-xl bg-[#CFB291]/20 border border-[#CFB291]/40 flex items-center justify-center text-[#CFB291] flex-shrink-0 group-hover:scale-105 transition-transform">
                 <Mail className="w-5 h-5" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-[#F2EDE4] group-hover:text-[#C9A84C] transition-colors flex items-center space-x-1">
+                  <span className="text-xs font-bold text-[#FCFCF6] group-hover:text-[#CFB291] transition-colors flex items-center space-x-1">
                     <span>Direct Email Desk</span>
-                    <ArrowUpRight className="w-3 h-3 text-[#C9A84C]" />
+                    <ArrowUpRight className="w-3 h-3 text-[#CFB291]" />
                   </span>
-                  <span className="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-[#C9A84C]/20 text-[#C9A84C] font-semibold">
+                  <span className="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded bg-[#CFB291]/20 text-[#CFB291] font-semibold">
                     Official
                   </span>
                 </div>
-                <span className="text-[11px] text-[#C9A84C] block truncate font-mono mt-0.5">
+                <span className="text-[11px] text-[#CFB291] block truncate font-mono mt-0.5">
                   Muhammedashad395@gmail.com
                 </span>
-                <span className="text-[9px] text-[#C9A84C]/70 block truncate">
+                <span className="text-[9px] text-[#CFB291]/70 block truncate">
                   Send architectural blueprints & estimation requests
                 </span>
               </div>
@@ -168,13 +168,13 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
 
           {/* Quick Consultation CTA */}
           {onOpenConsultation && (
-            <div className="mt-3 pt-3 border-t border-[#C9A84C]/20">
+            <div className="mt-3 pt-3 border-t border-[#CFB291]/20">
               <button
                 onClick={() => {
                   setIsOpen(false);
                   onOpenConsultation();
                 }}
-                className="w-full py-2.5 px-3 bg-[#C9A84C] hover:bg-[#F2EDE4] text-[#0A0A0B] text-[11px] uppercase font-bold tracking-wider rounded-lg transition-colors flex items-center justify-center space-x-1.5 shadow-md"
+                className="w-full py-2.5 px-3 bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-[11px] uppercase font-bold tracking-wider rounded-lg transition-colors flex items-center justify-center space-x-1.5 shadow-md"
               >
                 <span>BOOK FREE CONSULTATION</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -190,8 +190,8 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
           onClick={() => setIsOpen(!isOpen)}
           className={`group relative flex items-center space-x-2.5 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-full border-2 transition-all duration-300 shadow-[0_6px_30px_rgba(212,175,55,0.35)] active:scale-95 ${
             isOpen
-              ? 'bg-[#C9A84C] text-[#0A0A0B] border-[#F2EDE4]'
-              : 'bg-[#0A0A0B]/95 hover:bg-[#141416] text-[#F2EDE4] border-[#C9A84C]'
+              ? 'bg-[#CFB291] text-[#341910] border-[#FCFCF6]'
+              : 'bg-[#341910]/95 hover:bg-[#45241A] text-[#FCFCF6] border-[#CFB291]'
           }`}
           title="Direct Contact via WhatsApp, Instagram or Email"
           aria-expanded={isOpen}
@@ -216,17 +216,17 @@ export default function FloatingWhatsApp({ onOpenConsultation }) {
                 <span className="w-6 h-6 rounded-full bg-[#E1306C] text-white flex items-center justify-center shadow-sm">
                   <Send className="w-3 h-3" />
                 </span>
-                <span className="w-6 h-6 rounded-full bg-[#C9A84C] text-[#0A0A0B] flex items-center justify-center shadow-sm">
+                <span className="w-6 h-6 rounded-full bg-[#CFB291] text-[#341910] flex items-center justify-center shadow-sm">
                   <Mail className="w-3 h-3" />
                 </span>
               </div>
 
               {/* Text Label */}
               <div className="flex flex-col text-left pr-0.5">
-                <span className="text-[11px] sm:text-xs font-bold text-[#F2EDE4] tracking-wide leading-none">
+                <span className="text-[11px] sm:text-xs font-bold text-[#FCFCF6] tracking-wide leading-none">
                   Contact
                 </span>
-                <span className="text-[8px] sm:text-[9px] uppercase font-mono tracking-wider text-[#C9A84C] leading-tight">
+                <span className="text-[8px] sm:text-[9px] uppercase font-mono tracking-wider text-[#CFB291] leading-tight">
                   3 Channels
                 </span>
               </div>

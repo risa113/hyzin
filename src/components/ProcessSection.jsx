@@ -48,21 +48,21 @@ export default function ProcessSection({ onOpenConsultation }) {
   ];
 
   return (
-    <section id="process" className="py-24 sm:py-32 bg-[#0A0A0B]">
+    <section id="process" className="py-24 sm:py-32 bg-[#341910]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#C9A84C]/20 pb-8 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#CFB291]/20 pb-8 mb-16">
           <div>
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium mb-3">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-medium mb-3">
               <span>THE INTERIOR & FABRICATION JOURNEY</span>
-              <span className="w-8 h-[1px] bg-[#C9A84C]/40"></span>
+              <span className="w-8 h-[1px] bg-[#CFB291]/40"></span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#F2EDE4] font-bold tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FCFCF6] font-bold tracking-tight">
               Process & Precision
             </h2>
           </div>
-          <p className="mt-4 md:mt-0 text-sm text-[#C9A84C] font-normal leading-relaxed max-w-sm">
+          <p className="mt-4 md:mt-0 text-sm text-[#CFB291] font-normal leading-relaxed max-w-sm">
             A disciplined five-stage methodology engineered to eliminate uncertainty and deliver pristine design fidelity.
           </p>
         </div>
@@ -79,34 +79,34 @@ export default function ProcessSection({ onOpenConsultation }) {
                 onClick={() => setActiveStep(idx)}
                 className={`p-6 sm:p-7 border cursor-pointer transition-all duration-500 flex flex-col justify-between group shadow-lg ${
                   isActive
-                    ? 'border-[#C9A84C] shadow-xl shadow-[#C9A84C]/10 bg-[#1C1C20]'
-                    : 'bg-[#141416] border-[#C9A84C]/20 hover:border-[#C9A84C]/50'
+                    ? 'border-[#CFB291] shadow-xl shadow-[#CFB291]/10 bg-[#5A3122]'
+                    : 'bg-[#45241A] border-[#CFB291]/20 hover:border-[#CFB291]/50'
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl text-[#C9A84C] font-bold">
+                    <span className="text-2xl text-[#CFB291] font-bold">
                       {step.num}
                     </span>
-                    <Icon className={`w-5 h-5 transition-colors ${isActive ? 'text-[#C9A84C]' : 'text-[#C9A84C]'}`} />
+                    <Icon className={`w-5 h-5 transition-colors ${isActive ? 'text-[#CFB291]' : 'text-[#CFB291]'}`} />
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight mb-1 group-hover:text-[#C9A84C] transition-colors">
+                  <h3 className="text-xl sm:text-2xl text-[#FCFCF6] font-bold tracking-tight mb-1 group-hover:text-[#CFB291] transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-[11px] uppercase tracking-wider text-[#C9A84C]/80 mb-4 font-medium">
+                  <p className="text-[11px] uppercase tracking-wider text-[#CFB291]/80 mb-4 font-medium">
                     {step.subtitle}
                   </p>
-                  <p className="text-xs text-[#C9A84C] font-normal leading-relaxed">
+                  <p className="text-xs text-[#CFB291] font-normal leading-relaxed">
                     {step.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#C9A84C]/20">
-                  <span className="text-[9px] uppercase tracking-wider text-[#C9A84C] font-semibold block mb-1">
+                <div className="mt-6 pt-4 border-t border-[#CFB291]/20">
+                  <span className="text-[9px] uppercase tracking-wider text-[#CFB291] font-semibold block mb-1">
                     DELIVERABLE
                   </span>
-                  <span className="text-[11px] text-[#F2EDE4] font-medium leading-tight block">
+                  <span className="text-[11px] text-[#FCFCF6] font-medium leading-tight block">
                     {step.deliverable}
                   </span>
                 </div>
@@ -119,7 +119,7 @@ export default function ProcessSection({ onOpenConsultation }) {
         <div className="mt-16 text-center">
           <button
             onClick={onOpenConsultation}
-            className="px-8 py-4 bg-transparent border border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-[#0A0A0B] text-xs uppercase tracking-[0.25em] font-bold transition-all duration-300 inline-flex items-center space-x-3 shadow-lg"
+            className="px-8 py-4 bg-transparent border border-[#CFB291] text-[#CFB291] hover:bg-[#CFB291] hover:text-[#341910] text-xs uppercase tracking-[0.25em] font-bold transition-all duration-300 inline-flex items-center space-x-3 shadow-lg"
           >
             <span>DISCUSS YOUR PROJECT TIMELINE</span>
             <ArrowRight className="w-4 h-4" />

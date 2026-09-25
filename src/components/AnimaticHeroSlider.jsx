@@ -50,7 +50,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
 
   return (
     <section
-      className="relative min-h-[calc(100svh-64px)] sm:min-h-[90vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#0A0A0B] select-none w-full max-w-full no-reveal"
+      className="relative min-h-[calc(100svh-64px)] sm:min-h-[90vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-[#341910] select-none w-full max-w-full no-reveal"
       onMouseEnter={() => setIsPlaying(false)}
       onMouseLeave={() => setIsPlaying(true)}
       onTouchStart={handleTouchStart}
@@ -74,8 +74,8 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
               }`}
             />
             {/* Cinematic Gradient Overlays in Coffee Brown */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B] via-[#1C1C20]/40 to-[#0A0A0B]/40" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0B]/90 via-[#1C1C20]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#341910] via-[#5A3122]/40 to-[#341910]/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#341910]/90 via-[#5A3122]/40 to-transparent" />
           </div>
         ))}
       </div>
@@ -85,28 +85,28 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
         <div key={currentSlide} className="max-w-3xl animate-slide-right-pop">
           
           {/* Location & Discipline Badge */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1 sm:px-3.5 sm:py-1.5 bg-[#0A0A0B]/80 backdrop-blur-md border border-[#C9A84C]/50 shadow-sm mb-3 sm:mb-6 animate-slide-right-pop">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
-            <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#F2EDE4] font-medium">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 sm:px-3.5 sm:py-1.5 bg-[#341910]/80 backdrop-blur-md border border-[#CFB291]/50 shadow-sm mb-3 sm:mb-6 animate-slide-right-pop">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#CFB291] animate-pulse" />
+            <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#FCFCF6] font-medium">
               {active.locationTag}
             </span>
           </div>
 
           {/* Editorial Headline */}
-          <h1 className="text-2xl sm:text-5xl lg:text-7xl font-extrabold text-[#F2EDE4] leading-[1.15] sm:leading-[1.1] tracking-tight drop-shadow-md transition-all duration-500 animate-slide-right-pop delay-100">
+          <h1 className="text-2xl sm:text-5xl lg:text-7xl font-extrabold text-[#FCFCF6] leading-[1.15] sm:leading-[1.1] tracking-tight drop-shadow-md transition-all duration-500 animate-slide-right-pop delay-100">
             {active.title}{' '}
-            <span className="text-[#C9A84C] font-extrabold">
+            <span className="text-[#CFB291] font-extrabold">
               {active.emphasis}
             </span>{' '}
             {active.titleEnd}
           </h1>
 
           {/* Supporting Statement */}
-          <p className="mt-2.5 sm:mt-6 text-xs sm:text-base lg:text-lg text-[#C9A84C] font-normal leading-relaxed max-w-2xl transition-all duration-500 line-clamp-3 sm:line-clamp-none animate-slide-right-pop delay-150">
+          <p className="mt-2.5 sm:mt-6 text-xs sm:text-base lg:text-lg text-[#CFB291] font-normal leading-relaxed max-w-2xl transition-all duration-500 line-clamp-3 sm:line-clamp-none animate-slide-right-pop delay-150">
             {active.tagline}
           </p>
 
-          <p className="mt-1.5 sm:mt-3 text-[10px] sm:text-sm uppercase tracking-[0.18em] sm:tracking-[0.2em] text-[#C9A84C] font-medium animate-slide-right-pop delay-200">
+          <p className="mt-1.5 sm:mt-3 text-[10px] sm:text-sm uppercase tracking-[0.18em] sm:tracking-[0.2em] text-[#CFB291] font-medium animate-slide-right-pop delay-200">
             {active.badge}
           </p>
 
@@ -114,7 +114,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
           <div className="mt-4 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-5 animate-pop-up delay-300">
             <button
               onClick={onOpenConsultation}
-              className="px-6 py-3 sm:px-8 sm:py-4 bg-[#C9A84C] hover:bg-[#F2EDE4] text-[#0A0A0B] text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-bold transition-all duration-300 shadow-xl flex items-center justify-center space-x-2.5 group rounded-sm"
+              className="px-6 py-3 sm:px-8 sm:py-4 bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-bold transition-all duration-300 shadow-xl flex items-center justify-center space-x-2.5 group rounded-sm"
             >
               <span>COMMISSION YOUR SPACE</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -122,7 +122,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
 
             <button
               onClick={onExploreWork}
-              className="px-6 py-2.5 sm:px-8 sm:py-4 bg-[#141416]/80 hover:bg-[#1C1C20] border border-[#C9A84C]/30 text-[#F2EDE4] text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-medium transition-all duration-300 backdrop-blur-md shadow-sm flex items-center justify-center space-x-2.5 rounded-sm"
+              className="px-6 py-2.5 sm:px-8 sm:py-4 bg-[#45241A]/80 hover:bg-[#5A3122] border border-[#CFB291]/30 text-[#FCFCF6] text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-medium transition-all duration-300 backdrop-blur-md shadow-sm flex items-center justify-center space-x-2.5 rounded-sm"
             >
               <span>EXPLORE ALL 10 DISCIPLINES</span>
             </button>
@@ -130,7 +130,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
             {onOpenLightbox && (
               <button
                 onClick={() => onOpenLightbox(slides.map(s => s.image), currentSlide, active.title, active.service)}
-                className="hidden sm:inline-flex p-4 bg-[#0A0A0B]/60 hover:bg-[#C9A84C] hover:text-[#0A0A0B] text-[#F2EDE4] border border-[#C9A84C]/20 transition-colors backdrop-blur-md"
+                className="hidden sm:inline-flex p-4 bg-[#341910]/60 hover:bg-[#CFB291] hover:text-[#341910] text-[#FCFCF6] border border-[#CFB291]/20 transition-colors backdrop-blur-md"
                 title="View Fullscreen High-Res Photo"
               >
                 <Maximize2 className="w-4 h-4" />
@@ -142,7 +142,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
       </div>
 
       {/* Slide Navigation Controls & Interactive Thumbnails */}
-      <div className="relative z-20 w-full max-w-full overflow-hidden border-t border-[#C9A84C]/20 bg-[#0A0A0B]/95 backdrop-blur-md mt-4 sm:mt-12">
+      <div className="relative z-20 w-full max-w-full overflow-hidden border-t border-[#CFB291]/20 bg-[#341910]/95 backdrop-blur-md mt-4 sm:mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4 overflow-hidden">
           
           {/* Visual Slide Thumbnails Preview Bar */}
@@ -153,14 +153,14 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
                 onClick={() => setCurrentSlide(idx)}
                 className={`relative flex items-center gap-1.5 sm:gap-2 p-1 sm:p-1.5 rounded-lg sm:rounded-xl border transition-all flex-shrink-0 ${
                   idx === currentSlide 
-                    ? 'bg-[#1C1C20] border-[#C9A84C] shadow-md scale-105' 
-                    : 'bg-[#0A0A0B]/60 border-[#C9A84C]/20 opacity-70 hover:opacity-100 hover:border-[#C9A84C]/50'
+                    ? 'bg-[#5A3122] border-[#CFB291] shadow-md scale-105' 
+                    : 'bg-[#341910]/60 border-[#CFB291]/20 opacity-70 hover:opacity-100 hover:border-[#CFB291]/50'
                 }`}
               >
                 <div className="w-8 h-6 sm:w-10 sm:h-7 rounded-md sm:rounded-lg overflow-hidden flex-shrink-0">
                   <img src={s.image} alt={s.service} className="w-full h-full object-cover" />
                 </div>
-                <span className="text-[9px] sm:text-[10px] font-medium text-[#F2EDE4] whitespace-nowrap hidden sm:inline pr-1">
+                <span className="text-[9px] sm:text-[10px] font-medium text-[#FCFCF6] whitespace-nowrap hidden sm:inline pr-1">
                   0{idx + 1}. {s.service}
                 </span>
               </button>
@@ -169,21 +169,21 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
         </div>
 
         {/* 4 Credibility Metric Counters */}
-        <div className="border-t border-[#C9A84C]/15 py-3 sm:py-5">
+        <div className="border-t border-[#CFB291]/15 py-3 sm:py-5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 items-center text-white">
               {statsData.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col border-l border-[#C9A84C]/20 pl-3 sm:pl-6 first:border-l-0"
+                  className="flex flex-col border-l border-[#CFB291]/20 pl-3 sm:pl-6 first:border-l-0"
                 >
-                  <span className="text-lg sm:text-3xl text-[#F2EDE4] font-bold tracking-tight">
+                  <span className="text-lg sm:text-3xl text-[#FCFCF6] font-bold tracking-tight">
                     {stat.value}
                   </span>
-                  <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.18em] text-[#C9A84C] font-medium mt-0.5">
+                  <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.18em] text-[#CFB291] font-medium mt-0.5">
                     {stat.label}
                   </span>
-                  <span className="text-[9px] text-[#C9A84C] tracking-wider hidden sm:block">
+                  <span className="text-[9px] text-[#CFB291] tracking-wider hidden sm:block">
                     {stat.detail}
                   </span>
                 </div>

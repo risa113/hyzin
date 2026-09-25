@@ -52,33 +52,33 @@ export default function ServicesPage({
   ];
 
   return (
-    <div className="animate-page-enter bg-[#0A0A0B]">
+    <div className="animate-page-enter bg-[#341910]">
 
       {/* ─── 01 — PAGE HEADER ──────────────────────────────────────────────────── */}
-      <section className="w-full bg-[#0A0A0B] pt-32 pb-24 border-b border-[#C9A84C]/20">
+      <section className="w-full bg-[#341910] pt-32 pb-24 border-b border-[#CFB291]/20">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
 
           {/* Chapter label */}
           <div className="flex items-center gap-3 mb-10">
-            <Sparkles className="w-3.5 h-3.5 text-[#C9A84C]" />
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#C9A84C] font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-[#CFB291]" />
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#CFB291] font-semibold">
               — THE 10 OFFICIAL DISCIPLINES —
             </span>
-            <span className="flex-1 max-w-[120px] h-[1px] bg-[#C9A84C]/30" />
+            <span className="flex-1 max-w-[120px] h-[1px] bg-[#CFB291]/30" />
           </div>
 
           {/* Giant editorial heading */}
           <div className="mb-10">
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-[-0.02em] text-[#F2EDE4] uppercase">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-[-0.02em] text-[#FCFCF6] uppercase">
               WHAT WE
             </h1>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-[-0.02em] text-[#C9A84C] uppercase">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-[-0.02em] text-[#CFB291] uppercase">
               CREATE.
             </h1>
           </div>
 
           {/* Subtext */}
-          <p className="max-w-xl text-base sm:text-lg text-[#F2EDE4]/60 font-light leading-relaxed tracking-wide">
+          <p className="max-w-xl text-base sm:text-lg text-[#FCFCF6]/60 font-light leading-relaxed tracking-wide">
             Ten specialized disciplines covering complete interior design, modular joinery,
             and structural metal fabrication across Kerala, Tamil Nadu, and Karnataka.
           </p>
@@ -88,21 +88,21 @@ export default function ServicesPage({
       {/* ─── 02 — SERVICES SHOWCASE ────────────────────────────────────────────── */}
       <section
         id="services-showcase"
-        className="w-full bg-[#1C1C20] scroll-mt-24 py-20"
+        className="w-full bg-[#5A3122] scroll-mt-24 py-20"
       >
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
 
           {/* Section header row */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-[#C9A84C]/15 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-[#CFB291]/15 gap-4">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] font-semibold block mb-2">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#CFB291] font-semibold block mb-2">
                 01 — DISCIPLINE CATALOGUE &nbsp;·&nbsp; {servicesData.length} TOTAL
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#F2EDE4] font-bold tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FCFCF6] font-bold tracking-tight">
                 Explore All 10 Services
               </h2>
             </div>
-            <p className="text-[11px] text-[#C9A84C]/70 font-medium uppercase tracking-[0.2em] max-w-xs text-right">
+            <p className="text-[11px] text-[#CFB291]/70 font-medium uppercase tracking-[0.2em] max-w-xs text-right">
               Select any discipline to inspect photography, deliverables & specs
             </p>
           </div>
@@ -117,8 +117,8 @@ export default function ServicesPage({
                   onClick={() => setActiveService(idx)}
                   className={`px-4 py-2 text-[10px] font-bold whitespace-nowrap transition-all duration-300 flex items-center gap-1.5 cursor-pointer shrink-0 border uppercase tracking-[0.15em] ${
                     isSelected
-                      ? 'bg-[#C9A84C] text-[#0A0A0B] border-[#C9A84C] shadow-lg shadow-[#C9A84C]/20'
-                      : 'bg-transparent text-[#F2EDE4]/70 border-[#C9A84C]/20 hover:border-[#C9A84C]/60 hover:text-[#C9A84C]'
+                      ? 'bg-[#CFB291] text-[#341910] border-[#CFB291] shadow-lg shadow-[#CFB291]/20'
+                      : 'bg-transparent text-[#FCFCF6]/70 border-[#CFB291]/20 hover:border-[#CFB291]/60 hover:text-[#CFB291]'
                   }`}
                 >
                   <span className="opacity-70">{srv.number}</span>
@@ -141,8 +141,8 @@ export default function ServicesPage({
                     onClick={() => setActiveService(idx)}
                     className={`px-6 py-5 cursor-pointer border transition-all duration-300 ${
                       isSelected
-                        ? 'bg-[#141416] border-[#C9A84C] shadow-2xl shadow-[#C9A84C]/10 ring-1 ring-[#C9A84C]/30'
-                        : 'bg-[#141416]/50 border-[#C9A84C]/15 hover:border-[#C9A84C]/40 hover:bg-[#141416]'
+                        ? 'bg-[#45241A] border-[#CFB291] shadow-2xl shadow-[#CFB291]/10 ring-1 ring-[#CFB291]/30'
+                        : 'bg-[#45241A]/50 border-[#CFB291]/15 hover:border-[#CFB291]/40 hover:bg-[#45241A]'
                     }`}
                   >
                     {/* Card header row */}
@@ -150,39 +150,39 @@ export default function ServicesPage({
                       <div className="flex items-center gap-4">
                         <span className={`text-[10px] font-bold px-2.5 py-1 tracking-[0.15em] uppercase ${
                           isSelected
-                            ? 'bg-[#C9A84C] text-[#0A0A0B]'
-                            : 'bg-[#0A0A0B] text-[#C9A84C] border border-[#C9A84C]/30'
+                            ? 'bg-[#CFB291] text-[#341910]'
+                            : 'bg-[#341910] text-[#CFB291] border border-[#CFB291]/30'
                         }`}>
                           {srv.number}
                         </span>
                         <h3 className={`text-base sm:text-lg font-bold tracking-tight transition-colors duration-300 ${
-                          isSelected ? 'text-[#F2EDE4]' : 'text-[#F2EDE4]/80'
+                          isSelected ? 'text-[#FCFCF6]' : 'text-[#FCFCF6]/80'
                         }`}>
                           {srv.title}
                         </h3>
                       </div>
                       <ArrowUpRight
                         className={`w-4 h-4 shrink-0 transition-all duration-300 ${
-                          isSelected ? 'rotate-45 text-[#C9A84C] scale-125' : 'text-[#C9A84C]/50'
+                          isSelected ? 'rotate-45 text-[#CFB291] scale-125' : 'text-[#CFB291]/50'
                         }`}
                       />
                     </div>
 
                     {/* Expanded details on selection */}
                     {isSelected && (
-                      <div className="mt-5 pt-5 border-t border-[#C9A84C]/20 animate-fadeIn">
-                        <p className="text-sm text-[#F2EDE4]/70 font-light leading-relaxed mb-5">
+                      <div className="mt-5 pt-5 border-t border-[#CFB291]/20 animate-fadeIn">
+                        <p className="text-sm text-[#FCFCF6]/70 font-light leading-relaxed mb-5">
                           {srv.description}
                         </p>
 
-                        <div className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C9A84C] mb-3">
+                        <div className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#CFB291] mb-3">
                           Included Deliverables &amp; Scope
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-5">
                           {srv.deliverables.map((item, i) => (
-                            <div key={i} className="flex items-center gap-2 text-xs text-[#F2EDE4]/80">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#C9A84C] shrink-0" />
+                            <div key={i} className="flex items-center gap-2 text-xs text-[#FCFCF6]/80">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#CFB291] shrink-0" />
                               <span className="truncate">{item}</span>
                             </div>
                           ))}
@@ -197,7 +197,7 @@ export default function ServicesPage({
                               const allPhotos = [srv.image, ...(srv.gallery || [])];
                               onOpenLightbox && onOpenLightbox(allPhotos, 0, srv.title, srv.title);
                             }}
-                            className="px-4 py-2 bg-[#C9A84C] text-[#0A0A0B] font-bold text-[10px] uppercase tracking-[0.15em] flex items-center gap-1.5 shadow"
+                            className="px-4 py-2 bg-[#CFB291] text-[#341910] font-bold text-[10px] uppercase tracking-[0.15em] flex items-center gap-1.5 shadow"
                           >
                             <Maximize2 className="w-3.5 h-3.5" />
                             <span>View {1 + (srv.gallery?.length || 0)} Photos</span>
@@ -209,7 +209,7 @@ export default function ServicesPage({
                               e.stopPropagation();
                               onOpenConsultation();
                             }}
-                            className="text-[10px] uppercase tracking-[0.2em] text-[#C9A84C] hover:text-[#F2EDE4] font-bold transition-colors"
+                            className="text-[10px] uppercase tracking-[0.2em] text-[#CFB291] hover:text-[#FCFCF6] font-bold transition-colors"
                           >
                             Commission →
                           </button>
@@ -230,7 +230,7 @@ export default function ServicesPage({
                   const allServicePhotos = [selected.image, ...(selected.gallery || [])];
                   onOpenLightbox && onOpenLightbox(allServicePhotos, 0, selected.title, selected.title);
                 }}
-                className="relative w-full h-[400px] sm:h-[500px] border border-[#C9A84C]/20 overflow-hidden shadow-2xl bg-[#141416] cursor-pointer group"
+                className="relative w-full h-[400px] sm:h-[500px] border border-[#CFB291]/20 overflow-hidden shadow-2xl bg-[#45241A] cursor-pointer group"
               >
                 <img
                   src={selected.image}
@@ -238,29 +238,29 @@ export default function ServicesPage({
                   className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
                 />
                 {/* Bottom gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B]/95 via-[#0A0A0B]/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#341910]/95 via-[#341910]/25 to-transparent" />
 
                 {/* Expand icon */}
                 <button
                   type="button"
-                  className="absolute top-5 right-5 p-2.5 bg-[#0A0A0B]/80 backdrop-blur-md text-[#F2EDE4] border border-[#C9A84C]/30 opacity-80 group-hover:opacity-100 transition-opacity"
+                  className="absolute top-5 right-5 p-2.5 bg-[#341910]/80 backdrop-blur-md text-[#FCFCF6] border border-[#CFB291]/30 opacity-80 group-hover:opacity-100 transition-opacity"
                   aria-label="Open fullscreen gallery"
                 >
-                  <Maximize2 className="w-4 h-4 text-[#C9A84C]" />
+                  <Maximize2 className="w-4 h-4 text-[#CFB291]" />
                 </button>
 
                 {/* Info overlay panel — sharp corners */}
-                <div className="absolute bottom-5 left-5 right-5 p-5 bg-[#0A0A0B]/95 backdrop-blur-md border border-[#C9A84C]/20 shadow-xl">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#C9A84C] block mb-1.5 font-semibold">
+                <div className="absolute bottom-5 left-5 right-5 p-5 bg-[#341910]/95 backdrop-blur-md border border-[#CFB291]/20 shadow-xl">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#CFB291] block mb-1.5 font-semibold">
                     DISCIPLINE {selected.number} &nbsp;·&nbsp; ORIGINAL CLIENT WORK
                   </span>
-                  <h4 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight">
+                  <h4 className="text-xl sm:text-2xl text-[#FCFCF6] font-bold tracking-tight">
                     {selected.title}
                   </h4>
-                  <p className="text-xs text-[#F2EDE4]/60 mt-1.5 font-light line-clamp-2">
+                  <p className="text-xs text-[#FCFCF6]/60 mt-1.5 font-light line-clamp-2">
                     {selected.tagline}
                   </p>
-                  <div className="mt-4 pt-3 border-t border-[#C9A84C]/20 flex items-center justify-between text-[10px] text-[#C9A84C] font-semibold uppercase tracking-[0.15em]">
+                  <div className="mt-4 pt-3 border-t border-[#CFB291]/20 flex items-center justify-between text-[10px] text-[#CFB291] font-semibold uppercase tracking-[0.15em]">
                     <span className="flex items-center gap-1.5">
                       <Maximize2 className="w-3.5 h-3.5" />
                       <span>TOUCH TO VIEW FULLSCREEN</span>
@@ -280,7 +280,7 @@ export default function ServicesPage({
                         const allServicePhotos = [selected.image, ...(selected.gallery || [])];
                         onOpenLightbox && onOpenLightbox(allServicePhotos, i + 1, selected.title, selected.title);
                       }}
-                      className="w-24 h-16 flex-shrink-0 border border-[#C9A84C]/20 overflow-hidden cursor-pointer hover:border-[#C9A84C] hover:scale-105 transition-all shadow-sm"
+                      className="w-24 h-16 flex-shrink-0 border border-[#CFB291]/20 overflow-hidden cursor-pointer hover:border-[#CFB291] hover:scale-105 transition-all shadow-sm"
                     >
                       <img src={img} alt="Service detail preview" className="w-full h-full object-cover" />
                     </div>
@@ -289,18 +289,18 @@ export default function ServicesPage({
               )}
 
               {/* CTA block — sharp corners */}
-              <div className="p-6 bg-[#141416] border border-[#C9A84C]/20 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+              <div className="p-6 bg-[#45241A] border border-[#CFB291]/20 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#C9A84C] block font-bold mb-1">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#CFB291] block font-bold mb-1">
                     READY TO COMMISSION?
                   </span>
-                  <span className="text-base sm:text-lg font-bold text-[#F2EDE4]">
+                  <span className="text-base sm:text-lg font-bold text-[#FCFCF6]">
                     Inquire for {selected.title}
                   </span>
                 </div>
                 <button
                   onClick={onOpenConsultation}
-                  className="w-full sm:w-auto px-7 py-3.5 bg-[#C9A84C] hover:bg-[#F2EDE4] text-[#0A0A0B] text-[10px] uppercase tracking-[0.25em] font-bold transition-colors shadow-lg cursor-pointer"
+                  className="w-full sm:w-auto px-7 py-3.5 bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-[10px] uppercase tracking-[0.25em] font-bold transition-colors shadow-lg cursor-pointer"
                 >
                   START YOUR PROJECT
                 </button>
@@ -312,59 +312,59 @@ export default function ServicesPage({
       </section>
 
       {/* ─── 03 — GEOMETRY PILLARS ─────────────────────────────────────────────── */}
-      <section className="w-full bg-[#0A0A0B] py-32 border-t border-[#C9A84C]/15">
+      <section className="w-full bg-[#341910] py-32 border-t border-[#CFB291]/15">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
 
           {/* Section label */}
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#C9A84C] font-semibold">
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#CFB291] font-semibold">
               02 — DESIGN &amp; FABRICATION METHODOLOGY
             </span>
-            <span className="flex-1 max-w-[80px] h-[1px] bg-[#C9A84C]/30" />
+            <span className="flex-1 max-w-[80px] h-[1px] bg-[#CFB291]/30" />
           </div>
 
           {/* Giant section heading */}
           <div className="mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl text-[#F2EDE4] font-bold tracking-tight leading-[1.05]">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl text-[#FCFCF6] font-bold tracking-tight leading-[1.05]">
               The Geometry of Quietness
             </h2>
-            <p className="mt-4 text-sm text-[#F2EDE4]/50 font-light max-w-lg leading-relaxed">
+            <p className="mt-4 text-sm text-[#FCFCF6]/50 font-light max-w-lg leading-relaxed">
               Three core foundations that govern every interior and fabrication project we deliver.
             </p>
           </div>
 
           {/* Gold hairline rule */}
-          <div className="w-full h-[1px] bg-[#C9A84C]/15 mb-16" />
+          <div className="w-full h-[1px] bg-[#CFB291]/15 mb-16" />
 
           {/* Three pillar cards — SHARP CORNERS */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#C9A84C]/15">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#CFB291]/15">
             {geometryPillars.map((p, idx) => (
               <div
                 key={p.num}
-                className={`p-10 bg-[#141416] hover:bg-[#1C1C20] transition-colors duration-300 ${
-                  idx < geometryPillars.length - 1 ? 'border-r border-[#C9A84C]/15' : ''
+                className={`p-10 bg-[#45241A] hover:bg-[#5A3122] transition-colors duration-300 ${
+                  idx < geometryPillars.length - 1 ? 'border-r border-[#CFB291]/15' : ''
                 }`}
               >
                 {/* Numbered label in small gold caps */}
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C9A84C] block mb-6">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#CFB291] block mb-6">
                   {p.num} / FOUNDATION
                 </span>
 
                 {/* Gold accent line */}
-                <div className="w-10 h-[2px] bg-[#C9A84C] mb-8" />
+                <div className="w-10 h-[2px] bg-[#CFB291] mb-8" />
 
                 {/* Large title */}
-                <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#F2EDE4] font-bold tracking-tight leading-tight mb-4">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#FCFCF6] font-bold tracking-tight leading-tight mb-4">
                   {p.title}
                 </h3>
 
                 {/* Italic sub in bronze */}
-                <p className="text-sm italic text-[#8B7355] mb-6 leading-relaxed">
+                <p className="text-sm italic text-[#F5F5DC] mb-6 leading-relaxed">
                   {p.sub}
                 </p>
 
                 {/* Body text */}
-                <p className="text-sm text-[#F2EDE4]/55 font-light leading-relaxed">
+                <p className="text-sm text-[#FCFCF6]/55 font-light leading-relaxed">
                   {p.text}
                 </p>
               </div>

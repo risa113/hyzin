@@ -5,28 +5,28 @@ export default function StudioLocationSection({ onOpenConsultation }) {
   const embedMapUrl = "https://maps.google.com/maps?q=10.6764307,76.6811311&hl=en&z=15&output=embed";
 
   return (
-    <section id="location" className="py-20 sm:py-28 bg-[#0A0A0B] border-t border-[#C9A84C]/20 relative overflow-hidden">
+    <section id="location" className="py-20 sm:py-28 bg-[#341910] border-t border-[#CFB291]/20 relative overflow-hidden">
       {/* Background Subtle Ambience */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#C9A84C]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#CFB291]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#CFB291]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div className="max-w-2xl">
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-semibold mb-3">
-              <Compass className="w-3.5 h-3.5 text-[#C9A84C]" />
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-semibold mb-3">
+              <Compass className="w-3.5 h-3.5 text-[#CFB291]" />
               <span>ATELIER & WORKSHOP LOCATION</span>
-              <span className="w-8 h-[1px] bg-[#C9A84C]/40"></span>
+              <span className="w-8 h-[1px] bg-[#CFB291]/40"></span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#F2EDE4] font-bold tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FCFCF6] font-bold tracking-tight leading-[1.15]">
               Visit Our Main Studio & <br className="hidden sm:inline" />
-              <span className="text-[#C9A84C]">Fabrication Workshop</span>
+              <span className="text-[#CFB291]">Fabrication Workshop</span>
             </h2>
 
-            <p className="mt-4 text-sm sm:text-base text-[#C9A84C] font-normal leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-[#CFB291] font-normal leading-relaxed">
               Experience material palettes, live fabrication mockups, aluminium interior profiles, and structural steel craftsmanship in person.
             </p>
           </div>
@@ -36,11 +36,11 @@ export default function StudioLocationSection({ onOpenConsultation }) {
               href={mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-sm bg-[#C9A84C] hover:bg-[#F2EDE4] text-[#0A0A0B] text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-lg shadow-[#C9A84C]/20"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-sm bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-xs uppercase tracking-widest font-bold transition-all duration-300 shadow-lg shadow-[#CFB291]/20"
             >
-              <MapPin className="w-4 h-4 text-[#0A0A0B]" />
+              <MapPin className="w-4 h-4 text-[#341910]" />
               <span>OPEN GOOGLE MAPS</span>
-              <ExternalLink className="w-3.5 h-3.5 text-[#0A0A0B]" />
+              <ExternalLink className="w-3.5 h-3.5 text-[#341910]" />
             </a>
           </div>
         </div>
@@ -49,11 +49,11 @@ export default function StudioLocationSection({ onOpenConsultation }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Column: Interactive Google Map Embed */}
-          <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-[#C9A84C]/20 bg-[#141416] shadow-2xl relative min-h-[380px] sm:min-h-[460px] flex flex-col">
-            <div className="p-4 bg-[#0A0A0B] border-b border-[#C9A84C]/20 flex items-center justify-between">
+          <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-[#CFB291]/20 bg-[#45241A] shadow-2xl relative min-h-[380px] sm:min-h-[460px] flex flex-col">
+            <div className="p-4 bg-[#341910] border-b border-[#CFB291]/20 flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse"></span>
-                <span className="text-xs uppercase font-semibold tracking-wider text-[#F2EDE4]">
+                <span className="text-xs uppercase font-semibold tracking-wider text-[#FCFCF6]">
                   LIVE PINPOINT COORDINATES: 10°40'35.2"N 76°40'52.1"E
                 </span>
               </div>
@@ -61,7 +61,7 @@ export default function StudioLocationSection({ onOpenConsultation }) {
                 href={mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] text-[#C9A84C] hover:underline flex items-center gap-1 font-semibold"
+                className="text-[11px] text-[#CFB291] hover:underline flex items-center gap-1 font-semibold"
               >
                 <span>Navigate</span>
                 <ExternalLink className="w-3 h-3" />
@@ -80,11 +80,11 @@ export default function StudioLocationSection({ onOpenConsultation }) {
               ></iframe>
 
               {/* Float Card on Map */}
-              <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs p-4 rounded-xl bg-[#0A0A0B]/90 backdrop-blur-md border border-[#C9A84C]/20 shadow-xl text-left pointer-events-none">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-[#C9A84C] block mb-1">
+              <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs p-4 rounded-xl bg-[#341910]/90 backdrop-blur-md border border-[#CFB291]/20 shadow-xl text-left pointer-events-none">
+                <span className="text-[10px] uppercase font-bold tracking-wider text-[#CFB291] block mb-1">
                   MAIN STUDIO & WORKSHOP
                 </span>
-                <p className="text-xs text-[#F2EDE4] font-medium leading-snug">
+                <p className="text-xs text-[#FCFCF6] font-medium leading-snug">
                   HYZIN INTERIOR — Specialized Aluminium & Interior Fabrication Studio
                 </p>
                 <div className="mt-2 flex items-center gap-1 text-[11px] text-[#25D366] font-medium">
@@ -96,18 +96,18 @@ export default function StudioLocationSection({ onOpenConsultation }) {
           </div>
 
           {/* Right Column: Studio Contact & Verification Card */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-6 bg-[#141416] border border-[#C9A84C]/20 p-6 sm:p-8 rounded-2xl shadow-xl">
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-6 bg-[#45241A] border border-[#CFB291]/20 p-6 sm:p-8 rounded-2xl shadow-xl">
             
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C9A84C]/15 border border-[#C9A84C]/30 text-[#C9A84C] text-[10px] uppercase tracking-wider font-semibold mb-6">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#C9A84C]" /> Official Client Desk
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#CFB291]/15 border border-[#CFB291]/30 text-[#CFB291] text-[10px] uppercase tracking-wider font-semibold mb-6">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#CFB291]" /> Official Client Desk
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-[#F2EDE4] tracking-tight mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#FCFCF6] tracking-tight mb-3">
                 Connect Directly with Our Principals
               </h3>
 
-              <p className="text-xs sm:text-sm text-[#C9A84C] leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-[#CFB291] leading-relaxed mb-6">
                 Whether you wish to visit our fabrication workshop, inspect material samples, or coordinate a site consultation across South India, our studio desk is at your service.
               </p>
 
@@ -115,17 +115,17 @@ export default function StudioLocationSection({ onOpenConsultation }) {
               <div className="space-y-4">
                 
                 {/* Official Studio Email */}
-                <div className="p-3.5 bg-[#0A0A0B] border border-[#C9A84C]/20 rounded-xl flex items-start space-x-3.5 hover:border-[#C9A84C]/40 transition-colors">
-                  <div className="w-9 h-9 bg-[#141416] rounded-lg flex items-center justify-center flex-shrink-0 text-[#C9A84C]">
+                <div className="p-3.5 bg-[#341910] border border-[#CFB291]/20 rounded-xl flex items-start space-x-3.5 hover:border-[#CFB291]/40 transition-colors">
+                  <div className="w-9 h-9 bg-[#45241A] rounded-lg flex items-center justify-center flex-shrink-0 text-[#CFB291]">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#C9A84C] font-semibold block">
+                    <span className="text-[10px] uppercase tracking-wider text-[#CFB291] font-semibold block">
                       OFFICIAL STUDIO EMAIL
                     </span>
                     <a
                       href="mailto:Muhammedashad395@gmail.com"
-                      className="text-sm font-semibold text-[#F2EDE4] hover:text-[#C9A84C] transition-colors break-all"
+                      className="text-sm font-semibold text-[#FCFCF6] hover:text-[#CFB291] transition-colors break-all"
                     >
                       Muhammedashad395@gmail.com
                     </a>
@@ -133,17 +133,17 @@ export default function StudioLocationSection({ onOpenConsultation }) {
                 </div>
 
                 {/* Studio Phone Line 1 */}
-                <div className="p-3.5 bg-[#0A0A0B] border border-[#C9A84C]/20 rounded-xl flex items-start space-x-3.5 hover:border-[#C9A84C]/40 transition-colors">
-                  <div className="w-9 h-9 bg-[#141416] rounded-lg flex items-center justify-center flex-shrink-0 text-[#C9A84C]">
+                <div className="p-3.5 bg-[#341910] border border-[#CFB291]/20 rounded-xl flex items-start space-x-3.5 hover:border-[#CFB291]/40 transition-colors">
+                  <div className="w-9 h-9 bg-[#45241A] rounded-lg flex items-center justify-center flex-shrink-0 text-[#CFB291]">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#C9A84C] font-semibold block">
+                    <span className="text-[10px] uppercase tracking-wider text-[#CFB291] font-semibold block">
                       STUDIO LINE 1 (CALL / WHATSAPP)
                     </span>
                     <a
                       href="tel:916282549008"
-                      className="text-sm font-semibold text-[#F2EDE4] hover:text-[#C9A84C] transition-colors"
+                      className="text-sm font-semibold text-[#FCFCF6] hover:text-[#CFB291] transition-colors"
                     >
                       +91 6282549008
                     </a>
@@ -151,17 +151,17 @@ export default function StudioLocationSection({ onOpenConsultation }) {
                 </div>
 
                 {/* Studio Phone Line 2 */}
-                <div className="p-3.5 bg-[#0A0A0B] border border-[#C9A84C]/20 rounded-xl flex items-start space-x-3.5 hover:border-[#C9A84C]/40 transition-colors">
-                  <div className="w-9 h-9 bg-[#141416] rounded-lg flex items-center justify-center flex-shrink-0 text-[#C9A84C]">
+                <div className="p-3.5 bg-[#341910] border border-[#CFB291]/20 rounded-xl flex items-start space-x-3.5 hover:border-[#CFB291]/40 transition-colors">
+                  <div className="w-9 h-9 bg-[#45241A] rounded-lg flex items-center justify-center flex-shrink-0 text-[#CFB291]">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#C9A84C] font-semibold block">
+                    <span className="text-[10px] uppercase tracking-wider text-[#CFB291] font-semibold block">
                       STUDIO LINE 2 (CALL / WHATSAPP)
                     </span>
                     <a
                       href="tel:918848023041"
-                      className="text-sm font-semibold text-[#F2EDE4] hover:text-[#C9A84C] transition-colors"
+                      className="text-sm font-semibold text-[#FCFCF6] hover:text-[#CFB291] transition-colors"
                     >
                       +91 8848023041
                     </a>
@@ -169,18 +169,18 @@ export default function StudioLocationSection({ onOpenConsultation }) {
                 </div>
 
                 {/* Hours & Visiting Policy */}
-                <div className="p-3.5 bg-[#0A0A0B] border border-[#C9A84C]/20 rounded-xl flex items-start space-x-3.5">
-                  <div className="w-9 h-9 bg-[#141416] rounded-lg flex items-center justify-center flex-shrink-0 text-[#C9A84C]">
+                <div className="p-3.5 bg-[#341910] border border-[#CFB291]/20 rounded-xl flex items-start space-x-3.5">
+                  <div className="w-9 h-9 bg-[#45241A] rounded-lg flex items-center justify-center flex-shrink-0 text-[#CFB291]">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#C9A84C] font-semibold block">
+                    <span className="text-[10px] uppercase tracking-wider text-[#CFB291] font-semibold block">
                       STUDIO & WORKSHOP HOURS
                     </span>
-                    <p className="text-xs text-[#F2EDE4] font-medium">
+                    <p className="text-xs text-[#FCFCF6] font-medium">
                       Monday – Saturday: 9:00 AM – 7:30 PM
                     </p>
-                    <p className="text-[11px] text-[#C9A84C] mt-0.5">
+                    <p className="text-[11px] text-[#CFB291] mt-0.5">
                       Sunday by prior appointment for bespoke client briefs.
                     </p>
                   </div>
@@ -190,12 +190,12 @@ export default function StudioLocationSection({ onOpenConsultation }) {
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-4 border-t border-[#C9A84C]/20 flex flex-col sm:flex-row gap-3">
+            <div className="pt-4 border-t border-[#CFB291]/20 flex flex-col sm:flex-row gap-3">
               <a
                 href={mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3 px-4 bg-[#0A0A0B] border border-[#C9A84C]/40 hover:border-[#C9A84C] text-[#C9A84C] text-xs uppercase tracking-wider font-semibold rounded-sm text-center flex items-center justify-center gap-1.5 transition-colors"
+                className="flex-1 py-3 px-4 bg-[#341910] border border-[#CFB291]/40 hover:border-[#CFB291] text-[#CFB291] text-xs uppercase tracking-wider font-semibold rounded-sm text-center flex items-center justify-center gap-1.5 transition-colors"
               >
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Get Directions</span>
