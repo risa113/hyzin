@@ -5,39 +5,39 @@ export default function BrandIntro({ onExploreServices, onOpenLightbox }) {
   const introImage = assetUrl('WhatsApp Image 2026-09-22 at 3.18.17 PM.jpeg');
 
   return (
-    <section id="about" className="relative py-24 sm:py-32 bg-[#0d0e10] border-t border-white/[0.06] overflow-hidden">
+    <section id="about" className="relative py-24 sm:py-32 bg-[#341910] border-t border-white/[0.06] overflow-hidden">
       {/* Ambient background glow */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#c5a065]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#CFB291]/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Narrative */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#c5a065] font-medium mb-4">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-medium mb-4">
               <span>01 / ABOUT HYZIN</span>
-              <span className="w-12 h-[1px] bg-[#c5a065]/40"></span>
+              <span className="w-12 h-[1px] bg-[#CFB291]/40"></span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#fbf8f3] tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#FCFCF6] tracking-tight leading-[1.15]">
               WE DESIGN SPACES WITH{' '}
-              <span className="text-[#d4b584] font-bold">CHARACTER.</span>
+              <span className="text-[#CFB291] font-bold">CHARACTER.</span>
             </h2>
 
-            <p className="mt-8 text-base sm:text-lg text-[#ccc5b8] font-normal leading-relaxed">
+            <p className="mt-8 text-base sm:text-lg text-[#CFB291] font-normal leading-relaxed">
               HYZIN INTERIOR creates thoughtfully designed spaces that balance aesthetics, functionality, comfort, and personality. From concept to completion, we transform ordinary spaces into environments that feel intentional, timeless, and uniquely yours.
             </p>
 
-            <p className="mt-4 text-sm sm:text-base text-[#a39c90] font-normal leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-[#CFB291] font-normal leading-relaxed">
               Operating with specialized in-house aluminium and steel fabrication workshops alongside bespoke interior joinery, our practice delivers turnkey interior and fabrication excellence across Kerala, Tamil Nadu, and Karnataka. Every detail is engineered for enduring permanence.
             </p>
 
             {/* Design Philosophy Callout */}
-            <div className="mt-10 p-6 sm:p-8 bg-[#131418] border-l-2 border-[#c5a065] relative">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#c5a065] font-medium block mb-2">
+            <div className="mt-10 p-6 sm:p-8 bg-[#341910] border-l-2 border-[#CFB291] relative">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#CFB291] font-medium block mb-2">
                 OUR PHILOSOPHY
               </span>
-              <blockquote className="text-lg sm:text-xl text-[#f3ece2] font-medium leading-relaxed">
+              <blockquote className="text-lg sm:text-xl text-[#FCFCF6] font-medium leading-relaxed">
                 “Good interiors don’t simply look beautiful. They make everyday life better.”
               </blockquote>
             </div>
@@ -45,7 +45,7 @@ export default function BrandIntro({ onExploreServices, onOpenLightbox }) {
             <div className="mt-8">
               <button
                 onClick={onExploreServices}
-                className="group inline-flex items-center space-x-3 text-xs uppercase tracking-[0.25em] text-[#d4b584] hover:text-[#faf2e3] font-semibold transition-colors"
+                className="group inline-flex items-center space-x-3 text-xs uppercase tracking-[0.25em] text-[#CFB291] hover:text-[#FCFCF6] font-semibold transition-colors"
               >
                 <span>DISCOVER OUR 10 CORE DISCIPLINES</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -67,24 +67,24 @@ export default function BrandIntro({ onExploreServices, onOpenLightbox }) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
               
               {/* Floating Architectural Badge */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 bg-[#0e0f12]/90 backdrop-blur-md border border-white/10 flex items-center justify-between">
+              <div className="absolute bottom-6 left-6 right-6 p-4 sm:p-5 bg-[#341910]/90 backdrop-blur-md border border-white/10 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#c5a065] block font-medium">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#CFB291] block font-medium">
                     ORIGINAL CLIENT WORK
                   </span>
-                  <span className="text-base sm:text-lg font-semibold text-[#f7f2ea]">
+                  <span className="text-base sm:text-lg font-semibold text-[#FCFCF6]">
                     Living Paneling & Ambient Cove
                   </span>
                 </div>
-                <div className="text-right font-medium text-[10px] text-[#a39e94]">
+                <div className="text-right font-medium text-[10px] text-[#CFB291]">
                   <div>STUDIO DESK</div>
-                  <div className="text-[#d4b584]">+91 6282549008</div>
+                  <div className="text-[#CFB291]">+91 6282549008</div>
                 </div>
               </div>
             </div>
 
             {/* Subtle decorative offset border */}
-            <div className="hidden sm:block absolute -bottom-4 -right-4 w-full h-full border border-[#c5a065]/20 pointer-events-none -z-10"></div>
+            <div className="hidden sm:block absolute -bottom-4 -right-4 w-full h-full border border-[#CFB291]/20 pointer-events-none -z-10"></div>
           </div>
 
         </div>

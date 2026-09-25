@@ -26,7 +26,7 @@ export default function ParticleBackground() {
         this.speedX = (Math.random() - 0.5) * 0.4;
         this.speedY = (Math.random() - 0.5) * 0.4;
         this.alpha = Math.random() * 0.4 + 0.1;
-        this.color = Math.random() > 0.4 ? '#D4AF37' : '#C9B29B';
+        this.color = Math.random() > 0.4 ? '#CFB291' : '#CFB291';
       }
 
       update() {
@@ -43,7 +43,7 @@ export default function ParticleBackground() {
         ctx.save();
         ctx.globalAlpha = this.alpha;
         ctx.fillStyle = this.color;
-        ctx.shadowColor = '#D4AF37';
+        ctx.shadowColor = '#CFB291';
         ctx.shadowBlur = 4;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);

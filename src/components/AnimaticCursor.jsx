@@ -138,7 +138,7 @@ export default function AnimaticCursor() {
       {/* 1. Ultra-speed Pinpoint Core Dot */}
       <div
         ref={dotRef}
-        className={`fixed top-0 left-0 w-2 h-2 rounded-full bg-[#D4AF37] pointer-events-none transition-transform duration-75 shadow-[0_0_10px_#D4AF37] ${
+        className={`fixed top-0 left-0 w-2 h-2 rounded-full bg-[#CFB291] pointer-events-none transition-transform duration-75 shadow-[0_0_10px_#CFB291] ${
           isHovered ? 'scale-0' : 'scale-100'
         }`}
         style={{ willChange: 'transform' }}
@@ -149,17 +149,17 @@ export default function AnimaticCursor() {
         ref={ringRef}
         className={`fixed top-0 left-0 rounded-full pointer-events-none transition-[width,height,background-color,border-color] duration-200 flex items-center justify-center ${
           isHovered
-            ? 'w-12 h-12 bg-[#D4AF37]/15 border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.4)] backdrop-blur-[1px]'
-            : 'w-8 h-8 bg-transparent border border-[#D4AF37]/70 shadow-[0_0_12px_rgba(212,175,55,0.2)]'
+            ? 'w-12 h-12 bg-[#CFB291]/15 border-2 border-[#CFB291] shadow-[0_0_20px_rgba(212,175,55,0.4)] backdrop-blur-[1px]'
+            : 'w-8 h-8 bg-transparent border border-[#CFB291]/70 shadow-[0_0_12px_rgba(212,175,55,0.2)]'
         }`}
         style={{ willChange: 'transform' }}
       >
         {/* Subtle center crosshair dot when hovered */}
         {isHovered && (
-          <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-ping" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#CFB291] animate-ping" />
         )}
         {hoverText && (
-          <span className="text-[9px] font-bold uppercase tracking-wider text-[#FAF7F0] bg-[#2B1C19]/90 px-1.5 py-0.5 rounded border border-[#D4AF37]/40 shadow">
+          <span className="text-[9px] font-bold uppercase tracking-wider text-[#FCFCF6] bg-[#341910]/90 px-1.5 py-0.5 rounded border border-[#CFB291]/40 shadow">
             {hoverText}
           </span>
         )}

@@ -4,19 +4,19 @@ import { Sparkles, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function House3DPage({ onOpenLightbox, onOpenConsultation, onNavigate }) {
   return (
-    <div className="animate-page-enter pt-12 pb-20 bg-[#4E342E]">
+    <div className="animate-page-enter pt-12 pb-20 bg-[#5A3122]">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-b border-[#C9B29B]/20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-b border-[#CFB291]/20">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/40 text-[#D4AF37] text-xs font-semibold tracking-wider uppercase mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" /> 3D Interactive House Model
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#CFB291]/15 border border-[#CFB291]/40 text-[#CFB291] text-xs font-semibold tracking-wider uppercase mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-[#CFB291]" /> 3D Interactive House Model
           </div>
 
-          <h1 className="text-4xl sm:text-6xl text-[#FAF7F0] font-extrabold leading-[1.12] tracking-tight">
-            3D Interactive <span className="text-[#D4AF37]">House Showcase.</span>
+          <h1 className="text-4xl sm:text-6xl text-[#FCFCF6] font-extrabold leading-[1.12] tracking-tight">
+            3D Interactive <span className="text-[#CFB291]">House Showcase.</span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-[#C9B29B] font-normal leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-[#CFB291] font-normal leading-relaxed">
             Orbit our 3D villa model in 360°, switch between Day Sun, Night Cove Light, and Blueprint Wireframe modes, and click 3D hotspots to inspect real Kerala client work.
           </p>
         </div>
@@ -30,41 +30,41 @@ export default function House3DPage({ onOpenLightbox, onOpenConsultation, onNavi
 
       {/* Feature Bullet Points */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-[#3E2723] rounded-3xl p-8 sm:p-12 border border-[#C9B29B]/20 shadow-2xl">
-          <h3 className="text-2xl sm:text-3xl text-[#FAF7F0] font-bold tracking-tight mb-6">
+        <div className="bg-[#45241A] rounded-3xl p-8 sm:p-12 border border-[#CFB291]/20 shadow-2xl">
+          <h3 className="text-2xl sm:text-3xl text-[#FCFCF6] font-bold tracking-tight mb-6">
             Key Highlights of Our 3D Interactive House Model
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm font-bold text-[#FAF7F0]">
-                <CheckCircle2 className="w-4 h-4 text-[#D4AF37]" /> 360° Free Camera Orbit
+              <div className="flex items-center gap-2 text-sm font-bold text-[#FCFCF6]">
+                <CheckCircle2 className="w-4 h-4 text-[#CFB291]" /> 360° Free Camera Orbit
               </div>
-              <p className="text-xs text-[#C9B29B] leading-relaxed">
+              <p className="text-xs text-[#CFB291] leading-relaxed">
                 Drag with mouse or finger to freely rotate, zoom, and pan around every angle of the house model.
               </p>
             </div>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm font-bold text-[#FAF7F0]">
-                <CheckCircle2 className="w-4 h-4 text-[#D4AF37]" /> Day, Night & Blueprint Modes
+              <div className="flex items-center gap-2 text-sm font-bold text-[#FCFCF6]">
+                <CheckCircle2 className="w-4 h-4 text-[#CFB291]" /> Day, Night & Blueprint Modes
               </div>
-              <p className="text-xs text-[#C9B29B] leading-relaxed">
+              <p className="text-xs text-[#CFB291] leading-relaxed">
                 Experience natural sunlight shadows, warm evening cove lighting in internal rooms, or structural wireframe blueprints.
               </p>
             </div>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm font-bold text-[#FAF7F0]">
-                <CheckCircle2 className="w-4 h-4 text-[#D4AF37]" /> Real Project Hotspots
+              <div className="flex items-center gap-2 text-sm font-bold text-[#FCFCF6]">
+                <CheckCircle2 className="w-4 h-4 text-[#CFB291]" /> Real Project Hotspots
               </div>
-              <p className="text-xs text-[#C9B29B] leading-relaxed">
+              <p className="text-xs text-[#CFB291] leading-relaxed">
                 Click interactive pins on the Kitchen, Master Wardrobe, Paneling, Stair Balustrade, Steel Door, or Ceiling to view actual photos.
               </p>
             </div>
           </div>
 
-          <div className="mt-10 pt-8 border-t border-[#C9B29B]/20 flex flex-wrap items-center justify-between gap-4">
+          <div className="mt-10 pt-8 border-t border-[#CFB291]/20 flex flex-wrap items-center justify-between gap-4">
             <button
               onClick={() => onNavigate('photo-vault')}
-              className="px-6 py-3 rounded-2xl bg-[#D4AF37] text-[#2B1C19] text-xs font-bold uppercase tracking-wider hover:bg-[#FAF7F0] transition-colors flex items-center gap-2 shadow-lg"
+              className="px-6 py-3 rounded-2xl bg-[#CFB291] text-[#341910] text-xs font-bold uppercase tracking-wider hover:bg-[#FCFCF6] transition-colors flex items-center gap-2 shadow-lg"
             >
               <span>Explore All 72 Client Photos</span>
               <ArrowRight className="w-4 h-4" />
@@ -72,7 +72,7 @@ export default function House3DPage({ onOpenLightbox, onOpenConsultation, onNavi
 
             <button
               onClick={onOpenConsultation}
-              className="px-6 py-3 rounded-2xl bg-[#2B1C19] border border-[#D4AF37]/40 text-[#FAF7F0] text-xs font-bold uppercase tracking-wider hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+              className="px-6 py-3 rounded-2xl bg-[#341910] border border-[#CFB291]/40 text-[#FCFCF6] text-xs font-bold uppercase tracking-wider hover:border-[#CFB291] hover:text-[#CFB291] transition-colors"
             >
               Book Project Consultation
             </button>

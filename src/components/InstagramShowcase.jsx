@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { ArrowUpRight, Heart, MessageCircle, Send, Sparkles, Filter, CheckCircle2, Bookmark } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
+import { ArrowUpRight, Heart, MessageCircle, Send, Sparkles, Filter, CheckCircle2, Bookmark, X } from 'lucide-react';
 import { instagramProfile } from '../data/instagramData';
 
 const InstagramIcon = ({ className = "w-4 h-4" }) => (
@@ -13,6 +14,26 @@ const InstagramIcon = ({ className = "w-4 h-4" }) => (
 export default function InstagramShowcase({ onOpenLightbox }) {
   const [activeCategory, setActiveCategory] = useState('ALL');
   const [selectedStory, setSelectedStory] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+  const initialLimit = 6;
+
+  // Handle escape key and body scroll lock when story modal is open
+  useEffect(() => {
+    if (!selectedStory) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedStory(null);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = originalOverflow || 'auto';
+    };
+  }, [selectedStory]);
 
   const categories = [
     'ALL',
@@ -26,35 +47,42 @@ export default function InstagramShowcase({ onOpenLightbox }) {
     'Accessories'
   ];
 
+  const handleSelectCategory = (cat) => {
+    setActiveCategory(cat);
+    setShowAll(false);
+  };
+
   const filteredPosts = activeCategory === 'ALL'
     ? instagramProfile.posts
     : instagramProfile.posts.filter(post => post.service === activeCategory);
 
+  const displayedPosts = showAll ? filteredPosts : filteredPosts.slice(0, initialLimit);
+
   const handlePostClick = (post) => {
     if (onOpenLightbox) {
-      onOpenLightbox(post.image, 0, post.caption, post.service);
+      onOpenLightbox([post.image], 0, post.caption, post.service);
     } else {
       window.open(post.postUrl || instagramProfile.url, '_blank', 'noopener,noreferrer');
     }
   };
 
   return (
-    <section className="py-24 bg-[#2B1C19] border-t border-[#C9B29B]/20 relative overflow-hidden">
+    <section className="py-14 sm:py-20 bg-[#341910] border-t border-[#CFB291]/20 relative overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#C9B29B]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#CFB291]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#CFB291]/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Profile Card Header */}
-        <div className="bg-[#3E2723]/90 backdrop-blur-md border border-[#C9B29B]/20 p-6 sm:p-8 rounded-2xl mb-12 shadow-2xl">
+        <div className="bg-[#45241A]/90 backdrop-blur-md border border-[#CFB291]/20 p-5 sm:p-7 rounded-2xl mb-8 sm:mb-10 shadow-2xl">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             
             {/* Handle & Badge Info */}
             <div className="flex items-start space-x-4">
               <div className="relative group cursor-pointer" onClick={() => window.open(instagramProfile.url, '_blank')}>
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-[2.5px] bg-gradient-to-tr from-[#D4AF37] via-[#C9B29B] to-[#D4AF37] shadow-lg">
-                  <div className="w-full h-full rounded-full bg-[#2B1C19] p-0.5">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-[2.5px] bg-gradient-to-tr from-[#CFB291] via-[#CFB291] to-[#CFB291] shadow-lg">
+                  <div className="w-full h-full rounded-full bg-[#341910] p-0.5">
                     <img
                       src={instagramProfile.posts[0].image}
                       alt="HYZIN Profile"
@@ -62,36 +90,36 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                     />
                   </div>
                 </div>
-                <div className="absolute -bottom-1 -right-1 bg-[#D4AF37] text-[#2B1C19] rounded-full p-1 shadow">
+                <div className="absolute -bottom-1 -right-1 bg-[#CFB291] text-[#341910] rounded-full p-1 shadow">
                   <InstagramIcon className="w-3.5 h-3.5" />
                 </div>
               </div>
 
               <div>
                 <div className="flex items-center space-x-2">
-                  <h3 className="font-mono text-lg sm:text-2xl font-bold text-[#FAF7F0] tracking-wide">
+                  <h3 className="font-mono text-lg sm:text-2xl font-bold text-[#FCFCF6] tracking-wide">
                     {instagramProfile.handle}
                   </h3>
                   <CheckCircle2 className="w-5 h-5 text-[#3897f0] fill-[#3897f0]/20" />
-                  <span className="px-2 py-0.5 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-semibold uppercase">
+                  <span className="px-2 py-0.5 rounded-full bg-[#CFB291]/20 border border-[#CFB291]/40 text-[#CFB291] text-[10px] font-mono font-semibold uppercase">
                     Official Studio
                   </span>
                 </div>
 
-                <p className="mt-1 text-xs sm:text-sm text-[#C9B29B] max-w-xl font-normal leading-relaxed">
+                <p className="mt-1 text-xs sm:text-sm text-[#CFB291] max-w-xl font-normal leading-relaxed">
                   {instagramProfile.bio}
                 </p>
 
                 {/* Follower Stats Row */}
-                <div className="mt-3 flex items-center space-x-6 text-xs font-mono text-[#C9B29B]">
+                <div className="mt-3 flex items-center space-x-6 text-xs font-mono text-[#CFB291]">
                   <div>
-                    <span className="text-[#FAF7F0] font-bold">{instagramProfile.followers}</span> Followers
+                    <span className="text-[#FCFCF6] font-bold">{instagramProfile.followers}</span> Followers
                   </div>
                   <div>
-                    <span className="text-[#FAF7F0] font-bold">{instagramProfile.postsCount}</span> Posts
+                    <span className="text-[#FCFCF6] font-bold">{instagramProfile.postsCount}</span> Posts
                   </div>
                   <div>
-                    <span className="text-[#FAF7F0] font-bold">{instagramProfile.following}</span> Following
+                    <span className="text-[#FCFCF6] font-bold">{instagramProfile.following}</span> Following
                   </div>
                 </div>
               </div>
@@ -103,7 +131,7 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                 href={instagramProfile.dmUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-3 rounded-lg bg-[#D4AF37] hover:bg-[#FAF7F0] text-[#2B1C19] text-xs font-bold font-mono uppercase tracking-wider transition-all shadow-lg flex items-center space-x-2"
+                className="px-5 py-3 rounded-lg bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-xs font-bold font-mono uppercase tracking-wider transition-all shadow-lg flex items-center space-x-2"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>DM US ON INSTAGRAM</span>
@@ -113,7 +141,7 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                 href={instagramProfile.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-3 rounded-lg border border-[#C9B29B]/30 hover:border-[#D4AF37] text-[#FAF7F0] hover:text-[#D4AF37] text-xs font-bold font-mono uppercase tracking-wider transition-all flex items-center space-x-2"
+                className="px-5 py-3 rounded-lg border border-[#CFB291]/30 hover:border-[#CFB291] text-[#FCFCF6] hover:text-[#CFB291] text-xs font-bold font-mono uppercase tracking-wider transition-all flex items-center space-x-2"
               >
                 <InstagramIcon className="w-4 h-4" />
                 <span>FOLLOW PROFILE</span>
@@ -124,9 +152,9 @@ export default function InstagramShowcase({ onOpenLightbox }) {
           </div>
 
           {/* Instagram Story Highlights Bar */}
-          <div className="mt-8 pt-6 border-t border-[#C9B29B]/20">
-            <div className="flex items-center space-x-2 mb-3 text-[10px] uppercase font-mono tracking-widest text-[#D4AF37]">
-              <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <div className="mt-8 pt-6 border-t border-[#CFB291]/20">
+            <div className="flex items-center space-x-2 mb-3 text-[10px] uppercase font-mono tracking-widest text-[#CFB291]">
+              <Sparkles className="w-3.5 h-3.5 text-[#CFB291]" />
               <span>STUDIO STORY HIGHLIGHTS</span>
             </div>
             <div className="flex items-center space-x-4 sm:space-x-6 overflow-x-auto pb-2 scrollbar-none">
@@ -136,14 +164,14 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                   onClick={() => setSelectedStory(story)}
                   className="flex flex-col items-center space-y-1.5 min-w-[72px] group focus:outline-none"
                 >
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-[2px] bg-gradient-to-tr from-[#D4AF37] to-[#C9B29B] group-hover:from-[#FAF7F0] group-hover:to-[#D4AF37] transition-all">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-[2px] bg-gradient-to-tr from-[#CFB291] to-[#CFB291] group-hover:from-[#FCFCF6] group-hover:to-[#CFB291] transition-all">
                     <img
                       src={story.cover}
                       alt={story.title}
                       className="w-full h-full object-cover rounded-full filter brightness-90 group-hover:scale-105 transition-transform"
                     />
                   </div>
-                  <span className="text-[10px] text-[#C9B29B] group-hover:text-[#FAF7F0] font-mono truncate max-w-[80px]">
+                  <span className="text-[10px] text-[#CFB291] group-hover:text-[#FCFCF6] font-mono truncate max-w-[80px]">
                     {story.title}
                   </span>
                 </button>
@@ -153,13 +181,13 @@ export default function InstagramShowcase({ onOpenLightbox }) {
         </div>
 
         {/* Category Filter Tabs Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 border-b border-[#C9B29B]/20 pb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 border-b border-[#CFB291]/20 pb-6">
           <div>
-            <div className="flex items-center space-x-2 text-[11px] uppercase tracking-[0.25em] text-[#D4AF37] font-medium mb-1">
+            <div className="flex items-center space-x-2 text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-medium mb-1">
               <Filter className="w-3.5 h-3.5" />
               <span>THE VISUAL CHRONICLE</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#FAF7F0] font-bold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#FCFCF6] font-bold tracking-tight">
               LIVE INSTAGRAM FEED & GALLERY
             </h2>
           </div>
@@ -169,11 +197,11 @@ export default function InstagramShowcase({ onOpenLightbox }) {
             {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
+                onClick={() => handleSelectCategory(cat)}
                 className={`px-3.5 py-1.5 text-[11px] uppercase tracking-wider rounded-md whitespace-nowrap transition-all font-semibold ${
                   activeCategory === cat
-                    ? 'bg-[#D4AF37] text-[#2B1C19] font-bold shadow-md'
-                    : 'bg-[#3E2723] hover:bg-[#4E342E] text-[#C9B29B] hover:text-[#FAF7F0] border border-[#C9B29B]/20'
+                    ? 'bg-[#CFB291] text-[#341910] font-bold shadow-md'
+                    : 'bg-[#45241A] hover:bg-[#5A3122] text-[#CFB291] hover:text-[#FCFCF6] border border-[#CFB291]/20'
                 }`}
               >
                 {cat}
@@ -182,12 +210,12 @@ export default function InstagramShowcase({ onOpenLightbox }) {
           </div>
         </div>
 
-        {/* Instagram 6-Grid / Responsive Gallery with Slide-Right Pop on Filter Switch */}
-        <div key={activeCategory} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-slide-right-pop">
-          {filteredPosts.map((post, idx) => (
+        {/* Instagram Grid / Responsive Gallery with Slide-Right Pop on Filter Switch */}
+        <div key={activeCategory} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 animate-slide-right-pop">
+          {displayedPosts.map((post, idx) => (
             <div
               key={post.id}
-              className="group bg-[#3E2723] border border-[#C9B29B]/20 hover:border-[#D4AF37]/50 rounded-xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer reveal-up"
+              className="group bg-[#45241A] border border-[#CFB291]/20 hover:border-[#CFB291]/50 rounded-xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer reveal-up"
               style={{ transitionDelay: `${(idx % 6) * 75}ms` }}
               onClick={() => handlePostClick(post)}
             >
@@ -200,38 +228,38 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                 />
                 
                 {/* Category Badge Pill */}
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#2B1C19]/80 backdrop-blur-md border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] uppercase font-mono tracking-wider font-semibold">
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#341910]/80 backdrop-blur-md border border-[#CFB291]/30 text-[#CFB291] text-[10px] uppercase font-mono tracking-wider font-semibold">
                   {post.service}
                 </div>
 
-                <div className="absolute top-3 right-3 p-1.5 rounded-full bg-[#2B1C19]/80 backdrop-blur-md text-[#FAF7F0]/80 group-hover:text-[#D4AF37]">
+                <div className="absolute top-3 right-3 p-1.5 rounded-full bg-[#341910]/80 backdrop-blur-md text-[#FCFCF6]/80 group-hover:text-[#CFB291]">
                   <Bookmark className="w-3.5 h-3.5" />
                 </div>
 
                 {/* Hover Content overlay */}
-                <div className="absolute inset-0 bg-[#2B1C19]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5 text-white">
-                  <div className="flex items-center justify-between text-xs text-[#D4AF37] font-mono">
+                <div className="absolute inset-0 bg-[#341910]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5 text-white">
+                  <div className="flex items-center justify-between text-xs text-[#CFB291] font-mono">
                     <span>{post.location}</span>
                     <span>{post.date}</span>
                   </div>
 
-                  <p className="text-xs text-[#FAF7F0]/90 line-clamp-4 font-normal leading-relaxed">
+                  <p className="text-xs text-[#FCFCF6]/90 line-clamp-4 font-normal leading-relaxed">
                     {post.caption}
                   </p>
 
-                  <div className="flex items-center justify-between text-xs font-mono pt-3 border-t border-[#C9B29B]/20">
+                  <div className="flex items-center justify-between text-xs font-mono pt-3 border-t border-[#CFB291]/20">
                     <div className="flex items-center space-x-3">
-                      <span className="flex items-center space-x-1 text-[#D4AF37]">
-                        <Heart className="w-3.5 h-3.5 fill-[#D4AF37]" />
+                      <span className="flex items-center space-x-1 text-[#CFB291]">
+                        <Heart className="w-3.5 h-3.5 fill-[#CFB291]" />
                         <span>{post.likes}</span>
                       </span>
-                      <span className="flex items-center space-x-1 text-[#FAF7F0]/80">
+                      <span className="flex items-center space-x-1 text-[#FCFCF6]/80">
                         <MessageCircle className="w-3.5 h-3.5" />
                         <span>{post.comments}</span>
                       </span>
                     </div>
 
-                    <span className="text-[#D4AF37] text-[10px] uppercase font-semibold flex items-center space-x-1">
+                    <span className="text-[#CFB291] text-[10px] uppercase font-semibold flex items-center space-x-1">
                       <span>EXPAND LIGHTBOX</span>
                       <ArrowUpRight className="w-3 h-3" />
                     </span>
@@ -240,10 +268,10 @@ export default function InstagramShowcase({ onOpenLightbox }) {
               </div>
 
               {/* Bottom Micro Footer Card */}
-              <div className="p-4 bg-[#2B1C19] border-t border-[#C9B29B]/20 flex items-center justify-between text-xs">
-                <div className="flex items-center space-x-2 text-[#C9B29B] font-mono text-[11px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span>
-                  <span className="text-[#FAF7F0] font-medium">{post.service}</span>
+              <div className="p-4 bg-[#341910] border-t border-[#CFB291]/20 flex items-center justify-between text-xs">
+                <div className="flex items-center space-x-2 text-[#CFB291] font-mono text-[11px]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#CFB291]"></span>
+                  <span className="text-[#FCFCF6] font-medium">{post.service}</span>
                 </div>
 
                 <a
@@ -251,7 +279,7 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="text-[10px] text-[#D4AF37] font-mono tracking-wider uppercase hover:underline flex items-center space-x-1"
+                  className="text-[10px] text-[#CFB291] font-mono tracking-wider uppercase hover:underline flex items-center space-x-1"
                 >
                   <span>VIEW ON INSTAGRAM</span>
                   <ArrowUpRight className="w-3 h-3" />
@@ -262,48 +290,70 @@ export default function InstagramShowcase({ onOpenLightbox }) {
           ))}
         </div>
 
-        {/* Story Modal Popup (if clicked) */}
-        {selectedStory && (
-          <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-            <div className="bg-[#2B1C19] border border-[#D4AF37]/40 rounded-2xl max-w-md w-full p-6 text-[#FAF7F0] space-y-4 shadow-2xl relative animate-fadeIn">
-              <div className="flex items-center justify-between border-b border-[#C9B29B]/20 pb-3">
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 rounded-full p-[2px] bg-[#D4AF37]">
+        {/* Toggle to view all posts or show fewer */}
+        {filteredPosts.length > initialLimit && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-3 rounded-xl bg-[#45241A] hover:bg-[#5A3122] border border-[#CFB291]/50 text-[#FCFCF6] hover:text-[#CFB291] text-xs font-semibold uppercase tracking-[0.2em] transition-all shadow-md inline-flex items-center gap-2"
+            >
+              <span>{showAll ? 'Show Fewer Posts' : `Show All ${filteredPosts.length} Posts`}</span>
+              <ArrowUpRight className={`w-3.5 h-3.5 transition-transform duration-300 ${showAll ? '-rotate-90' : 'rotate-45'}`} />
+            </button>
+          </div>
+        )}
+
+        {/* Story Modal Popup Teleported directly to document.body */}
+        {selectedStory && typeof document !== 'undefined' && createPortal(
+          <div
+            className="fixed inset-0 z-[100] bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 overflow-y-auto animate-fadeIn"
+            onClick={() => setSelectedStory(null)}
+          >
+            <div
+              className="bg-[#341910] border border-[#CFB291]/50 rounded-2xl max-w-sm w-full p-4 sm:p-5 text-[#FCFCF6] shadow-2xl relative animate-pop-up my-auto flex flex-col max-h-[92vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between border-b border-[#CFB291]/20 pb-3 flex-shrink-0">
+                <div className="flex items-center space-x-2.5">
+                  <div className="w-9 h-9 rounded-full p-[2px] bg-gradient-to-tr from-[#CFB291] to-[#CFB291] flex-shrink-0">
                     <img src={selectedStory.cover} alt="" className="w-full h-full object-cover rounded-full" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-[#FAF7F0]">{selectedStory.title}</h4>
-                    <span className="text-[10px] text-[#D4AF37] font-mono">{selectedStory.tag} • {selectedStory.count} Clips</span>
+                    <h4 className="font-bold text-sm text-[#FCFCF6] leading-tight">{selectedStory.title}</h4>
+                    <span className="text-[10px] text-[#CFB291] font-mono">{selectedStory.tag} • {selectedStory.count} Clips</span>
                   </div>
                 </div>
                 <button
                   onClick={() => setSelectedStory(null)}
-                  className="px-2 py-1 text-xs text-[#C9B29B] hover:text-[#FAF7F0] bg-white/10 rounded"
+                  className="p-1.5 text-[#CFB291] hover:text-[#FCFCF6] hover:bg-white/10 rounded-full transition-colors"
+                  aria-label="Close story"
                 >
-                  Close ✕
+                  <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="aspect-[9/16] rounded-xl overflow-hidden relative bg-black">
+              {/* Story Visual Container with Responsive Bounded Height */}
+              <div className="relative w-full h-[54vh] max-h-[460px] rounded-xl overflow-hidden bg-black flex-shrink-0 my-3.5 shadow-lg border border-[#CFB291]/20">
                 <img
                   src={selectedStory.cover}
                   alt={selectedStory.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2B1C19]/90 via-transparent to-black/30 p-4 flex flex-col justify-between">
-                  <div className="flex justify-between text-[10px] font-mono text-[#FAF7F0]/80">
-                    <span>HYZIN STORY ARCHIVE</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#341910]/95 via-transparent to-black/40 p-4 flex flex-col justify-between">
+                  <div className="flex justify-between items-center text-[10px] font-mono text-[#FCFCF6]/90">
+                    <span className="bg-[#341910]/80 px-2 py-0.5 rounded border border-[#CFB291]/30">HYZIN ARCHIVE</span>
                     <span>{instagramProfile.handle}</span>
                   </div>
                   <div>
-                    <p className="text-xs text-[#FAF7F0]/90 font-normal mb-3">
+                    <p className="text-xs text-[#FCFCF6]/90 font-normal mb-3 leading-relaxed">
                       Authentic on-site craftsmanship footage from our projects across Kerala, Tamil Nadu & Karnataka.
                     </p>
                     <a
                       href={instagramProfile.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-2.5 bg-[#D4AF37] text-[#2B1C19] text-xs font-bold font-mono uppercase tracking-wider flex items-center justify-center space-x-2 rounded-lg"
+                      className="w-full py-2.5 bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-xs font-bold font-mono uppercase tracking-wider flex items-center justify-center space-x-2 rounded-lg transition-colors shadow-md"
                     >
                       <span>VIEW STORIES ON INSTAGRAM</span>
                       <ArrowUpRight className="w-4 h-4" />
@@ -311,22 +361,28 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                   </div>
                 </div>
               </div>
+
+              {/* Bottom dismissal hint */}
+              <div className="text-center text-[11px] text-[#CFB291]/70 flex-shrink-0">
+                Click outside or press Esc to close
+              </div>
             </div>
-          </div>
+          </div>,
+          document.body
         )}
 
         {/* Live DM Callout Banner */}
-        <div className="mt-16 bg-[#3E2723] border border-[#D4AF37]/30 rounded-2xl p-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+        <div className="mt-10 sm:mt-12 bg-[#45241A] border border-[#CFB291]/30 rounded-2xl p-6 sm:p-7 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#CFB291]/15 border border-[#CFB291]/30 text-[#CFB291] text-xs font-semibold uppercase tracking-wider mb-3">
               <Send className="w-3.5 h-3.5" />
               <span>INSTANT INSTAGRAM INQUIRY</span>
             </div>
-            <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#FAF7F0] font-bold tracking-tight">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#FCFCF6] font-bold tracking-tight">
               Have an Instagram inspiration post or Reel?
             </h3>
-            <p className="mt-2 text-xs sm:text-sm text-[#C9B29B] font-normal leading-relaxed">
-              Send the photo or Reel directly to our Instagram DM <span className="text-[#D4AF37] font-semibold">@hyzin.interior</span> for an instant estimate, material feasibility, and 3D consultation!
+            <p className="mt-2 text-xs sm:text-sm text-[#CFB291] font-normal leading-relaxed">
+              Send the photo or Reel directly to our Instagram DM <span className="text-[#CFB291] font-semibold">@hyzin.interior</span> for an instant estimate, material feasibility, and 3D consultation!
             </p>
           </div>
 
@@ -334,7 +390,7 @@ export default function InstagramShowcase({ onOpenLightbox }) {
             href={instagramProfile.dmUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-[#D4AF37] hover:bg-[#FAF7F0] text-[#2B1C19] text-xs uppercase font-bold tracking-widest rounded-xl transition-all shadow-xl whitespace-nowrap flex items-center space-x-2"
+            className="px-8 py-4 bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-xs uppercase font-bold tracking-widest rounded-xl transition-all shadow-xl whitespace-nowrap flex items-center space-x-2"
           >
             <Send className="w-4 h-4" />
             <span>SEND DM ON INSTAGRAM</span>

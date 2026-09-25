@@ -5,6 +5,12 @@
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-cinzel: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --color-caput-mortuum: #5A3122;
+  --color-chamoisee: #95725A;
+  --color-tan: #CFB291;
+  --color-beige: #F5F5DC;
+  --color-baby-powder: #FCFCF6;
 }
 
 @layer base {
@@ -31,8 +37,8 @@
   }
 
   body {
-    background-color: #4E342E;
-    color: #FAF7F0;
+    background-color: #5A3122;
+    color: #FCFCF6;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     line-height: 1.6;
@@ -53,7 +59,7 @@
     max-width: 100%;
     width: 100%;
     min-height: 100vh;
-    background-color: #4E342E;
+    background-color: #5A3122;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -61,7 +67,7 @@
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: #FAF7F0;
+    color: #FCFCF6;
   }
 
   h1 {
@@ -107,57 +113,82 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #2B1C19;
+  background: #341910;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C9B29B;
+  background: #CFB291;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #F5F5DC;
 }
 
-/* Coffee & Sand Luxury Theme Tokens */
+/* Client 5-Color Luxury Theme Palette
+   1. #5A3122 - Caput mortuum (Deep rich chocolate base)
+   2. #95725A - Chamoisee (Warm medium wood & panel tone)
+   3. #CFB291 - Tan (Warm golden sand accent & borders)
+   4. #F5F5DC - Beige (Soft cream hover & secondary text)
+   5. #FCFCF6 - Baby powder (Pure ivory white headings & primary text)
+*/
+.bg-caput-mortuum { background-color: #5A3122; }
+.bg-chamoisee { background-color: #95725A; }
+.bg-tan { background-color: #CFB291; }
+.bg-beige { background-color: #F5F5DC; }
+.bg-baby-powder { background-color: #FCFCF6; }
+
+.text-caput-mortuum { color: #5A3122; }
+.text-chamoisee { color: #95725A; }
+.text-tan { color: #CFB291; }
+.text-beige { color: #F5F5DC; }
+.text-baby-powder { color: #FCFCF6; }
+
+.border-caput-mortuum { border-color: #5A3122; }
+.border-chamoisee { border-color: #95725A; }
+.border-tan { border-color: #CFB291; }
+.border-beige { border-color: #F5F5DC; }
+.border-baby-powder { border-color: #FCFCF6; }
+
+/* Legacy Theme Token Aliases */
 .bg-coffee {
-  background-color: #4E342E;
+  background-color: #5A3122;
 }
 .bg-coffee-deep {
-  background-color: #2B1C19;
+  background-color: #341910;
 }
 .bg-coffee-surface {
-  background-color: #3E2723;
+  background-color: #45241A;
 }
 .bg-beige-brown {
-  background-color: #C9B29B;
+  background-color: #CFB291;
 }
 .bg-gold-sand {
-  background-color: #D4AF37;
+  background-color: #CFB291;
 }
 .bg-ivory-beige {
-  background-color: #FAF7F0;
+  background-color: #FCFCF6;
 }
 
 .text-coffee {
-  color: #4E342E;
+  color: #5A3122;
 }
 .text-beige-brown {
-  color: #C9B29B;
+  color: #CFB291;
 }
 .text-gold-sand {
-  color: #D4AF37;
+  color: #CFB291;
 }
 .text-ivory-beige {
-  color: #FAF7F0;
+  color: #FCFCF6;
 }
 
 .border-coffee {
-  border-color: #4E342E;
+  border-color: #5A3122;
 }
 .border-beige-brown {
-  border-color: #C9B29B;
+  border-color: #CFB291;
 }
 .border-gold-sand {
-  border-color: #D4AF37;
+  border-color: #CFB291;
 }
 
 /* Animatic Light Reflection Ribbon */
@@ -270,7 +301,7 @@
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: none;
   }
 }
 
@@ -315,32 +346,32 @@
 @keyframes slideRightPop {
   0% {
     opacity: 0;
-    transform: translateX(40px) scale(0.96);
+    transform: translateX(18px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0) scale(1);
+    transform: translateX(0);
   }
 }
 
 .animate-slide-right-pop {
-  animation: slideRightPop 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideRightPop 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   will-change: transform, opacity;
 }
 
 @keyframes slideLeftPop {
   0% {
     opacity: 0;
-    transform: translateX(-40px) scale(0.96);
+    transform: translateX(-18px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0) scale(1);
+    transform: translateX(0);
   }
 }
 
 .animate-slide-left-pop {
-  animation: slideLeftPop 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideLeftPop 0.85s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   will-change: transform, opacity;
 }
 

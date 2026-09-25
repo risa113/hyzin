@@ -535,32 +535,32 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
   };
 
   return (
-    <section className={`relative transition-all duration-500 ${isFullScreen ? 'fixed inset-0 z-50 bg-[#0E1117]' : 'w-full py-16 bg-[#F4F1EB]'}`}>
+    <section className={`relative transition-all duration-500 ${isFullScreen ? 'fixed inset-0 z-50 bg-[#341910]' : 'w-full py-16 bg-[#FCFCF6]'}`}>
       <div className={`${isFullScreen ? 'h-full w-full p-4 flex flex-col' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'}`}>
         
         {/* Section Header */}
         {!isFullScreen && (
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold tracking-wider uppercase mb-3">
-                <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" /> 3D Interactive House Model
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#CFB291]/15 border border-[#CFB291]/30 text-[#CFB291] text-xs font-semibold tracking-wider uppercase mb-3">
+                <Sparkles className="w-3.5 h-3.5 text-[#CFB291]" /> 3D Interactive House Model
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#FAF7F0]">
-                Interactive 3D House <span className="text-[#D4AF37]">Work Showcase</span>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#FCFCF6]">
+                Interactive 3D House <span className="text-[#CFB291]">Work Showcase</span>
               </h2>
-              <p className="text-sm text-[#C9B29B] mt-1 max-w-2xl leading-relaxed">
+              <p className="text-sm text-[#CFB291] mt-1 max-w-2xl leading-relaxed">
                 Explore our 10 client work disciplines (Aluminium Interior, Wall Drop, Kitchen Cabinet, Loft, Accessories, Ceiling, Paneling, Steel Doors, Steel & MS Fabrication) inside an interactive 3D house model.
               </p>
             </div>
 
             {/* Control Toggles */}
-            <div className="flex flex-wrap items-center gap-2 bg-[#3E2723]/90 backdrop-blur-md p-1.5 rounded-2xl border border-[#C9B29B]/20 shadow-xl">
+            <div className="flex flex-wrap items-center gap-2 bg-[#45241A]/90 backdrop-blur-md p-1.5 rounded-2xl border border-[#CFB291]/20 shadow-xl">
               <button
                 onClick={() => handleModeChange('day')}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                   renderMode === 'day' 
-                    ? 'bg-[#D4AF37] text-[#2B1C19] shadow-md' 
-                    : 'text-[#C9B29B] hover:text-[#FAF7F0]'
+                    ? 'bg-[#CFB291] text-[#341910] shadow-md' 
+                    : 'text-[#CFB291] hover:text-[#FCFCF6]'
                 }`}
               >
                 <Sun className="w-3.5 h-3.5 text-amber-400" /> Day Sun
@@ -569,8 +569,8 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                 onClick={() => handleModeChange('night')}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                   renderMode === 'night' 
-                    ? 'bg-[#D4AF37] text-[#2B1C19] shadow-md' 
-                    : 'text-[#C9B29B] hover:text-[#FAF7F0]'
+                    ? 'bg-[#CFB291] text-[#341910] shadow-md' 
+                    : 'text-[#CFB291] hover:text-[#FCFCF6]'
                 }`}
               >
                 <Moon className="w-3.5 h-3.5 text-amber-300" /> Night Cove
@@ -580,21 +580,21 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                   renderMode === 'blueprint' 
                     ? 'bg-[#00d8ff]/20 text-[#00d8ff] border border-[#00d8ff]/40 shadow-md' 
-                    : 'text-[#C9B29B] hover:text-[#FAF7F0]'
+                    : 'text-[#CFB291] hover:text-[#FCFCF6]'
                 }`}
               >
                 <Layers className="w-3.5 h-3.5 text-cyan-400" /> Blueprint
               </button>
 
-              <div className="w-px h-5 bg-[#C9B29B]/20" />
+              <div className="w-px h-5 bg-[#CFB291]/20" />
 
               {/* Exploded View Toggle Button & Slider */}
               <button
                 onClick={() => setExplodedFactor(explodedFactor > 0 ? 0 : 0.8)}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                   explodedFactor > 0
-                    ? 'bg-[#D4AF37] text-[#2B1C19] shadow-md' 
-                    : 'text-[#C9B29B] hover:text-[#FAF7F0]'
+                    ? 'bg-[#CFB291] text-[#341910] shadow-md' 
+                    : 'text-[#CFB291] hover:text-[#FCFCF6]'
                 }`}
               >
                 <SlidersHorizontal className="w-3.5 h-3.5" /> 
@@ -609,17 +609,17 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                   step="0.05"
                   value={explodedFactor}
                   onChange={(e) => setExplodedFactor(parseFloat(e.target.value))}
-                  className="w-20 accent-[#D4AF37] cursor-pointer"
+                  className="w-20 accent-[#CFB291] cursor-pointer"
                   title="Adjust Exploded Elevation Factor"
                 />
               )}
 
-              <div className="w-px h-5 bg-[#C9B29B]/20" />
+              <div className="w-px h-5 bg-[#CFB291]/20" />
 
               <button
                 onClick={() => setAutoRotate(!autoRotate)}
                 className={`p-1.5 rounded-xl transition-all ${
-                  autoRotate ? 'bg-[#D4AF37]/20 text-[#D4AF37]' : 'text-[#C9B29B] hover:text-[#FAF7F0] hover:bg-white/5'
+                  autoRotate ? 'bg-[#CFB291]/20 text-[#CFB291]' : 'text-[#CFB291] hover:text-[#FCFCF6] hover:bg-white/5'
                 }`}
                 title="Toggle 360 Auto Rotation"
               >
@@ -627,7 +627,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
               </button>
               <button
                 onClick={toggleFullScreen}
-                className="p-1.5 rounded-xl text-[#C9B29B] hover:text-[#FAF7F0] hover:bg-white/5 transition-all"
+                className="p-1.5 rounded-xl text-[#CFB291] hover:text-[#FCFCF6] hover:bg-white/5 transition-all"
                 title="Toggle Full Screen"
               >
                 <Maximize2 className="w-4 h-4" />
@@ -638,15 +638,15 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
 
         {/* 3D Canvas Canvas Window & Interactive Overlay */}
         <div className={`relative rounded-3xl overflow-hidden border shadow-2xl transition-all duration-300 ${
-          renderMode === 'blueprint' ? 'border-[#00d8ff]/30 bg-[#0A1128]' : (renderMode === 'night' ? 'border-amber-500/20 bg-[#2B1C19]' : 'border-[#C9B29B]/20 bg-[#3E2723]')
+          renderMode === 'blueprint' ? 'border-[#00d8ff]/30 bg-[#341910]' : (renderMode === 'night' ? 'border-amber-500/20 bg-[#341910]' : 'border-[#CFB291]/20 bg-[#45241A]')
         } ${isFullScreen ? 'flex-1 min-h-0' : 'h-[520px] sm:h-[600px]'}`}>
 
           {/* Three.js Render Mount */}
           <div ref={mountRef} className="w-full h-full cursor-grab active:cursor-grabbing" />
 
           {/* 3D Canvas Instructions HUD */}
-          <div className="absolute top-4 left-4 pointer-events-none flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-[#C9B29B]/20 text-[#FAF7F0] text-xs font-mono">
-            <Eye className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <div className="absolute top-4 left-4 pointer-events-none flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-[#CFB291]/20 text-[#FCFCF6] text-xs font-mono">
+            <Eye className="w-3.5 h-3.5 text-[#CFB291]" />
             <span>Drag mouse/finger to orbit • Scroll to zoom</span>
           </div>
 
@@ -671,16 +671,16 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                   <div className="relative">
                     {/* Pulsating Ping Ring */}
                     <span className={`absolute -inset-2 rounded-full animate-ping opacity-75 ${
-                      isActive ? 'bg-[#D4AF37]' : 'bg-[#D4AF37]/40 group-hover:bg-[#D4AF37]'
+                      isActive ? 'bg-[#CFB291]' : 'bg-[#CFB291]/40 group-hover:bg-[#CFB291]'
                     }`} />
                     
                     {/* Pin Badge */}
                     <div className={`relative flex items-center gap-2 px-3 py-1.5 rounded-2xl border shadow-lg backdrop-blur-md text-xs font-semibold transition-all ${
                       isActive 
-                        ? 'bg-[#2B1C19] text-[#FAF7F0] border-[#D4AF37]' 
-                        : 'bg-[#3E2723]/90 text-[#FAF7F0] border-[#C9B29B]/30 hover:bg-[#2B1C19]'
+                        ? 'bg-[#341910] text-[#FCFCF6] border-[#CFB291]' 
+                        : 'bg-[#45241A]/90 text-[#FCFCF6] border-[#CFB291]/30 hover:bg-[#341910]'
                     }`}>
-                      <IconComp className={`w-3.5 h-3.5 ${isActive ? 'text-[#D4AF37]' : 'text-[#D4AF37]/80'}`} />
+                      <IconComp className={`w-3.5 h-3.5 ${isActive ? 'text-[#CFB291]' : 'text-[#CFB291]/80'}`} />
                       <span className="hidden sm:inline">{hs.name}</span>
                     </div>
                   </div>
@@ -690,11 +690,11 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
           </div>
 
           {/* Quick Zone Camera Presets Bar */}
-          <div className="absolute bottom-4 left-4 right-4 sm:left-auto sm:right-4 flex flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-2xl bg-[#2B1C19]/80 backdrop-blur-lg border border-[#C9B29B]/20 z-20">
+          <div className="absolute bottom-4 left-4 right-4 sm:left-auto sm:right-4 flex flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-2xl bg-[#341910]/80 backdrop-blur-lg border border-[#CFB291]/20 z-20">
             <button
               onClick={() => handleSelectZone('overview')}
               className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-medium transition-all ${
-                activeZone === 'overview' ? 'bg-[#D4AF37] text-[#2B1C19] font-bold shadow-md' : 'text-[#FAF7F0]/80 hover:text-white hover:bg-white/10'
+                activeZone === 'overview' ? 'bg-[#CFB291] text-[#341910] font-bold shadow-md' : 'text-[#FCFCF6]/80 hover:text-white hover:bg-white/10'
               }`}
             >
               <Home className="w-3.5 h-3.5" /> Full Villa
@@ -706,7 +706,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                   key={hs.id}
                   onClick={() => handleSelectZone(hs.id)}
                   className={`flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-medium transition-all ${
-                    activeZone === hs.id ? 'bg-[#D4AF37] text-[#2B1C19] font-bold shadow-md' : 'text-[#FAF7F0]/80 hover:text-white hover:bg-white/10'
+                    activeZone === hs.id ? 'bg-[#CFB291] text-[#341910] font-bold shadow-md' : 'text-[#FCFCF6]/80 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   <IconComp className="w-3 h-3" />
@@ -718,41 +718,41 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
 
           {/* Selected Hotspot Real Work Popover Card */}
           {selectedHotspot && (
-            <div className="absolute top-4 right-4 max-w-sm w-full bg-[#2B1C19]/95 backdrop-blur-xl rounded-2xl p-4 shadow-2xl border border-[#C9B29B]/20 z-40 animate-in fade-in slide-in-from-right-4 duration-300">
+            <div className="absolute top-4 right-4 max-w-sm w-full bg-[#341910]/95 backdrop-blur-xl rounded-2xl p-4 shadow-2xl border border-[#CFB291]/20 z-40 animate-in fade-in slide-in-from-right-4 duration-300">
               <div className="flex items-start justify-between mb-2">
                 <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-xl bg-[#D4AF37]/15 text-[#D4AF37]">
+                  <div className="p-2 rounded-xl bg-[#CFB291]/15 text-[#CFB291]">
                     {React.createElement(selectedHotspot.icon, { className: 'w-4 h-4' })}
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-[#FAF7F0] tracking-tight">{selectedHotspot.name}</h4>
-                    <span className="text-[10px] uppercase tracking-wider text-[#D4AF37] font-semibold">Verified Client Work</span>
+                    <h4 className="text-sm font-bold text-[#FCFCF6] tracking-tight">{selectedHotspot.name}</h4>
+                    <span className="text-[10px] uppercase tracking-wider text-[#CFB291] font-semibold">Verified Client Work</span>
                   </div>
                 </div>
                 <button 
                   onClick={() => setSelectedHotspot(null)}
-                  className="text-[#C9B29B] hover:text-[#FAF7F0] text-xs p-1"
+                  className="text-[#CFB291] hover:text-[#FCFCF6] text-xs p-1"
                 >
                   ✕
                 </button>
               </div>
 
-              <p className="text-xs text-[#C9B29B] mb-3 leading-relaxed">
+              <p className="text-xs text-[#CFB291] mb-3 leading-relaxed">
                 {selectedHotspot.description}
               </p>
 
               {/* Real Kerala Client Photos Thumbnails */}
               <div className="mb-3">
-                <div className="text-[11px] font-semibold text-[#FAF7F0] mb-1.5 flex items-center justify-between">
+                <div className="text-[11px] font-semibold text-[#FCFCF6] mb-1.5 flex items-center justify-between">
                   <span>Actual Client Photos ({selectedHotspot.featuredPhotos.length})</span>
-                  <span className="text-[10px] text-[#D4AF37]">Click to enlarge</span>
+                  <span className="text-[10px] text-[#CFB291]">Click to enlarge</span>
                 </div>
                 <div className="grid grid-cols-4 gap-1.5">
                   {selectedHotspot.featuredPhotos.map((photo, index) => (
                     <button
                       key={photo.id}
                       onClick={() => onOpenLightbox(selectedHotspot.featuredPhotos.map(p => p.url), index, photo.title, photo.category)}
-                      className="group relative aspect-square rounded-lg overflow-hidden border border-[#C9B29B]/20 hover:border-[#D4AF37] focus:outline-none transition-all"
+                      className="group relative aspect-square rounded-lg overflow-hidden border border-[#CFB291]/20 hover:border-[#CFB291] focus:outline-none transition-all"
                     >
                       <img 
                         src={photo.url} 
@@ -766,16 +766,16 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 pt-1 border-t border-[#C9B29B]/20">
+              <div className="flex items-center gap-2 pt-1 border-t border-[#CFB291]/20">
                 <button
                   onClick={() => onOpenLightbox(selectedHotspot.featuredPhotos.map(p => p.url), 0, selectedHotspot.name, '3D House Showcase')}
-                  className="flex-1 py-2 rounded-xl bg-[#D4AF37] text-[#2B1C19] text-xs font-bold hover:bg-[#FAF7F0] transition-colors flex items-center justify-center gap-1 shadow-md"
+                  className="flex-1 py-2 rounded-xl bg-[#CFB291] text-[#341910] text-xs font-bold hover:bg-[#FCFCF6] transition-colors flex items-center justify-center gap-1 shadow-md"
                 >
                   <Eye className="w-3.5 h-3.5" /> Full Gallery
                 </button>
                 <button
                   onClick={onOpenConsultation}
-                  className="py-2 px-3 rounded-xl bg-[#3E2723] text-[#FAF7F0] border border-[#D4AF37]/30 text-xs font-semibold hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors"
+                  className="py-2 px-3 rounded-xl bg-[#45241A] text-[#FCFCF6] border border-[#CFB291]/30 text-xs font-semibold hover:border-[#CFB291] hover:text-[#CFB291] transition-colors"
                 >
                   Book Work
                 </button>
