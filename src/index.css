@@ -7,20 +7,20 @@
   --font-cinzel: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* HYZIN Luxury: Obsidian Noir & Antique Gold */
-  --color-noir: #341910;
-  --color-carbon: #45241A;
-  --color-obsidian: #5A3122;
-  --color-gunmetal: #95725A;
-  --color-antique-gold: #CFB291;
-  --color-aged-bronze: #F5F5DC;
-  --color-warm-ivory: #FCFCF6;
+  --color-noir: #2B1C19;
+  --color-carbon: #3E2723;
+  --color-obsidian: #4E342E;
+  --color-gunmetal: #3E2723;
+  --color-antique-gold: #D4AF37;
+  --color-aged-bronze: #C9B29B;
+  --color-warm-ivory: #FAF7F0;
 
   /* Legacy aliases */
-  --color-caput-mortuum: #5A3122;
-  --color-chamoisee: #95725A;
-  --color-tan: #CFB291;
-  --color-beige: #F5F5DC;
-  --color-baby-powder: #FCFCF6;
+  --color-caput-mortuum: #4E342E;
+  --color-chamoisee: #3E2723;
+  --color-tan: #D4AF37;
+  --color-beige: #C9B29B;
+  --color-baby-powder: #FAF7F0;
 }
 
 @layer base {
@@ -47,8 +47,8 @@
   }
 
   body {
-    background-color: #5A3122;
-    color: #FCFCF6;
+    background-color: #4E342E;
+    color: #FAF7F0;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     line-height: 1.6;
@@ -69,7 +69,7 @@
     max-width: 100%;
     width: 100%;
     min-height: 100vh;
-    background-color: #5A3122;
+    background-color: #4E342E;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -77,7 +77,7 @@
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: #FCFCF6;
+    color: #FAF7F0;
   }
 
   h1 {
@@ -123,102 +123,102 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #341910;
+  background: #2B1C19;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CFB291;
+  background: #D4AF37;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #F5F5DC;
+  background: #C9B29B;
 }
 
 /* ✦ HYZIN INTERIOR — Luxury Theme: "Obsidian Noir & Antique Gold"
    Designed by Claude for maximum luxury perception in interior design branding.
-   1. #341910 - Absolute Noir   (deepest BG — pure darkness, ultra-premium)
-   2. #45241A - Carbon          (card surfaces — near-black, refined depth)
-   3. #5A3122 - Obsidian        (section backgrounds — dark charcoal elegance)
-   4. #95725A - Gunmetal        (mid-tone panels — cool dark separator)
-   5. #CFB291 - Antique Gold    (accent — aged museum-quality brass/gold)
-   6. #F5F5DC - Aged Bronze     (secondary accent — warm oxidized metal)
-   7. #FCFCF6 - Warm Ivory      (primary text — parchment warmth, not cold white)
+   1. #2B1C19 - Absolute Noir   (deepest BG — pure darkness, ultra-premium)
+   2. #3E2723 - Carbon          (card surfaces — near-black, refined depth)
+   3. #4E342E - Obsidian        (section backgrounds — dark charcoal elegance)
+   4. #3E2723 - Gunmetal        (mid-tone panels — cool dark separator)
+   5. #D4AF37 - Antique Gold    (accent — aged museum-quality brass/gold)
+   6. #C9B29B - Aged Bronze     (secondary accent — warm oxidized metal)
+   7. #FAF7F0 - Warm Ivory      (primary text — parchment warmth, not cold white)
 */
-.bg-noir { background-color: #341910; }
-.bg-carbon { background-color: #45241A; }
-.bg-obsidian { background-color: #5A3122; }
-.bg-gunmetal { background-color: #95725A; }
-.bg-antique-gold { background-color: #CFB291; }
-.bg-aged-bronze { background-color: #F5F5DC; }
-.bg-warm-ivory { background-color: #FCFCF6; }
+.bg-noir { background-color: #2B1C19; }
+.bg-carbon { background-color: #3E2723; }
+.bg-obsidian { background-color: #4E342E; }
+.bg-gunmetal { background-color: #3E2723; }
+.bg-antique-gold { background-color: #D4AF37; }
+.bg-aged-bronze { background-color: #C9B29B; }
+.bg-warm-ivory { background-color: #FAF7F0; }
 
-.text-noir { color: #341910; }
-.text-antique-gold { color: #CFB291; }
-.text-aged-bronze { color: #F5F5DC; }
-.text-warm-ivory { color: #FCFCF6; }
-.text-gunmetal { color: #95725A; }
+.text-noir { color: #2B1C19; }
+.text-antique-gold { color: #D4AF37; }
+.text-aged-bronze { color: #C9B29B; }
+.text-warm-ivory { color: #FAF7F0; }
+.text-gunmetal { color: #3E2723; }
 
-.border-antique-gold { border-color: #CFB291; }
-.border-gunmetal { border-color: #95725A; }
-.border-aged-bronze { border-color: #F5F5DC; }
+.border-antique-gold { border-color: #D4AF37; }
+.border-gunmetal { border-color: #3E2723; }
+.border-aged-bronze { border-color: #C9B29B; }
 
 /* Legacy aliases (kept for backward compat) */
-.bg-caput-mortuum { background-color: #5A3122; }
-.bg-chamoisee { background-color: #95725A; }
-.bg-tan { background-color: #CFB291; }
-.bg-beige { background-color: #F5F5DC; }
-.bg-baby-powder { background-color: #FCFCF6; }
-.text-caput-mortuum { color: #5A3122; }
-.text-chamoisee { color: #95725A; }
-.text-tan { color: #CFB291; }
-.text-beige { color: #F5F5DC; }
-.text-baby-powder { color: #FCFCF6; }
-.border-caput-mortuum { border-color: #5A3122; }
-.border-chamoisee { border-color: #95725A; }
-.border-tan { border-color: #CFB291; }
-.border-beige { border-color: #F5F5DC; }
-.border-baby-powder { border-color: #FCFCF6; }
+.bg-caput-mortuum { background-color: #4E342E; }
+.bg-chamoisee { background-color: #3E2723; }
+.bg-tan { background-color: #D4AF37; }
+.bg-beige { background-color: #C9B29B; }
+.bg-baby-powder { background-color: #FAF7F0; }
+.text-caput-mortuum { color: #4E342E; }
+.text-chamoisee { color: #3E2723; }
+.text-tan { color: #D4AF37; }
+.text-beige { color: #C9B29B; }
+.text-baby-powder { color: #FAF7F0; }
+.border-caput-mortuum { border-color: #4E342E; }
+.border-chamoisee { border-color: #3E2723; }
+.border-tan { border-color: #D4AF37; }
+.border-beige { border-color: #C9B29B; }
+.border-baby-powder { border-color: #FAF7F0; }
 
 /* Legacy Theme Token Aliases */
 .bg-coffee {
-  background-color: #5A3122;
+  background-color: #4E342E;
 }
 .bg-coffee-deep {
-  background-color: #341910;
+  background-color: #2B1C19;
 }
 .bg-coffee-surface {
-  background-color: #45241A;
+  background-color: #3E2723;
 }
 .bg-beige-brown {
-  background-color: #CFB291;
+  background-color: #D4AF37;
 }
 .bg-gold-sand {
-  background-color: #CFB291;
+  background-color: #D4AF37;
 }
 .bg-ivory-beige {
-  background-color: #FCFCF6;
+  background-color: #FAF7F0;
 }
 
 .text-coffee {
-  color: #5A3122;
+  color: #4E342E;
 }
 .text-beige-brown {
-  color: #CFB291;
+  color: #D4AF37;
 }
 .text-gold-sand {
-  color: #CFB291;
+  color: #D4AF37;
 }
 .text-ivory-beige {
-  color: #FCFCF6;
+  color: #FAF7F0;
 }
 
 .border-coffee {
-  border-color: #5A3122;
+  border-color: #4E342E;
 }
 .border-beige-brown {
-  border-color: #CFB291;
+  border-color: #D4AF37;
 }
 .border-gold-sand {
-  border-color: #CFB291;
+  border-color: #D4AF37;
 }
 
 /* Animatic Light Reflection Ribbon */
@@ -496,7 +496,7 @@
 .card-sharp {
   border-radius: 0;
   border: 1px solid rgba(201, 168, 76, 0.2);
-  background-color: #45241A;
+  background-color: #3E2723;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .card-sharp:hover {
@@ -541,7 +541,7 @@
 /* Vertical timeline connector */
 .timeline-connector {
   width: 1px;
-  background: linear-gradient(to bottom, #CFB291, rgba(201, 168, 76, 0.1));
+  background: linear-gradient(to bottom, #D4AF37, rgba(201, 168, 76, 0.1));
 }
 
 /* No scrollbar utility */
@@ -554,12 +554,12 @@
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.03em;
-  color: #FCFCF6;
+  color: #FAF7F0;
 }
 
 /* Gold text gradient */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #CFB291 0%, #FCFCF6 50%, #CFB291 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #FAF7F0 50%, #D4AF37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

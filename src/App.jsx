@@ -125,7 +125,7 @@ export default function App() {
   }, [activePage]);
 
   return (
-    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#5A3122] text-[#FCFCF6] selection:bg-[#CFB291]/30 selection:text-[#FCFCF6] flex flex-col justify-between relative">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#4E342E] text-[#FAF7F0] selection:bg-[#D4AF37]/30 selection:text-[#FAF7F0] flex flex-col justify-between relative">
       {/* Luxury Animatic Custom Cursor */}
       <AnimaticCursor />
 

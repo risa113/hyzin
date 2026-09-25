@@ -66,12 +66,12 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center space-x-3 text-white">
-          <div className="w-2 h-2 rounded-full bg-[#CFB291] animate-pulse"></div>
+          <div className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></div>
           <div>
-            <span className="text-[10px] uppercase font-medium tracking-[0.2em] text-[#CFB291] block">
+            <span className="text-[10px] uppercase font-medium tracking-[0.2em] text-[#D4AF37] block">
               {category || 'HYZIN ORIGINAL CLIENT WORK'}
             </span>
-            <h4 className="text-base sm:text-lg font-bold tracking-tight text-[#FCFCF6] line-clamp-1">
+            <h4 className="text-base sm:text-lg font-bold tracking-tight text-[#FAF7F0] line-clamp-1">
               {title || 'Project Specification'}
             </h4>
           </div>
@@ -80,7 +80,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
         <div className="flex items-center space-x-3">
           <button
             onClick={toggleZoom}
-            className="p-2.5 bg-white/10 hover:bg-[#CFB291] hover:text-[#341910] text-[#FCFCF6] rounded-full transition-colors"
+            className="p-2.5 bg-white/10 hover:bg-[#D4AF37] hover:text-[#2B1C19] text-[#FAF7F0] rounded-full transition-colors"
             title={isZoomed ? "Zoom Out" : "Zoom In"}
           >
             {isZoomed ? <ZoomOut className="w-4 h-4" /> : <ZoomIn className="w-4 h-4" />}
@@ -88,7 +88,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
 
           <button
             onClick={onClose}
-            className="p-2.5 bg-white/10 hover:bg-[#CFB291] hover:text-[#341910] text-[#FCFCF6] rounded-full transition-colors"
+            className="p-2.5 bg-white/10 hover:bg-[#D4AF37] hover:text-[#2B1C19] text-[#FAF7F0] rounded-full transition-colors"
             title="Close Lightbox (Esc)"
           >
             <X className="w-5 h-5" />
@@ -116,7 +116,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
         {images.length > 1 && (
           <button
             onClick={handlePrev}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-black/60 hover:bg-[#CFB291] hover:text-[#341910] text-[#FCFCF6] backdrop-blur-md rounded-full transition-all duration-300 shadow-xl"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-black/60 hover:bg-[#D4AF37] hover:text-[#2B1C19] text-[#FAF7F0] backdrop-blur-md rounded-full transition-all duration-300 shadow-xl"
             aria-label="Previous image"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -127,7 +127,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
         {images.length > 1 && (
           <button
             onClick={handleNext}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-black/60 hover:bg-[#CFB291] hover:text-[#341910] text-[#FCFCF6] backdrop-blur-md rounded-full transition-all duration-300 shadow-xl"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 p-3 sm:p-4 bg-black/60 hover:bg-[#D4AF37] hover:text-[#2B1C19] text-[#FAF7F0] backdrop-blur-md rounded-full transition-all duration-300 shadow-xl"
             aria-label="Next image"
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -140,7 +140,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
         className="absolute bottom-0 inset-x-0 p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between z-50 bg-gradient-to-t from-black/80 via-black/40 to-transparent gap-3"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="text-xs text-[#CFB291] font-semibold tracking-wider">
+        <div className="text-xs text-[#D4AF37] font-semibold tracking-wider">
           IMAGE {currentIndex + 1} OF {images.length}
         </div>
 
@@ -155,7 +155,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
                 }}
                 className={`w-12 h-12 flex-shrink-0 border-2 transition-all duration-300 rounded overflow-hidden ${
                   idx === currentIndex
-                    ? 'border-[#CFB291] scale-105 shadow-md'
+                    ? 'border-[#D4AF37] scale-105 shadow-md'
                     : 'border-white/20 opacity-50 hover:opacity-100'
                 }`}
               >
@@ -165,7 +165,7 @@ export default function ImageLightboxModal({ isOpen, onClose, images = [], initi
           </div>
         )}
 
-        <div className="text-[11px] text-[#CFB291] font-normal">
+        <div className="text-[11px] text-[#D4AF37] font-normal">
           Click image or zoom button to toggle 1.5x zoom
         </div>
       </div>

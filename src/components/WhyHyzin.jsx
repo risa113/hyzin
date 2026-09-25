@@ -28,21 +28,21 @@ export default function WhyHyzin() {
   ];
 
   return (
-    <section id="philosophy" className="py-24 sm:py-32 bg-[#341910] border-t border-[#CFB291]/20">
+    <section id="philosophy" className="py-24 sm:py-32 bg-[#2B1C19] border-t border-[#D4AF37]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Title Sticky Column */}
           <div className="lg:col-span-4 lg:sticky lg:top-28">
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-medium mb-3">
+            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#D4AF37] font-medium mb-3">
               <span>04 / THE HYZIN CODE</span>
-              <span className="w-8 h-[1px] bg-[#CFB291]/40"></span>
+              <span className="w-8 h-[1px] bg-[#D4AF37]/40"></span>
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#FCFCF6] font-bold tracking-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#FAF7F0] font-bold tracking-tight">
               WHY HYZIN
             </h2>
-            <p className="mt-4 text-sm sm:text-base text-[#CFB291] font-normal leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-[#D4AF37] font-normal leading-relaxed">
               We operate not as a commercial contractor, but as a dedicated interior & fabrication atelier committed to enduring quality, intellectual restraint, and profound client discretion.
             </p>
           </div>
@@ -52,18 +52,18 @@ export default function WhyHyzin() {
             {points.map((p, index) => (
               <div
                 key={p.title}
-                className="p-8 sm:p-10 bg-[#45241A] border border-[#CFB291]/20 hover:border-[#CFB291]/60 transition-all duration-300 group shadow-lg"
+                className="p-8 sm:p-10 bg-[#3E2723] border border-[#D4AF37]/20 hover:border-[#D4AF37]/60 transition-all duration-300 group shadow-lg"
               >
-                <div className="flex items-center justify-between text-xs text-[#CFB291] font-semibold mb-2">
+                <div className="flex items-center justify-between text-xs text-[#D4AF37] font-semibold mb-2">
                   <span>0{index + 1} / FOUNDATION</span>
-                  <span className="text-[10px] text-[#CFB291]/80 uppercase font-medium">{p.sub}</span>
+                  <span className="text-[10px] text-[#D4AF37]/80 uppercase font-medium">{p.sub}</span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl text-[#FCFCF6] font-bold tracking-tight group-hover:text-[#CFB291] transition-colors">
+                <h3 className="text-xl sm:text-2xl text-[#FAF7F0] font-bold tracking-tight group-hover:text-[#D4AF37] transition-colors">
                   {p.title}
                 </h3>
 
-                <p className="mt-3 text-sm sm:text-base text-[#CFB291] font-normal leading-relaxed">
+                <p className="mt-3 text-sm sm:text-base text-[#D4AF37] font-normal leading-relaxed">
                   {p.desc}
                 </p>
               </div>
