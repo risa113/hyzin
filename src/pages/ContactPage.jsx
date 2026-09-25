@@ -30,20 +30,20 @@ export default function ContactPage({ prefilledProject = '', selectedRegion = ''
   ];
 
   return (
-    <div className="animate-page-enter pt-12 pb-24 bg-[#5A3122]">
+    <div className="animate-page-enter pt-12 pb-24 bg-[#1C1C20]">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-[#CFB291]/20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-[#C9A84C]/20">
         <div className="max-w-3xl">
-          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-medium mb-4">
+          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium mb-4">
             <span>COMMISSION DIALOGUE</span>
-            <span className="w-12 h-[1px] bg-[#CFB291]/40"></span>
+            <span className="w-12 h-[1px] bg-[#C9A84C]/40"></span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl text-[#FCFCF6] font-extrabold leading-[1.12] tracking-tight">
-            Reserve a Private <span className="text-[#CFB291]">Spatial Brief.</span>
+          <h1 className="text-4xl sm:text-6xl text-[#F2EDE4] font-extrabold leading-[1.12] tracking-tight">
+            Reserve a Private <span className="text-[#C9A84C]">Spatial Brief.</span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-[#CFB291] font-normal leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-[#C9A84C] font-normal leading-relaxed">
             Tell us about your property, design ideas, and lifestyle requirements. We accept a limited number of commissions per quarter to ensure obsessive attention to detail.
           </p>
         </div>
@@ -59,88 +59,88 @@ export default function ContactPage({ prefilledProject = '', selectedRegion = ''
       <StudioLocationSection />
 
       {/* Regional Atelier Addresses */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-[#CFB291]/20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-[#C9A84C]/20">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-medium block mb-2">
+          <span className="text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium block mb-2">
             REGIONAL DESKS & CONTACTS
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#FCFCF6] font-bold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#F2EDE4] font-bold tracking-tight">
             Direct Studio Desks Across South India
           </h2>
-          <p className="mt-3 text-xs sm:text-sm text-[#CFB291]">
-            Official Email: <a href="mailto:Muhammedashad395@gmail.com" className="font-semibold text-[#CFB291] hover:text-[#FCFCF6] underline">Muhammedashad395@gmail.com</a>
+          <p className="mt-3 text-xs sm:text-sm text-[#C9A84C]">
+            Official Email: <a href="mailto:Muhammedashad395@gmail.com" className="font-semibold text-[#C9A84C] hover:text-[#F2EDE4] underline">Muhammedashad395@gmail.com</a>
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-8 bg-[#45241A] border border-[#CFB291]/20 shadow-xl flex flex-col justify-between">
+          <div className="p-8 bg-[#141416] border border-[#C9A84C]/20 shadow-xl flex flex-col justify-between">
             <div>
-              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#CFB291] block mb-2">
+              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9A84C] block mb-2">
                 KERALA PRINCIPAL ATELIER & WORKSHOP
               </span>
-              <h3 className="text-xl sm:text-2xl text-[#FCFCF6] font-bold tracking-tight mb-2">Kerala Design & Fabrication</h3>
-              <p className="text-xs text-[#CFB291]/80 font-medium mb-4">Coordinates: 10°40'35.2"N 76°40'52.1"E</p>
-              <p className="text-sm text-[#CFB291] font-normal leading-relaxed mb-6">
+              <h3 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight mb-2">Kerala Design & Fabrication</h3>
+              <p className="text-xs text-[#C9A84C]/80 font-medium mb-4">Coordinates: 10°40'35.2"N 76°40'52.1"E</p>
+              <p className="text-sm text-[#C9A84C] font-normal leading-relaxed mb-6">
                 Full-scale natural stone displays, aluminium interior sections, modular cabinetry mockups, and acoustic lighting lab.
               </p>
             </div>
-            <div className="space-y-2 pt-4 border-t border-[#CFB291]/20">
-              <a href="tel:916282549008" className="text-xs font-semibold text-[#CFB291] hover:text-[#FCFCF6] flex items-center space-x-1">
+            <div className="space-y-2 pt-4 border-t border-[#C9A84C]/20">
+              <a href="tel:916282549008" className="text-xs font-semibold text-[#C9A84C] hover:text-[#F2EDE4] flex items-center space-x-1">
                 <span>+91 6282549008</span>
                 <ArrowUpRight className="w-3 h-3" />
               </a>
-              <a href="mailto:Muhammedashad395@gmail.com" className="text-xs font-medium text-[#CFB291] hover:text-[#CFB291] flex items-center space-x-1">
-                <Mail className="w-3 h-3 text-[#CFB291]" />
+              <a href="mailto:Muhammedashad395@gmail.com" className="text-xs font-medium text-[#C9A84C] hover:text-[#C9A84C] flex items-center space-x-1">
+                <Mail className="w-3 h-3 text-[#C9A84C]" />
                 <span>Muhammedashad395@gmail.com</span>
               </a>
-              <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-[#FCFCF6] hover:text-[#CFB291] flex items-center space-x-1">
-                <MapPin className="w-3 h-3 text-[#CFB291]" />
+              <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-[#F2EDE4] hover:text-[#C9A84C] flex items-center space-x-1">
+                <MapPin className="w-3 h-3 text-[#C9A84C]" />
                 <span>Open Google Maps Location</span>
               </a>
             </div>
           </div>
 
-          <div className="p-8 bg-[#45241A] border border-[#CFB291]/20 shadow-xl flex flex-col justify-between">
+          <div className="p-8 bg-[#141416] border border-[#C9A84C]/20 shadow-xl flex flex-col justify-between">
             <div>
-              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#CFB291] block mb-2">
+              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9A84C] block mb-2">
                 KARNATAKA GUILD
               </span>
-              <h3 className="text-xl sm:text-2xl text-[#FCFCF6] font-bold tracking-tight mb-2">Bengaluru Private Cave</h3>
-              <p className="text-xs text-[#CFB291]/80 font-medium mb-4">Lavelle Road / Indiranagar, Bengaluru</p>
-              <p className="text-sm text-[#CFB291] font-normal leading-relaxed mb-6">
+              <h3 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight mb-2">Bengaluru Private Cave</h3>
+              <p className="text-xs text-[#C9A84C]/80 font-medium mb-4">Lavelle Road / Indiranagar, Bengaluru</p>
+              <p className="text-sm text-[#C9A84C] font-normal leading-relaxed mb-6">
                 Tailored for high-rise sky galleries, penthouses, and bespoke technology executive headquarters.
               </p>
             </div>
-            <div className="space-y-2 pt-4 border-t border-[#CFB291]/20">
-              <a href="tel:918848023041" className="text-xs font-semibold text-[#CFB291] hover:text-[#FCFCF6] flex items-center space-x-1">
+            <div className="space-y-2 pt-4 border-t border-[#C9A84C]/20">
+              <a href="tel:918848023041" className="text-xs font-semibold text-[#C9A84C] hover:text-[#F2EDE4] flex items-center space-x-1">
                 <span>+91 8848023041</span>
                 <ArrowUpRight className="w-3 h-3" />
               </a>
-              <a href="mailto:Muhammedashad395@gmail.com" className="text-xs font-medium text-[#CFB291] hover:text-[#CFB291] flex items-center space-x-1">
-                <Mail className="w-3 h-3 text-[#CFB291]" />
+              <a href="mailto:Muhammedashad395@gmail.com" className="text-xs font-medium text-[#C9A84C] hover:text-[#C9A84C] flex items-center space-x-1">
+                <Mail className="w-3 h-3 text-[#C9A84C]" />
                 <span>Muhammedashad395@gmail.com</span>
               </a>
             </div>
           </div>
 
-          <div className="p-8 bg-[#45241A] border border-[#CFB291]/20 shadow-xl flex flex-col justify-between">
+          <div className="p-8 bg-[#141416] border border-[#C9A84C]/20 shadow-xl flex flex-col justify-between">
             <div>
-              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#CFB291] block mb-2">
+              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9A84C] block mb-2">
                 TAMIL NADU ATELIER
               </span>
-              <h3 className="text-xl sm:text-2xl text-[#FCFCF6] font-bold tracking-tight mb-2">Chennai Modernist Guild</h3>
-              <p className="text-xs text-[#CFB291]/80 font-medium mb-4">Boat Club Road / Poes Garden, Chennai</p>
-              <p className="text-sm text-[#CFB291] font-normal leading-relaxed mb-6">
+              <h3 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight mb-2">Chennai Modernist Guild</h3>
+              <p className="text-xs text-[#C9A84C]/80 font-medium mb-4">Boat Club Road / Poes Garden, Chennai</p>
+              <p className="text-sm text-[#C9A84C] font-normal leading-relaxed mb-6">
                 Specializing in Chettinad courtyard modernism, ancestral manor preservation, and monolithic villas.
               </p>
             </div>
-            <div className="space-y-2 pt-4 border-t border-[#CFB291]/20">
-              <a href="tel:916282549008" className="text-xs font-semibold text-[#CFB291] hover:text-[#FCFCF6] flex items-center space-x-1">
+            <div className="space-y-2 pt-4 border-t border-[#C9A84C]/20">
+              <a href="tel:916282549008" className="text-xs font-semibold text-[#C9A84C] hover:text-[#F2EDE4] flex items-center space-x-1">
                 <span>+91 6282549008</span>
                 <ArrowUpRight className="w-3 h-3" />
               </a>
-              <a href="mailto:Muhammedashad395@gmail.com" className="text-xs font-medium text-[#CFB291] hover:text-[#CFB291] flex items-center space-x-1">
-                <Mail className="w-3 h-3 text-[#CFB291]" />
+              <a href="mailto:Muhammedashad395@gmail.com" className="text-xs font-medium text-[#C9A84C] hover:text-[#C9A84C] flex items-center space-x-1">
+                <Mail className="w-3 h-3 text-[#C9A84C]" />
                 <span>Muhammedashad395@gmail.com</span>
               </a>
             </div>
@@ -151,10 +151,10 @@ export default function ContactPage({ prefilledProject = '', selectedRegion = ''
       {/* Frequently Asked Questions */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <span className="text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-medium block mb-2">
+          <span className="text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium block mb-2">
             FREQUENT INQUIRIES
           </span>
-          <h2 className="text-2xl sm:text-3xl text-[#FCFCF6] font-bold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl text-[#F2EDE4] font-bold tracking-tight">
             Client Questions & Commission Protocol
           </h2>
         </div>
@@ -165,18 +165,18 @@ export default function ContactPage({ prefilledProject = '', selectedRegion = ''
             return (
               <div
                 key={index}
-                className="bg-[#45241A] border border-[#CFB291]/20 shadow-lg overflow-hidden transition-colors"
+                className="bg-[#141416] border border-[#C9A84C]/20 shadow-lg overflow-hidden transition-colors"
               >
                 <button
                   onClick={() => setOpenFaq(isOpen ? null : index)}
-                  className="w-full p-6 text-left flex items-center justify-between text-lg sm:text-xl font-semibold text-[#FCFCF6] hover:text-[#CFB291] transition-colors"
+                  className="w-full p-6 text-left flex items-center justify-between text-lg sm:text-xl font-semibold text-[#F2EDE4] hover:text-[#C9A84C] transition-colors"
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#CFB291]' : 'text-[#CFB291]'}`} />
+                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#C9A84C]' : 'text-[#C9A84C]'}`} />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-sm sm:text-base text-[#CFB291] font-normal leading-relaxed border-t border-[#CFB291]/20 pt-4 animate-fadeIn">
+                  <div className="px-6 pb-6 text-sm sm:text-base text-[#C9A84C] font-normal leading-relaxed border-t border-[#C9A84C]/20 pt-4 animate-fadeIn">
                     {faq.a}
                   </div>
                 )}

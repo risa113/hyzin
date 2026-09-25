@@ -52,21 +52,21 @@ export default function ServicesPage({
   ];
 
   return (
-    <div className="animate-page-enter pt-12 pb-24 bg-[#5A3122]">
+    <div className="animate-page-enter pt-12 pb-24 bg-[#1C1C20]">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 border-b border-[#CFB291]/20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 border-b border-[#C9A84C]/20">
         <div className="max-w-3xl">
-          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-medium mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#CFB291]" />
+          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-[#C9A84C]" />
             <span>THE 10 OFFICIAL CLIENT WORK DISCIPLINES</span>
-            <span className="w-12 h-[1px] bg-[#CFB291]/40"></span>
+            <span className="w-12 h-[1px] bg-[#C9A84C]/40"></span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl text-[#FCFCF6] font-extrabold leading-[1.12] tracking-tight">
-            What We <span className="text-[#CFB291]">Create.</span>
+          <h1 className="text-4xl sm:text-6xl text-[#F2EDE4] font-extrabold leading-[1.12] tracking-tight">
+            What We <span className="text-[#C9A84C]">Create.</span>
           </h1>
 
-          <p className="mt-5 text-base sm:text-xl text-[#CFB291] font-normal leading-relaxed">
+          <p className="mt-5 text-base sm:text-xl text-[#C9A84C] font-normal leading-relaxed">
             Ten specialized services covering complete interior design, modular joinery, and structural metal fabrication across Kerala, Tamil Nadu, and Karnataka.
           </p>
         </div>
@@ -76,16 +76,16 @@ export default function ServicesPage({
       <section id="services-showcase" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 scroll-mt-24">
         
         {/* Section Title & Subheader */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-[#CFB291]/15 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-[#C9A84C]/15 gap-4">
           <div>
-            <span className="text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-semibold block mb-1">
+            <span className="text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-semibold block mb-1">
               DISCIPLINE CATALOGUE ({servicesData.length} TOTAL)
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#FCFCF6] font-bold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#F2EDE4] font-bold tracking-tight">
               Explore All 10 Services
             </h2>
           </div>
-          <div className="text-xs text-[#CFB291] font-medium">
+          <div className="text-xs text-[#C9A84C] font-medium">
             Touch any discipline to inspect photography, deliverables, and specs
           </div>
         </div>
@@ -100,8 +100,8 @@ export default function ServicesPage({
                 onClick={() => setActiveService(idx)}
                 className={`px-3.5 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-300 flex items-center space-x-1.5 cursor-pointer shrink-0 border ${
                   isSelected
-                    ? 'bg-[#CFB291] text-[#341910] border-[#CFB291] shadow-lg shadow-[#CFB291]/20 scale-105'
-                    : 'bg-[#45241A] text-[#FCFCF6] border-[#CFB291]/20 hover:border-[#CFB291] hover:text-[#CFB291]'
+                    ? 'bg-[#C9A84C] text-[#0A0A0B] border-[#C9A84C] shadow-lg shadow-[#C9A84C]/20 scale-105'
+                    : 'bg-[#141416] text-[#F2EDE4] border-[#C9A84C]/20 hover:border-[#C9A84C] hover:text-[#C9A84C]'
                 }`}
               >
                 <span className="text-[10px] opacity-80">{srv.number}</span>
@@ -124,43 +124,43 @@ export default function ServicesPage({
                   onClick={() => setActiveService(idx)}
                   className={`p-5 cursor-pointer border transition-all duration-300 rounded-lg ${
                     isSelected
-                      ? 'bg-[#45241A] border-[#CFB291] shadow-xl ring-2 ring-[#CFB291]/50'
-                      : 'bg-[#45241A]/60 border-[#CFB291]/20 hover:border-[#CFB291]/60 hover:bg-[#45241A]'
+                      ? 'bg-[#141416] border-[#C9A84C] shadow-xl ring-2 ring-[#C9A84C]/50'
+                      : 'bg-[#141416]/60 border-[#C9A84C]/20 hover:border-[#C9A84C]/60 hover:bg-[#141416]'
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                       <span className={`text-xs font-bold px-2 py-0.5 rounded ${
-                        isSelected ? 'bg-[#CFB291] text-[#341910]' : 'bg-[#341910] text-[#CFB291] border border-[#CFB291]/30'
+                        isSelected ? 'bg-[#C9A84C] text-[#0A0A0B]' : 'bg-[#0A0A0B] text-[#C9A84C] border border-[#C9A84C]/30'
                       }`}>
                         {srv.number}
                       </span>
-                      <h3 className="text-base sm:text-lg text-[#FCFCF6] font-bold tracking-tight">
+                      <h3 className="text-base sm:text-lg text-[#F2EDE4] font-bold tracking-tight">
                         {srv.title}
                       </h3>
                     </div>
                     <ArrowUpRight
                       className={`w-4 h-4 transition-transform duration-300 ${
-                        isSelected ? 'rotate-45 text-[#CFB291] scale-125' : 'text-[#CFB291]'
+                        isSelected ? 'rotate-45 text-[#C9A84C] scale-125' : 'text-[#C9A84C]'
                       }`}
                     />
                   </div>
 
                   {/* Active Service Expanded Details */}
                   {isSelected && (
-                    <div className="mt-4 pt-4 border-t border-[#CFB291]/20 animate-fadeIn">
-                      <p className="text-sm text-[#CFB291] font-normal leading-relaxed mb-4">
+                    <div className="mt-4 pt-4 border-t border-[#C9A84C]/20 animate-fadeIn">
+                      <p className="text-sm text-[#C9A84C] font-normal leading-relaxed mb-4">
                         {srv.description}
                       </p>
                       
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-[#CFB291] mb-2">
+                      <div className="text-[11px] font-bold uppercase tracking-wider text-[#C9A84C] mb-2">
                         Included Deliverables & Scope:
                       </div>
                       
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
                         {srv.deliverables.map((item, i) => (
-                          <div key={i} className="flex items-center space-x-2 text-xs text-[#FCFCF6]">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#CFB291] shrink-0" />
+                          <div key={i} className="flex items-center space-x-2 text-xs text-[#F2EDE4]">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#C9A84C] shrink-0" />
                             <span className="truncate">{item}</span>
                           </div>
                         ))}
@@ -175,7 +175,7 @@ export default function ServicesPage({
                             const allPhotos = [srv.image, ...(srv.gallery || [])];
                             onOpenLightbox && onOpenLightbox(allPhotos, 0, srv.title, srv.title);
                           }}
-                          className="px-3 py-1.5 bg-[#CFB291] text-[#341910] font-bold rounded text-xs flex items-center space-x-1.5 shadow"
+                          className="px-3 py-1.5 bg-[#C9A84C] text-[#0A0A0B] font-bold rounded text-xs flex items-center space-x-1.5 shadow"
                         >
                           <Maximize2 className="w-3.5 h-3.5" />
                           <span>View {1 + (srv.gallery?.length || 0)} Photos</span>
@@ -187,7 +187,7 @@ export default function ServicesPage({
                             e.stopPropagation();
                             onOpenConsultation();
                           }}
-                          className="text-xs text-[#CFB291] hover:underline font-bold"
+                          className="text-xs text-[#C9A84C] hover:underline font-bold"
                         >
                           Commission Service →
                         </button>
@@ -206,34 +206,34 @@ export default function ServicesPage({
                 const allServicePhotos = [selected.image, ...(selected.gallery || [])];
                 onOpenLightbox && onOpenLightbox(allServicePhotos, 0, selected.title, selected.title);
               }}
-              className="relative w-full h-[380px] sm:h-[460px] border border-[#CFB291]/20 rounded-xl overflow-hidden shadow-2xl bg-[#45241A] animatic-reflection cursor-pointer group"
+              className="relative w-full h-[380px] sm:h-[460px] border border-[#C9A84C]/20 rounded-xl overflow-hidden shadow-2xl bg-[#141416] animatic-reflection cursor-pointer group"
             >
               <img
                 src={selected.image}
                 alt={selected.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#341910]/95 via-[#341910]/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B]/95 via-[#0A0A0B]/30 to-transparent"></div>
               
               <button 
                 type="button"
-                className="absolute top-4 right-4 p-2.5 bg-[#341910]/80 backdrop-blur-md text-[#FCFCF6] rounded-full border border-[#CFB291]/30 opacity-90 group-hover:opacity-100 transition-opacity"
+                className="absolute top-4 right-4 p-2.5 bg-[#0A0A0B]/80 backdrop-blur-md text-[#F2EDE4] rounded-full border border-[#C9A84C]/30 opacity-90 group-hover:opacity-100 transition-opacity"
                 aria-label="Open fullscreen gallery"
               >
-                <Maximize2 className="w-4 h-4 text-[#CFB291]" />
+                <Maximize2 className="w-4 h-4 text-[#C9A84C]" />
               </button>
 
-              <div className="absolute bottom-5 left-5 right-5 p-5 bg-[#341910]/95 backdrop-blur-md border border-[#CFB291]/20 rounded-lg shadow-xl">
-                <span className="text-[10px] uppercase tracking-wider text-[#CFB291] block mb-1 font-semibold">
+              <div className="absolute bottom-5 left-5 right-5 p-5 bg-[#0A0A0B]/95 backdrop-blur-md border border-[#C9A84C]/20 rounded-lg shadow-xl">
+                <span className="text-[10px] uppercase tracking-wider text-[#C9A84C] block mb-1 font-semibold">
                   DISCIPLINE {selected.number} • ORIGINAL CLIENT WORK
                 </span>
-                <h4 className="text-xl sm:text-2xl text-[#FCFCF6] font-bold tracking-tight">
+                <h4 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight">
                   {selected.title}
                 </h4>
-                <p className="text-xs text-[#CFB291] mt-1 font-normal line-clamp-2">
+                <p className="text-xs text-[#C9A84C] mt-1 font-normal line-clamp-2">
                   {selected.tagline}
                 </p>
-                <div className="mt-3 pt-2 border-t border-[#CFB291]/20 flex items-center justify-between text-[11px] text-[#CFB291] font-semibold">
+                <div className="mt-3 pt-2 border-t border-[#C9A84C]/20 flex items-center justify-between text-[11px] text-[#C9A84C] font-semibold">
                   <span className="flex items-center space-x-1.5">
                     <Maximize2 className="w-3.5 h-3.5" />
                     <span>TOUCH TO VIEW FULLSCREEN LIGHTBOX</span>
@@ -253,7 +253,7 @@ export default function ServicesPage({
                       const allServicePhotos = [selected.image, ...(selected.gallery || [])];
                       onOpenLightbox && onOpenLightbox(allServicePhotos, i + 1, selected.title, selected.title);
                     }}
-                    className="w-24 h-16 flex-shrink-0 border border-[#CFB291]/25 rounded-md overflow-hidden cursor-pointer hover:border-[#CFB291] transition-all hover:scale-105 shadow-sm"
+                    className="w-24 h-16 flex-shrink-0 border border-[#C9A84C]/25 rounded-md overflow-hidden cursor-pointer hover:border-[#C9A84C] transition-all hover:scale-105 shadow-sm"
                   >
                     <img src={img} alt="Service detail preview" className="w-full h-full object-cover" />
                   </div>
@@ -262,18 +262,18 @@ export default function ServicesPage({
             )}
 
             {/* Action CTA */}
-            <div className="p-6 bg-[#45241A] border border-[#CFB291]/20 rounded-xl shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="p-6 bg-[#141416] border border-[#C9A84C]/20 rounded-xl shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <span className="text-[10px] uppercase text-[#CFB291] block font-bold tracking-wider">
+                <span className="text-[10px] uppercase text-[#C9A84C] block font-bold tracking-wider">
                   READY TO COMMISSION?
                 </span>
-                <span className="text-base sm:text-lg font-bold text-[#FCFCF6]">
+                <span className="text-base sm:text-lg font-bold text-[#F2EDE4]">
                   Inquire for {selected.title}
                 </span>
               </div>
               <button
                 onClick={onOpenConsultation}
-                className="w-full sm:w-auto px-6 py-3 bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-xs uppercase tracking-widest font-bold transition-colors shadow-lg rounded-sm cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3 bg-[#C9A84C] hover:bg-[#F2EDE4] text-[#0A0A0B] text-xs uppercase tracking-widest font-bold transition-colors shadow-lg rounded-sm cursor-pointer"
               >
                 START YOUR PROJECT
               </button>
@@ -284,28 +284,28 @@ export default function ServicesPage({
       </section>
 
       {/* Geometry Pillars */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-[#CFB291]/20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-[#C9A84C]/20">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-[11px] uppercase tracking-[0.25em] text-[#CFB291] font-medium block mb-2">
+          <span className="text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium block mb-2">
             DESIGN & FABRICATION METHODOLOGY
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FCFCF6] font-bold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#F2EDE4] font-bold tracking-tight">
             The Geometry of Quietness
           </h2>
-          <p className="mt-3 text-sm text-[#CFB291] font-normal">
+          <p className="mt-3 text-sm text-[#C9A84C] font-normal">
             Three core foundations that govern every interior and fabrication project we deliver.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {geometryPillars.map((p) => (
-            <div key={p.num} className="p-8 bg-[#45241A] border border-[#CFB291]/20 shadow-lg hover:border-[#CFB291]/50 transition-all duration-300 rounded-xl">
-              <span className="text-xs font-semibold text-[#CFB291] block mb-4">
+            <div key={p.num} className="p-8 bg-[#141416] border border-[#C9A84C]/20 shadow-lg hover:border-[#C9A84C]/50 transition-all duration-300 rounded-xl">
+              <span className="text-xs font-semibold text-[#C9A84C] block mb-4">
                 {p.num} / FOUNDATION
               </span>
-              <h3 className="text-xl sm:text-2xl text-[#FCFCF6] font-bold tracking-tight mb-2">{p.title}</h3>
-              <p className="text-xs uppercase tracking-wider text-[#CFB291]/80 mb-4 font-medium">{p.sub}</p>
-              <p className="text-sm text-[#CFB291] font-normal leading-relaxed">{p.text}</p>
+              <h3 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight mb-2">{p.title}</h3>
+              <p className="text-xs uppercase tracking-wider text-[#C9A84C]/80 mb-4 font-medium">{p.sub}</p>
+              <p className="text-sm text-[#C9A84C] font-normal leading-relaxed">{p.text}</p>
             </div>
           ))}
         </div>

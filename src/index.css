@@ -6,11 +6,21 @@
   --font-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-cinzel: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  --color-caput-mortuum: #5A3122;
-  --color-chamoisee: #95725A;
-  --color-tan: #CFB291;
-  --color-beige: #F5F5DC;
-  --color-baby-powder: #FCFCF6;
+  /* HYZIN Luxury: Obsidian Noir & Antique Gold */
+  --color-noir: #0A0A0B;
+  --color-carbon: #141416;
+  --color-obsidian: #1C1C20;
+  --color-gunmetal: #2A2A30;
+  --color-antique-gold: #C9A84C;
+  --color-aged-bronze: #8B7355;
+  --color-warm-ivory: #F2EDE4;
+
+  /* Legacy aliases */
+  --color-caput-mortuum: #1C1C20;
+  --color-chamoisee: #2A2A30;
+  --color-tan: #C9A84C;
+  --color-beige: #8B7355;
+  --color-baby-powder: #F2EDE4;
 }
 
 @layer base {
@@ -37,8 +47,8 @@
   }
 
   body {
-    background-color: #5A3122;
-    color: #FCFCF6;
+    background-color: #1C1C20;
+    color: #F2EDE4;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     line-height: 1.6;
@@ -59,7 +69,7 @@
     max-width: 100%;
     width: 100%;
     min-height: 100vh;
-    background-color: #5A3122;
+    background-color: #1C1C20;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -67,7 +77,7 @@
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.02em;
-    color: #FCFCF6;
+    color: #F2EDE4;
   }
 
   h1 {
@@ -113,82 +123,102 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #341910;
+  background: #0A0A0B;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CFB291;
+  background: #C9A84C;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #F5F5DC;
+  background: #8B7355;
 }
 
-/* Client 5-Color Luxury Theme Palette
-   1. #5A3122 - Caput mortuum (Deep rich chocolate base)
-   2. #95725A - Chamoisee (Warm medium wood & panel tone)
-   3. #CFB291 - Tan (Warm golden sand accent & borders)
-   4. #F5F5DC - Beige (Soft cream hover & secondary text)
-   5. #FCFCF6 - Baby powder (Pure ivory white headings & primary text)
+/* ✦ HYZIN INTERIOR — Luxury Theme: "Obsidian Noir & Antique Gold"
+   Designed by Claude for maximum luxury perception in interior design branding.
+   1. #0A0A0B - Absolute Noir   (deepest BG — pure darkness, ultra-premium)
+   2. #141416 - Carbon          (card surfaces — near-black, refined depth)
+   3. #1C1C20 - Obsidian        (section backgrounds — dark charcoal elegance)
+   4. #2A2A30 - Gunmetal        (mid-tone panels — cool dark separator)
+   5. #C9A84C - Antique Gold    (accent — aged museum-quality brass/gold)
+   6. #8B7355 - Aged Bronze     (secondary accent — warm oxidized metal)
+   7. #F2EDE4 - Warm Ivory      (primary text — parchment warmth, not cold white)
 */
-.bg-caput-mortuum { background-color: #5A3122; }
-.bg-chamoisee { background-color: #95725A; }
-.bg-tan { background-color: #CFB291; }
-.bg-beige { background-color: #F5F5DC; }
-.bg-baby-powder { background-color: #FCFCF6; }
+.bg-noir { background-color: #0A0A0B; }
+.bg-carbon { background-color: #141416; }
+.bg-obsidian { background-color: #1C1C20; }
+.bg-gunmetal { background-color: #2A2A30; }
+.bg-antique-gold { background-color: #C9A84C; }
+.bg-aged-bronze { background-color: #8B7355; }
+.bg-warm-ivory { background-color: #F2EDE4; }
 
-.text-caput-mortuum { color: #5A3122; }
-.text-chamoisee { color: #95725A; }
-.text-tan { color: #CFB291; }
-.text-beige { color: #F5F5DC; }
-.text-baby-powder { color: #FCFCF6; }
+.text-noir { color: #0A0A0B; }
+.text-antique-gold { color: #C9A84C; }
+.text-aged-bronze { color: #8B7355; }
+.text-warm-ivory { color: #F2EDE4; }
+.text-gunmetal { color: #2A2A30; }
 
-.border-caput-mortuum { border-color: #5A3122; }
-.border-chamoisee { border-color: #95725A; }
-.border-tan { border-color: #CFB291; }
-.border-beige { border-color: #F5F5DC; }
-.border-baby-powder { border-color: #FCFCF6; }
+.border-antique-gold { border-color: #C9A84C; }
+.border-gunmetal { border-color: #2A2A30; }
+.border-aged-bronze { border-color: #8B7355; }
+
+/* Legacy aliases (kept for backward compat) */
+.bg-caput-mortuum { background-color: #1C1C20; }
+.bg-chamoisee { background-color: #2A2A30; }
+.bg-tan { background-color: #C9A84C; }
+.bg-beige { background-color: #8B7355; }
+.bg-baby-powder { background-color: #F2EDE4; }
+.text-caput-mortuum { color: #1C1C20; }
+.text-chamoisee { color: #2A2A30; }
+.text-tan { color: #C9A84C; }
+.text-beige { color: #8B7355; }
+.text-baby-powder { color: #F2EDE4; }
+.border-caput-mortuum { border-color: #1C1C20; }
+.border-chamoisee { border-color: #2A2A30; }
+.border-tan { border-color: #C9A84C; }
+.border-beige { border-color: #8B7355; }
+.border-baby-powder { border-color: #F2EDE4; }
 
 /* Legacy Theme Token Aliases */
 .bg-coffee {
-  background-color: #5A3122;
+  background-color: #1C1C20;
 }
 .bg-coffee-deep {
-  background-color: #341910;
+  background-color: #0A0A0B;
 }
 .bg-coffee-surface {
-  background-color: #45241A;
+  background-color: #141416;
 }
 .bg-beige-brown {
-  background-color: #CFB291;
+  background-color: #C9A84C;
 }
 .bg-gold-sand {
-  background-color: #CFB291;
+  background-color: #C9A84C;
 }
 .bg-ivory-beige {
-  background-color: #FCFCF6;
+  background-color: #F2EDE4;
 }
 
 .text-coffee {
-  color: #5A3122;
+  color: #1C1C20;
 }
 .text-beige-brown {
-  color: #CFB291;
+  color: #C9A84C;
 }
 .text-gold-sand {
-  color: #CFB291;
+  color: #C9A84C;
 }
 .text-ivory-beige {
-  color: #FCFCF6;
+  color: #F2EDE4;
 }
 
 .border-coffee {
-  border-color: #5A3122;
+  border-color: #1C1C20;
 }
 .border-beige-brown {
-  border-color: #CFB291;
+  border-color: #C9A84C;
 }
 .border-gold-sand {
-  border-color: #CFB291;
+  border-color: #C9A84C;
 }
 
 /* Animatic Light Reflection Ribbon */

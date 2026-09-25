@@ -32,19 +32,19 @@ export default function SeoFaqSection({ onOpenConsultation }) {
   ];
 
   return (
-    <section className="py-24 bg-[#341910] border-t border-[#CFB291]/20 relative overflow-hidden">
+    <section className="py-24 bg-[#0A0A0B] border-t border-[#C9A84C]/20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#CFB291]/15 border border-[#CFB291]/30 text-[#CFB291] text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#C9A84C]/15 border border-[#C9A84C]/30 text-[#C9A84C] text-xs font-semibold uppercase tracking-wider mb-4">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>EXPERT INTERIOR & FABRICATION KNOWLEDGE</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FCFCF6] font-bold tracking-tight">
-            FREQUENTLY ASKED <span className="text-[#CFB291] font-bold">QUESTIONS</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#F2EDE4] font-bold tracking-tight">
+            FREQUENTLY ASKED <span className="text-[#C9A84C] font-bold">QUESTIONS</span>
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-[#CFB291] font-normal leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-[#C9A84C] font-normal leading-relaxed">
             Everything you need to know about material selection, installation timelines, and bespoke fabrication for your residential project in Kerala.
           </p>
         </div>
@@ -58,26 +58,26 @@ export default function SeoFaqSection({ onOpenConsultation }) {
                 key={idx}
                 className={`border rounded-xl transition-all duration-300 overflow-hidden ${
                   isOpen
-                    ? 'bg-[#45241A] border-[#CFB291]/50 shadow-xl'
-                    : 'bg-[#45241A]/60 border-[#CFB291]/20 hover:border-[#CFB291]/30'
+                    ? 'bg-[#141416] border-[#C9A84C]/50 shadow-xl'
+                    : 'bg-[#141416]/60 border-[#C9A84C]/20 hover:border-[#C9A84C]/30'
                 }`}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
                 >
-                  <span className="text-lg sm:text-xl text-[#FCFCF6] font-semibold tracking-tight">
+                  <span className="text-lg sm:text-xl text-[#F2EDE4] font-semibold tracking-tight">
                     {faq.q}
                   </span>
                   <div className={`p-2 rounded-full transition-transform duration-300 shrink-0 ${
-                    isOpen ? 'bg-[#CFB291] text-[#341910] rotate-180' : 'bg-[#341910] text-[#FCFCF6]'
+                    isOpen ? 'bg-[#C9A84C] text-[#0A0A0B] rotate-180' : 'bg-[#0A0A0B] text-[#F2EDE4]'
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-sm text-[#CFB291] font-normal leading-relaxed border-t border-[#CFB291]/20 pt-4 animate-fadeIn">
+                  <div className="px-6 pb-6 text-sm text-[#C9A84C] font-normal leading-relaxed border-t border-[#C9A84C]/20 pt-4 animate-fadeIn">
                     <p>{faq.a}</p>
                   </div>
                 )}
@@ -87,27 +87,27 @@ export default function SeoFaqSection({ onOpenConsultation }) {
         </div>
 
         {/* Trust Badges & Keyword Strip */}
-        <div className="mt-16 pt-12 border-t border-[#CFB291]/20 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div className="p-6 bg-[#45241A] border border-[#CFB291]/20 rounded-xl">
-            <ShieldCheck className="w-6 h-6 text-[#CFB291] mx-auto mb-3" />
-            <h4 className="font-mono text-sm text-[#FCFCF6] font-bold uppercase tracking-wider">Turnkey Execution</h4>
-            <p className="text-xs text-[#CFB291] mt-1 font-normal">From raw site framing to white-glove handover in 35 days.</p>
+        <div className="mt-16 pt-12 border-t border-[#C9A84C]/20 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="p-6 bg-[#141416] border border-[#C9A84C]/20 rounded-xl">
+            <ShieldCheck className="w-6 h-6 text-[#C9A84C] mx-auto mb-3" />
+            <h4 className="font-mono text-sm text-[#F2EDE4] font-bold uppercase tracking-wider">Turnkey Execution</h4>
+            <p className="text-xs text-[#C9A84C] mt-1 font-normal">From raw site framing to white-glove handover in 35 days.</p>
           </div>
 
-          <div className="p-6 bg-[#45241A] border border-[#CFB291]/20 rounded-xl">
-            <Sparkles className="w-6 h-6 text-[#CFB291] mx-auto mb-3" />
-            <h4 className="font-mono text-sm text-[#FCFCF6] font-bold uppercase tracking-wider">10-Year Craft Warranty</h4>
-            <p className="text-xs text-[#CFB291] mt-1 font-normal">Guaranteed hardware, moisture protection, and structural integrity.</p>
+          <div className="p-6 bg-[#141416] border border-[#C9A84C]/20 rounded-xl">
+            <Sparkles className="w-6 h-6 text-[#C9A84C] mx-auto mb-3" />
+            <h4 className="font-mono text-sm text-[#F2EDE4] font-bold uppercase tracking-wider">10-Year Craft Warranty</h4>
+            <p className="text-xs text-[#C9A84C] mt-1 font-normal">Guaranteed hardware, moisture protection, and structural integrity.</p>
           </div>
 
-          <div className="p-6 bg-[#45241A] border border-[#CFB291]/20 rounded-xl flex flex-col justify-between">
+          <div className="p-6 bg-[#141416] border border-[#C9A84C]/20 rounded-xl flex flex-col justify-between">
             <div>
-              <h4 className="font-mono text-sm text-[#FCFCF6] font-bold uppercase tracking-wider">Ready to Start?</h4>
-              <p className="text-xs text-[#CFB291] mt-1 font-normal">Book your 3D consultation & BOQ cost estimate today.</p>
+              <h4 className="font-mono text-sm text-[#F2EDE4] font-bold uppercase tracking-wider">Ready to Start?</h4>
+              <p className="text-xs text-[#C9A84C] mt-1 font-normal">Book your 3D consultation & BOQ cost estimate today.</p>
             </div>
             <button
               onClick={onOpenConsultation}
-              className="mt-4 py-2.5 px-4 bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-xs font-mono font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center space-x-2"
+              className="mt-4 py-2.5 px-4 bg-[#C9A84C] hover:bg-[#F2EDE4] text-[#0A0A0B] text-xs font-mono font-bold uppercase tracking-wider rounded-lg transition-colors flex items-center justify-center space-x-2"
             >
               <span>RESERVE BRIEF</span>
               <ArrowRight className="w-3.5 h-3.5" />
