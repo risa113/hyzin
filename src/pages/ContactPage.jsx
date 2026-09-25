@@ -30,161 +30,307 @@ export default function ContactPage({ prefilledProject = '', selectedRegion = ''
   ];
 
   return (
-    <div className="animate-page-enter pt-12 pb-24 bg-[#1C1C20]">
-      {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 border-b border-[#C9A84C]/20">
-        <div className="max-w-3xl">
-          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium mb-4">
-            <span>COMMISSION DIALOGUE</span>
-            <span className="w-12 h-[1px] bg-[#C9A84C]/40"></span>
+    <div className="animate-page-enter bg-[#0A0A0B]">
+
+      {/* ── 01 PAGE HEADER ─────────────────────────────────────────────── */}
+      <section className="w-full bg-[#0A0A0B] py-32">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-16">
+
+          {/* Chapter label */}
+          <div className="flex items-center gap-4 mb-10">
+            <span className="block w-12 h-[1px] bg-[#C9A84C]/50" />
+            <span className="text-[10px] tracking-[0.35em] uppercase font-semibold text-[#C9A84C]">
+              Commission Dialogue
+            </span>
+            <span className="block w-12 h-[1px] bg-[#C9A84C]/50" />
           </div>
 
-          <h1 className="text-4xl sm:text-6xl text-[#F2EDE4] font-extrabold leading-[1.12] tracking-tight">
-            Reserve a Private <span className="text-[#C9A84C]">Spatial Brief.</span>
-          </h1>
+          {/* Giant editorial heading */}
+          <div className="max-w-4xl">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-tight text-[#F2EDE4] uppercase">
+              Reserve a Private
+            </h1>
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-tight text-[#C9A84C] uppercase mt-1">
+              Spatial Brief.
+            </h1>
+          </div>
 
-          <p className="mt-6 text-lg sm:text-xl text-[#C9A84C] font-normal leading-relaxed">
-            Tell us about your property, design ideas, and lifestyle requirements. We accept a limited number of commissions per quarter to ensure obsessive attention to detail.
+          {/* Subtext */}
+          <p className="mt-10 max-w-2xl text-base sm:text-lg text-[#F2EDE4]/60 leading-relaxed font-light">
+            Tell us about your property, design ideas, and lifestyle requirements.
+            We accept a limited number of commissions per quarter to ensure obsessive
+            attention to every material and spatial detail.
           </p>
+
+          {/* Gold hairline divider */}
+          <div className="mt-16 w-full h-[1px] bg-gradient-to-r from-[#C9A84C]/40 via-[#C9A84C]/10 to-transparent" />
         </div>
       </section>
 
-      {/* Main Consultation Form Component */}
-      <ConsultationForm
-        prefilledProject={prefilledProject}
-        selectedRegion={selectedRegion}
-      />
+      {/* ── 02 CONSULTATION FORM ───────────────────────────────────────── */}
+      <section className="w-full bg-[#0A0A0B] py-24">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-16">
 
-      {/* Interactive Studio Workshop & Google Maps Location */}
+          {/* Section label */}
+          <div className="flex items-center gap-6 mb-14">
+            <span className="text-[10px] tracking-[0.35em] uppercase font-semibold text-[#C9A84C]">
+              02 — Consultation Form
+            </span>
+            <span className="flex-1 h-[1px] bg-[#C9A84C]/20" />
+          </div>
+
+          {/* Form container with gold border */}
+          <div className="border border-[#C9A84C]/20 bg-[#141416] p-8 sm:p-12 lg:p-16">
+            <ConsultationForm
+              prefilledProject={prefilledProject}
+              selectedRegion={selectedRegion}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ── STUDIO LOCATION (embedded as-is) ──────────────────────────── */}
       <StudioLocationSection />
 
-      {/* Regional Atelier Addresses */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-[#C9A84C]/20">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium block mb-2">
-            REGIONAL DESKS & CONTACTS
-          </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#F2EDE4] font-bold tracking-tight">
-            Direct Studio Desks Across South India
-          </h2>
-          <p className="mt-3 text-xs sm:text-sm text-[#C9A84C]">
-            Official Email: <a href="mailto:Muhammedashad395@gmail.com" className="font-semibold text-[#C9A84C] hover:text-[#F2EDE4] underline">Muhammedashad395@gmail.com</a>
-          </p>
-        </div>
+      {/* ── 03 REGIONAL ATELIERS ───────────────────────────────────────── */}
+      <section className="w-full bg-[#141416] py-32 border-t border-[#C9A84C]/20">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-16">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-8 bg-[#141416] border border-[#C9A84C]/20 shadow-xl flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9A84C] block mb-2">
-                KERALA PRINCIPAL ATELIER & WORKSHOP
-              </span>
-              <h3 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight mb-2">Kerala Design & Fabrication</h3>
-              <p className="text-xs text-[#C9A84C]/80 font-medium mb-4">Coordinates: 10°40'35.2"N 76°40'52.1"E</p>
-              <p className="text-sm text-[#C9A84C] font-normal leading-relaxed mb-6">
-                Full-scale natural stone displays, aluminium interior sections, modular cabinetry mockups, and acoustic lighting lab.
-              </p>
-            </div>
-            <div className="space-y-2 pt-4 border-t border-[#C9A84C]/20">
-              <a href="tel:916282549008" className="text-xs font-semibold text-[#C9A84C] hover:text-[#F2EDE4] flex items-center space-x-1">
-                <span>+91 6282549008</span>
-                <ArrowUpRight className="w-3 h-3" />
-              </a>
-              <a href="mailto:Muhammedashad395@gmail.com" className="text-xs font-medium text-[#C9A84C] hover:text-[#C9A84C] flex items-center space-x-1">
-                <Mail className="w-3 h-3 text-[#C9A84C]" />
-                <span>Muhammedashad395@gmail.com</span>
-              </a>
-              <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-[#F2EDE4] hover:text-[#C9A84C] flex items-center space-x-1">
-                <MapPin className="w-3 h-3 text-[#C9A84C]" />
-                <span>Open Google Maps Location</span>
-              </a>
-            </div>
+          {/* Section label */}
+          <div className="flex items-center gap-6 mb-6">
+            <span className="text-[10px] tracking-[0.35em] uppercase font-semibold text-[#C9A84C]">
+              03 — Studio Desks
+            </span>
+            <span className="flex-1 h-[1px] bg-[#C9A84C]/20" />
           </div>
 
-          <div className="p-8 bg-[#141416] border border-[#C9A84C]/20 shadow-xl flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9A84C] block mb-2">
-                KARNATAKA GUILD
-              </span>
-              <h3 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight mb-2">Bengaluru Private Cave</h3>
-              <p className="text-xs text-[#C9A84C]/80 font-medium mb-4">Lavelle Road / Indiranagar, Bengaluru</p>
-              <p className="text-sm text-[#C9A84C] font-normal leading-relaxed mb-6">
-                Tailored for high-rise sky galleries, penthouses, and bespoke technology executive headquarters.
-              </p>
-            </div>
-            <div className="space-y-2 pt-4 border-t border-[#C9A84C]/20">
-              <a href="tel:918848023041" className="text-xs font-semibold text-[#C9A84C] hover:text-[#F2EDE4] flex items-center space-x-1">
-                <span>+91 8848023041</span>
-                <ArrowUpRight className="w-3 h-3" />
-              </a>
-              <a href="mailto:Muhammedashad395@gmail.com" className="text-xs font-medium text-[#C9A84C] hover:text-[#C9A84C] flex items-center space-x-1">
-                <Mail className="w-3 h-3 text-[#C9A84C]" />
-                <span>Muhammedashad395@gmail.com</span>
-              </a>
-            </div>
-          </div>
-
-          <div className="p-8 bg-[#141416] border border-[#C9A84C]/20 shadow-xl flex flex-col justify-between">
-            <div>
-              <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9A84C] block mb-2">
-                TAMIL NADU ATELIER
-              </span>
-              <h3 className="text-xl sm:text-2xl text-[#F2EDE4] font-bold tracking-tight mb-2">Chennai Modernist Guild</h3>
-              <p className="text-xs text-[#C9A84C]/80 font-medium mb-4">Boat Club Road / Poes Garden, Chennai</p>
-              <p className="text-sm text-[#C9A84C] font-normal leading-relaxed mb-6">
-                Specializing in Chettinad courtyard modernism, ancestral manor preservation, and monolithic villas.
-              </p>
-            </div>
-            <div className="space-y-2 pt-4 border-t border-[#C9A84C]/20">
-              <a href="tel:916282549008" className="text-xs font-semibold text-[#C9A84C] hover:text-[#F2EDE4] flex items-center space-x-1">
-                <span>+91 6282549008</span>
-                <ArrowUpRight className="w-3 h-3" />
-              </a>
-              <a href="mailto:Muhammedashad395@gmail.com" className="text-xs font-medium text-[#C9A84C] hover:text-[#C9A84C] flex items-center space-x-1">
-                <Mail className="w-3 h-3 text-[#C9A84C]" />
-                <span>Muhammedashad395@gmail.com</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Frequently Asked Questions */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <span className="text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium block mb-2">
-            FREQUENT INQUIRIES
-          </span>
-          <h2 className="text-2xl sm:text-3xl text-[#F2EDE4] font-bold tracking-tight">
-            Client Questions & Commission Protocol
-          </h2>
-        </div>
-
-        <div className="space-y-4">
-          {faqs.map((faq, index) => {
-            const isOpen = openFaq === index;
-            return (
-              <div
-                key={index}
-                className="bg-[#141416] border border-[#C9A84C]/20 shadow-lg overflow-hidden transition-colors"
+          {/* Section heading */}
+          <div className="max-w-2xl mb-16">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F2EDE4] uppercase leading-[1.0]">
+              Direct Studio Desks<br />
+              <span className="text-[#C9A84C]">Across South India.</span>
+            </h2>
+            <p className="mt-6 text-sm text-[#F2EDE4]/50 leading-relaxed font-light">
+              Official Studio Email:{' '}
+              <a
+                href="mailto:Muhammedashad395@gmail.com"
+                className="text-[#C9A84C] hover:text-[#F2EDE4] transition-colors duration-200 underline underline-offset-4"
               >
-                <button
-                  onClick={() => setOpenFaq(isOpen ? null : index)}
-                  className="w-full p-6 text-left flex items-center justify-between text-lg sm:text-xl font-semibold text-[#F2EDE4] hover:text-[#C9A84C] transition-colors"
-                >
-                  <span>{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#C9A84C]' : 'text-[#C9A84C]'}`} />
-                </button>
+                Muhammedashad395@gmail.com
+              </a>
+            </p>
+          </div>
 
-                {isOpen && (
-                  <div className="px-6 pb-6 text-sm sm:text-base text-[#C9A84C] font-normal leading-relaxed border-t border-[#C9A84C]/20 pt-4 animate-fadeIn">
-                    {faq.a}
-                  </div>
-                )}
+          {/* Three sharp architectural cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#C9A84C]/20">
+
+            {/* Kerala Card */}
+            <div className="flex flex-col justify-between p-10 lg:p-12 border-r border-[#C9A84C]/20 bg-[#0A0A0B] hover:bg-[#141416] transition-colors duration-300">
+              <div>
+                {/* Region label */}
+                <span className="text-[10px] tracking-[0.35em] uppercase font-semibold text-[#C9A84C] block mb-6">
+                  Kerala Principal Atelier &amp; Workshop
+                </span>
+                {/* Location name */}
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#F2EDE4] tracking-tight uppercase mb-3">
+                  Kerala Design<br />&amp; Fabrication
+                </h3>
+                {/* Coordinates */}
+                <p className="text-[11px] tracking-[0.15em] text-[#C9A84C]/70 font-medium mb-6">
+                  10°40′35.2″N &nbsp;76°40′52.1″E
+                </p>
+                {/* Description */}
+                <p className="text-sm text-[#F2EDE4]/50 font-light leading-relaxed">
+                  Full-scale natural stone displays, aluminium interior sections,
+                  modular cabinetry mockups, and acoustic lighting laboratory.
+                </p>
               </div>
-            );
-          })}
+
+              {/* Divider */}
+              <div className="my-8 h-[1px] bg-[#C9A84C]/20 w-full" />
+
+              {/* Contact links */}
+              <div className="space-y-3">
+                <a
+                  href="tel:916282549008"
+                  className="flex items-center gap-2 text-[11px] tracking-[0.12em] font-semibold text-[#C9A84C] hover:text-[#F2EDE4] transition-colors duration-200 uppercase"
+                >
+                  <span>+91 6282 549 008</span>
+                  <ArrowUpRight className="w-3 h-3 flex-shrink-0" />
+                </a>
+                <a
+                  href="mailto:Muhammedashad395@gmail.com"
+                  className="flex items-center gap-2 text-[11px] tracking-[0.08em] font-medium text-[#F2EDE4]/50 hover:text-[#C9A84C] transition-colors duration-200"
+                >
+                  <Mail className="w-3 h-3 flex-shrink-0 text-[#C9A84C]" />
+                  <span>Muhammedashad395@gmail.com</span>
+                </a>
+                <a
+                  href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-[11px] tracking-[0.08em] font-semibold text-[#F2EDE4]/70 hover:text-[#C9A84C] transition-colors duration-200"
+                >
+                  <MapPin className="w-3 h-3 flex-shrink-0 text-[#C9A84C]" />
+                  <span>Open Google Maps Location</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Karnataka Card */}
+            <div className="flex flex-col justify-between p-10 lg:p-12 border-r border-[#C9A84C]/20 bg-[#0A0A0B] hover:bg-[#141416] transition-colors duration-300">
+              <div>
+                <span className="text-[10px] tracking-[0.35em] uppercase font-semibold text-[#C9A84C] block mb-6">
+                  Karnataka Guild
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#F2EDE4] tracking-tight uppercase mb-3">
+                  Bengaluru<br />Private Cave
+                </h3>
+                <p className="text-[11px] tracking-[0.15em] text-[#C9A84C]/70 font-medium mb-6">
+                  Lavelle Road &nbsp;/&nbsp; Indiranagar, Bengaluru
+                </p>
+                <p className="text-sm text-[#F2EDE4]/50 font-light leading-relaxed">
+                  Tailored for high-rise sky galleries, penthouses, and bespoke
+                  technology executive headquarters across the Silicon Valley of India.
+                </p>
+              </div>
+
+              <div className="my-8 h-[1px] bg-[#C9A84C]/20 w-full" />
+
+              <div className="space-y-3">
+                <a
+                  href="tel:918848023041"
+                  className="flex items-center gap-2 text-[11px] tracking-[0.12em] font-semibold text-[#C9A84C] hover:text-[#F2EDE4] transition-colors duration-200 uppercase"
+                >
+                  <span>+91 8848 023 041</span>
+                  <ArrowUpRight className="w-3 h-3 flex-shrink-0" />
+                </a>
+                <a
+                  href="mailto:Muhammedashad395@gmail.com"
+                  className="flex items-center gap-2 text-[11px] tracking-[0.08em] font-medium text-[#F2EDE4]/50 hover:text-[#C9A84C] transition-colors duration-200"
+                >
+                  <Mail className="w-3 h-3 flex-shrink-0 text-[#C9A84C]" />
+                  <span>Muhammedashad395@gmail.com</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Tamil Nadu Card */}
+            <div className="flex flex-col justify-between p-10 lg:p-12 bg-[#0A0A0B] hover:bg-[#141416] transition-colors duration-300">
+              <div>
+                <span className="text-[10px] tracking-[0.35em] uppercase font-semibold text-[#C9A84C] block mb-6">
+                  Tamil Nadu Atelier
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#F2EDE4] tracking-tight uppercase mb-3">
+                  Chennai<br />Modernist Guild
+                </h3>
+                <p className="text-[11px] tracking-[0.15em] text-[#C9A84C]/70 font-medium mb-6">
+                  Boat Club Road &nbsp;/&nbsp; Poes Garden, Chennai
+                </p>
+                <p className="text-sm text-[#F2EDE4]/50 font-light leading-relaxed">
+                  Specializing in Chettinad courtyard modernism, ancestral manor
+                  preservation, and monolithic villas along the Coromandel Coast.
+                </p>
+              </div>
+
+              <div className="my-8 h-[1px] bg-[#C9A84C]/20 w-full" />
+
+              <div className="space-y-3">
+                <a
+                  href="tel:916282549008"
+                  className="flex items-center gap-2 text-[11px] tracking-[0.12em] font-semibold text-[#C9A84C] hover:text-[#F2EDE4] transition-colors duration-200 uppercase"
+                >
+                  <span>+91 6282 549 008</span>
+                  <ArrowUpRight className="w-3 h-3 flex-shrink-0" />
+                </a>
+                <a
+                  href="mailto:Muhammedashad395@gmail.com"
+                  className="flex items-center gap-2 text-[11px] tracking-[0.08em] font-medium text-[#F2EDE4]/50 hover:text-[#C9A84C] transition-colors duration-200"
+                >
+                  <Mail className="w-3 h-3 flex-shrink-0 text-[#C9A84C]" />
+                  <span>Muhammedashad395@gmail.com</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
+
+      {/* ── 04 FAQ ─────────────────────────────────────────────────────── */}
+      <section className="w-full bg-[#1C1C20] py-32 border-t border-[#C9A84C]/20">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-16">
+
+          {/* Section label */}
+          <div className="flex items-center gap-6 mb-6">
+            <span className="text-[10px] tracking-[0.35em] uppercase font-semibold text-[#C9A84C]">
+              04 — Frequent Inquiries
+            </span>
+            <span className="flex-1 h-[1px] bg-[#C9A84C]/20" />
+          </div>
+
+          {/* Section heading */}
+          <div className="max-w-3xl mb-20">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#F2EDE4] uppercase leading-[1.0]">
+              Client Questions &amp;<br />
+              <span className="text-[#C9A84C]">Commission Protocol.</span>
+            </h2>
+          </div>
+
+          {/* Accordion list */}
+          <div className="max-w-4xl">
+            {faqs.map((faq, index) => {
+              const isOpen = openFaq === index;
+              return (
+                <div
+                  key={index}
+                  className={`border-b border-[#C9A84C]/20 transition-colors duration-300 ${
+                    index === 0 ? 'border-t border-[#C9A84C]/20' : ''
+                  } ${isOpen ? 'bg-[#141416]' : 'bg-transparent'}`}
+                >
+                  {/* Question row */}
+                  <button
+                    onClick={() => setOpenFaq(isOpen ? null : index)}
+                    className="w-full py-8 px-0 text-left flex items-start justify-between gap-6 group"
+                  >
+                    {/* Index + question */}
+                    <div className="flex items-start gap-6">
+                      <span className="text-[10px] tracking-[0.25em] text-[#C9A84C]/50 font-semibold mt-1 flex-shrink-0 pt-[3px]">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-lg sm:text-xl font-bold text-[#F2EDE4] group-hover:text-[#C9A84C] transition-colors duration-200 leading-snug">
+                        {faq.q}
+                      </span>
+                    </div>
+
+                    {/* Chevron */}
+                    <ChevronDown
+                      className={`w-5 h-5 flex-shrink-0 mt-1 transition-all duration-300 ${
+                        isOpen
+                          ? 'rotate-180 text-[#C9A84C]'
+                          : 'text-[#C9A84C]/50 group-hover:text-[#C9A84C]'
+                      }`}
+                    />
+                  </button>
+
+                  {/* Answer panel */}
+                  {isOpen && (
+                    <div className="pb-8 pl-14 pr-10 animate-fadeIn">
+                      {/* Gold left accent bar */}
+                      <div className="border-l-2 border-[#C9A84C] pl-6">
+                        <p className="text-sm sm:text-base text-[#C9A84C] font-light leading-relaxed">
+                          {faq.a}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

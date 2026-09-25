@@ -5,117 +5,240 @@ import { BRAND_ASSETS } from '../data/clientAssets';
 
 export default function AboutPage({ onOpenConsultation, onSelectRegion, onOpenLightbox }) {
   return (
-    <div className="animate-page-enter pt-12 pb-24 bg-[#1C1C20]">
-      {/* Page Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-b border-[#C9A84C]/20">
-        <div className="max-w-3xl">
-          <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#C9A84C] font-medium mb-4">
-            <span>ABOUT HYZIN INTERIOR</span>
-            <span className="w-12 h-[1px] bg-[#C9A84C]/40"></span>
+    <div className="animate-page-enter bg-[#0A0A0B]">
+
+      {/* ─────────────────────────────────────────────────────────────
+          01 — PAGE HERO HEADER
+      ───────────────────────────────────────────────────────────── */}
+      <section className="w-full bg-[#0A0A0B] pt-32 pb-20 px-6 sm:px-10 lg:px-20">
+        <div className="max-w-[1400px] mx-auto">
+
+          {/* Chapter label */}
+          <div className="flex items-center gap-4 mb-10">
+            <span className="block w-10 h-[1px] bg-[#C9A84C]/50" />
+            <span className="text-[10px] uppercase tracking-[0.4em] text-[#C9A84C] font-semibold">
+              About Hyzin Interior
+            </span>
+            <span className="block w-10 h-[1px] bg-[#C9A84C]/50" />
           </div>
 
-          <h1 className="text-4xl sm:text-6xl text-[#F2EDE4] font-extrabold leading-[1.12] tracking-tight">
-            Designing with <span className="text-[#C9A84C]">Purpose</span> & Quiet Permanence.
+          {/* Giant hero heading */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-[#F2EDE4] leading-[1.05] tracking-tight uppercase max-w-5xl">
+            Designing with Purpose &amp;<br />
+            <span className="text-[#C9A84C]">Quiet Permanence.</span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-[#C9A84C] font-normal leading-relaxed">
-            HYZIN INTERIOR is an interior design and structural fabrication practice operating across Kerala, Tamil Nadu, and Karnataka. We sculpt private residences, modular joinery systems, and specialized metalwork that balance pure geometry, natural light, and authentic materiality.
-          </p>
-        </div>
-      </section>
+          {/* Gold hairline */}
+          <div className="w-full h-[1px] bg-[#C9A84C]/20 mt-14 mb-10" />
 
-      {/* Philosophy Split Section with Official 3D Branding Wall */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div className="lg:col-span-6 relative">
-            <div 
-              onClick={() => onOpenLightbox && onOpenLightbox(BRAND_ASSETS.logo3D, 0, 'HYZIN Official 3D Gold Logo Wall', 'Branding')}
-              className="relative overflow-hidden border border-[#C9A84C]/20 shadow-2xl bg-[#141416] animatic-reflection cursor-pointer group"
-            >
-              <img
-                src={BRAND_ASSETS.logo3D}
-                alt="HYZIN Official 3D Gold Logo Wall"
-                className="w-full h-[520px] object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B]/90 via-transparent to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6 p-6 bg-[#0A0A0B]/95 backdrop-blur-md border border-[#C9A84C]/20">
-                <span className="text-lg sm:text-xl font-medium text-[#F2EDE4] block leading-snug">
-                  “Good interiors don’t simply look beautiful. They make everyday life better.”
-                </span>
-                <span className="text-[10px] uppercase font-semibold tracking-wider text-[#C9A84C] mt-2 block">
-                  HYZIN CORE DESIGN PRINCIPLE
-                </span>
-              </div>
+          {/* Inline stats */}
+          <div className="flex flex-wrap items-center gap-0 divide-x divide-[#C9A84C]/30">
+            <div className="pr-10 sm:pr-16">
+              <span className="block text-3xl sm:text-4xl font-bold text-[#F2EDE4] tracking-tight">50+</span>
+              <span className="block text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] mt-1 font-semibold">Works Delivered</span>
             </div>
-          </div>
-
-          <div className="lg:col-span-6 space-y-6 text-[#C9A84C] font-normal text-base leading-relaxed">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#F2EDE4] font-bold tracking-tight">
-              Integrated Interior Design & Specialized Fabrication
-            </h2>
-            <p>
-              Unlike conventional agencies that outsource critical elements to disparate vendors, HYZIN maintains full sovereign execution. We operate specialized workshops for modular aluminium extrusion framing, custom stainless steel & MS metal fabrication, and computerized joinery.
-            </p>
-            <p>
-              This seamless marriage of heavy structural engineering with delicate interior cabinetry ensures zero structural compromises: wall drops are millimeter-level aligned, suspended ceilings carry concealed acoustic channels, and steel security doors blend into minimalist paneling.
-            </p>
-            <p>
-              Our turnkey execution methodology ensures that the initial 3D visualization is executed with 1:1 fidelity on-site—supervised directly by our senior leads.
-            </p>
-
-            {/* Credibility metric grid */}
-            <div className="pt-6 grid grid-cols-3 gap-4 border-t border-[#C9A84C]/20 text-xs">
-              <div className="p-4 bg-[#141416] border border-[#C9A84C]/20">
-                <span className="text-2xl sm:text-3xl text-[#F2EDE4] block font-bold tracking-tight">10</span>
-                <span className="text-[#C9A84C] uppercase text-[10px] font-semibold mt-1 block">Core Disciplines</span>
-              </div>
-              <div className="p-4 bg-[#141416] border border-[#C9A84C]/20">
-                <span className="text-2xl sm:text-3xl text-[#F2EDE4] block font-bold tracking-tight">50+</span>
-                <span className="text-[#C9A84C] uppercase text-[10px] font-semibold mt-1 block">Delivered Works</span>
-              </div>
-              <div className="p-4 bg-[#141416] border border-[#C9A84C]/20">
-                <span className="text-2xl sm:text-3xl text-[#F2EDE4] block font-bold tracking-tight">3 States</span>
-                <span className="text-[#C9A84C] uppercase text-[10px] font-semibold mt-1 block">Kerala • TN • KA</span>
-              </div>
+            <div className="px-10 sm:px-16">
+              <span className="block text-3xl sm:text-4xl font-bold text-[#F2EDE4] tracking-tight">10</span>
+              <span className="block text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] mt-1 font-semibold">Core Disciplines</span>
+            </div>
+            <div className="pl-10 sm:pl-16">
+              <span className="block text-3xl sm:text-4xl font-bold text-[#F2EDE4] tracking-tight">3</span>
+              <span className="block text-[10px] uppercase tracking-[0.3em] text-[#C9A84C] mt-1 font-semibold">States Served</span>
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* Why HYZIN Pillars */}
+      {/* ─────────────────────────────────────────────────────────────
+          02 — PHILOSOPHY SPLIT
+      ───────────────────────────────────────────────────────────── */}
+      <section className="w-full bg-[#1C1C20] py-32 px-6 sm:px-10 lg:px-20 border-t border-[#C9A84C]/15">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-24 items-center">
+
+            {/* LEFT — Text col */}
+            <div className="lg:col-span-6 relative">
+
+              {/* Ghost section number */}
+              <span
+                aria-hidden="true"
+                className="absolute -top-10 -left-4 text-[clamp(7rem,16vw,14rem)] font-extrabold text-[#F2EDE4]/[0.03] leading-none select-none pointer-events-none"
+              >
+                01
+              </span>
+
+              {/* Section label */}
+              <p className="text-[10px] uppercase tracking-[0.35em] text-[#C9A84C] font-semibold mb-5">
+                01 — Philosophy
+              </p>
+
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F2EDE4] leading-[1.08] tracking-tight uppercase mb-10">
+                Integrated Design &amp;<br />Fabrication
+              </h2>
+
+              {/* Gold left-border quote line */}
+              <div className="border-l-2 border-[#C9A84C]/60 pl-6 mb-10 space-y-6 text-[#F2EDE4]/70 text-base leading-[1.85]">
+                <p>
+                  Unlike conventional agencies that outsource critical elements to disparate vendors, HYZIN maintains full sovereign execution. We operate specialized workshops for modular aluminium extrusion framing, custom stainless steel &amp; MS metal fabrication, and computerized joinery.
+                </p>
+                <p>
+                  This seamless marriage of heavy structural engineering with delicate interior cabinetry ensures zero structural compromises: wall drops are millimeter-level aligned, suspended ceilings carry concealed acoustic channels, and steel security doors blend invisibly into minimalist paneling.
+                </p>
+                <p>
+                  Our turnkey execution methodology ensures that the initial 3D visualization is executed with 1:1 fidelity on-site — supervised directly by our senior leads from concept through to commissioning.
+                </p>
+              </div>
+
+            </div>
+
+            {/* RIGHT — 3D Logo image col */}
+            <div className="lg:col-span-6">
+              <div
+                onClick={() => onOpenLightbox && onOpenLightbox(BRAND_ASSETS.logo3D, 0, 'HYZIN Official 3D Gold Logo Wall', 'Branding')}
+                className="relative overflow-hidden border border-[#C9A84C]/30 shadow-[0_0_80px_rgba(201,168,76,0.08)] bg-[#141416] cursor-pointer group"
+              >
+                <img
+                  src={BRAND_ASSETS.logo3D}
+                  alt="HYZIN Official 3D Gold Logo Wall"
+                  className="w-full h-[560px] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                />
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0B]/95 via-[#0A0A0B]/10 to-transparent pointer-events-none" />
+
+                {/* Quote panel — sharp corners */}
+                <div className="absolute bottom-0 left-0 right-0 p-7 bg-[#0A0A0B]/90 backdrop-blur-sm border-t border-[#C9A84C]/20">
+                  <p className="text-base sm:text-lg font-medium text-[#F2EDE4] leading-snug">
+                    "Good interiors don't simply look beautiful.<br />They make everyday life better."
+                  </p>
+                  <span className="block text-[10px] uppercase tracking-[0.35em] text-[#C9A84C] mt-3 font-semibold">
+                    Hyzin Core Design Principle
+                  </span>
+                </div>
+
+                {/* Hover gold rim flash */}
+                <div className="absolute inset-0 border border-[#C9A84C]/0 group-hover:border-[#C9A84C]/40 transition-all duration-500 pointer-events-none" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          03 — CREDENTIAL METRIC STRIP
+      ───────────────────────────────────────────────────────────── */}
+      <section className="w-full bg-[#141416] border-t border-[#C9A84C]/20 border-b border-b-[#C9A84C]/20">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 py-0">
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#C9A84C]/20">
+
+            {/* Metric 1 */}
+            <div className="py-16 px-8 sm:px-12 flex flex-col justify-center group">
+              <span className="text-[10px] uppercase tracking-[0.35em] text-[#C9A84C]/60 font-semibold mb-4">
+                Core Disciplines
+              </span>
+              <div className="flex items-end gap-4">
+                <span className="text-6xl sm:text-7xl xl:text-8xl font-extrabold text-[#F2EDE4] leading-none tracking-tight">
+                  10
+                </span>
+                <span className="text-[#C9A84C]/40 text-4xl font-thin mb-2">/</span>
+              </div>
+              <span className="block text-[11px] uppercase tracking-[0.3em] text-[#C9A84C] font-semibold mt-5">
+                Interior · Fabrication · Joinery &amp; More
+              </span>
+            </div>
+
+            {/* Metric 2 */}
+            <div className="py-16 px-8 sm:px-12 flex flex-col justify-center group">
+              <span className="text-[10px] uppercase tracking-[0.35em] text-[#C9A84C]/60 font-semibold mb-4">
+                Delivered Works
+              </span>
+              <div className="flex items-end gap-4">
+                <span className="text-6xl sm:text-7xl xl:text-8xl font-extrabold text-[#F2EDE4] leading-none tracking-tight">
+                  50+
+                </span>
+                <span className="text-[#C9A84C]/40 text-4xl font-thin mb-2">/</span>
+              </div>
+              <span className="block text-[11px] uppercase tracking-[0.3em] text-[#C9A84C] font-semibold mt-5">
+                Residential · Commercial · Institutional
+              </span>
+            </div>
+
+            {/* Metric 3 */}
+            <div className="py-16 px-8 sm:px-12 flex flex-col justify-center group">
+              <span className="text-[10px] uppercase tracking-[0.35em] text-[#C9A84C]/60 font-semibold mb-4">
+                States Served
+              </span>
+              <div className="flex items-end gap-4">
+                <span className="text-6xl sm:text-7xl xl:text-8xl font-extrabold text-[#F2EDE4] leading-none tracking-tight">
+                  3
+                </span>
+                <span className="text-[#C9A84C]/40 text-4xl font-thin mb-2">/</span>
+              </div>
+              <span className="block text-[11px] uppercase tracking-[0.3em] text-[#C9A84C] font-semibold mt-5">
+                Kerala · Tamil Nadu · Karnataka
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          04 — WHY HYZIN PILLARS
+      ───────────────────────────────────────────────────────────── */}
       <WhyHyzin />
 
-      {/* Three Regional Studios */}
+      {/* ─────────────────────────────────────────────────────────────
+          05 — REGIONAL STUDIOS
+      ───────────────────────────────────────────────────────────── */}
       <RegionalStudios onSelectRegion={onSelectRegion} onOpenLightbox={onOpenLightbox} />
 
-      {/* Bottom CTA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
-        <div className="p-10 sm:p-14 bg-[#141416] border border-[#C9A84C]/20 shadow-2xl">
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl text-[#F2EDE4] font-bold tracking-tight">
-            Initiate a Private Spatial Dialogue
-          </h3>
-          <p className="mt-2 text-sm text-[#C9A84C] max-w-lg mx-auto font-normal">
-            Discuss your upcoming interior design, modular installation, or fabrication project directly with our lead team.
+      {/* ─────────────────────────────────────────────────────────────
+          06 — BOTTOM CTA
+      ───────────────────────────────────────────────────────────── */}
+      <section className="w-full bg-[#0A0A0B] border-t border-[#C9A84C]/15 py-36 px-6 sm:px-10 lg:px-20">
+        <div className="max-w-[1400px] mx-auto">
+
+          {/* Section label */}
+          <p className="text-[10px] uppercase tracking-[0.4em] text-[#C9A84C]/70 font-semibold mb-8">
+            06 — Begin
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+
+          {/* Gold hairline above */}
+          <div className="w-24 h-[1px] bg-[#C9A84C]/40 mb-12" />
+
+          {/* Heading */}
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-[#F2EDE4] leading-[1.06] tracking-tight uppercase max-w-4xl mb-6">
+            Initiate a Private<br />
+            <span className="text-[#C9A84C]">Spatial Dialogue.</span>
+          </h2>
+
+          <p className="text-base text-[#F2EDE4]/50 max-w-xl leading-relaxed mb-14">
+            Discuss your upcoming interior design, modular installation, or fabrication project directly with our lead team. Every engagement begins with a private consultation — unhurried and confidential.
+          </p>
+
+          {/* CTA buttons — zero border-radius, architectural */}
+          <div className="flex flex-wrap items-center gap-5">
             <button
               onClick={onOpenConsultation}
-              className="px-8 py-4 bg-[#C9A84C] hover:bg-[#F2EDE4] text-[#0A0A0B] text-xs uppercase tracking-[0.25em] font-semibold transition-colors shadow-lg"
+              className="px-10 py-5 bg-[#C9A84C] hover:bg-[#F2EDE4] text-[#0A0A0B] text-[11px] uppercase tracking-[0.3em] font-bold transition-colors duration-200 shadow-[0_0_40px_rgba(201,168,76,0.18)] hover:shadow-[0_0_60px_rgba(201,168,76,0.28)]"
             >
-              START YOUR PROJECT
+              Start Your Project
             </button>
             <a
               href="tel:6282549008"
-              className="px-8 py-4 border border-[#C9A84C]/50 hover:border-[#C9A84C] text-[#F2EDE4] hover:text-[#C9A84C] text-xs uppercase tracking-[0.2em] font-semibold transition-colors flex items-center space-x-2"
+              className="px-10 py-5 border border-[#C9A84C]/50 hover:border-[#C9A84C] text-[#F2EDE4] hover:text-[#C9A84C] text-[11px] uppercase tracking-[0.3em] font-bold transition-all duration-200 flex items-center gap-3"
             >
               <Phone className="w-3.5 h-3.5 text-[#C9A84C]" />
-              <span>+91 6282549008</span>
+              +91&nbsp;6282&nbsp;549&nbsp;008
             </a>
           </div>
+
         </div>
       </section>
+
     </div>
   );
 }

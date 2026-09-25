@@ -445,3 +445,115 @@
   animation: slideDownFast 0.4s ease-out forwards;
 }
 
+/* ========================================================
+   HYZIN LUXURY — ADDITIONAL PREMIUM EFFECTS
+   ======================================================== */
+
+/* Gold Marquee Ticker (Infinite Scroll) */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Luxury Gold Glow on Hover */
+.gold-glow-hover {
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.gold-glow-hover:hover {
+  box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.4), 0 20px 60px -12px rgba(201, 168, 76, 0.15);
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
+/* Architectural Sharp Card */
+.card-sharp {
+  border-radius: 0;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  background-color: #141416;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.card-sharp:hover {
+  border-color: rgba(201, 168, 76, 0.45);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6);
+}
+
+/* Editorial Chapter Number (ghosted) */
+.chapter-ghost {
+  font-size: clamp(100px, 18vw, 220px);
+  font-weight: 900;
+  line-height: 0.85;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201, 168, 76, 0.08);
+  letter-spacing: -0.05em;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Gold Hairline Divider */
+.hairline-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(201, 168, 76, 0.4) 20%,
+    rgba(201, 168, 76, 0.6) 50%,
+    rgba(201, 168, 76, 0.4) 80%,
+    transparent 100%
+  );
+}
+
+/* Luxury Fade-In */
+@keyframes luxuryFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-luxury-in {
+  animation: luxuryFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Vertical timeline connector */
+.timeline-connector {
+  width: 1px;
+  background: linear-gradient(to bottom, #C9A84C, rgba(201, 168, 76, 0.1));
+}
+
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Stat number editorial */
+.stat-number {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #F2EDE4;
+}
+
+/* Gold text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #C9A84C 0%, #F2EDE4 50%, #C9A84C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Fade-in animation for FAQ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.35s ease forwards;
+}
+
