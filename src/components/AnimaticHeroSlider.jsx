@@ -11,12 +11,12 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
 
   const slides = HERO_SLIDES;
 
-  // Auto-play timer with relaxed luxury duration (8.5 seconds)
+  // Auto-play timer with relaxed luxury duration (12 seconds)
   useEffect(() => {
     if (!isPlaying) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 8500);
+    }, 12000);
     return () => clearInterval(timer);
   }, [isPlaying, slides.length]);
 
@@ -62,7 +62,7 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
         {slides.map((slide, idx) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1200 ease-in-out overflow-hidden ${
+            className={`absolute inset-0 transition-opacity duration-1400 ease-in-out overflow-hidden ${
               idx === currentSlide ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none'
             }`}
           >
@@ -80,20 +80,20 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
         ))}
       </div>
 
-      {/* Main Slide Content - Slide-Right Pop-Up Animation on Slide Change */}
+      {/* Main Slide Content - Luxury Pop-Up Text Animation on Slide Change */}
       <div className="relative z-20 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-28 lg:pt-36 pb-4 sm:pb-8 flex-1 flex flex-col justify-center">
-        <div key={currentSlide} className="max-w-3xl animate-slide-right-pop">
+        <div key={currentSlide} className="max-w-3xl">
           
           {/* Location & Discipline Badge */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1 sm:px-3.5 sm:py-1.5 bg-[#341910]/80 backdrop-blur-md border border-[#CFB291]/50 shadow-sm mb-3 sm:mb-6 animate-slide-right-pop">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 sm:px-3.5 sm:py-1.5 bg-[#341910]/80 backdrop-blur-md border border-[#CFB291]/50 shadow-sm mb-3 sm:mb-6 animate-hero-pop">
             <span className="w-1.5 h-1.5 rounded-full bg-[#CFB291] animate-pulse" />
             <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#FCFCF6] font-medium">
               {active.locationTag}
             </span>
           </div>
 
-          {/* Editorial Headline */}
-          <h1 className="text-2xl sm:text-5xl lg:text-7xl font-extrabold text-[#FCFCF6] leading-[1.15] sm:leading-[1.1] tracking-tight drop-shadow-md transition-all duration-500 animate-slide-right-pop delay-100">
+          {/* Editorial Headline with Bottom-to-Top Pop Up */}
+          <h1 className="text-2xl sm:text-5xl lg:text-7xl font-extrabold text-[#FCFCF6] leading-[1.15] sm:leading-[1.1] tracking-tight drop-shadow-md animate-hero-pop delay-100">
             {active.title}{' '}
             <span className="text-[#CFB291] font-extrabold">
               {active.emphasis}
@@ -102,16 +102,16 @@ export default function AnimaticHeroSlider({ onOpenConsultation, onExploreWork, 
           </h1>
 
           {/* Supporting Statement */}
-          <p className="mt-2.5 sm:mt-6 text-xs sm:text-base lg:text-lg text-[#CFB291] font-normal leading-relaxed max-w-2xl transition-all duration-500 line-clamp-3 sm:line-clamp-none animate-slide-right-pop delay-150">
+          <p className="mt-2.5 sm:mt-6 text-xs sm:text-base lg:text-lg text-[#CFB291] font-normal leading-relaxed max-w-2xl line-clamp-3 sm:line-clamp-none animate-hero-pop delay-200">
             {active.tagline}
           </p>
 
-          <p className="mt-1.5 sm:mt-3 text-[10px] sm:text-sm uppercase tracking-[0.18em] sm:tracking-[0.2em] text-[#CFB291] font-medium animate-slide-right-pop delay-200">
+          <p className="mt-1.5 sm:mt-3 text-[10px] sm:text-sm uppercase tracking-[0.18em] sm:tracking-[0.2em] text-[#CFB291] font-medium animate-hero-pop delay-300">
             {active.badge}
           </p>
 
           {/* Dual Action CTAs */}
-          <div className="mt-4 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-5 animate-pop-up delay-300">
+          <div className="mt-4 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-5 animate-hero-pop delay-400">
             <button
               onClick={onOpenConsultation}
               className="px-6 py-3 sm:px-8 sm:py-4 bg-[#CFB291] hover:bg-[#FCFCF6] text-[#341910] text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-bold transition-all duration-300 shadow-xl flex items-center justify-center space-x-2.5 group rounded-sm"

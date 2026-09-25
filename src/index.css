@@ -372,6 +372,23 @@
   animation: popUpDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Luxury Hero Text Bottom-to-Top Pop-Up Animation */
+@keyframes heroPopUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-hero-pop {
+  animation: heroPopUp 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+}
+
 /* 3. Slide-Right Pop-Up Animation (For all slide switches & carousels) */
 @keyframes slideRightPop {
   0% {
