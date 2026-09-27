@@ -54,25 +54,34 @@ export default function App() {
     setLightboxState((prev) => ({ ...prev, isOpen: false }));
   };
 
-  // Handle URL hash on initial load or browser back/forward
+  // Handle URL pathname or hash on initial load or browser navigation
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '');
+    const syncRoute = () => {
+      const hash = window.location.hash.replace('#', '').trim();
       if (hash.toLowerCase().includes('sitemap.xml')) {
         window.location.href = '/sitemap.xml';
         return;
       }
       if (['home', 'about', 'projects', 'services', 'contact', '3d-house', 'photo-vault'].includes(hash)) {
         setActivePage(hash);
+        return;
+      }
+
+      // Check pathname (e.g. /about, /projects, /services, /contact)
+      const cleanPath = window.location.pathname.replace(/^\/hyzin\/?/, '').replace(/^\//, '').replace(/\/$/, '');
+      if (['about', 'projects', 'services', 'contact', '3d-house', 'photo-vault'].includes(cleanPath)) {
+        setActivePage(cleanPath);
       }
     };
 
-    if (window.location.hash) {
-      handleHashChange();
-    }
+    syncRoute();
 
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('hashchange', syncRoute);
+    window.addEventListener('popstate', syncRoute);
+    return () => {
+      window.removeEventListener('hashchange', syncRoute);
+      window.removeEventListener('popstate', syncRoute);
+    };
   }, []);
 
   // Idle Prefetching of Secondary Routes
