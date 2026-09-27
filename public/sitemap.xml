@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -7,7 +7,7 @@
   <url>
     <loc>https://hyzininterior.com/</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/" />
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -385,7 +385,7 @@
   <url>
     <loc>https://hyzininterior.com/#photo-vault</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#photo-vault" />
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -394,7 +394,7 @@
   <url>
     <loc>https://hyzininterior.com/#3d-house</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#3d-house" />
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -403,7 +403,7 @@
   <url>
     <loc>https://hyzininterior.com/#services</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#services" />
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -412,7 +412,7 @@
   <url>
     <loc>https://hyzininterior.com/#projects</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#projects" />
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -421,7 +421,7 @@
   <url>
     <loc>https://hyzininterior.com/#about</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#about" />
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -430,7 +430,7 @@
   <url>
     <loc>https://hyzininterior.com/#contact</loc>
     <xhtml:link rel="alternate" hreflang="en-in" href="https://risa113.github.io/hyzin/#contact" />
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
   </url>
