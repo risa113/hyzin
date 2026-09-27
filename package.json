@@ -6,7 +6,7 @@
   "homepage": "https://risa113.github.io/hyzin",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node -e \"import fs from 'node:fs'; fs.copyFileSync('dist/index.html', 'dist/404.html');\"",
     "start": "node server/index.js",
     "test:load": "node scripts/load-test.js",
     "lint": "oxlint",
