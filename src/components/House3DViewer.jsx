@@ -535,29 +535,29 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
   };
 
   return (
-    <section className={`relative transition-all duration-500 ${isFullScreen ? 'fixed inset-0 z-50 bg-[#2B1C19]' : 'w-full py-16 bg-[#FAF7F0]'}`}>
-      <div className={`${isFullScreen ? 'h-full w-full p-4 flex flex-col' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'}`}>
+    <section className={`relative transition-all duration-500 ${isFullScreen ? 'fixed inset-0 z-50 bg-[#2B1C19]' : 'w-full py-10 sm:py-16 bg-[#2B1C19]'}`}>
+      <div className={`${isFullScreen ? 'h-full w-full p-3 sm:p-4 flex flex-col' : 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'}`}>
         
         {/* Section Header */}
         {!isFullScreen && (
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold tracking-wider uppercase mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] sm:text-xs font-semibold tracking-wider uppercase mb-2.5 sm:mb-3">
                 <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" /> 3D Interactive House Model
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#FAF7F0]">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#FAF7F0]">
                 Interactive 3D House <span className="text-[#D4AF37]">Work Showcase</span>
               </h2>
-              <p className="text-sm text-[#D4AF37] mt-1 max-w-2xl leading-relaxed">
-                Explore our 10 client work disciplines (Aluminium Interior, Wall Drop, Kitchen Cabinet, Loft, Accessories, Ceiling, Paneling, Steel Doors, Steel & MS Fabrication) inside an interactive 3D house model.
+              <p className="text-xs sm:text-sm text-[#D4AF37] mt-1 max-w-2xl leading-relaxed">
+                Explore our 10 client work disciplines (Aluminium Interior, Wall Drop, Kitchen Cabinet, Loft, Accessories, Ceiling, Paneling, Steel Doors, Steel &amp; MS Fabrication) inside an interactive 3D house model.
               </p>
             </div>
 
             {/* Control Toggles */}
-            <div className="flex flex-wrap items-center gap-2 bg-[#3E2723]/90 backdrop-blur-md p-1.5 rounded-2xl border border-[#D4AF37]/20 shadow-xl">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 bg-[#3E2723]/90 backdrop-blur-md p-1.5 rounded-2xl border border-[#D4AF37]/20 shadow-xl">
               <button
                 onClick={() => handleModeChange('day')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                   renderMode === 'day' 
                     ? 'bg-[#D4AF37] text-[#2B1C19] shadow-md' 
                     : 'text-[#D4AF37] hover:text-[#FAF7F0]'
@@ -567,7 +567,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
               </button>
               <button
                 onClick={() => handleModeChange('night')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                   renderMode === 'night' 
                     ? 'bg-[#D4AF37] text-[#2B1C19] shadow-md' 
                     : 'text-[#D4AF37] hover:text-[#FAF7F0]'
@@ -577,7 +577,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
               </button>
               <button
                 onClick={() => handleModeChange('blueprint')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                   renderMode === 'blueprint' 
                     ? 'bg-[#00d8ff]/20 text-[#00d8ff] border border-[#00d8ff]/40 shadow-md' 
                     : 'text-[#D4AF37] hover:text-[#FAF7F0]'
@@ -591,14 +591,14 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
               {/* Exploded View Toggle Button & Slider */}
               <button
                 onClick={() => setExplodedFactor(explodedFactor > 0 ? 0 : 0.8)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                   explodedFactor > 0
                     ? 'bg-[#D4AF37] text-[#2B1C19] shadow-md' 
                     : 'text-[#D4AF37] hover:text-[#FAF7F0]'
                 }`}
               >
                 <SlidersHorizontal className="w-3.5 h-3.5" /> 
-                <span>Exploded View {explodedFactor > 0 ? `(${Math.round(explodedFactor * 100)}%)` : ''}</span>
+                <span>Exploded {explodedFactor > 0 ? `(${Math.round(explodedFactor * 100)}%)` : ''}</span>
               </button>
 
               {explodedFactor > 0 && (
@@ -609,7 +609,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                   step="0.05"
                   value={explodedFactor}
                   onChange={(e) => setExplodedFactor(parseFloat(e.target.value))}
-                  className="w-20 accent-[#D4AF37] cursor-pointer"
+                  className="w-16 sm:w-20 accent-[#D4AF37] cursor-pointer"
                   title="Adjust Exploded Elevation Factor"
                 />
               )}
@@ -618,7 +618,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
 
               <button
                 onClick={() => setAutoRotate(!autoRotate)}
-                className={`p-1.5 rounded-xl transition-all ${
+                className={`p-1.5 rounded-xl transition-all cursor-pointer ${
                   autoRotate ? 'bg-[#D4AF37]/20 text-[#D4AF37]' : 'text-[#D4AF37] hover:text-[#FAF7F0] hover:bg-white/5'
                 }`}
                 title="Toggle 360 Auto Rotation"
@@ -627,7 +627,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
               </button>
               <button
                 onClick={toggleFullScreen}
-                className="p-1.5 rounded-xl text-[#D4AF37] hover:text-[#FAF7F0] hover:bg-white/5 transition-all"
+                className="p-1.5 rounded-xl text-[#D4AF37] hover:text-[#FAF7F0] hover:bg-white/5 transition-all cursor-pointer"
                 title="Toggle Full Screen"
               >
                 <Maximize2 className="w-4 h-4" />
@@ -636,18 +636,18 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
           </div>
         )}
 
-        {/* 3D Canvas Canvas Window & Interactive Overlay */}
-        <div className={`relative rounded-3xl overflow-hidden border shadow-2xl transition-all duration-300 ${
+        {/* 3D Canvas Window & Interactive Overlay */}
+        <div className={`relative rounded-2xl sm:rounded-3xl overflow-hidden border shadow-2xl transition-all duration-300 ${
           renderMode === 'blueprint' ? 'border-[#00d8ff]/30 bg-[#2B1C19]' : (renderMode === 'night' ? 'border-amber-500/20 bg-[#2B1C19]' : 'border-[#D4AF37]/20 bg-[#3E2723]')
-        } ${isFullScreen ? 'flex-1 min-h-0' : 'h-[520px] sm:h-[600px]'}`}>
+        } ${isFullScreen ? 'flex-1 min-h-0' : 'h-[400px] sm:h-[520px] md:h-[600px]'}`}>
 
           {/* Three.js Render Mount */}
           <div ref={mountRef} className="w-full h-full cursor-grab active:cursor-grabbing" />
 
           {/* 3D Canvas Instructions HUD */}
-          <div className="absolute top-4 left-4 pointer-events-none flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-[#D4AF37]/20 text-[#FAF7F0] text-xs font-mono">
-            <Eye className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span>Drag mouse/finger to orbit • Scroll to zoom</span>
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 pointer-events-none flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-[#D4AF37]/20 text-[#FAF7F0] text-[10px] sm:text-xs font-mono">
+            <Eye className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37]" />
+            <span>Drag to orbit • Scroll to zoom</span>
           </div>
 
           {/* Hotspots Interactive Floating Pins */}
@@ -659,11 +659,10 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                 <button
                   key={hs.id}
                   onClick={() => handleSelectZone(hs.id)}
-                  className={`pointer-events-auto absolute transform -translate-x-1/2 -translate-y-1/2 group transition-all duration-300 ${
+                  className={`pointer-events-auto absolute transform -translate-x-1/2 -translate-y-1/2 group transition-all duration-300 cursor-pointer ${
                     isActive ? 'scale-110 z-30' : 'scale-90 hover:scale-105 z-20'
                   }`}
                   style={{
-                    // Approximate relative position overlay styling
                     top: hs.id === 'kitchen' ? '65%' : (hs.id === 'paneling' ? '52%' : (hs.id === 'wardrobe' ? '30%' : (hs.id === 'staircase' ? '45%' : (hs.id === 'entrance' ? '75%' : '20%')))),
                     left: hs.id === 'kitchen' ? '32%' : (hs.id === 'paneling' ? '50%' : (hs.id === 'wardrobe' ? '70%' : (hs.id === 'staircase' ? '28%' : (hs.id === 'entrance' ? '52%' : '48%'))))
                   }}
@@ -675,12 +674,12 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                     }`} />
                     
                     {/* Pin Badge */}
-                    <div className={`relative flex items-center gap-2 px-3 py-1.5 rounded-2xl border shadow-lg backdrop-blur-md text-xs font-semibold transition-all ${
+                    <div className={`relative flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-2xl border shadow-lg backdrop-blur-md text-[10px] sm:text-xs font-semibold transition-all ${
                       isActive 
                         ? 'bg-[#2B1C19] text-[#FAF7F0] border-[#D4AF37]' 
                         : 'bg-[#3E2723]/90 text-[#FAF7F0] border-[#D4AF37]/30 hover:bg-[#2B1C19]'
                     }`}>
-                      <IconComp className={`w-3.5 h-3.5 ${isActive ? 'text-[#D4AF37]' : 'text-[#D4AF37]/80'}`} />
+                      <IconComp className={`w-3 h-3 sm:w-3.5 sm:h-3.5 ${isActive ? 'text-[#D4AF37]' : 'text-[#D4AF37]/80'}`} />
                       <span className="hidden sm:inline">{hs.name}</span>
                     </div>
                   </div>
@@ -690,14 +689,14 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
           </div>
 
           {/* Quick Zone Camera Presets Bar */}
-          <div className="absolute bottom-4 left-4 right-4 sm:left-auto sm:right-4 flex flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-2xl bg-[#2B1C19]/80 backdrop-blur-lg border border-[#D4AF37]/20 z-20">
+          <div className="absolute bottom-3 left-3 right-3 sm:left-auto sm:right-4 flex flex-wrap items-center justify-center gap-1 sm:gap-1.5 p-1 sm:p-1.5 rounded-2xl bg-[#2B1C19]/90 backdrop-blur-lg border border-[#D4AF37]/20 z-20">
             <button
               onClick={() => handleSelectZone('overview')}
-              className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-medium transition-all ${
+              className={`flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-xl text-[11px] sm:text-xs font-medium transition-all cursor-pointer ${
                 activeZone === 'overview' ? 'bg-[#D4AF37] text-[#2B1C19] font-bold shadow-md' : 'text-[#FAF7F0]/80 hover:text-white hover:bg-white/10'
               }`}
             >
-              <Home className="w-3.5 h-3.5" /> Full Villa
+              <Home className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Full Villa
             </button>
             {hotspotsData.map((hs) => {
               const IconComp = hs.icon;
@@ -705,7 +704,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
                 <button
                   key={hs.id}
                   onClick={() => handleSelectZone(hs.id)}
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-medium transition-all ${
+                  className={`flex items-center gap-1 px-2 sm:px-2.5 py-1 rounded-xl text-[11px] sm:text-xs font-medium transition-all cursor-pointer ${
                     activeZone === hs.id ? 'bg-[#D4AF37] text-[#2B1C19] font-bold shadow-md' : 'text-[#FAF7F0]/80 hover:text-white hover:bg-white/10'
                   }`}
                 >
@@ -718,7 +717,7 @@ export default function House3DViewer({ onOpenLightbox, onOpenConsultation }) {
 
           {/* Selected Hotspot Real Work Popover Card */}
           {selectedHotspot && (
-            <div className="absolute top-4 right-4 max-w-sm w-full bg-[#2B1C19]/95 backdrop-blur-xl rounded-2xl p-4 shadow-2xl border border-[#D4AF37]/20 z-40 animate-in fade-in slide-in-from-right-4 duration-300">
+            <div className="absolute top-3 left-3 right-3 sm:left-auto sm:right-4 sm:max-w-sm bg-[#2B1C19]/95 backdrop-blur-xl rounded-2xl p-3.5 sm:p-4 shadow-2xl border border-[#D4AF37]/30 z-40 animate-in fade-in slide-in-from-right-4 duration-300">
               <div className="flex items-start justify-between mb-2">
                 <div className="flex items-center gap-2">
                   <div className="p-2 rounded-xl bg-[#D4AF37]/15 text-[#D4AF37]">

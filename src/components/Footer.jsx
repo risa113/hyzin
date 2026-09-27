@@ -24,24 +24,24 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
           PRE-FOOTER CTA BAND — Full-bleed gold
       ───────────────────────────────────────────────────────────────────── */}
       <div className="w-full bg-[#D4AF37]">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-12">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-10 lg:px-16 py-8 sm:py-12">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-8">
 
             {/* Left — Headline */}
             <div className="flex-1 min-w-0">
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#2B1C19] leading-tight">
+              <h2 className="text-xl sm:text-3xl font-bold tracking-tight text-[#2B1C19] leading-tight">
                 READY TO BEGIN YOUR PROJECT?
               </h2>
-              <p className="mt-2 text-[#2B1C19]/70 text-sm font-medium tracking-wide">
+              <p className="mt-1.5 sm:mt-2 text-[#2B1C19]/80 text-xs sm:text-sm font-medium tracking-wide">
                 Accepting commissions in Kerala, Tamil Nadu &amp; Karnataka.
               </p>
             </div>
 
             {/* Right — CTAs */}
-            <div className="flex items-center gap-3 flex-shrink-0">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 flex-shrink-0 w-full sm:w-auto">
               <button
                 onClick={onOpenConsultation}
-                className="px-6 py-3 bg-[#2B1C19] text-[#D4AF37] text-[11px] font-bold uppercase tracking-widest hover:bg-[#3E2723] transition-colors"
+                className="w-full sm:w-auto px-6 py-3 bg-[#2B1C19] text-[#D4AF37] text-[11px] font-bold uppercase tracking-widest hover:bg-[#3E2723] transition-colors text-center"
               >
                 START YOUR PROJECT
               </button>
@@ -49,7 +49,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 href="https://wa.me/916282549008"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border border-[#2B1C19] text-[#2B1C19] text-[11px] font-bold uppercase tracking-widest hover:bg-[#2B1C19]/10 transition-colors"
+                className="w-full sm:w-auto px-6 py-3 border border-[#2B1C19] text-[#2B1C19] text-[11px] font-bold uppercase tracking-widest hover:bg-[#2B1C19]/10 transition-colors text-center"
               >
                 WHATSAPP US
               </a>
@@ -63,10 +63,10 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
           MAIN FOOTER — Absolute Noir background
       ───────────────────────────────────────────────────────────────────── */}
       <div className="w-full bg-[#2B1C19]">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-10 lg:px-16">
 
           {/* ── MOBILE LAYOUT (hidden sm:hidden → block on mobile) ── */}
-          <div className="block sm:hidden pt-10 pb-6 space-y-7 border-b border-[#D4AF37]/20">
+          <div className="block sm:hidden pt-8 pb-6 space-y-6 border-b border-[#D4AF37]/20">
 
             {/* Brand row */}
             <div className="flex items-center justify-between">
@@ -76,7 +76,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                   alt="HYZIN Logo"
                   className="w-8 h-8 object-cover border border-[#D4AF37]/40"
                 />
-                <span className="text-lg font-bold tracking-wider text-[#FAF7F0]">
+                <span className="text-base font-bold tracking-wider text-[#FAF7F0]">
                   HYZIN INTERIOR
                 </span>
               </div>
@@ -84,7 +84,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 href="https://www.instagram.com/hyzin.interior/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-[#3E2723] border border-[#D4AF37]/20 text-[#D4AF37] flex items-center space-x-1.5 text-[10px] font-medium"
+                className="p-1.5 px-2 bg-[#3E2723] border border-[#D4AF37]/20 text-[#D4AF37] flex items-center space-x-1.5 text-[10px] font-medium"
               >
                 <InstagramIcon className="w-3.5 h-3.5" />
                 <span>@hyzin</span>
@@ -127,29 +127,29 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
             <div className="space-y-2">
               <button
                 onClick={onOpenConsultation}
-                className="w-full py-3 bg-[#D4AF37] text-[#2B1C19] font-bold uppercase tracking-widest text-[10px] flex items-center justify-center space-x-1"
+                className="w-full py-3.5 bg-[#D4AF37] text-[#2B1C19] font-bold uppercase tracking-widest text-[10px] flex items-center justify-center space-x-1 shadow-md"
               >
                 <span>START YOUR PROJECT</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </button>
 
               <div className="grid grid-cols-2 gap-2 text-[10px] font-medium text-center">
-                <a href="tel:916282549008" className="p-2 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] flex items-center justify-center gap-1">
+                <a href="tel:916282549008" className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] flex items-center justify-center gap-1">
                   <Phone className="w-3 h-3 text-[#D4AF37]" />
                   <span>Line 1</span>
                 </a>
-                <a href="tel:918848023041" className="p-2 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] flex items-center justify-center gap-1">
+                <a href="tel:918848023041" className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] flex items-center justify-center gap-1">
                   <Phone className="w-3 h-3 text-[#D4AF37]" />
                   <span>Line 2</span>
                 </a>
               </div>
 
               <div className="space-y-1.5 pt-0.5">
-                <a href="mailto:Muhammedashad395@gmail.com" className="p-2 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] text-[10px] font-medium flex items-center justify-center gap-1.5 break-all">
+                <a href="mailto:Muhammedashad395@gmail.com" className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] text-[10px] font-mono font-medium flex items-center justify-center gap-1.5 break-words">
                   <Mail className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
-                  <span>Muhammedashad395@gmail.com</span>
+                  <span className="truncate">Muhammedashad395@gmail.com</span>
                 </a>
-                <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#3E2723] border border-[#D4AF37]/20 text-[#D4AF37] text-[10px] font-medium flex items-center justify-center gap-1.5">
+                <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#D4AF37] text-[10px] font-medium flex items-center justify-center gap-1.5">
                   <MapPin className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
                   <span>Studio Workshop on Google Maps</span>
                 </a>

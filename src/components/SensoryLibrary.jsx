@@ -6,27 +6,27 @@ export default function SensoryLibrary() {
   const [selectedMaterial, setSelectedMaterial] = useState(materialsData[0]);
 
   return (
-    <section id="materials" className="py-24 sm:py-32 bg-[#2B1C19] border-t border-[#D4AF37]/20 relative">
+    <section id="materials" className="py-16 sm:py-24 lg:py-32 bg-[#2B1C19] border-t border-[#D4AF37]/20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#D4AF37]/20 pb-8 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#D4AF37]/20 pb-6 sm:pb-8 mb-8 sm:mb-16">
           <div>
-            <div className="flex items-center space-x-3 text-[11px] uppercase tracking-[0.25em] text-[#D4AF37] font-medium mb-4">
+            <div className="flex items-center space-x-3 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#D4AF37] font-medium mb-3 sm:mb-4">
               <span>03 / MATERIAL ARCHIVE</span>
-              <span className="w-8 h-[1px] bg-[#D4AF37]/40"></span>
+              <span className="w-8 h-[1px] bg-[#D4AF37]/40 hidden sm:inline-block"></span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#FAF7F0] font-bold tracking-tight">
               The Sensory Library
             </h2>
           </div>
-          <p className="mt-4 md:mt-0 text-sm sm:text-base text-[#D4AF37] font-normal leading-relaxed max-w-md">
+          <p className="mt-3 md:mt-0 text-xs sm:text-base text-[#D4AF37] font-normal leading-relaxed max-w-md">
             Physical manifestation over superficial trends. Every surface is chosen for tactile resonance, acoustic softness, and perpetual endurance.
           </p>
         </div>
 
         {/* 4 Swatches Grid (Matching Reference Screenshot) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {materialsData.map((item, idx) => {
             const isSelected = selectedMaterial.id === item.id;
             return (
@@ -42,7 +42,7 @@ export default function SensoryLibrary() {
               >
                 <div>
                   {/* Swatch Image */}
-                  <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-black">
+                  <div className="relative w-full h-44 sm:h-56 overflow-hidden bg-black">
                     <img
                       src={item.image}
                       alt={item.name}
@@ -55,20 +55,20 @@ export default function SensoryLibrary() {
                   </div>
 
                   {/* Swatch Content */}
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <div className="text-[10px] uppercase font-medium tracking-wider text-[#D4AF37] mb-1">
                       {item.origin}
                     </div>
-                    <h3 className="text-lg sm:text-xl text-[#FAF7F0] font-bold tracking-tight group-hover:text-[#D4AF37] transition-colors">
+                    <h3 className="text-base sm:text-xl text-[#FAF7F0] font-bold tracking-tight group-hover:text-[#D4AF37] transition-colors">
                       {item.name}
                     </h3>
-                    <p className="mt-2 text-xs text-[#D4AF37] font-normal leading-relaxed line-clamp-2">
+                    <p className="mt-1.5 sm:mt-2 text-xs text-[#D4AF37] font-normal leading-relaxed line-clamp-2">
                       {item.finish}
                     </p>
                   </div>
                 </div>
 
-                <div className="px-6 pb-6 pt-2 border-t border-[#D4AF37]/20 flex items-center justify-between text-[10px] uppercase tracking-wider font-semibold text-[#D4AF37]">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2 border-t border-[#D4AF37]/20 flex items-center justify-between text-[10px] uppercase tracking-wider font-semibold text-[#D4AF37]">
                   <span>{isSelected ? 'ACTIVE SELECTION' : 'EXPLORE SPECS'}</span>
                   <span>→</span>
                 </div>
@@ -79,23 +79,23 @@ export default function SensoryLibrary() {
 
         {/* Selected Swatch Detailed Breakdown with Slide-Right Pop Animation */}
         {selectedMaterial && (
-          <div key={selectedMaterial.id} className="mt-12 p-8 sm:p-10 bg-[#3E2723] border border-[#D4AF37]/30 rounded-xl relative overflow-hidden animate-slide-right-pop shadow-2xl">
+          <div key={selectedMaterial.id} className="mt-8 sm:mt-12 p-4 sm:p-8 lg:p-10 bg-[#3E2723] border border-[#D4AF37]/30 rounded-xl relative overflow-hidden animate-slide-right-pop shadow-2xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
               <div className="lg:col-span-8">
                 <div className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.2em] text-[#D4AF37] font-medium mb-2">
                   <Info className="w-3.5 h-3.5" />
                   <span>MATERIAL SPECIFICATION • {selectedMaterial.category}</span>
                 </div>
-                <h4 className="text-2xl sm:text-3xl lg:text-4xl text-[#FAF7F0] font-bold tracking-tight mb-4">
+                <h4 className="text-xl sm:text-3xl lg:text-4xl text-[#FAF7F0] font-bold tracking-tight mb-3 sm:mb-4">
                   {selectedMaterial.name}
                 </h4>
-                <p className="text-base text-[#D4AF37] font-normal leading-relaxed mb-6">
+                <p className="text-xs sm:text-base text-[#D4AF37] font-normal leading-relaxed mb-4 sm:mb-6">
                   {selectedMaterial.description}
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-4 text-xs">
                   <div className="p-3 bg-[#2B1C19] border border-[#D4AF37]/20 rounded">
                     <span className="text-[#D4AF37] block">PROVENANCE</span>
                     <span className="text-[#FAF7F0] font-medium">{selectedMaterial.origin}</span>

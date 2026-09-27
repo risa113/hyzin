@@ -55,30 +55,30 @@ export default function ServicesPage({
     <div className="animate-page-enter bg-[#2B1C19]">
 
       {/* ─── 01 — PAGE HEADER ──────────────────────────────────────────────────── */}
-      <section className="w-full bg-[#2B1C19] pt-32 pb-24 border-b border-[#D4AF37]/20">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+      <section className="w-full bg-[#2B1C19] pt-24 sm:pt-32 pb-16 sm:pb-24 border-b border-[#D4AF37]/20">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-16">
 
           {/* Chapter label */}
-          <div className="flex items-center gap-3 mb-10">
+          <div className="flex items-center gap-3 mb-6 sm:mb-10">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#D4AF37] font-semibold">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-semibold">
               — THE 10 OFFICIAL DISCIPLINES —
             </span>
             <span className="flex-1 max-w-[120px] h-[1px] bg-[#D4AF37]/30" />
           </div>
 
-          {/* Giant editorial heading */}
-          <div className="mb-10">
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-[-0.02em] text-[#FAF7F0] uppercase">
+          {/* Editorial heading */}
+          <div className="mb-6 sm:mb-10">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[0.98] tracking-[-0.02em] text-[#FAF7F0] uppercase">
               WHAT WE
             </h1>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-[-0.02em] text-[#D4AF37] uppercase">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[0.98] tracking-[-0.02em] text-[#D4AF37] uppercase">
               CREATE.
             </h1>
           </div>
 
           {/* Subtext */}
-          <p className="max-w-xl text-base sm:text-lg text-[#FAF7F0]/60 font-light leading-relaxed tracking-wide">
+          <p className="max-w-xl text-sm sm:text-base md:text-lg text-[#FAF7F0]/60 font-light leading-relaxed tracking-wide">
             Ten specialized disciplines covering complete interior design, modular joinery,
             and structural metal fabrication across Kerala, Tamil Nadu, and Karnataka.
           </p>
@@ -88,22 +88,22 @@ export default function ServicesPage({
       {/* ─── 02 — SERVICES SHOWCASE ────────────────────────────────────────────── */}
       <section
         id="services-showcase"
-        className="w-full bg-[#4E342E] scroll-mt-24 py-20"
+        className="w-full bg-[#4E342E] scroll-mt-24 py-12 sm:py-20"
       >
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-16">
 
           {/* Section header row */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-[#D4AF37]/15 gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-4 sm:pb-6 border-b border-[#D4AF37]/15 gap-3 sm:gap-4">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-semibold block mb-2">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-semibold block mb-1.5 sm:mb-2">
                 01 — DISCIPLINE CATALOGUE &nbsp;·&nbsp; {servicesData.length} TOTAL
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#FAF7F0] font-bold tracking-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#FAF7F0] font-bold tracking-tight">
                 Explore All 10 Services
               </h2>
             </div>
-            <p className="text-[11px] text-[#D4AF37]/70 font-medium uppercase tracking-[0.2em] max-w-xs text-right">
-              Select any discipline to inspect photography, deliverables & specs
+            <p className="text-[10px] sm:text-[11px] text-[#D4AF37]/80 font-medium uppercase tracking-[0.18em] max-w-xs text-left md:text-right">
+              Select any discipline to inspect photography, deliverables &amp; specs
             </p>
           </div>
 
@@ -312,59 +312,57 @@ export default function ServicesPage({
       </section>
 
       {/* ─── 03 — GEOMETRY PILLARS ─────────────────────────────────────────────── */}
-      <section className="w-full bg-[#2B1C19] py-32 border-t border-[#D4AF37]/15">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+      <section className="w-full bg-[#2B1C19] py-16 sm:py-24 lg:py-32 border-t border-[#D4AF37]/15">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-16">
 
           {/* Section label */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
             <span className="text-[10px] uppercase tracking-[0.35em] text-[#D4AF37] font-semibold">
               02 — DESIGN &amp; FABRICATION METHODOLOGY
             </span>
             <span className="flex-1 max-w-[80px] h-[1px] bg-[#D4AF37]/30" />
           </div>
 
-          {/* Giant section heading */}
-          <div className="mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl text-[#FAF7F0] font-bold tracking-tight leading-[1.05]">
+          {/* Section heading */}
+          <div className="mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#FAF7F0] font-bold tracking-tight leading-[1.05]">
               The Geometry of Quietness
             </h2>
-            <p className="mt-4 text-sm text-[#FAF7F0]/50 font-light max-w-lg leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-sm text-[#FAF7F0]/60 font-light max-w-lg leading-relaxed">
               Three core foundations that govern every interior and fabrication project we deliver.
             </p>
           </div>
 
           {/* Gold hairline rule */}
-          <div className="w-full h-[1px] bg-[#D4AF37]/15 mb-16" />
+          <div className="w-full h-[1px] bg-[#D4AF37]/15 mb-10 sm:mb-16" />
 
-          {/* Three pillar cards — SHARP CORNERS */}
+          {/* Three pillar cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#D4AF37]/15">
-            {geometryPillars.map((p, idx) => (
+            {geometryPillars.map((p) => (
               <div
                 key={p.num}
-                className={`p-10 bg-[#3E2723] hover:bg-[#4E342E] transition-colors duration-300 ${
-                  idx < geometryPillars.length - 1 ? 'border-r border-[#D4AF37]/15' : ''
-                }`}
+                className="p-6 sm:p-8 lg:p-10 bg-[#3E2723] hover:bg-[#4E342E] transition-colors duration-300 border-b md:border-b-0 md:border-r border-[#D4AF37]/15 last:border-b-0 md:last:border-r-0"
               >
                 {/* Numbered label in small gold caps */}
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D4AF37] block mb-6">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D4AF37] block mb-4 sm:mb-6">
                   {p.num} / FOUNDATION
                 </span>
 
                 {/* Gold accent line */}
-                <div className="w-10 h-[2px] bg-[#D4AF37] mb-8" />
+                <div className="w-8 sm:w-10 h-[2px] bg-[#D4AF37] mb-6 sm:mb-8" />
 
                 {/* Large title */}
-                <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#FAF7F0] font-bold tracking-tight leading-tight mb-4">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#FAF7F0] font-bold tracking-tight leading-tight mb-3 sm:mb-4">
                   {p.title}
                 </h3>
 
                 {/* Italic sub in bronze */}
-                <p className="text-sm italic text-[#C9B29B] mb-6 leading-relaxed">
+                <p className="text-sm italic text-[#C9B29B] mb-4 sm:mb-6 leading-relaxed">
                   {p.sub}
                 </p>
 
                 {/* Body text */}
-                <p className="text-sm text-[#FAF7F0]/55 font-light leading-relaxed">
+                <p className="text-sm text-[#FAF7F0]/60 font-light leading-relaxed">
                   {p.text}
                 </p>
               </div>

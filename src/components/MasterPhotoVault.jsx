@@ -57,38 +57,38 @@ export default function MasterPhotoVault({ onOpenLightbox, onOpenConsultation })
   };
 
   return (
-    <section className="py-20 bg-[#4E342E] relative overflow-hidden" id="photo-vault">
+    <section className="py-12 sm:py-20 bg-[#4E342E] relative overflow-hidden" id="photo-vault">
       {/* Background Subtle Grid Accent */}
       <div className="absolute inset-0 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-semibold tracking-wider uppercase mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 text-[#D4AF37] text-[10px] sm:text-xs font-semibold tracking-wider uppercase mb-3 sm:mb-4">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" /> Master Photo Gallery (72 Client Photos)
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#FAF7F0] mb-4">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#FAF7F0] mb-3 sm:mb-4">
             Complete Kerala Client <span className="text-[#D4AF37]">Work Archive</span>
           </h2>
-          <p className="text-base text-[#D4AF37] leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-[#D4AF37] leading-relaxed">
             Browse all 72 authentic on-site photos of our completed luxury modular kitchens, wall drops, fluted paneling, ceiling cove lighting, and structural steel works across Kerala.
           </p>
         </div>
 
         {/* Filter Bar & Live Search Controls */}
-        <div className="bg-[#3E2723] rounded-3xl p-4 sm:p-6 shadow-xl border border-[#D4AF37]/20 mb-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-[#3E2723] rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-xl border border-[#D4AF37]/20 mb-8 sm:mb-10">
+          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 sm:gap-4">
             
             {/* Live Search Input */}
             <div className="relative w-full md:w-80">
               <Search className="w-4 h-4 text-[#D4AF37] absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
-                placeholder="Search by city, acrylic, fluted, quartz, rose gold..."
+                placeholder="Search city, acrylic, fluted, quartz..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-2xl bg-[#2B1C19] border border-[#D4AF37]/20 text-xs text-[#FAF7F0] placeholder-[#D4AF37]/60 focus:outline-none focus:border-[#D4AF37] transition-all"
+                className="w-full pl-10 pr-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl bg-[#2B1C19] border border-[#D4AF37]/20 text-xs text-[#FAF7F0] placeholder-[#D4AF37]/60 focus:outline-none focus:border-[#D4AF37] transition-all"
               />
               {searchQuery && (
                 <button
@@ -101,14 +101,14 @@ export default function MasterPhotoVault({ onOpenLightbox, onOpenConsultation })
             </div>
 
             {/* Results Count Badge */}
-            <div className="text-xs text-[#D4AF37] font-medium flex items-center gap-1.5">
-              <ImageIcon className="w-4 h-4 text-[#D4AF37]" />
-              Showing <span className="font-bold text-[#FAF7F0]">{filteredPhotos.length}</span> of 72 authentic client photos
+            <div className="text-[11px] sm:text-xs text-[#D4AF37] font-medium flex items-center gap-1.5">
+              <ImageIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4AF37]" />
+              <span>Showing <strong className="text-[#FAF7F0]">{filteredPhotos.length}</strong> of 72 client photos</span>
             </div>
           </div>
 
           {/* Category Chips Bar */}
-          <div className="mt-4 pt-4 border-t border-[#D4AF37]/20 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-[#D4AF37]/20 flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 scrollbar-none">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -116,9 +116,9 @@ export default function MasterPhotoVault({ onOpenLightbox, onOpenConsultation })
                   setSelectedCategory(cat.id);
                   setVisibleCount(16);
                 }}
-                className={`px-4 py-2 rounded-2xl text-xs font-semibold whitespace-nowrap transition-all ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all cursor-pointer shrink-0 ${
                   selectedCategory === cat.id
-                    ? 'bg-[#D4AF37] text-[#2B1C19] font-bold shadow-lg scale-105'
+                    ? 'bg-[#D4AF37] text-[#2B1C19] font-bold shadow-md'
                     : 'bg-[#2B1C19] text-[#D4AF37] hover:bg-[#4E342E] hover:text-[#FAF7F0] border border-[#D4AF37]/20'
                 }`}
               >
@@ -130,7 +130,7 @@ export default function MasterPhotoVault({ onOpenLightbox, onOpenConsultation })
 
         {/* 72 Photo Grid Showcase with Slide-Right Pop on Filter Switch */}
         {displayedPhotos.length > 0 ? (
-          <div key={`${selectedCategory}-${searchQuery}`} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-slide-right-pop">
+          <div key={`${selectedCategory}-${searchQuery}`} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 animate-slide-right-pop">
             {displayedPhotos.map((photo, idx) => (
               <div
                 key={photo.id}

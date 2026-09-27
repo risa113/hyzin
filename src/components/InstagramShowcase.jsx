@@ -75,13 +75,13 @@ export default function InstagramShowcase({ onOpenLightbox }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Profile Card Header */}
-        <div className="bg-[#3E2723]/90 backdrop-blur-md border border-[#D4AF37]/20 p-5 sm:p-7 rounded-2xl mb-8 sm:mb-10 shadow-2xl">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div className="bg-[#3E2723]/90 backdrop-blur-md border border-[#D4AF37]/20 p-4 sm:p-7 rounded-xl sm:rounded-2xl mb-8 sm:mb-10 shadow-2xl">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-5 sm:gap-6">
             
             {/* Handle & Badge Info */}
-            <div className="flex items-start space-x-4">
-              <div className="relative group cursor-pointer" onClick={() => window.open(instagramProfile.url, '_blank')}>
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-[2.5px] bg-gradient-to-tr from-[#D4AF37] via-[#D4AF37] to-[#D4AF37] shadow-lg">
+            <div className="flex items-start space-x-3.5 sm:space-x-4 min-w-0">
+              <div className="relative group cursor-pointer flex-shrink-0" onClick={() => window.open(instagramProfile.url, '_blank')}>
+                <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full p-[2px] sm:p-[2.5px] bg-gradient-to-tr from-[#D4AF37] via-[#D4AF37] to-[#D4AF37] shadow-lg">
                   <div className="w-full h-full rounded-full bg-[#2B1C19] p-0.5">
                     <img
                       src={instagramProfile.posts[0].image}
@@ -91,17 +91,17 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                   </div>
                 </div>
                 <div className="absolute -bottom-1 -right-1 bg-[#D4AF37] text-[#2B1C19] rounded-full p-1 shadow">
-                  <InstagramIcon className="w-3.5 h-3.5" />
+                  <InstagramIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 </div>
               </div>
 
-              <div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="font-mono text-lg sm:text-2xl font-bold text-[#FAF7F0] tracking-wide">
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                  <h3 className="font-mono text-base sm:text-2xl font-bold text-[#FAF7F0] tracking-wide truncate">
                     {instagramProfile.handle}
                   </h3>
-                  <CheckCircle2 className="w-5 h-5 text-[#3897f0] fill-[#3897f0]/20" />
-                  <span className="px-2 py-0.5 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-semibold uppercase">
+                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#3897f0] fill-[#3897f0]/20 flex-shrink-0" />
+                  <span className="px-2 py-0.5 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/40 text-[#D4AF37] text-[9px] sm:text-[10px] font-mono font-semibold uppercase flex-shrink-0">
                     Official Studio
                   </span>
                 </div>
@@ -111,7 +111,7 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                 </p>
 
                 {/* Follower Stats Row */}
-                <div className="mt-3 flex items-center space-x-6 text-xs font-mono text-[#D4AF37]">
+                <div className="mt-2.5 sm:mt-3 flex items-center space-x-4 sm:space-x-6 text-[11px] sm:text-xs font-mono text-[#D4AF37]">
                   <div>
                     <span className="text-[#FAF7F0] font-bold">{instagramProfile.followers}</span> Followers
                   </div>
@@ -126,12 +126,12 @@ export default function InstagramShowcase({ onOpenLightbox }) {
             </div>
 
             {/* Direct Action CTAs */}
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full lg:w-auto">
               <a
                 href={instagramProfile.dmUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-3 rounded-lg bg-[#D4AF37] hover:bg-[#FAF7F0] text-[#2B1C19] text-xs font-bold font-mono uppercase tracking-wider transition-all shadow-lg flex items-center space-x-2"
+                className="w-full sm:w-auto px-5 py-3 rounded-lg bg-[#D4AF37] hover:bg-[#FAF7F0] text-[#2B1C19] text-xs font-bold font-mono uppercase tracking-wider transition-all shadow-lg flex items-center justify-center space-x-2"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>DM US ON INSTAGRAM</span>
@@ -141,7 +141,7 @@ export default function InstagramShowcase({ onOpenLightbox }) {
                 href={instagramProfile.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-3 rounded-lg border border-[#D4AF37]/30 hover:border-[#D4AF37] text-[#FAF7F0] hover:text-[#D4AF37] text-xs font-bold font-mono uppercase tracking-wider transition-all flex items-center space-x-2"
+                className="w-full sm:w-auto px-5 py-3 rounded-lg border border-[#D4AF37]/30 hover:border-[#D4AF37] text-[#FAF7F0] hover:text-[#D4AF37] text-xs font-bold font-mono uppercase tracking-wider transition-all flex items-center justify-center space-x-2"
               >
                 <InstagramIcon className="w-4 h-4" />
                 <span>FOLLOW PROFILE</span>
@@ -152,26 +152,26 @@ export default function InstagramShowcase({ onOpenLightbox }) {
           </div>
 
           {/* Instagram Story Highlights Bar */}
-          <div className="mt-8 pt-6 border-t border-[#D4AF37]/20">
+          <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-[#D4AF37]/20">
             <div className="flex items-center space-x-2 mb-3 text-[10px] uppercase font-mono tracking-widest text-[#D4AF37]">
               <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>STUDIO STORY HIGHLIGHTS</span>
             </div>
-            <div className="flex items-center space-x-4 sm:space-x-6 overflow-x-auto pb-2 scrollbar-none">
+            <div className="flex items-center space-x-3.5 sm:space-x-6 overflow-x-auto pb-2 scrollbar-none -mx-2 px-2 sm:mx-0 sm:px-0">
               {instagramProfile.stories.map((story) => (
                 <button
                   key={story.id}
                   onClick={() => setSelectedStory(story)}
-                  className="flex flex-col items-center space-y-1.5 min-w-[72px] group focus:outline-none"
+                  className="flex flex-col items-center space-y-1.5 min-w-[64px] sm:min-w-[72px] flex-shrink-0 group focus:outline-none"
                 >
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-[2px] bg-gradient-to-tr from-[#D4AF37] to-[#D4AF37] group-hover:from-[#FAF7F0] group-hover:to-[#D4AF37] transition-all">
+                  <div className="w-13 h-13 sm:w-16 sm:h-16 rounded-full p-[2px] bg-gradient-to-tr from-[#D4AF37] to-[#D4AF37] group-hover:from-[#FAF7F0] group-hover:to-[#D4AF37] transition-all">
                     <img
                       src={story.cover}
                       alt={story.title}
                       className="w-full h-full object-cover rounded-full filter brightness-90 group-hover:scale-105 transition-transform"
                     />
                   </div>
-                  <span className="text-[10px] text-[#D4AF37] group-hover:text-[#FAF7F0] font-mono truncate max-w-[80px]">
+                  <span className="text-[10px] text-[#D4AF37] group-hover:text-[#FAF7F0] font-mono truncate max-w-[72px] sm:max-w-[80px]">
                     {story.title}
                   </span>
                 </button>
@@ -181,24 +181,24 @@ export default function InstagramShowcase({ onOpenLightbox }) {
         </div>
 
         {/* Category Filter Tabs Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 border-b border-[#D4AF37]/20 pb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 sm:mb-8 border-b border-[#D4AF37]/20 pb-5 sm:pb-6">
           <div>
-            <div className="flex items-center space-x-2 text-[11px] uppercase tracking-[0.25em] text-[#D4AF37] font-medium mb-1">
+            <div className="flex items-center space-x-2 text-[10px] sm:text-[11px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#D4AF37] font-medium mb-1">
               <Filter className="w-3.5 h-3.5" />
               <span>THE VISUAL CHRONICLE</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#FAF7F0] font-bold tracking-tight">
+            <h2 className="text-xl sm:text-3xl lg:text-4xl text-[#FAF7F0] font-bold tracking-tight">
               LIVE INSTAGRAM FEED & GALLERY
             </h2>
           </div>
 
           {/* Service Category Buttons */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none max-w-full">
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none max-w-full -mx-4 px-4 sm:mx-0 sm:px-0">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => handleSelectCategory(cat)}
-                className={`px-3.5 py-1.5 text-[11px] uppercase tracking-wider rounded-md whitespace-nowrap transition-all font-semibold ${
+                className={`px-3 sm:px-3.5 py-1.5 text-[10px] sm:text-[11px] uppercase tracking-wider rounded-md whitespace-nowrap transition-all font-semibold flex-shrink-0 ${
                   activeCategory === cat
                     ? 'bg-[#D4AF37] text-[#2B1C19] font-bold shadow-md'
                     : 'bg-[#3E2723] hover:bg-[#4E342E] text-[#D4AF37] hover:text-[#FAF7F0] border border-[#D4AF37]/20'
