@@ -58,6 +58,10 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
+      if (hash.toLowerCase().includes('sitemap.xml')) {
+        window.location.href = '/sitemap.xml';
+        return;
+      }
       if (['home', 'about', 'projects', 'services', 'contact', '3d-house', 'photo-vault'].includes(hash)) {
         setActivePage(hash);
       }
