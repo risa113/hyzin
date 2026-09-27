@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight, Phone, ChevronDown, Sparkles } from 'lucide-react';
 import { BRAND_ASSETS, CLIENT_SERVICES_CONFIG } from '../data/clientAssets';
 
@@ -69,56 +69,88 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
 
   return (
     <>
-      {/* ─── TOP BAR (Desktop Only) ─────────────────────────────────────────── */}
-      <div className="w-full bg-[#3A2117] border-b border-[#C4A174]/15 hidden md:flex items-center justify-between py-2 px-6 lg:px-10 z-50 relative">
-        <div className="flex items-center gap-3 whitespace-nowrap">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#C4A174] animate-pulse flex-shrink-0" />
-          <span className="text-[10px] tracking-[0.22em] uppercase font-medium text-[#EDE3D2]">
-            Interior Design &amp; Specialized Fabrication Studio
-          </span>
-          <span className="text-[#C4A174]/25 text-[10px] select-none">•</span>
-          <span className="text-[10px] tracking-[0.22em] uppercase text-[#C4A174]/80">
-            Kerala&nbsp;•&nbsp;Tamil Nadu&nbsp;•&nbsp;Karnataka
-          </span>
+      {/* ─── STICKY WRAPPER: KEEPS TOP BAR & MAIN HEADER VISIBLE ON SCROLL ─── */}
+      <div className="sticky top-0 z-50 w-full shadow-[0_8px_32px_rgba(0,0,0,0.65)]">
+
+        {/* ─── TOP BAR (Desktop: Stays Visible on Scroll) ────────────────────── */}
+        <div
+          className={`w-full border-b border-[#C4A174]/15 hidden md:flex items-center justify-between px-6 lg:px-10 transition-all duration-300 ${
+            isScrolled
+              ? 'bg-[#3A2117]/98 backdrop-blur-xl py-1.5'
+              : 'bg-[#3A2117]/95 backdrop-blur-md py-2'
+          }`}
+        >
+          <div className="flex items-center gap-3 whitespace-nowrap">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#C4A174] animate-pulse flex-shrink-0" />
+            <span className="text-[10px] tracking-[0.22em] uppercase font-medium text-[#EDE3D2]">
+              Interior Design &amp; Specialized Fabrication Studio
+            </span>
+            <span className="text-[#C4A174]/25 text-[10px] select-none">•</span>
+            <span className="text-[10px] tracking-[0.22em] uppercase text-[#C4A174]/80">
+              Kerala&nbsp;•&nbsp;Tamil Nadu&nbsp;•&nbsp;Karnataka
+            </span>
+          </div>
+
+          <div className="flex items-center gap-5 whitespace-nowrap">
+            <a
+              href="tel:916282549008"
+              className="flex items-center gap-1.5 text-[10px] tracking-[0.18em] uppercase text-[#EDE3D2] hover:text-[#C4A174] transition-colors duration-200"
+            >
+              <Phone className="w-2.5 h-2.5 text-[#C4A174]" />
+              <span>+91 6282 549008</span>
+            </a>
+            <span className="text-[#C4A174]/20 text-[10px] select-none">|</span>
+            <a
+              href="tel:918848023041"
+              className="flex items-center gap-1.5 text-[10px] tracking-[0.18em] uppercase text-[#EDE3D2] hover:text-[#C4A174] transition-colors duration-200"
+            >
+              <Phone className="w-2.5 h-2.5 text-[#C4A174]" />
+              <span>+91 8848 023041</span>
+            </a>
+            <span className="text-[#C4A174]/20 text-[10px] select-none">|</span>
+            <a
+              href="https://www.instagram.com/hyzin.interior/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-[10px] tracking-[0.18em] uppercase text-[#EDE3D2] hover:text-[#E1306C] transition-colors duration-200"
+            >
+              <span>@hyzin.interior</span>
+              <ArrowUpRight className="w-2.5 h-2.5 text-[#C4A174]" />
+            </a>
+          </div>
         </div>
 
-        <div className="flex items-center gap-5 whitespace-nowrap">
+        {/* ─── TOP BAR (Mobile: Compact Strip Visible on Scroll) ─────────────── */}
+        <div
+          className={`w-full border-b border-[#C4A174]/15 flex md:hidden items-center justify-between px-3.5 py-1.5 text-[9px] tracking-wider uppercase transition-all duration-300 ${
+            isScrolled
+              ? 'bg-[#3A2117]/98 backdrop-blur-xl'
+              : 'bg-[#3A2117]/95 backdrop-blur-md'
+          }`}
+        >
+          <div className="flex items-center gap-1.5 truncate">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C4A174] animate-pulse flex-shrink-0" />
+            <span className="text-[#C4A174] font-semibold">KL • TN • KA</span>
+            <span className="text-[#C4A174]/30">•</span>
+            <span className="text-[#EDE3D2]/80 truncate text-[8.5px]">Interiors &amp; Fabrication</span>
+          </div>
           <a
             href="tel:916282549008"
-            className="flex items-center gap-1.5 text-[10px] tracking-[0.18em] uppercase text-[#EDE3D2] hover:text-[#C4A174] transition-colors duration-200"
+            className="flex items-center gap-1 text-[9px] font-semibold text-[#EDE3D2] hover:text-[#C4A174] shrink-0 ml-2"
           >
             <Phone className="w-2.5 h-2.5 text-[#C4A174]" />
             <span>+91 6282 549008</span>
           </a>
-          <span className="text-[#C4A174]/20 text-[10px] select-none">|</span>
-          <a
-            href="tel:918848023041"
-            className="flex items-center gap-1.5 text-[10px] tracking-[0.18em] uppercase text-[#EDE3D2] hover:text-[#C4A174] transition-colors duration-200"
-          >
-            <Phone className="w-2.5 h-2.5 text-[#C4A174]" />
-            <span>+91 8848 023041</span>
-          </a>
-          <span className="text-[#C4A174]/20 text-[10px] select-none">|</span>
-          <a
-            href="https://www.instagram.com/hyzin.interior/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 text-[10px] tracking-[0.18em] uppercase text-[#EDE3D2] hover:text-[#E1306C] transition-colors duration-200"
-          >
-            <span>@hyzin.interior</span>
-            <ArrowUpRight className="w-2.5 h-2.5 text-[#C4A174]" />
-          </a>
         </div>
-      </div>
 
-      {/* ─── MAIN HEADER (100% Solid & Visible on Mobile & Desktop) ────────── */}
-      <header
-        className={`sticky top-0 z-50 w-full border-b border-[#C4A174]/25 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-[#3A2117]/98 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.7)] py-3 sm:py-3.5'
-            : 'bg-[#3A2117]/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] py-3 sm:py-4'
-        }`}
-      >
+        {/* ─── MAIN HEADER (100% Solid & Visible on Mobile & Desktop) ────────── */}
+        <header
+          className={`w-full border-b border-[#C4A174]/25 transition-all duration-300 relative ${
+            isScrolled
+              ? 'bg-[#3A2117]/98 backdrop-blur-xl py-2.5 sm:py-3'
+              : 'bg-[#3A2117]/95 backdrop-blur-md py-3 sm:py-4'
+          }`}
+        >
         <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between gap-3">
 
           {/* ── LOGO ── */}
@@ -401,6 +433,7 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
         )}
 
       </header>
+      </div>
 
       {/* Dimmed backdrop when mobile menu is open */}
       {mobileMenuOpen && (
