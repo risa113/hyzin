@@ -69,8 +69,8 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
 
   return (
     <>
-      {/* ─── STICKY WRAPPER: KEEPS TOP BAR & MAIN HEADER VISIBLE ON SCROLL ─── */}
-      <div className="sticky top-0 z-50 w-full shadow-[0_8px_32px_rgba(0,0,0,0.65)]">
+      {/* ─── FIXED CONTAINER: 100% LOCKED AT TOP OF VIEWPORT ON SCROLL ─── */}
+      <div className="fixed top-0 left-0 right-0 z-50 w-full shadow-[0_8px_32px_rgba(0,0,0,0.65)] bg-[#3A2117]">
 
         {/* ─── TOP BAR (Desktop: Stays Visible on Scroll) ────────────────────── */}
         <div
@@ -313,7 +313,7 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
 
         {/* ─── MOBILE NAVIGATION DRAWER (Attached directly under header) ──── */}
         {mobileMenuOpen && (
-          <div className="lg:hidden absolute top-full inset-x-0 w-full bg-[#3A2117] border-b border-[#C4A174]/30 shadow-2xl z-50 animate-fadeIn overflow-y-auto max-h-[calc(100vh-64px)]">
+          <div className="lg:hidden absolute top-full inset-x-0 w-full bg-[#3A2117] border-b border-[#C4A174]/30 shadow-2xl z-50 animate-fadeIn overflow-y-auto max-h-[calc(100vh-92px)]">
             <div className="p-4 sm:p-6 space-y-4">
 
               {/* 2-Column Quick Nav Links */}
@@ -434,6 +434,9 @@ export default function Navbar({ activePage, onNavigate, onOpenConsultation, onS
 
       </header>
       </div>
+
+      {/* ─── SPACER: PUSHES PAGE CONTENT DOWN SO IT STARTS NATURALLY BELOW FIXED NAVBAR ─── */}
+      <div className="w-full shrink-0 pointer-events-none select-none h-[86px] sm:h-[94px] md:h-[104px]" aria-hidden="true" />
 
       {/* Dimmed backdrop when mobile menu is open */}
       {mobileMenuOpen && (
