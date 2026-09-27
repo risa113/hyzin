@@ -4,5 +4,6 @@ Disallow: /dist/
 
 # Sitemap URLs for Google, Bing, Yahoo & DuckDuckGo
 Sitemap: https://www.hyzininterior.in/sitemap.xml
+Sitemap: https://www.hyzininterior.in/sitemap.txt
 Sitemap: https://hyzininterior.in/sitemap.xml
 Sitemap: https://risa113.github.io/hyzin/sitemap.xml
