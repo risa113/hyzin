@@ -1,6 +1,7 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Send, Phone, MapPin, CheckCircle2, MessageSquare, ArrowUpRight, Mail, ExternalLink, ShieldCheck, Loader2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { apiClient } from '../utils/apiClient';
 
 export default function ConsultationForm({ prefilledProject = '', selectedRegion = '' }) {
   const [formData, setFormData] = useState({
@@ -81,39 +82,24 @@ export default function ConsultationForm({ prefilledProject = '', selectedRegion
 
     setIsSubmitted(true);
 
-    // 3. Concurrently dispatch email to Muhammedashad395@gmail.com
+    // 3. Concurrently dispatch email with high-concurrency client (retries, timeouts, fallback)
     try {
-      const response = await fetch("https://formsubmit.co/ajax/Muhammedashad395@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          _subject: `New HYZIN Interior Consultation Brief: ${formData.name || 'Patron'} (${formData.projectType})`,
-          _template: "table",
-          _captcha: "false",
-          "Patron Name": formData.name || 'Client',
-          "Phone Number": formData.phone || 'Not provided',
-          "Email Address": formData.email || 'Not provided',
-          "Region / Location": formData.region,
-          "Service Typology": formData.projectType,
-          "Budget Framework": formData.budget.trim() || 'Flexible / To be discussed',
-          "Spatial Notes": formData.message || 'Standard consultation requested.',
-          "Dispatched WhatsApp Line": formData.selectedWhatsApp === '916282549008' ? '+91 6282549008 (Line 1)' : '+91 8848023041 (Line 2)',
-          "Target Studio Email": "Muhammedashad395@gmail.com",
-          "Transmission Mode": "Dual Submit (WhatsApp + Direct Studio Email)",
-          "Submission Time": new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
-        })
+      await apiClient.submitConsultation({
+        name: formData.name || 'Client',
+        phone: formData.phone || 'Not provided',
+        email: formData.email || 'Not provided',
+        region: formData.region,
+        projectType: formData.projectType,
+        budget: formData.budget.trim() || 'Flexible / To be discussed',
+        message: formData.message || 'Standard consultation requested.',
+        selectedWhatsApp: formData.selectedWhatsApp === '916282549008' ? '+91 6282549008 (Line 1)' : '+91 8848023041 (Line 2)',
+        targetStudioEmail: 'Muhammedashad395@gmail.com',
+        transmissionMode: 'Dual Submit (WhatsApp + Direct Studio Email)',
+        submissionTime: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
       });
-
-      if (response.ok) {
-        setEmailStatus('sent');
-      } else {
-        setEmailStatus('sent'); // Accept FormSubmit response
-      }
+      setEmailStatus('sent');
     } catch (err) {
-      console.warn("Background email notification dispatch notice:", err);
+      console.warn('[HYZIN Form Dispatch Notice]: WhatsApp dispatced successfully; secondary email queued in fallback mode.', err);
       setEmailStatus('fallback');
     } finally {
       setIsSubmitting(false);
