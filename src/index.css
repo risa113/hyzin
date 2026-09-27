@@ -1,33 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-cinzel: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-cinzel: 'Playfair Display', Georgia, serif;
 
-  /* HYZIN Luxury: Obsidian Noir & Antique Gold */
-  --color-noir: #2B1C19;
-  --color-carbon: #3E2723;
-  --color-obsidian: #4E342E;
-  --color-gunmetal: #3E2723;
-  --color-antique-gold: #D4AF37;
-  --color-aged-bronze: #C9B29B;
-  --color-warm-ivory: #FAF7F0;
+  /* Atelier Monograph Luxury Brown & Sand Palette */
+  --color-espresso: #3A2117;
+  --color-carbon: #4A2E22;
+  --color-mocha: #704936;
+  --color-sand: #C4A174;
+  --color-cream: #EDE3D2;
+  --color-sand-muted: #D4C3BD;
+
+  /* HYZIN Luxury Mapped Tokens */
+  --color-noir: #3A2117;
+  --color-obsidian: #3A2117;
+  --color-gunmetal: #4A2E22;
+  --color-antique-gold: #C4A174;
+  --color-aged-bronze: #D4C3BD;
+  --color-warm-ivory: #EDE3D2;
 
   /* Legacy aliases */
-  --color-caput-mortuum: #4E342E;
-  --color-chamoisee: #3E2723;
-  --color-tan: #D4AF37;
-  --color-beige: #C9B29B;
-  --color-baby-powder: #FAF7F0;
+  --color-caput-mortuum: #3A2117;
+  --color-chamoisee: #4A2E22;
+  --color-tan: #C4A174;
+  --color-beige: #D4C3BD;
+  --color-baby-powder: #EDE3D2;
 }
 
 @layer base {
   :root {
-    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-serif: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-cinzel: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-cinzel: 'Playfair Display', Georgia, serif;
   }
 
   *, *::before, *::after {
@@ -35,7 +42,7 @@
   }
 
   html {
-    font-family: "Inter", sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -47,9 +54,9 @@
   }
 
   body {
-    background-color: #4E342E;
-    color: #FAF7F0;
-    font-family: "Inter", sans-serif;
+    background-color: #3A2117;
+    color: #EDE3D2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: -0.011em;
@@ -69,32 +76,32 @@
     max-width: 100%;
     width: 100%;
     min-height: 100vh;
-    background-color: #4E342E;
+    background-color: #3A2117;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    color: #FAF7F0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: #EDE3D2;
   }
 
   h1 {
-    font-weight: 800;
-    letter-spacing: -0.025em;
-    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
   }
 
   h2 {
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-weight: 600;
+    letter-spacing: -0.018em;
     line-height: 1.18;
   }
 
   h3 {
     font-weight: 600;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.012em;
     line-height: 1.25;
   }
 
@@ -103,122 +110,145 @@
   input,
   textarea,
   select {
-    font-family: "Inter", sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   p {
     line-height: 1.65;
   }
 
-  /* Ensure legacy font classes adhere strictly to Inter */
   .font-serif,
   .font-cinzel {
-    font-family: "Inter", sans-serif !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+  }
+
+  .font-sans {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
   }
 }
 
-/* Coffee & Sand Luxury Scrollbar */
+/* Atelier Luxury Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #2B1C19;
+  background: #3A2117;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
+  background: #C4A174;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9B29B;
+  background: #D4C3BD;
 }
 
-/* ✦ HYZIN INTERIOR — Luxury Theme: "Obsidian Noir & Antique Gold"
-   Designed by Claude for maximum luxury perception in interior design branding.
-   1. #2B1C19 - Absolute Noir   (deepest BG — pure darkness, ultra-premium)
-   2. #3E2723 - Carbon          (card surfaces — near-black, refined depth)
-   3. #4E342E - Obsidian        (section backgrounds — dark charcoal elegance)
-   4. #3E2723 - Gunmetal        (mid-tone panels — cool dark separator)
-   5. #D4AF37 - Antique Gold    (accent — aged museum-quality brass/gold)
-   6. #C9B29B - Aged Bronze     (secondary accent — warm oxidized metal)
-   7. #FAF7F0 - Warm Ivory      (primary text — parchment warmth, not cold white)
+/* ✦ HYZIN ATELIER MONOGRAPH — Luxury Brown & Sand Theme
+   Matches Stitch Screen: projects/10142823534461748104/screens/8a458ae0c7d64ad08bd8750a9c51a570
+   1. #3A2117 - Deep Espresso Brown (base background, header, top bar)
+   2. #4A2E22 - Carbon / Deep Surface (cards, elevated containers)
+   3. #704936 - Warm Mocha (secondary container, warm architectural tone)
+   4. #C4A174 - Luxury Sand / Champagne Bronze (primary accent, active pills, badges, borders)
+   5. #D4C3BD - Muted Sand / Aged Bronze (subtitles, secondary labels)
+   6. #EDE3D2 - Soft Warm Cream / Ivory (primary typography, bright headings)
 */
-.bg-noir { background-color: #2B1C19; }
-.bg-carbon { background-color: #3E2723; }
-.bg-obsidian { background-color: #4E342E; }
-.bg-gunmetal { background-color: #3E2723; }
-.bg-antique-gold { background-color: #D4AF37; }
-.bg-aged-bronze { background-color: #C9B29B; }
-.bg-warm-ivory { background-color: #FAF7F0; }
+.bg-noir { background-color: #3A2117; }
+.bg-carbon { background-color: #4A2E22; }
+.bg-obsidian { background-color: #3A2117; }
+.bg-gunmetal { background-color: #4A2E22; }
+.bg-antique-gold { background-color: #C4A174; }
+.bg-aged-bronze { background-color: #D4C3BD; }
+.bg-warm-ivory { background-color: #EDE3D2; }
 
-.text-noir { color: #2B1C19; }
-.text-antique-gold { color: #D4AF37; }
-.text-aged-bronze { color: #C9B29B; }
-.text-warm-ivory { color: #FAF7F0; }
-.text-gunmetal { color: #3E2723; }
+/* Atelier Direct Semantic Utility Classes */
+.bg-espresso { background-color: #3A2117; }
+.bg-mocha { background-color: #704936; }
+.bg-sand { background-color: #C4A174; }
+.bg-cream { background-color: #EDE3D2; }
 
-.border-antique-gold { border-color: #D4AF37; }
-.border-gunmetal { border-color: #3E2723; }
-.border-aged-bronze { border-color: #C9B29B; }
+.text-noir { color: #3A2117; }
+.text-antique-gold { color: #C4A174; }
+.text-aged-bronze { color: #D4C3BD; }
+.text-warm-ivory { color: #EDE3D2; }
+.text-gunmetal { color: #4A2E22; }
+.text-espresso { color: #3A2117; }
+.text-mocha { color: #704936; }
+.text-sand { color: #C4A174; }
+.text-cream { color: #EDE3D2; }
+.text-sand-muted { color: #D4C3BD; }
+
+.border-antique-gold { border-color: #C4A174; }
+.border-gunmetal { border-color: #4A2E22; }
+.border-aged-bronze { border-color: #D4C3BD; }
+.border-sand { border-color: #C4A174; }
+.border-sand-20 { border-color: rgba(196, 161, 116, 0.2); }
+.border-sand-40 { border-color: rgba(196, 161, 116, 0.4); }
+.border-sand-60 { border-color: rgba(196, 161, 116, 0.6); }
+
+/* Paper Grain Texture from Stitch */
+.bg-grain {
+  background-image: radial-gradient(rgba(196, 161, 116, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
 
 /* Legacy aliases (kept for backward compat) */
-.bg-caput-mortuum { background-color: #4E342E; }
-.bg-chamoisee { background-color: #3E2723; }
-.bg-tan { background-color: #D4AF37; }
-.bg-beige { background-color: #C9B29B; }
-.bg-baby-powder { background-color: #FAF7F0; }
-.text-caput-mortuum { color: #4E342E; }
-.text-chamoisee { color: #3E2723; }
-.text-tan { color: #D4AF37; }
-.text-beige { color: #C9B29B; }
-.text-baby-powder { color: #FAF7F0; }
-.border-caput-mortuum { border-color: #4E342E; }
-.border-chamoisee { border-color: #3E2723; }
-.border-tan { border-color: #D4AF37; }
-.border-beige { border-color: #C9B29B; }
-.border-baby-powder { border-color: #FAF7F0; }
+.bg-caput-mortuum { background-color: #3A2117; }
+.bg-chamoisee { background-color: #4A2E22; }
+.bg-tan { background-color: #C4A174; }
+.bg-beige { background-color: #D4C3BD; }
+.bg-baby-powder { background-color: #EDE3D2; }
+.text-caput-mortuum { color: #3A2117; }
+.text-chamoisee { color: #4A2E22; }
+.text-tan { color: #C4A174; }
+.text-beige { color: #D4C3BD; }
+.text-baby-powder { color: #EDE3D2; }
+.border-caput-mortuum { border-color: #3A2117; }
+.border-chamoisee { border-color: #4A2E22; }
+.border-tan { border-color: #C4A174; }
+.border-beige { border-color: #D4C3BD; }
+.border-baby-powder { border-color: #EDE3D2; }
 
 /* Legacy Theme Token Aliases */
 .bg-coffee {
-  background-color: #4E342E;
+  background-color: #3A2117;
 }
 .bg-coffee-deep {
-  background-color: #2B1C19;
+  background-color: #3A2117;
 }
 .bg-coffee-surface {
-  background-color: #3E2723;
+  background-color: #4A2E22;
 }
 .bg-beige-brown {
-  background-color: #D4AF37;
+  background-color: #C4A174;
 }
 .bg-gold-sand {
-  background-color: #D4AF37;
+  background-color: #C4A174;
 }
 .bg-ivory-beige {
-  background-color: #FAF7F0;
+  background-color: #EDE3D2;
 }
 
 .text-coffee {
-  color: #4E342E;
+  color: #3A2117;
 }
 .text-beige-brown {
-  color: #D4AF37;
+  color: #C4A174;
 }
 .text-gold-sand {
-  color: #D4AF37;
+  color: #C4A174;
 }
 .text-ivory-beige {
-  color: #FAF7F0;
+  color: #EDE3D2;
 }
 
 .border-coffee {
-  border-color: #4E342E;
+  border-color: #3A2117;
 }
 .border-beige-brown {
-  border-color: #D4AF37;
+  border-color: #C4A174;
 }
 .border-gold-sand {
-  border-color: #D4AF37;
+  border-color: #C4A174;
 }
 
 /* Animatic Light Reflection Ribbon */
@@ -483,24 +513,24 @@
   animation-play-state: paused;
 }
 
-/* Luxury Gold Glow on Hover */
+/* Luxury Gold/Sand Glow on Hover */
 .gold-glow-hover {
   transition: box-shadow 0.4s ease, border-color 0.4s ease;
 }
 .gold-glow-hover:hover {
-  box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.4), 0 20px 60px -12px rgba(201, 168, 76, 0.15);
-  border-color: rgba(201, 168, 76, 0.5);
+  box-shadow: 0 0 0 1px rgba(196, 161, 116, 0.4), 0 20px 60px -12px rgba(196, 161, 116, 0.15);
+  border-color: rgba(196, 161, 116, 0.5);
 }
 
 /* Architectural Sharp Card */
 .card-sharp {
   border-radius: 0;
-  border: 1px solid rgba(201, 168, 76, 0.2);
-  background-color: #3E2723;
+  border: 1px solid rgba(196, 161, 116, 0.2);
+  background-color: #4A2E22;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .card-sharp:hover {
-  border-color: rgba(201, 168, 76, 0.45);
+  border-color: rgba(196, 161, 116, 0.45);
   box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6);
 }
 
@@ -510,21 +540,21 @@
   font-weight: 900;
   line-height: 0.85;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(201, 168, 76, 0.08);
+  -webkit-text-stroke: 1px rgba(196, 161, 116, 0.08);
   letter-spacing: -0.05em;
   user-select: none;
   pointer-events: none;
 }
 
-/* Gold Hairline Divider */
+/* Gold/Sand Hairline Divider */
 .hairline-gold {
   height: 1px;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(201, 168, 76, 0.4) 20%,
-    rgba(201, 168, 76, 0.6) 50%,
-    rgba(201, 168, 76, 0.4) 80%,
+    rgba(196, 161, 116, 0.4) 20%,
+    rgba(196, 161, 116, 0.6) 50%,
+    rgba(196, 161, 116, 0.4) 80%,
     transparent 100%
   );
 }
@@ -541,7 +571,7 @@
 /* Vertical timeline connector */
 .timeline-connector {
   width: 1px;
-  background: linear-gradient(to bottom, #D4AF37, rgba(201, 168, 76, 0.1));
+  background: linear-gradient(to bottom, #C4A174, rgba(196, 161, 116, 0.1));
 }
 
 /* No scrollbar utility */
@@ -554,12 +584,12 @@
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.03em;
-  color: #FAF7F0;
+  color: #EDE3D2;
 }
 
-/* Gold text gradient */
+/* Sand & Cream text gradient */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #D4AF37 0%, #FAF7F0 50%, #D4AF37 100%);
+  background: linear-gradient(135deg, #C4A174 0%, #EDE3D2 50%, #C4A174 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

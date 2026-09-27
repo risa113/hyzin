@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -125,7 +125,7 @@ export default function App() {
   }, [activePage]);
 
   return (
-    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#4E342E] text-[#FAF7F0] selection:bg-[#D4AF37]/30 selection:text-[#FAF7F0] flex flex-col justify-between relative">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#3A2117] text-[#EDE3D2] selection:bg-[#C4A174]/30 selection:text-[#EDE3D2] flex flex-col justify-between relative">
       {/* Luxury Animatic Custom Cursor */}
       <AnimaticCursor />
 

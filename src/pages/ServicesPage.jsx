@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { ArrowUpRight, Maximize2, CheckCircle2, Sparkles } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
 import SensoryLibrary from '../components/SensoryLibrary';
@@ -52,33 +52,33 @@ export default function ServicesPage({
   ];
 
   return (
-    <div className="animate-page-enter bg-[#2B1C19]">
+    <div className="animate-page-enter bg-[#3A2117]">
 
       {/* ─── 01 — PAGE HEADER ──────────────────────────────────────────────────── */}
-      <section className="w-full bg-[#2B1C19] pt-24 sm:pt-32 pb-16 sm:pb-24 border-b border-[#D4AF37]/20">
+      <section className="w-full bg-[#3A2117] pt-24 sm:pt-32 pb-16 sm:pb-24 border-b border-[#C4A174]/20">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-16">
 
           {/* Chapter label */}
           <div className="flex items-center gap-3 mb-6 sm:mb-10">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
-            <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-[#C4A174]" />
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C4A174] font-semibold">
               — THE 10 OFFICIAL DISCIPLINES —
             </span>
-            <span className="flex-1 max-w-[120px] h-[1px] bg-[#D4AF37]/30" />
+            <span className="flex-1 max-w-[120px] h-[1px] bg-[#C4A174]/30" />
           </div>
 
           {/* Editorial heading */}
           <div className="mb-6 sm:mb-10">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[0.98] tracking-[-0.02em] text-[#FAF7F0] uppercase">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[0.98] tracking-[-0.02em] text-[#EDE3D2] uppercase">
               WHAT WE
             </h1>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[0.98] tracking-[-0.02em] text-[#D4AF37] uppercase">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[0.98] tracking-[-0.02em] text-[#C4A174] uppercase">
               CREATE.
             </h1>
           </div>
 
           {/* Subtext */}
-          <p className="max-w-xl text-sm sm:text-base md:text-lg text-[#FAF7F0]/60 font-light leading-relaxed tracking-wide">
+          <p className="max-w-xl text-sm sm:text-base md:text-lg text-[#EDE3D2]/60 font-light leading-relaxed tracking-wide">
             Ten specialized disciplines covering complete interior design, modular joinery,
             and structural metal fabrication across Kerala, Tamil Nadu, and Karnataka.
           </p>
@@ -88,21 +88,21 @@ export default function ServicesPage({
       {/* ─── 02 — SERVICES SHOWCASE ────────────────────────────────────────────── */}
       <section
         id="services-showcase"
-        className="w-full bg-[#4E342E] scroll-mt-24 py-12 sm:py-20"
+        className="w-full bg-[#3A2117] scroll-mt-24 py-12 sm:py-20"
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-16">
 
           {/* Section header row */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-4 sm:pb-6 border-b border-[#D4AF37]/15 gap-3 sm:gap-4">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-4 sm:pb-6 border-b border-[#C4A174]/15 gap-3 sm:gap-4">
             <div>
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-semibold block mb-1.5 sm:mb-2">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C4A174] font-semibold block mb-1.5 sm:mb-2">
                 01 — DISCIPLINE CATALOGUE &nbsp;·&nbsp; {servicesData.length} TOTAL
               </span>
-              <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#FAF7F0] font-bold tracking-tight">
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl text-[#EDE3D2] font-bold tracking-tight">
                 Explore All 10 Services
               </h2>
             </div>
-            <p className="text-[10px] sm:text-[11px] text-[#D4AF37]/80 font-medium uppercase tracking-[0.18em] max-w-xs text-left md:text-right">
+            <p className="text-[10px] sm:text-[11px] text-[#C4A174]/80 font-medium uppercase tracking-[0.18em] max-w-xs text-left md:text-right">
               Select any discipline to inspect photography, deliverables &amp; specs
             </p>
           </div>
@@ -117,8 +117,8 @@ export default function ServicesPage({
                   onClick={() => setActiveService(idx)}
                   className={`px-4 py-2 text-[10px] font-bold whitespace-nowrap transition-all duration-300 flex items-center gap-1.5 cursor-pointer shrink-0 border uppercase tracking-[0.15em] ${
                     isSelected
-                      ? 'bg-[#D4AF37] text-[#2B1C19] border-[#D4AF37] shadow-lg shadow-[#D4AF37]/20'
-                      : 'bg-transparent text-[#FAF7F0]/70 border-[#D4AF37]/20 hover:border-[#D4AF37]/60 hover:text-[#D4AF37]'
+                      ? 'bg-[#C4A174] text-[#3A2117] border-[#C4A174] shadow-lg shadow-[#C4A174]/20'
+                      : 'bg-transparent text-[#EDE3D2]/70 border-[#C4A174]/20 hover:border-[#C4A174]/60 hover:text-[#C4A174]'
                   }`}
                 >
                   <span className="opacity-70">{srv.number}</span>
@@ -141,8 +141,8 @@ export default function ServicesPage({
                     onClick={() => setActiveService(idx)}
                     className={`px-6 py-5 cursor-pointer border transition-all duration-300 ${
                       isSelected
-                        ? 'bg-[#3E2723] border-[#D4AF37] shadow-2xl shadow-[#D4AF37]/10 ring-1 ring-[#D4AF37]/30'
-                        : 'bg-[#3E2723]/50 border-[#D4AF37]/15 hover:border-[#D4AF37]/40 hover:bg-[#3E2723]'
+                        ? 'bg-[#4A2E22] border-[#C4A174] shadow-2xl shadow-[#C4A174]/10 ring-1 ring-[#C4A174]/30'
+                        : 'bg-[#4A2E22]/50 border-[#C4A174]/15 hover:border-[#C4A174]/40 hover:bg-[#4A2E22]'
                     }`}
                   >
                     {/* Card header row */}
@@ -150,39 +150,39 @@ export default function ServicesPage({
                       <div className="flex items-center gap-4">
                         <span className={`text-[10px] font-bold px-2.5 py-1 tracking-[0.15em] uppercase ${
                           isSelected
-                            ? 'bg-[#D4AF37] text-[#2B1C19]'
-                            : 'bg-[#2B1C19] text-[#D4AF37] border border-[#D4AF37]/30'
+                            ? 'bg-[#C4A174] text-[#3A2117]'
+                            : 'bg-[#3A2117] text-[#C4A174] border border-[#C4A174]/30'
                         }`}>
                           {srv.number}
                         </span>
                         <h3 className={`text-base sm:text-lg font-bold tracking-tight transition-colors duration-300 ${
-                          isSelected ? 'text-[#FAF7F0]' : 'text-[#FAF7F0]/80'
+                          isSelected ? 'text-[#EDE3D2]' : 'text-[#EDE3D2]/80'
                         }`}>
                           {srv.title}
                         </h3>
                       </div>
                       <ArrowUpRight
                         className={`w-4 h-4 shrink-0 transition-all duration-300 ${
-                          isSelected ? 'rotate-45 text-[#D4AF37] scale-125' : 'text-[#D4AF37]/50'
+                          isSelected ? 'rotate-45 text-[#C4A174] scale-125' : 'text-[#C4A174]/50'
                         }`}
                       />
                     </div>
 
                     {/* Expanded details on selection */}
                     {isSelected && (
-                      <div className="mt-5 pt-5 border-t border-[#D4AF37]/20 animate-fadeIn">
-                        <p className="text-sm text-[#FAF7F0]/70 font-light leading-relaxed mb-5">
+                      <div className="mt-5 pt-5 border-t border-[#C4A174]/20 animate-fadeIn">
+                        <p className="text-sm text-[#EDE3D2]/70 font-light leading-relaxed mb-5">
                           {srv.description}
                         </p>
 
-                        <div className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#D4AF37] mb-3">
+                        <div className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C4A174] mb-3">
                           Included Deliverables &amp; Scope
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-5">
                           {srv.deliverables.map((item, i) => (
-                            <div key={i} className="flex items-center gap-2 text-xs text-[#FAF7F0]/80">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+                            <div key={i} className="flex items-center gap-2 text-xs text-[#EDE3D2]/80">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#C4A174] shrink-0" />
                               <span className="truncate">{item}</span>
                             </div>
                           ))}
@@ -197,7 +197,7 @@ export default function ServicesPage({
                               const allPhotos = [srv.image, ...(srv.gallery || [])];
                               onOpenLightbox && onOpenLightbox(allPhotos, 0, srv.title, srv.title);
                             }}
-                            className="px-4 py-2 bg-[#D4AF37] text-[#2B1C19] font-bold text-[10px] uppercase tracking-[0.15em] flex items-center gap-1.5 shadow"
+                            className="px-4 py-2 bg-[#C4A174] text-[#3A2117] font-bold text-[10px] uppercase tracking-[0.15em] flex items-center gap-1.5 shadow"
                           >
                             <Maximize2 className="w-3.5 h-3.5" />
                             <span>View {1 + (srv.gallery?.length || 0)} Photos</span>
@@ -209,7 +209,7 @@ export default function ServicesPage({
                               e.stopPropagation();
                               onOpenConsultation();
                             }}
-                            className="text-[10px] uppercase tracking-[0.2em] text-[#D4AF37] hover:text-[#FAF7F0] font-bold transition-colors"
+                            className="text-[10px] uppercase tracking-[0.2em] text-[#C4A174] hover:text-[#EDE3D2] font-bold transition-colors"
                           >
                             Commission →
                           </button>
@@ -230,7 +230,7 @@ export default function ServicesPage({
                   const allServicePhotos = [selected.image, ...(selected.gallery || [])];
                   onOpenLightbox && onOpenLightbox(allServicePhotos, 0, selected.title, selected.title);
                 }}
-                className="relative w-full h-[400px] sm:h-[500px] border border-[#D4AF37]/20 overflow-hidden shadow-2xl bg-[#3E2723] cursor-pointer group"
+                className="relative w-full h-[400px] sm:h-[500px] border border-[#C4A174]/20 overflow-hidden shadow-2xl bg-[#4A2E22] cursor-pointer group"
               >
                 <img
                   src={selected.image}
@@ -238,29 +238,29 @@ export default function ServicesPage({
                   className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
                 />
                 {/* Bottom gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2B1C19]/95 via-[#2B1C19]/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#3A2117]/95 via-[#3A2117]/25 to-transparent" />
 
                 {/* Expand icon */}
                 <button
                   type="button"
-                  className="absolute top-5 right-5 p-2.5 bg-[#2B1C19]/80 backdrop-blur-md text-[#FAF7F0] border border-[#D4AF37]/30 opacity-80 group-hover:opacity-100 transition-opacity"
+                  className="absolute top-5 right-5 p-2.5 bg-[#3A2117]/80 backdrop-blur-md text-[#EDE3D2] border border-[#C4A174]/30 opacity-80 group-hover:opacity-100 transition-opacity"
                   aria-label="Open fullscreen gallery"
                 >
-                  <Maximize2 className="w-4 h-4 text-[#D4AF37]" />
+                  <Maximize2 className="w-4 h-4 text-[#C4A174]" />
                 </button>
 
                 {/* Info overlay panel — sharp corners */}
-                <div className="absolute bottom-5 left-5 right-5 p-5 bg-[#2B1C19]/95 backdrop-blur-md border border-[#D4AF37]/20 shadow-xl">
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#D4AF37] block mb-1.5 font-semibold">
+                <div className="absolute bottom-5 left-5 right-5 p-5 bg-[#3A2117]/95 backdrop-blur-md border border-[#C4A174]/20 shadow-xl">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#C4A174] block mb-1.5 font-semibold">
                     DISCIPLINE {selected.number} &nbsp;·&nbsp; ORIGINAL CLIENT WORK
                   </span>
-                  <h4 className="text-xl sm:text-2xl text-[#FAF7F0] font-bold tracking-tight">
+                  <h4 className="text-xl sm:text-2xl text-[#EDE3D2] font-bold tracking-tight">
                     {selected.title}
                   </h4>
-                  <p className="text-xs text-[#FAF7F0]/60 mt-1.5 font-light line-clamp-2">
+                  <p className="text-xs text-[#EDE3D2]/60 mt-1.5 font-light line-clamp-2">
                     {selected.tagline}
                   </p>
-                  <div className="mt-4 pt-3 border-t border-[#D4AF37]/20 flex items-center justify-between text-[10px] text-[#D4AF37] font-semibold uppercase tracking-[0.15em]">
+                  <div className="mt-4 pt-3 border-t border-[#C4A174]/20 flex items-center justify-between text-[10px] text-[#C4A174] font-semibold uppercase tracking-[0.15em]">
                     <span className="flex items-center gap-1.5">
                       <Maximize2 className="w-3.5 h-3.5" />
                       <span>TOUCH TO VIEW FULLSCREEN</span>
@@ -280,7 +280,7 @@ export default function ServicesPage({
                         const allServicePhotos = [selected.image, ...(selected.gallery || [])];
                         onOpenLightbox && onOpenLightbox(allServicePhotos, i + 1, selected.title, selected.title);
                       }}
-                      className="w-24 h-16 flex-shrink-0 border border-[#D4AF37]/20 overflow-hidden cursor-pointer hover:border-[#D4AF37] hover:scale-105 transition-all shadow-sm"
+                      className="w-24 h-16 flex-shrink-0 border border-[#C4A174]/20 overflow-hidden cursor-pointer hover:border-[#C4A174] hover:scale-105 transition-all shadow-sm"
                     >
                       <img src={img} alt="Service detail preview" className="w-full h-full object-cover" />
                     </div>
@@ -289,18 +289,18 @@ export default function ServicesPage({
               )}
 
               {/* CTA block — sharp corners */}
-              <div className="p-6 bg-[#3E2723] border border-[#D4AF37]/20 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+              <div className="p-6 bg-[#4A2E22] border border-[#C4A174]/20 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#D4AF37] block font-bold mb-1">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#C4A174] block font-bold mb-1">
                     READY TO COMMISSION?
                   </span>
-                  <span className="text-base sm:text-lg font-bold text-[#FAF7F0]">
+                  <span className="text-base sm:text-lg font-bold text-[#EDE3D2]">
                     Inquire for {selected.title}
                   </span>
                 </div>
                 <button
                   onClick={onOpenConsultation}
-                  className="w-full sm:w-auto px-7 py-3.5 bg-[#D4AF37] hover:bg-[#FAF7F0] text-[#2B1C19] text-[10px] uppercase tracking-[0.25em] font-bold transition-colors shadow-lg cursor-pointer"
+                  className="w-full sm:w-auto px-7 py-3.5 bg-[#C4A174] hover:bg-[#EDE3D2] text-[#3A2117] text-[10px] uppercase tracking-[0.25em] font-bold transition-colors shadow-lg cursor-pointer"
                 >
                   START YOUR PROJECT
                 </button>
@@ -312,57 +312,57 @@ export default function ServicesPage({
       </section>
 
       {/* ─── 03 — GEOMETRY PILLARS ─────────────────────────────────────────────── */}
-      <section className="w-full bg-[#2B1C19] py-16 sm:py-24 lg:py-32 border-t border-[#D4AF37]/15">
+      <section className="w-full bg-[#3A2117] py-16 sm:py-24 lg:py-32 border-t border-[#C4A174]/15">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-16">
 
           {/* Section label */}
           <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-            <span className="text-[10px] uppercase tracking-[0.35em] text-[#D4AF37] font-semibold">
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#C4A174] font-semibold">
               02 — DESIGN &amp; FABRICATION METHODOLOGY
             </span>
-            <span className="flex-1 max-w-[80px] h-[1px] bg-[#D4AF37]/30" />
+            <span className="flex-1 max-w-[80px] h-[1px] bg-[#C4A174]/30" />
           </div>
 
           {/* Section heading */}
           <div className="mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#FAF7F0] font-bold tracking-tight leading-[1.05]">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-[#EDE3D2] font-bold tracking-tight leading-[1.05]">
               The Geometry of Quietness
             </h2>
-            <p className="mt-3 sm:mt-4 text-sm text-[#FAF7F0]/60 font-light max-w-lg leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-sm text-[#EDE3D2]/60 font-light max-w-lg leading-relaxed">
               Three core foundations that govern every interior and fabrication project we deliver.
             </p>
           </div>
 
           {/* Gold hairline rule */}
-          <div className="w-full h-[1px] bg-[#D4AF37]/15 mb-10 sm:mb-16" />
+          <div className="w-full h-[1px] bg-[#C4A174]/15 mb-10 sm:mb-16" />
 
           {/* Three pillar cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#D4AF37]/15">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#C4A174]/15">
             {geometryPillars.map((p) => (
               <div
                 key={p.num}
-                className="p-6 sm:p-8 lg:p-10 bg-[#3E2723] hover:bg-[#4E342E] transition-colors duration-300 border-b md:border-b-0 md:border-r border-[#D4AF37]/15 last:border-b-0 md:last:border-r-0"
+                className="p-6 sm:p-8 lg:p-10 bg-[#4A2E22] hover:bg-[#704936] transition-colors duration-300 border-b md:border-b-0 md:border-r border-[#C4A174]/15 last:border-b-0 md:last:border-r-0"
               >
                 {/* Numbered label in small gold caps */}
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D4AF37] block mb-4 sm:mb-6">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C4A174] block mb-4 sm:mb-6">
                   {p.num} / FOUNDATION
                 </span>
 
                 {/* Gold accent line */}
-                <div className="w-8 sm:w-10 h-[2px] bg-[#D4AF37] mb-6 sm:mb-8" />
+                <div className="w-8 sm:w-10 h-[2px] bg-[#C4A174] mb-6 sm:mb-8" />
 
                 {/* Large title */}
-                <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#FAF7F0] font-bold tracking-tight leading-tight mb-3 sm:mb-4">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#EDE3D2] font-bold tracking-tight leading-tight mb-3 sm:mb-4">
                   {p.title}
                 </h3>
 
                 {/* Italic sub in bronze */}
-                <p className="text-sm italic text-[#C9B29B] mb-4 sm:mb-6 leading-relaxed">
+                <p className="text-sm italic text-[#D4C3BD] mb-4 sm:mb-6 leading-relaxed">
                   {p.sub}
                 </p>
 
                 {/* Body text */}
-                <p className="text-sm text-[#FAF7F0]/60 font-light leading-relaxed">
+                <p className="text-sm text-[#EDE3D2]/60 font-light leading-relaxed">
                   {p.text}
                 </p>
               </div>

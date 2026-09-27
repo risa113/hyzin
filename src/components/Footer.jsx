@@ -1,4 +1,4 @@
-import { ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
+﻿import { ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
 import { CLIENT_SERVICES_CONFIG, BRAND_ASSETS } from '../data/clientAssets';
 
 const InstagramIcon = ({ className = "w-4 h-4" }) => (
@@ -23,16 +23,16 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
       {/* ─────────────────────────────────────────────────────────────────────
           PRE-FOOTER CTA BAND — Full-bleed gold
       ───────────────────────────────────────────────────────────────────── */}
-      <div className="w-full bg-[#D4AF37]">
+      <div className="w-full bg-[#C4A174]">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-10 lg:px-16 py-8 sm:py-12">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-8">
 
             {/* Left — Headline */}
             <div className="flex-1 min-w-0">
-              <h2 className="text-xl sm:text-3xl font-bold tracking-tight text-[#2B1C19] leading-tight">
+              <h2 className="text-xl sm:text-3xl font-bold tracking-tight text-[#3A2117] leading-tight">
                 READY TO BEGIN YOUR PROJECT?
               </h2>
-              <p className="mt-1.5 sm:mt-2 text-[#2B1C19]/80 text-xs sm:text-sm font-medium tracking-wide">
+              <p className="mt-1.5 sm:mt-2 text-[#3A2117]/80 text-xs sm:text-sm font-medium tracking-wide">
                 Accepting commissions in Kerala, Tamil Nadu &amp; Karnataka.
               </p>
             </div>
@@ -41,7 +41,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 flex-shrink-0 w-full sm:w-auto">
               <button
                 onClick={onOpenConsultation}
-                className="w-full sm:w-auto px-6 py-3 bg-[#2B1C19] text-[#D4AF37] text-[11px] font-bold uppercase tracking-widest hover:bg-[#3E2723] transition-colors text-center"
+                className="w-full sm:w-auto px-6 py-3 bg-[#3A2117] text-[#C4A174] text-[11px] font-bold uppercase tracking-widest hover:bg-[#4A2E22] transition-colors text-center"
               >
                 START YOUR PROJECT
               </button>
@@ -49,7 +49,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 href="https://wa.me/916282549008"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3 border border-[#2B1C19] text-[#2B1C19] text-[11px] font-bold uppercase tracking-widest hover:bg-[#2B1C19]/10 transition-colors text-center"
+                className="w-full sm:w-auto px-6 py-3 border border-[#3A2117] text-[#3A2117] text-[11px] font-bold uppercase tracking-widest hover:bg-[#3A2117]/10 transition-colors text-center"
               >
                 WHATSAPP US
               </a>
@@ -62,11 +62,11 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
       {/* ─────────────────────────────────────────────────────────────────────
           MAIN FOOTER — Absolute Noir background
       ───────────────────────────────────────────────────────────────────── */}
-      <div className="w-full bg-[#2B1C19]">
+      <div className="w-full bg-[#3A2117]">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-10 lg:px-16">
 
           {/* ── MOBILE LAYOUT (hidden sm:hidden → block on mobile) ── */}
-          <div className="block sm:hidden pt-8 pb-6 space-y-6 border-b border-[#D4AF37]/20">
+          <div className="block sm:hidden pt-8 pb-6 space-y-6 border-b border-[#C4A174]/20">
 
             {/* Brand row */}
             <div className="flex items-center justify-between">
@@ -74,9 +74,9 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 <img
                   src={BRAND_ASSETS.logoBadge}
                   alt="HYZIN Logo"
-                  className="w-8 h-8 object-cover border border-[#D4AF37]/40"
+                  className="w-8 h-8 object-cover border border-[#C4A174]/40"
                 />
-                <span className="text-base font-bold tracking-wider text-[#FAF7F0]">
+                <span className="text-base font-bold tracking-wider text-[#EDE3D2]">
                   HYZIN INTERIOR
                 </span>
               </div>
@@ -84,14 +84,14 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 href="https://www.instagram.com/hyzin.interior/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1.5 px-2 bg-[#3E2723] border border-[#D4AF37]/20 text-[#D4AF37] flex items-center space-x-1.5 text-[10px] font-medium"
+                className="p-1.5 px-2 bg-[#4A2E22] border border-[#C4A174]/20 text-[#C4A174] flex items-center space-x-1.5 text-[10px] font-medium"
               >
                 <InstagramIcon className="w-3.5 h-3.5" />
                 <span>@hyzin</span>
               </a>
             </div>
 
-            <p className="text-[11px] text-[#D4AF37]/80 font-normal leading-snug tracking-wide">
+            <p className="text-[11px] text-[#C4A174]/80 font-normal leading-snug tracking-wide">
               Interior Design &amp; Specialized Fabrication • Kerala • Tamil Nadu • Karnataka
             </p>
 
@@ -99,25 +99,25 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
             <div className="grid grid-cols-2 gap-2 text-[10px] uppercase font-bold tracking-wider">
               <button
                 onClick={() => handleNav('3d-house')}
-                className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#D4AF37] text-left"
+                className="p-2.5 bg-[#4A2E22] border border-[#C4A174]/20 text-[#C4A174] text-left"
               >
                 3D House Model →
               </button>
               <button
                 onClick={() => handleNav('photo-vault')}
-                className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] text-left"
+                className="p-2.5 bg-[#4A2E22] border border-[#C4A174]/20 text-[#EDE3D2] text-left"
               >
                 72 Photos Vault →
               </button>
               <button
                 onClick={() => handleNav('services')}
-                className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] text-left"
+                className="p-2.5 bg-[#4A2E22] border border-[#C4A174]/20 text-[#EDE3D2] text-left"
               >
                 10 Services →
               </button>
               <button
                 onClick={() => handleNav('contact')}
-                className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] text-left"
+                className="p-2.5 bg-[#4A2E22] border border-[#C4A174]/20 text-[#EDE3D2] text-left"
               >
                 Contact Brief →
               </button>
@@ -127,30 +127,30 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
             <div className="space-y-2">
               <button
                 onClick={onOpenConsultation}
-                className="w-full py-3.5 bg-[#D4AF37] text-[#2B1C19] font-bold uppercase tracking-widest text-[10px] flex items-center justify-center space-x-1 shadow-md"
+                className="w-full py-3.5 bg-[#C4A174] text-[#3A2117] font-bold uppercase tracking-widest text-[10px] flex items-center justify-center space-x-1 shadow-md"
               >
                 <span>START YOUR PROJECT</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </button>
 
               <div className="grid grid-cols-2 gap-2 text-[10px] font-medium text-center">
-                <a href="tel:916282549008" className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] flex items-center justify-center gap-1">
-                  <Phone className="w-3 h-3 text-[#D4AF37]" />
+                <a href="tel:916282549008" className="p-2.5 bg-[#4A2E22] border border-[#C4A174]/20 text-[#EDE3D2] flex items-center justify-center gap-1">
+                  <Phone className="w-3 h-3 text-[#C4A174]" />
                   <span>Line 1</span>
                 </a>
-                <a href="tel:918848023041" className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] flex items-center justify-center gap-1">
-                  <Phone className="w-3 h-3 text-[#D4AF37]" />
+                <a href="tel:918848023041" className="p-2.5 bg-[#4A2E22] border border-[#C4A174]/20 text-[#EDE3D2] flex items-center justify-center gap-1">
+                  <Phone className="w-3 h-3 text-[#C4A174]" />
                   <span>Line 2</span>
                 </a>
               </div>
 
               <div className="space-y-1.5 pt-0.5">
-                <a href="mailto:Muhammedashad395@gmail.com" className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#FAF7F0] text-[10px] font-mono font-medium flex items-center justify-center gap-1.5 break-words">
-                  <Mail className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
+                <a href="mailto:Muhammedashad395@gmail.com" className="p-2.5 bg-[#4A2E22] border border-[#C4A174]/20 text-[#EDE3D2] text-[10px] font-mono font-medium flex items-center justify-center gap-1.5 break-words">
+                  <Mail className="w-3 h-3 text-[#C4A174] flex-shrink-0" />
                   <span className="truncate">Muhammedashad395@gmail.com</span>
                 </a>
-                <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-[#3E2723] border border-[#D4AF37]/20 text-[#D4AF37] text-[10px] font-medium flex items-center justify-center gap-1.5">
-                  <MapPin className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
+                <a href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9" target="_blank" rel="noopener noreferrer" className="p-2.5 bg-[#4A2E22] border border-[#C4A174]/20 text-[#C4A174] text-[10px] font-medium flex items-center justify-center gap-1.5">
+                  <MapPin className="w-3 h-3 text-[#C4A174] flex-shrink-0" />
                   <span>Studio Workshop on Google Maps</span>
                 </a>
               </div>
@@ -161,7 +161,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
           <div className="hidden sm:block pt-16 pb-8">
 
             {/* ── 4-COLUMN TOP GRID ── */}
-            <div className="grid grid-cols-12 gap-10 lg:gap-14 pb-14 border-b border-[#D4AF37]/20">
+            <div className="grid grid-cols-12 gap-10 lg:gap-14 pb-14 border-b border-[#C4A174]/20">
 
               {/* COL 1 — Brand (4/12) */}
               <div className="col-span-12 md:col-span-5 lg:col-span-4">
@@ -171,28 +171,28 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                   <img
                     src={BRAND_ASSETS.logoBadge}
                     alt="HYZIN Logo"
-                    className="w-10 h-10 object-cover border border-[#D4AF37]/40"
+                    className="w-10 h-10 object-cover border border-[#C4A174]/40"
                   />
-                  <h3 className="text-2xl font-bold tracking-[0.14em] text-[#FAF7F0] leading-none">
+                  <h3 className="text-2xl font-bold tracking-[0.14em] text-[#EDE3D2] leading-none">
                     HYZIN INTERIOR
                   </h3>
                 </div>
 
                 {/* Sub-label in tiny gold caps */}
-                <p className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#D4AF37] mb-5">
+                <p className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#C4A174] mb-5">
                   Interior Design &amp; Specialized Metal Fabrication
                 </p>
 
                 {/* Philosophy text */}
-                <p className="text-[13px] text-[#FAF7F0]/60 font-normal leading-relaxed max-w-sm">
+                <p className="text-[13px] text-[#EDE3D2]/60 font-normal leading-relaxed max-w-sm">
                   Creating quiet grandeur and sculpted spaces across Kerala, Tamil Nadu,
                   and Karnataka. From raw site framing to turnkey white-glove handover —
                   every detail resolved before the first cut.
                 </p>
 
                 {/* Italic quote with gold left border */}
-                <div className="mt-6 pl-4 border-l-2 border-[#D4AF37]/50">
-                  <p className="italic text-[13px] font-medium text-[#FAF7F0]/90 leading-snug">
+                <div className="mt-6 pl-4 border-l-2 border-[#C4A174]/50">
+                  <p className="italic text-[13px] font-medium text-[#EDE3D2]/90 leading-snug">
                     "Good interiors don't simply look beautiful.<br />
                     They make everyday life better."
                   </p>
@@ -201,7 +201,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
 
               {/* COL 2 — 10 Core Services (3/12) */}
               <div className="col-span-6 md:col-span-3 lg:col-span-3">
-                <span className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#D4AF37] block mb-5">
+                <span className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#C4A174] block mb-5">
                   10 CORE SERVICES
                 </span>
                 <ul className="space-y-2.5">
@@ -211,8 +211,8 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                         onClick={() => handleNav('services')}
                         className="group flex items-center space-x-2.5 text-left w-full"
                       >
-                        <span className="w-1 h-1 bg-[#D4AF37] flex-shrink-0 group-hover:scale-150 transition-transform" />
-                        <span className="text-[12px] text-[#FAF7F0]/75 group-hover:text-[#D4AF37] transition-colors leading-snug">
+                        <span className="w-1 h-1 bg-[#C4A174] flex-shrink-0 group-hover:scale-150 transition-transform" />
+                        <span className="text-[12px] text-[#EDE3D2]/75 group-hover:text-[#C4A174] transition-colors leading-snug">
                           {srv.title}
                         </span>
                       </button>
@@ -223,7 +223,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
 
               {/* COL 3 — Navigation + Studio Desk (2/12) */}
               <div className="col-span-6 md:col-span-4 lg:col-span-2">
-                <span className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#D4AF37] block mb-5">
+                <span className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#C4A174] block mb-5">
                   EXPLORE
                 </span>
                 <ul className="space-y-3">
@@ -239,7 +239,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                     <li key={pageId}>
                       <button
                         onClick={() => handleNav(pageId)}
-                        className="text-[12px] uppercase tracking-wider font-medium text-[#FAF7F0]/75 hover:text-[#D4AF37] transition-colors text-left"
+                        className="text-[12px] uppercase tracking-wider font-medium text-[#EDE3D2]/75 hover:text-[#C4A174] transition-colors text-left"
                       >
                         {label}
                       </button>
@@ -249,38 +249,38 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
 
                 {/* Studio Desk contact block */}
                 <div className="mt-8">
-                  <span className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#D4AF37] block mb-3">
+                  <span className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#C4A174] block mb-3">
                     DIRECT STUDIO DESK
                   </span>
                   <div className="space-y-2">
                     <a
                       href="tel:916282549008"
-                      className="flex items-center space-x-2 text-[11px] text-[#FAF7F0]/75 hover:text-[#D4AF37] transition-colors font-medium"
+                      className="flex items-center space-x-2 text-[11px] text-[#EDE3D2]/75 hover:text-[#C4A174] transition-colors font-medium"
                     >
-                      <Phone className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
+                      <Phone className="w-3 h-3 text-[#C4A174] flex-shrink-0" />
                       <span>+91 6282 549 008</span>
                     </a>
                     <a
                       href="tel:918848023041"
-                      className="flex items-center space-x-2 text-[11px] text-[#FAF7F0]/75 hover:text-[#D4AF37] transition-colors font-medium"
+                      className="flex items-center space-x-2 text-[11px] text-[#EDE3D2]/75 hover:text-[#C4A174] transition-colors font-medium"
                     >
-                      <Phone className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
+                      <Phone className="w-3 h-3 text-[#C4A174] flex-shrink-0" />
                       <span>+91 8848 023 041</span>
                     </a>
                     <a
                       href="mailto:Muhammedashad395@gmail.com"
-                      className="flex items-start space-x-2 text-[11px] text-[#FAF7F0]/75 hover:text-[#D4AF37] transition-colors font-medium break-all"
+                      className="flex items-start space-x-2 text-[11px] text-[#EDE3D2]/75 hover:text-[#C4A174] transition-colors font-medium break-all"
                     >
-                      <Mail className="w-3 h-3 text-[#D4AF37] flex-shrink-0 mt-px" />
+                      <Mail className="w-3 h-3 text-[#C4A174] flex-shrink-0 mt-px" />
                       <span>Muhammedashad395@gmail.com</span>
                     </a>
                     <a
                       href="https://maps.app.goo.gl/FNC3ixVjpjQppRfm9"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-[11px] text-[#D4AF37] hover:underline transition-colors font-medium"
+                      className="flex items-center space-x-2 text-[11px] text-[#C4A174] hover:underline transition-colors font-medium"
                     >
-                      <MapPin className="w-3 h-3 text-[#D4AF37] flex-shrink-0" />
+                      <MapPin className="w-3 h-3 text-[#C4A174] flex-shrink-0" />
                       <span>Studio &amp; Workshop →</span>
                     </a>
                   </div>
@@ -290,7 +290,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
               {/* COL 4 — Social + CTA (3/12) */}
               <div className="col-span-12 md:col-span-12 lg:col-span-3 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#D4AF37] block mb-5">
+                  <span className="text-[10px] uppercase font-semibold tracking-[0.28em] text-[#C4A174] block mb-5">
                     VISUAL DISPATCH
                   </span>
 
@@ -300,20 +300,20 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                       href="https://www.instagram.com/hyzin.interior/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center justify-between p-4 bg-[#3E2723] border border-[#D4AF37]/25 hover:border-[#D4AF37]/60 transition-all"
+                      className="group flex items-center justify-between p-4 bg-[#4A2E22] border border-[#C4A174]/25 hover:border-[#C4A174]/60 transition-all"
                     >
                       <div className="flex items-center space-x-3">
-                        <InstagramIcon className="w-5 h-5 text-[#D4AF37]" />
+                        <InstagramIcon className="w-5 h-5 text-[#C4A174]" />
                         <div>
-                          <span className="text-[13px] font-semibold text-[#FAF7F0] block leading-tight">
+                          <span className="text-[13px] font-semibold text-[#EDE3D2] block leading-tight">
                             @hyzin.interior
                           </span>
-                          <span className="text-[10px] text-[#D4AF37]/70 tracking-wide">
+                          <span className="text-[10px] text-[#C4A174]/70 tracking-wide">
                             14.8k Followers • Daily Stories
                           </span>
                         </div>
                       </div>
-                      <ArrowUpRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-4 h-4 text-[#C4A174] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </a>
 
                     {/* Instagram DM link */}
@@ -321,12 +321,12 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                       href="https://ig.me/m/hyzin.interior"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center justify-between px-4 py-3 bg-[#3E2723]/60 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all"
+                      className="group flex items-center justify-between px-4 py-3 bg-[#4A2E22]/60 border border-[#C4A174]/20 hover:border-[#C4A174]/50 transition-all"
                     >
-                      <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#D4AF37]">
+                      <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#C4A174]">
                         Send Instagram DM
                       </span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-[#C4A174] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </a>
                   </div>
                 </div>
@@ -335,7 +335,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 <div className="mt-8">
                   <button
                     onClick={onOpenConsultation}
-                    className="w-full py-4 bg-[#D4AF37] hover:bg-[#FAF7F0] text-[#2B1C19] font-bold uppercase tracking-widest text-[11px] transition-colors flex items-center justify-center space-x-2 shadow-lg shadow-[#D4AF37]/10"
+                    className="w-full py-4 bg-[#C4A174] hover:bg-[#EDE3D2] text-[#3A2117] font-bold uppercase tracking-widest text-[11px] transition-colors flex items-center justify-center space-x-2 shadow-lg shadow-[#C4A174]/10"
                   >
                     <span>START YOUR PROJECT</span>
                     <ArrowUpRight className="w-4 h-4" />
@@ -347,10 +347,10 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
 
             {/* ── BOTTOM ROW ── */}
             <div className="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3">
-              <p className="text-[10px] font-medium tracking-[0.12em] text-[#D4AF37]/70">
+              <p className="text-[10px] font-medium tracking-[0.12em] text-[#C4A174]/70">
                 © 2026 HYZIN INTERIOR. Original Client Work.
               </p>
-              <p className="text-[10px] font-semibold tracking-[0.22em] text-[#D4AF37]/70">
+              <p className="text-[10px] font-semibold tracking-[0.22em] text-[#C4A174]/70">
                 KERALA&nbsp;•&nbsp;TAMIL NADU&nbsp;•&nbsp;KARNATAKA
               </p>
             </div>
@@ -359,10 +359,10 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
 
           {/* MOBILE bottom row */}
           <div className="block sm:hidden pt-5 pb-6 flex flex-col items-center gap-2 text-center">
-            <p className="text-[10px] font-medium tracking-[0.12em] text-[#D4AF37]/70">
+            <p className="text-[10px] font-medium tracking-[0.12em] text-[#C4A174]/70">
               © 2026 HYZIN INTERIOR. Original Client Work.
             </p>
-            <p className="text-[10px] font-semibold tracking-[0.22em] text-[#D4AF37]/70">
+            <p className="text-[10px] font-semibold tracking-[0.22em] text-[#C4A174]/70">
               KERALA • TAMIL NADU • KARNATAKA
             </p>
           </div>
