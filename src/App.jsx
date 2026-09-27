@@ -67,10 +67,16 @@ export default function App() {
         return;
       }
 
-      // Check pathname (e.g. /about, /projects, /services, /contact)
+      // Check pathname (e.g. /about, /projects, /services, /contact, /modular-kitchen)
       const cleanPath = window.location.pathname.replace(/^\/hyzin\/?/, '').replace(/^\//, '').replace(/\/$/, '');
       if (['about', 'projects', 'services', 'contact', '3d-house', 'photo-vault'].includes(cleanPath)) {
         setActivePage(cleanPath);
+      } else if ([
+        'modular-kitchen', 'wall-drop-wardrobes', 'fluted-paneling', 'false-ceiling',
+        'aluminium-interiors', 'steel-doors', 'ss-fabrication', 'ms-security',
+        'bath-accessories', 'overhead-lofts'
+      ].includes(cleanPath)) {
+        setActivePage('services');
       }
     };
 
