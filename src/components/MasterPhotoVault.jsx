@@ -1,4 +1,4 @@
-﻿import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { 
   Search, 
   Grid, 
@@ -135,7 +135,7 @@ export default function MasterPhotoVault({ onOpenLightbox, onOpenConsultation })
               <div
                 key={photo.id}
                 onClick={() => handleOpenPhoto(idx)}
-                className="group relative bg-[#4A2E22] rounded-3xl overflow-hidden border border-[#C4A174]/20 shadow-md hover:border-[#C4A174]/50 hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col justify-between reveal-up"
+                className="group relative bg-[#4A2E22] rounded-3xl overflow-hidden border border-[#C4A174]/20 shadow-md hover:border-[#C4A174]/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col justify-between"
                 style={{ transitionDelay: `${(idx % 8) * 60}ms` }}
               >
                 {/* Image Container with Hover Zoom & Badges */}

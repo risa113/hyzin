@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowUpRight, MapPin, Maximize2, ChevronLeft, ChevronRight, LayoutGrid, Play, Pause, Sparkles } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
 
@@ -273,7 +273,7 @@ export default function CuratedWork({ onSelectProject, onOpenLightbox }) {
             {filteredProjects.map((project, idx) => (
               <div
                 key={project.id}
-                className="group relative bg-[#4A2E22] border border-[#C4A174]/20 rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#C4A174]/70 hover:-translate-y-1.5 flex flex-col justify-between reveal-up"
+                className="group relative bg-[#4A2E22] border border-[#C4A174]/20 rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#C4A174]/70 hover:-translate-y-1.5 flex flex-col justify-between"
                 style={{ transitionDelay: `${(idx % 6) * 75}ms` }}
               >
                 {/* Image Container with Precise 16:11 Aspect Ratio */}

@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Info } from 'lucide-react';
 import { materialsData } from '../data/materialsData';
 
@@ -34,10 +34,10 @@ export default function SensoryLibrary() {
                 key={item.id}
                 onClick={() => setSelectedMaterial(item)}
                 style={{ transitionDelay: `${(idx % 4) * 80}ms` }}
-                className={`group cursor-pointer bg-[#4A2E22] border transition-all duration-500 overflow-hidden flex flex-col justify-between reveal-up rounded-sm shadow-md ${
+                className={`group cursor-pointer bg-[#4A2E22] border transition-all duration-500 overflow-hidden flex flex-col justify-between rounded-sm shadow-md ${
                   isSelected
                     ? 'border-[#C4A174] shadow-xl shadow-[#C4A174]/20 -translate-y-1'
-                    : 'border-[#C4A174]/20 hover:border-[#C4A174]/40'
+                    : 'border-[#C4A174]/20 hover:border-[#C4A174]/40 hover:-translate-y-0.5'
                 }`}
               >
                 <div>

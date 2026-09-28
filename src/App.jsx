@@ -7,7 +7,7 @@ import PageSkeleton from './components/PageSkeleton';
 
 // Route-level Code Splitting for Ultra-High Concurrency (10,000+ users)
 // Reduces critical initial bundle size by over 70% and prevents Three.js from loading on non-3D pages
-const HomePage = lazy(() => import('./pages/HomePage'));
+import HomePage from './pages/HomePage';
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
@@ -136,34 +136,28 @@ export default function App() {
   // Passive High-Performance IntersectionObserver for Scroll Pop-ups
   useEffect(() => {
     let observer;
-    const timer = setTimeout(() => {
-      const handleIntersection = (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-revealed');
-            obs.unobserve(entry.target);
-          }
-        });
-      };
-
-      observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.08,
-        rootMargin: '0px 0px -40px 0px'
-      });
-
-      const targets = document.querySelectorAll(
-        'section:not(.no-reveal), .reveal-up, .scroll-reveal, .editorial-card, .service-card, .scroll-card'
-      );
-      targets.forEach((el) => {
-        if (!el.classList.contains('no-reveal')) {
-          el.classList.add('reveal-up');
-          observer.observe(el);
+    const handleIntersection = (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target);
         }
       });
-    }, 60);
+    };
+
+    observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.05,
+      rootMargin: '100px 0px 100px 0px'
+    });
+
+    const targets = document.querySelectorAll(
+      '.reveal-up, .scroll-reveal, .editorial-card, .service-card, .scroll-card'
+    );
+    targets.forEach((el) => {
+      observer.observe(el);
+    });
 
     return () => {
-      clearTimeout(timer);
       if (observer) observer.disconnect();
     };
   }, [activePage]);

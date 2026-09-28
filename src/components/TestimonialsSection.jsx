@@ -1,4 +1,4 @@
-﻿import { Quote, ShieldCheck, Star } from 'lucide-react';
+import { Quote, ShieldCheck, Star } from 'lucide-react';
 import { testimonialsData } from '../data/testimonialsData';
 
 export default function TestimonialsSection() {
@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
           {testimonialsData.map((item, idx) => (
             <div
               key={item.id}
-              className="p-5 sm:p-8 bg-[#4A2E22] border border-[#C4A174]/20 hover:border-[#C4A174]/50 transition-all duration-300 flex flex-col justify-between reveal-up rounded-sm shadow-lg"
+              className="p-5 sm:p-8 bg-[#4A2E22] border border-[#C4A174]/20 hover:border-[#C4A174]/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between rounded-sm shadow-lg"
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
               <div>

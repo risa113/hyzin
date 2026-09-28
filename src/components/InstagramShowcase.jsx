@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { ArrowUpRight, Heart, MessageCircle, Send, Sparkles, Filter, CheckCircle2, Bookmark, X } from 'lucide-react';
 import { instagramProfile } from '../data/instagramData';
@@ -215,7 +215,7 @@ export default function InstagramShowcase({ onOpenLightbox }) {
           {displayedPosts.map((post, idx) => (
             <div
               key={post.id}
-              className="group bg-[#4A2E22] border border-[#C4A174]/20 hover:border-[#C4A174]/50 rounded-xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer reveal-up"
+              className="group bg-[#4A2E22] border border-[#C4A174]/20 hover:border-[#C4A174]/50 hover:-translate-y-1 rounded-xl overflow-hidden shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
               style={{ transitionDelay: `${(idx % 6) * 75}ms` }}
               onClick={() => handlePostClick(post)}
             >
