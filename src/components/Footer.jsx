@@ -1,4 +1,4 @@
-﻿import { ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
 import { CLIENT_SERVICES_CONFIG, BRAND_ASSETS } from '../data/clientAssets';
 
 const InstagramIcon = ({ className = "w-4 h-4" }) => (
@@ -346,24 +346,46 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
             </div>{/* /4-col grid */}
 
             {/* ── BOTTOM ROW ── */}
-            <div className="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="pt-7 flex flex-col lg:flex-row items-center justify-between gap-3 text-center lg:text-left">
               <p className="text-[10px] font-medium tracking-[0.12em] text-[#C4A174]/70">
                 © 2026 HYZIN INTERIOR. Original Client Work.
               </p>
               <p className="text-[10px] font-semibold tracking-[0.22em] text-[#C4A174]/70">
                 KERALA&nbsp;•&nbsp;TAMIL NADU&nbsp;•&nbsp;KARNATAKA
               </p>
+              <p className="text-[10px] font-medium tracking-[0.12em] text-[#C4A174]/70 lg:text-right lg:pr-28">
+                Built with{' '}
+                <a
+                  href="https://tmdigitalgrow.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#EDE3D2] hover:text-[#C4A174] tracking-[0.14em] transition-colors duration-200 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#C4A174] hover:after:w-full after:transition-all after:duration-300 pb-px"
+                >
+                  TM Digital
+                </a>
+              </p>
             </div>
 
           </div>{/* /desktop block */}
 
           {/* MOBILE bottom row */}
-          <div className="block sm:hidden pt-5 pb-6 flex flex-col items-center gap-2 text-center">
+          <div className="block sm:hidden pt-5 pb-8 flex flex-col items-center gap-2 text-center">
             <p className="text-[10px] font-medium tracking-[0.12em] text-[#C4A174]/70">
               © 2026 HYZIN INTERIOR. Original Client Work.
             </p>
             <p className="text-[10px] font-semibold tracking-[0.22em] text-[#C4A174]/70">
               KERALA • TAMIL NADU • KARNATAKA
+            </p>
+            <p className="text-[10px] font-medium tracking-[0.12em] text-[#C4A174]/70 pt-0.5">
+              Built with{' '}
+              <a
+                href="https://tmdigitalgrow.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#EDE3D2] hover:text-[#C4A174] tracking-[0.14em] transition-colors duration-200 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#C4A174] hover:after:w-full after:transition-all after:duration-300 pb-px"
+              >
+                TM Digital
+              </a>
             </p>
           </div>
 
