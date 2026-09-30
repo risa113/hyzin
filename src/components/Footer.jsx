@@ -354,7 +354,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
                 KERALA&nbsp;•&nbsp;TAMIL NADU&nbsp;•&nbsp;KARNATAKA
               </p>
               <p className="text-[10px] font-medium tracking-[0.12em] text-[#C4A174]/70 lg:text-right lg:pr-28">
-                Built with{' '}
+                Designed &amp; Deployed by{' '}
                 <a
                   href="https://tmdigitalgrow.com"
                   target="_blank"
@@ -377,7 +377,7 @@ export default function Footer({ onNavigate, onOpenConsultation }) {
               KERALA • TAMIL NADU • KARNATAKA
             </p>
             <p className="text-[10px] font-medium tracking-[0.12em] text-[#C4A174]/70 pt-0.5">
-              Built with{' '}
+              Designed &amp; Deployed by{' '}
               <a
                 href="https://tmdigitalgrow.com"
                 target="_blank"
